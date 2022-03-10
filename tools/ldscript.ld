@@ -19,13 +19,13 @@ SECTIONS
 {
     .init 0x80003100 : { *(.init) } : init
     .text 0x800057C0 : { *(.text) } : text
-    .data0 0x80005620 : { *(.data0) } : data0
-    .data1 0x80005700 : { *(.data1) } : data1
-    .data2 0x8011DCC0 : { *(.data2) } : data2
-    .data3 0x8011DCE0 : { *(.data3) } : data3
-    .data4 0x8011DD00 : { *(.data4) } : data4
-    .data5 0x8011EDE0 : { *(.data5) } : data5
-    .data6 0x801D3420 : { *(.data6) } : data6
-    .data7 0x801D4960 : { *(.data7) } : data7
+    .extab_ 0x80005620 : { *(.extab_) } : extab_
+    .extabindex 0x80005700 : { *(.extabindex) } : data1
+    .ctors 0x8011DCC0 : { *(.ctors) } : ctors
+    .dtors 0x8011DCE0 : { *(.dtors) } : dtors
+    .rodata 0x8011DD00 : { *(.rodata) } : rodata
+    .data 0x8011EDE0 : { *(.data) } : data
+    .sdata 0x801D3420 : { *(.sdata) } : sdata
+    .sdata2 0x801D4960 : { *(.sdata2) } : sdata2
     .bss 0x80142800 (NOLOAD) : { *(.bss) } : bss
 }

@@ -1,5 +1,4 @@
 .include "macros.inc"
 
-# Note: These are here so the template LCF works correctly. TTYD does not use C++, so these are empty.
-
-.section extab_, "wa"
+.section extab_, "wa" # 0x80005620 - 0x80005700
+	.incbin "baserom.dol", 0x11AB20, 0xE0
