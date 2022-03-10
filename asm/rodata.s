@@ -241,6 +241,3 @@ lbl_8011EC40:
 .global lbl_8011ECC8
 lbl_8011ECC8:
 	.incbin "baserom.dol", 0x11BCC8, 0x118
-
-
-
