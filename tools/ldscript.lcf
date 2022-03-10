@@ -1,0 +1,16 @@
+_SDA_BASE_ = 0x801DB420;
+_SDA2_BASE_ = 0x801DC960;
+SECTIONS
+{
+    .init BIND(0x80003100) : { *(.init) }
+    .text BIND(0x800057C0) : { *(.text) }
+    .data0 BIND(0x80005620) : { *(.data0) }
+    .data1 BIND(0x80005700) : { *(.data1) }
+    .data2 BIND(0x8011DCC0) : { *(.data2) }
+    .data3 BIND(0x8011DCE0) : { *(.data3) }
+    .data4 BIND(0x8011DD00) : { *(.data4) }
+    .data5 BIND(0x8011EDE0) : { *(.data5) }
+    .data6 BIND(0x801D3420) : { *(.data6) }
+    .data7 BIND(0x801D4960) : { *(.data7) }
+    .bss BIND(0x80142800) : { *(.bss) }
+}
