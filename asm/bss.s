@@ -763,3 +763,4 @@ lbl_801D32D8:
 .global lbl_801D33C0
 lbl_801D33C0:
 	.skip 0x60
+	

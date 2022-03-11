@@ -1,6 +1,12 @@
 TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/text.o
 
+EXTAB_O_FILES := 						            \
+	$(BUILD_DIR)/asm/extab.o
+
+EXTABINDEX_O_FILES := 						            \
+	$(BUILD_DIR)/asm/extabindex.o
+
 CTORS_O_FILES :=                                    \
     $(BUILD_DIR)/asm/ctors.o
 
