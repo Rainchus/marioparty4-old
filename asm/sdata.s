@@ -1,6 +1,7 @@
 .include "macros.inc"
 
 .section .sdata, "wa"  # 0x801D3420 - 0x801D3A00
+
 .global lbl_801D3420
 lbl_801D3420:
 	.incbin "baserom.dol", 0x13F800, 0x5

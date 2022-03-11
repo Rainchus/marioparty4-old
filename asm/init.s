@@ -340,10 +340,9 @@ lbl_80003528:
 /* 80003530 00000530  4E 80 00 20 */	blr
 
 lbl_80003534:
-.ascii "Metrowerks Target Resident Kernel for PowerPC"
+.ascii "Metrowerks Target Resident Kernel for PowerPC\x00\x00\x00"
 
-lbl_80003560:
-/* 80003560 00000560  43 00 00 00 */	.4byte 0x43000000  /* unknown instruction */
+lbl_80003564:
 /* 80003564 00000564  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 80003568 00000568  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8000356C 0000056C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
