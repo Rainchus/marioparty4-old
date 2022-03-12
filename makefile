@@ -1,6 +1,3 @@
-# If defined, wine is not used.
-NOWINE ?= 0
-
 ifneq ($(findstring MINGW,$(shell uname)),)
   WINDOWS := 1
 endif
@@ -8,79 +5,112 @@ ifneq ($(findstring MSYS,$(shell uname)),)
   WINDOWS := 1
 endif
 
+# If 0, tells the console to chill out. (Quiets the make process.)
+VERBOSE ?= 0
+
+# If MAPGENFLAG set to 1, tells LDFLAGS to generate a mapfile, which makes linking take several minutes.
+MAPGENFLAG ?= 0
+
+ifeq ($(VERBOSE),0)
+  QUIET := @
+endif
+
 #-------------------------------------------------------------------------------
 # Files
 #-------------------------------------------------------------------------------
 
-# Used for elf2dol
-USES_SBSS2 := yes
+NAME := mp4
+VERSION ?= 1
+#VERSION := usa.demo
 
-TARGET := mp4_v1.0
+# Overkill epilogue fixup strategy. Set to 1 if necessary.
+EPILOGUE_PROCESS := 0
 
-BUILD_DIR := build/$(TARGET)
-
-SRC_DIRS := src
-ASM_DIRS := asm
+BUILD_DIR := build/$(NAME).$(VERSION)
+ifeq ($(EPILOGUE_PROCESS),1)
+EPILOGUE_DIR := epilogue/$(NAME).$(VERSION)
+endif
 
 # Inputs
 S_FILES := $(wildcard asm/*.s)
+C_FILES := $(wildcard src/*.c)
 CPP_FILES := $(wildcard src/*.cpp)
+CPP_FILES += $(wildcard src/*.cp)
 LDSCRIPT := $(BUILD_DIR)/ldscript.lcf
 
 # Outputs
-DOL     := $(BUILD_DIR)/$(TARGET).dol
+DOL     := $(BUILD_DIR)/main.dol
 ELF     := $(DOL:.dol=.elf)
-MAP     := $(BUILD_DIR)/$(TARGET).map
+MAP     := $(BUILD_DIR)/pikmin2UP.MAP
+
+
+ifeq ($(MAPGENFLAG),1)
+  MAPGEN := -map $(MAP)
+endif
 
 include obj_files.mk
+ifeq ($(EPILOGUE_PROCESS),1)
+include e_files.mk
+endif
 
 O_FILES := $(INIT_O_FILES) $(EXTAB_O_FILES) $(EXTABINDEX_O_FILES) $(TEXT_O_FILES) \
            $(CTORS_O_FILES) $(DTORS_O_FILES) $(RODATA_O_FILES) $(DATA_O_FILES)    \
            $(BSS_O_FILES) $(SDATA_O_FILES) $(SBSS_O_FILES) $(SDATA2_O_FILES) 	  \
 		   $(SBSS2_O_FILES)
-
+ifeq ($(EPILOGUE_PROCESS),1)
+E_FILES :=	$(EPILOGUE_UNSCHEDULED)
+endif
 #-------------------------------------------------------------------------------
 # Tools
 #-------------------------------------------------------------------------------
 
-MWCC_VERSION := GC/1.3.2
+MWCC_VERSION := 2.6
+ifeq ($(EPILOGUE_PROCESS),1)
+MWCC_EPI_VERSION := 1.2.5
+MWCC_EPI_EXE := mwcceppc.exe
+endif
+MWLD_VERSION := 2.6
 
 # Programs
 ifeq ($(WINDOWS),1)
   WINE :=
+  AS      := $(DEVKITPPC)/bin/powerpc-eabi-as.exe
+  CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp.exe -P
 else
-  WINE := wine
+  WINE ?= wine
+  AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
+  CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp -P
 endif
-
-ifeq ($(NOWINE),1)
-  WINE :=
+CC      = $(WINE) tools/mwcc_compiler/$(MWCC_VERSION)/mwcceppc.exe
+ifeq ($(EPILOGUE_PROCESS),1)
+CC_EPI  = $(WINE) tools/mwcc_compiler/$(MWCC_EPI_VERSION)/$(MWCC_EPI_EXE)
 endif
-
-AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
-OBJCOPY := $(DEVKITPPC)/bin/powerpc-eabi-objcopy
-CPP     := cpp -P
-CC      := $(WINE) tools/mwcc_compiler/$(MWCC_VERSION)/mwcceppc.exe
-# Due to bss erroring on less than 2.7, we have to use the 2.7 linker.
-LD      := $(WINE) tools/mwcc_compiler/GC/2.7/mwldeppc.exe
+LD      := $(WINE) tools/mwcc_compiler/$(MWLD_VERSION)/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 SHA1SUM := sha1sum
 PYTHON  := python3
 
-#POSTPROC := tools/postprocess.py
+FRANK := tools/franklite.py
 
 # Options
-INCLUDES := -i . -I- -i include
+INCLUDES := -i include/
+ASM_INCLUDES := -I include/
 
-ASFLAGS := -mgekko -I include
-LDFLAGS := -map $(MAP) -fp hard
-CFLAGS  := -Cpp_exceptions off -proc gekko -fp hard -Os -nodefaults -msgstyle gcc $(INCLUDES)
+ASFLAGS := -mgekko $(ASM_INCLUDES)
+ifeq ($(VERBOSE),1)
+# this set of LDFLAGS outputs warnings.
+LDFLAGS := $(MAPGEN) -fp hard -nodefaults
+endif
+ifeq ($(VERBOSE),0)
+# this set of LDFLAGS generates no warnings.
+LDFLAGS := $(MAPGEN) -fp hard -nodefaults -w off
+endif
+CFLAGS   = -Cpp_exceptions off -proc gekko -fp hard -Os -nodefaults $(INCLUDES)
 
-# for postprocess.py
-PROCFLAGS := -fprologue-fixup=old_stack
-
-# elf2dol needs to know these in order to calculate sbss correctly.
-SDATA_PDHR := 9
-SBSS_PDHR := 10
+ifeq ($(VERBOSE),0)
+# this set of ASFLAGS generates no warnings.
+ASFLAGS += -W
+endif
 
 #-------------------------------------------------------------------------------
 # Recipes
@@ -92,36 +122,86 @@ default: all
 
 all: $(DOL)
 
-ALL_DIRS := build $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(SRC_DIRS) $(ASM_DIRS))
+ALL_DIRS := $(sort $(dir $(O_FILES)))
+ifeq ($(EPILOGUE_PROCESS),1)
+EPI_DIRS := $(sort $(dir $(E_FILES)))
+endif
 
 # Make sure build directory exists before compiling anything
 DUMMY != mkdir -p $(ALL_DIRS)
 
+# ifeq ($(EPILOGUE_PROCESS),1)
+# Make sure profile directory exists before compiling anything
+# DUMMY != mkdir -p $(EPI_DIRS)
+# endif
+
 .PHONY: tools
 
 $(LDSCRIPT): ldscript.lcf
-	$(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
+	$(QUIET) $(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
 
 $(DOL): $(ELF) | tools
-	$(ELF2DOL) $< $@ $(SDATA_PDHR) $(SBSS_PDHR) $(USES_SBSS2)
-	$(SHA1SUM) -c $(TARGET).sha1
+	$(QUIET) $(ELF2DOL) $< $@
+	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
+ifneq ($(findstring -map,$(LDFLAGS)),)
+	$(QUIET) $(PYTHON) tools/calcprogress.py $@
+endif
 
 clean:
 	rm -f -d -r build
+	rm -f -d -r epilogue
+	find . -name '*.o' -exec rm {} +
+	find . -name 'ctx.c' -exec rm {} +
+	find ./include -name "*.s" -type f -delete
 	$(MAKE) -C tools clean
-
 tools:
 	$(MAKE) -C tools
 
+# ELF creation makefile instructions
+ifeq ($(EPILOGUE_PROCESS),1)
+	@echo Linking ELF $@
+$(ELF): $(O_FILES) $(E_FILES) $(LDSCRIPT)
+	$(QUIET) @echo $(O_FILES) > build/o_files
+	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
+else
 $(ELF): $(O_FILES) $(LDSCRIPT)
-	$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) $(O_FILES)
-# The Metrowerks linker doesn't generate physical addresses in the ELF program headers. This fixes it somehow.
-	$(OBJCOPY) $@ $@
-$(BUILD_DIR)/%.o: %.s
-	$(AS) $(ASFLAGS) -o $@ $<
+	@echo Linking ELF $@
+	$(QUIET) @echo $(O_FILES) > build/o_files
+	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
+endif
 
+$(BUILD_DIR)/%.o: %.s
+	@echo Assembling $<
+	$(QUIET) $(AS) $(ASFLAGS) -o $@ $<
+
+$(BUILD_DIR)/%.o: %.c
+	@echo "Compiling " $<
+	$(QUIET) $(CC) $(CFLAGS) -c -o $@ $<
+
+$(BUILD_DIR)/%.o: %.cp
+	@echo "Compiling " $<
+	$(QUIET) $(CC) $(CFLAGS) -c -o $@ $<
+	
 $(BUILD_DIR)/%.o: %.cpp
-	$(CC) $(CFLAGS) -c -o $@ $<
-	$(PYTHON) $(POSTPROC) $(PROCFLAGS) $@
+	@echo "Compiling " $<
+	$(QUIET) $(CC) $(CFLAGS) -c -o $@ $<
+
+ifeq ($(EPILOGUE_PROCESS),1)
+$(EPILOGUE_DIR)/%.o: %.c $(BUILD_DIR)/%.o
+	@echo Frank is fixing $<
+	$(QUIET) $(PYTHON) $(FRANK) $(word 2,$^) $(word 2,$^)
+
+$(EPILOGUE_DIR)/%.o: %.cp $(BUILD_DIR)/%.o
+	@echo Frank is fixing $<
+	$(QUIET) $(PYTHON) $(FRANK) $(word 2,$^) $(word 2,$^)
+
+$(EPILOGUE_DIR)/%.o: %.cpp $(BUILD_DIR)/%.o
+	@echo Frank is fixing $<
+	$(QUIET) $(PYTHON) $(FRANK) $(word 2,$^) $(word 2,$^)
+endif
+# If we need Frank, add the following after the @echo
+# $(QUIET) $(CC_EPI) $(CFLAGS) -c -o $@ $<
+
+### Debug Print ###
 
 print-% : ; $(info $* is a $(flavor $*) variable set to [$($*)]) @true

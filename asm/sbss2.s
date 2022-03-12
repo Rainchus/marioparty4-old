@@ -1,5 +1,5 @@
 .include "macros.inc"
-
+.section .sbss2, "", @nobits
 .global lbl_801D6BE0
 lbl_801D6BE0:
 	.skip 0x1
