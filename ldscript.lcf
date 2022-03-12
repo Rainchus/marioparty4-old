@@ -1,5 +1,5 @@
 MEMORY {
-text : origin = 0x80003140
+text : origin = 0x80003100
 }
 SECTIONS {
 GROUP:{
