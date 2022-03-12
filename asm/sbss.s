@@ -1,3 +1,6 @@
+.include "macros.inc"
+.section .sbss, "wa"
+
 .global lbl_801D3A00
 lbl_801D3A00:
 	.skip 0x4
