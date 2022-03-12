@@ -27,19 +27,13 @@ lbl_8011EE00:
 	.4byte 0
 	.asciz "dvd.c: HuDvdDataReadWait Mode Error"
 	.asciz "dvd.c: Memory Allocation Error (Length %x) (mode %d)\n"
-	.byte 0x52, 0x65
-	.asciz "st Memory %x\n"
-	.byte 0x64, 0x76
-	.asciz "d.c: File Open Error"
-	.byte 0x44, 0x56, 0x44
-	.asciz " ERROR:Fatal error occurred\n***HALT***"
-	.byte 0x44
-	.asciz "VD ERROR:No disk\n"
-	.byte 0x44, 0x56
-	.asciz "D ERROR:Cover open\n"
+	.asciz "Rest Memory %x\n"
+	.asciz "dvd.c: File Open Error"
+	.asciz "DVD ERROR:Fatal error occurred\n***HALT***"
+	.asciz "DVD ERROR:No disk\n"
+	.asciz "DVD ERROR:Cover open\n"
 	.asciz "DVD ERROR:Wrong disk\n"
-	.byte 0x44, 0x56
-	.asciz "D ERROR:Please retry\n"
+	.asciz "DVD ERROR:Please retry\n"
 	.balign 4
 
 .global lbl_8011EF24
@@ -63,229 +57,144 @@ lbl_8011EF24:
 lbl_8011EF58:
 	# ROM: 0x11BF58
 	.asciz "data/E3setup.bin"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a/bbattle.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/bguest.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/bkoopa.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/bkoopasuit.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/bkujiya.bin"
-	.byte 0x64
-	.asciz "ata/blast5.bin"
-	.byte 0x64
-	.asciz "ata/board.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/bpause.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/byokodori.bin"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a/daisy.bin"
+	.asciz "data/bbattle.bin"
+	.asciz "data/bguest.bin"
+	.asciz "data/bkoopa.bin"
+	.asciz "data/bkoopasuit.bin"
+	.asciz "data/bkujiya.bin"
+	.asciz "data/blast5.bin"
+	.asciz "data/board.bin"
+	.asciz "data/bpause.bin"
+	.asciz "data/byokodori.bin"
+	.asciz "data/daisy.bin"
 	.asciz "data/daisymdl0.bin"
-	.byte 0x64
-	.asciz "ata/daisymdl1.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/daisymot.bin"
+	.asciz "data/daisymdl1.bin"
+	.asciz "data/daisymot.bin"
 	.asciz "data/donkey.bin"
 	.asciz "data/donkeymdl0.bin"
 	.asciz "data/donkeymdl1.bin"
 	.asciz "data/donkeymot.bin"
-	.byte 0x64
-	.asciz "ata/effect.bin"
-	.byte 0x64
-	.asciz "ata/gamemes.bin"
+	.asciz "data/effect.bin"
+	.asciz "data/gamemes.bin"
 	.asciz "data/inst.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/instfont.bin"
+	.asciz "data/instfont.bin"
 	.asciz "data/instpic.bin"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a/luigi.bin"
+	.asciz "data/luigi.bin"
 	.asciz "data/luigimdl0.bin"
-	.byte 0x64
-	.asciz "ata/luigimdl1.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/luigimot.bin"
+	.asciz "data/luigimdl1.bin"
+	.asciz "data/luigimot.bin"
 	.asciz "data/m300.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m302.bin"
+	.asciz "data/m302.bin"
 	.asciz "data/m303.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m330.bin"
+	.asciz "data/m330.bin"
 	.asciz "data/m333.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m401.bin"
+	.asciz "data/m401.bin"
 	.asciz "data/m402.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m403.bin"
+	.asciz "data/m403.bin"
 	.asciz "data/m404.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m405.bin"
+	.asciz "data/m405.bin"
 	.asciz "data/m406.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m407.bin"
+	.asciz "data/m407.bin"
 	.asciz "data/m408.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m409.bin"
+	.asciz "data/m409.bin"
 	.asciz "data/m410.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m411.bin"
+	.asciz "data/m411.bin"
 	.asciz "data/m412.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m413.bin"
+	.asciz "data/m413.bin"
 	.asciz "data/m414.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m415.bin"
+	.asciz "data/m415.bin"
 	.asciz "data/m416.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m417.bin"
+	.asciz "data/m417.bin"
 	.asciz "data/m418.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m419.bin"
+	.asciz "data/m419.bin"
 	.asciz "data/m420.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m421.bin"
+	.asciz "data/m421.bin"
 	.asciz "data/m422.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m423.bin"
+	.asciz "data/m423.bin"
 	.asciz "data/m424.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m425.bin"
+	.asciz "data/m425.bin"
 	.asciz "data/m426.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m427.bin"
+	.asciz "data/m427.bin"
 	.asciz "data/m428.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m429.bin"
+	.asciz "data/m429.bin"
 	.asciz "data/m430.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m431.bin"
+	.asciz "data/m431.bin"
 	.asciz "data/m432.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m433.bin"
+	.asciz "data/m433.bin"
 	.asciz "data/m434.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m435.bin"
+	.asciz "data/m435.bin"
 	.asciz "data/m436.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m437.bin"
+	.asciz "data/m437.bin"
 	.asciz "data/m438.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m439.bin"
+	.asciz "data/m439.bin"
 	.asciz "data/m440.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m441.bin"
+	.asciz "data/m441.bin"
 	.asciz "data/m442.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m443.bin"
+	.asciz "data/m443.bin"
 	.asciz "data/m444.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m445.bin"
+	.asciz "data/m445.bin"
 	.asciz "data/m446.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m447.bin"
+	.asciz "data/m447.bin"
 	.asciz "data/m448.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m449.bin"
+	.asciz "data/m449.bin"
 	.asciz "data/m450.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m451.bin"
+	.asciz "data/m451.bin"
 	.asciz "data/m453.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m455.bin"
+	.asciz "data/m455.bin"
 	.asciz "data/m456.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m457.bin"
+	.asciz "data/m457.bin"
 	.asciz "data/m458.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m459.bin"
+	.asciz "data/m459.bin"
 	.asciz "data/m460.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/m461.bin"
+	.asciz "data/m461.bin"
 	.asciz "data/m462.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/mario.bin"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a/mariomdl0.bin"
+	.asciz "data/mario.bin"
+	.asciz "data/mariomdl0.bin"
 	.asciz "data/mariomdl1.bin"
-	.byte 0x64
-	.asciz "ata/mariomot.bin"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a/ment.bin"
-	.byte 0x64
-	.asciz "ata/mgconst.bin"
+	.asciz "data/mariomot.bin"
+	.asciz "data/ment.bin"
+	.asciz "data/mgconst.bin"
 	.asciz "data/mgmode.bin"
 	.asciz "data/modesel.bin"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a/mpex.bin"
-	.byte 0x64
-	.asciz "ata/mstory.bin"
-	.byte 0x64
-	.asciz "ata/mstory2.bin"
+	.asciz "data/mpex.bin"
+	.asciz "data/mstory.bin"
+	.asciz "data/mstory2.bin"
 	.asciz "data/mstory3.bin"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a/mstory4.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/option.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/peach.bin"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a/peachmdl0.bin"
+	.asciz "data/mstory4.bin"
+	.asciz "data/option.bin"
+	.asciz "data/peach.bin"
+	.asciz "data/peachmdl0.bin"
 	.asciz "data/peachmdl1.bin"
-	.byte 0x64
-	.asciz "ata/peachmot.bin"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a/present.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/result.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/saf.bin"
-	.byte 0x64
-	.asciz "ata/selmenu.bin"
+	.asciz "data/peachmot.bin"
+	.asciz "data/present.bin"
+	.asciz "data/result.bin"
+	.asciz "data/saf.bin"
+	.asciz "data/selmenu.bin"
 	.asciz "data/setup.bin"
-	.byte 0x64
-	.asciz "ata/staff.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/title.bin"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a/w01.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/w02.bin"
-	.byte 0x64
-	.asciz "ata/w03.bin"
+	.asciz "data/staff.bin"
+	.asciz "data/title.bin"
+	.asciz "data/w01.bin"
+	.asciz "data/w02.bin"
+	.asciz "data/w03.bin"
 	.asciz "data/w04.bin"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a/w05.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/w06.bin"
-	.byte 0x64
-	.asciz "ata/w10.bin"
+	.asciz "data/w05.bin"
+	.asciz "data/w06.bin"
+	.asciz "data/w10.bin"
 	.asciz "data/w20.bin"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a/w21.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/waluigi.bin"
-	.byte 0x64
-	.asciz "ata/waluigimdl0.bin"
+	.asciz "data/w21.bin"
+	.asciz "data/waluigi.bin"
+	.asciz "data/waluigimdl0.bin"
 	.asciz "data/waluigimdl1.bin"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a/waluigimot.bin"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a/wario.bin"
+	.asciz "data/waluigimot.bin"
+	.asciz "data/wario.bin"
 	.asciz "data/wariomdl0.bin"
-	.byte 0x64
-	.asciz "ata/wariomdl1.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/wariomot.bin"
+	.asciz "data/wariomdl1.bin"
+	.asciz "data/wariomot.bin"
 	.asciz "data/win.bin"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a/yoshi.bin"
+	.asciz "data/yoshi.bin"
 	.asciz "data/yoshimdl0.bin"
-	.byte 0x64
-	.asciz "ata/yoshimdl1.bin"
-	.byte 0x64, 0x61
-	.asciz "ta/yoshimot.bin"
+	.asciz "data/yoshimdl1.bin"
+	.asciz "data/yoshimot.bin"
 	.asciz "data/ztar.bin"
 	.balign 4
 
@@ -583,17 +492,14 @@ lbl_8011FC2C:
 .global lbl_8011FC49
 lbl_8011FC49:
 	# ROM: 0x11CC49
-	.byte 0x64, 0x61, 0x74
-	.asciz "a.c: Data Number Error(%d)\n"
+	.asciz "data.c: Data Number Error(%d)\n"
 
 .global lbl_8011FC68
 lbl_8011FC68:
 	# ROM: 0x11CC68
 	.asciz "data.c: Data Work Max Error\n"
-	.byte 0x41, 0x52, 0x41
-	.asciz "M data num %x\n"
-	.byte 0x64
-	.asciz "ata num %x\n"
+	.asciz "ARAM data num %x\n"
+	.asciz "data num %x\n"
 
 .global lbl_8011FCA4
 lbl_8011FCA4:
@@ -603,19 +509,13 @@ lbl_8011FCA4:
 .global lbl_8011FCBE
 lbl_8011FCBE:
 	# ROM: 0x11CCBE
-	.byte 0x64, 0x61
-	.asciz "ta.c: Async Close Error\n"
-	.byte 0x64, 0x61, 0x74
-	.asciz "a.c: Data Number Error(0x%08x)\n"
+	.asciz "data.c: Async Close Error\n"
+	.asciz "data.c: Data Number Error(0x%08x)\n"
 	.asciz "HuDataDVDdirDirectOpen: File Open Error(%08x)"
-	.byte 0x48, 0x75
-	.asciz "DataDVDdirDirectRead: File Read Error"
-	.byte 0x64, 0x61
-	.asciz "ta.c%d: Data Number Error(0x%08x)\n"
-	.byte 0x64
-	.asciz "ata.c: couldn't allocate read buffer(0x%08x)\n"
-	.byte 0x2A, 0x2A
-	.asciz " dcnt %d tmp %08x sp1 %08x\n"
+	.asciz "HuDataDVDdirDirectRead: File Read Error"
+	.asciz "data.c%d: Data Number Error(0x%08x)\n"
+	.asciz "data.c: couldn't allocate read buffer(0x%08x)\n"
+	.asciz "** dcnt %d tmp %08x sp1 %08x\n"
 	.asciz "** dcnt %d lastNum %08x\n"
 	.balign 4
 
@@ -2686,20 +2586,13 @@ lbl_80120004:
 lbl_80121E00:
 	# ROM: 0x11EE00
 	.asciz "DEMOInit: invalid TV format\n"
-	.byte 0x0A, 0x4E, 0x6F
-	.asciz "w, try to find memory info file...\n\n"
-	.byte 0x2F, 0x6D, 0x65
-	.asciz "minfo.bin"
-	.byte 0x0A, 0x43
-	.asciz "an't find memory info file. Use /XXX toolname/ to maximize available\n"
-	.byte 0x6D, 0x65
-	.asciz "mory space. For now, we only use the first %dMB.\n"
-	.byte 0x41, 0x6E
-	.asciz " error occurred when issuing read to /meminfo.bin\n"
-	.byte 0x73
-	.asciz "tart: 0x%08x, end: 0x%08x\n"
-	.byte 0x52
-	.asciz "emoved 0x%08x - 0x%08x from the current heap\n"
+	.asciz "\nNow, try to find memory info file...\n\n"
+	.asciz "/meminfo.bin"
+	.asciz "\nCan't find memory info file. Use /XXX toolname/ to maximize available\n"
+	.asciz "memory space. For now, we only use the first %dMB.\n"
+	.asciz "An error occurred when issuing read to /meminfo.bin\n"
+	.asciz "start: 0x%08x, end: 0x%08x\n"
+	.asciz "Removed 0x%08x - 0x%08x from the current heap\n"
 	.balign 4
 
 .global lbl_80121F50
@@ -2711,10 +2604,8 @@ lbl_80121F50:
 	.4byte 0x00580000
 	.4byte 0
 	.asciz "HuMem> Failed OSAlloc Size:%d\n"
-	.byte 0x48
-	.asciz "uMem> left memory space %dKB(%d)\n"
-	.byte 0x48, 0x75
-	.asciz "Mem> Failed OSAlloc left space\n"
+	.asciz "HuMem> left memory space %dKB(%d)\n"
+	.asciz "HuMem> Failed OSAlloc left space\n"
 
 .global lbl_80121FC8
 lbl_80121FC8:
@@ -2726,16 +2617,11 @@ lbl_80121FC8:
 lbl_80122018:
 	# ROM: 0x11F018
 	.asciz "HuMem>memory free error. %08x( call %08x)\n"
-	.byte 0x3D
-	.asciz "======= HuMem heap dump %08x ========\n"
-	.byte 0x4D
-	.asciz "CB-----+Size----+MG+FL+Prev----+Next----+UNum----+Body----+Call----\n"
-	.byte 0x25, 0x30, 0x38
-	.asciz "x %08x %02x %02x %08x %08x %08x %08x %08x\n"
-	.byte 0x4D
-	.asciz "CB:%d(%d/%d) MEM:%08x(%08x/%08x)\n"
-	.byte 0x3D, 0x3D
-	.asciz "====== HuMem heap dump %08x end =====\n"
+	.asciz "======== HuMem heap dump %08x ========\n"
+	.asciz "MCB-----+Size----+MG+FL+Prev----+Next----+UNum----+Body----+Call----\n"
+	.asciz "%08x %08x %02x %02x %08x %08x %08x %08x %08x\n"
+	.asciz "MCB:%d(%d/%d) MEM:%08x(%08x/%08x)\n"
+	.asciz "======== HuMem heap dump %08x end =====\n"
 	.balign 4
 	.4byte 0
 	.4byte 0
@@ -2771,8 +2657,7 @@ lbl_80122180:
 .global lbl_8012219F
 lbl_8012219F:
 	# ROM: 0x11F19F
-	.byte 0x73
-	.asciz "tack overlap error.(process pointer %x)\n"
+	.asciz "stack overlap error.(process pointer %x)\n"
 	.balign 4
 	.4byte 0
 .global lbl_801221D0
