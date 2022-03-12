@@ -2447,3 +2447,4 @@ lbl_800055F0:
 /* 800055F8 000025F8  80 1D 3A 00 */	lwz r0, 0x3a00(r29)
 /* 800055FC 000025FC  00 00 0F 4D */	.4byte 0x00000F4D  /* unknown instruction */
 /* 80005600 00002600  80 1D 6B E0 */	lwz r0, 0x6be0(r29)
+/* 80005604 00002604  00 00 00 08 */	.4byte 0x00000008  /* unknown instruction */
