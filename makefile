@@ -41,7 +41,7 @@ LDSCRIPT := $(BUILD_DIR)/ldscript.lcf
 # Outputs
 DOL     := $(BUILD_DIR)/main.dol
 ELF     := $(DOL:.dol=.elf)
-MAP     := $(BUILD_DIR)/pikmin2UP.MAP
+MAP     := $(BUILD_DIR)/MarioParty4.MAP
 
 
 ifeq ($(MAPGENFLAG),1)
