@@ -538,13 +538,17 @@ lbl_801D4B88:
 	.4byte 0
 .global lbl_801D4B90
 lbl_801D4B90:
-	.incbin "baserom.dol", 0x140010, 0x8
+	# ROM: 0x140010
+	.double 0.9
 .global lbl_801D4B98
 lbl_801D4B98:
-	.incbin "baserom.dol", 0x140018, 0x8
+	# ROM: 0x140018
+	.float 4.4765623
+	.4byte 0x00000000
 .global lbl_801D4BA0
 lbl_801D4BA0:
-	.incbin "baserom.dol", 0x140020, 0x8
+	# ROM: 0x140020
+	.double 0.1
 .global lbl_801D4BA8
 lbl_801D4BA8:
 	.incbin "baserom.dol", 0x140028, 0x8
