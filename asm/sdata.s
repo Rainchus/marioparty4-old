@@ -83,7 +83,7 @@ lbl_801D3488:
 	.asciz "CPU"
 .global lbl_801D348C
 lbl_801D348C:
-	#.incbin "baserom.dol", 0x13F86C, 0xC
+	#ROM: 0x13F86C
 	.asciz "DRAW"
 	.4byte 0x00000000 
 	.2byte 0x0000
@@ -120,7 +120,7 @@ lbl_801D34B8:
 	.asciz "START!"
 .global lbl_801D34C3
 lbl_801D34C3:
-	#.incbin "baserom.dol", 0x13F8A3, 0xF5
+	#ROM: 0x13F8A3
 	.asciz "!?"
 	.4byte 0xBDC0B0C4
 	.asciz "!"
@@ -194,14 +194,14 @@ lbl_801D35B8:
 	#ROM: 0x13F998
 	.4byte 0x801D35AA ;#ptr
 	.4byte 0x801D35B0 ;#ptr
-	.4byte 0x000D0026 ;#ptr
-	.4byte 0x00080017 ;#ptr
-	.4byte 0x0005001E ;#ptr
-	.4byte 0x0001000F ;#ptr
-	.4byte 0x000D0019 ;#ptr
-	.4byte 0x000B001A ;#ptr
-	.4byte 0x000C0022 ;#ptr
-	.4byte 0x000A001B ;#ptr
+	.4byte 0x000D0026
+	.4byte 0x00080017
+	.4byte 0x0005001E
+	.4byte 0x0001000F
+	.4byte 0x000D0019
+	.4byte 0x000B001A
+	.4byte 0x000C0022
+	.4byte 0x000A001B
 .global lbl_801D35E0
 lbl_801D35E0:
 	#ROM: 0x13F9C0
@@ -344,7 +344,7 @@ lbl_801D3682:
 	.2byte 0xFFFF
 .global lbl_801D3684
 lbl_801D3684:
-	#.incbin "baserom.dol", 0x13FA64, 0x5C
+	#ROM: 0x13FA64
 	.2byte 0xFFFF
 	.asciz "eye1"
 	.asciz "eye2"
