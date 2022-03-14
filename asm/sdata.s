@@ -957,40 +957,56 @@ fragmentID:
 	.4byte 0x00000000
 	.4byte 0x8011E55C ;#ptr
 	.4byte 0x8013E2E4 ;#ptr
+
+# MSL_C.PPCEABI.bare.H.a printf.c
 .global "@wstringBase0"
 "@wstringBase0":
 	#ROM: 0x13FDA8
-	.4byte 0x00000000
-	.4byte 0x00000000
-.global lbl_801D39D0
-lbl_801D39D0:
+	.2byte 0x0000
+
+# MSL_C.PPCEABI.bare.H.a float.c
+.balign 8
+.global __float_nan
+__float_nan:
 	#ROM: 0x13FDB0
 	.4byte 0x7FFFFFFF
-.global lbl_801D39D4
-lbl_801D39D4:
+.global __float_huge
+__float_huge:
 	#ROM: 0x13FDB4
 	.4byte 0x7F800000
-.global lbl_801D39D8
-lbl_801D39D8:
+
+# musyx.a snd_service.c
+.balign 8
+.global last_rnd
+last_rnd:
 	#ROM: 0x13FDB8
 	.4byte 0x00000001
-	.4byte 0x00000000
-.global lbl_801D39E0
-lbl_801D39E0:
+
+# musyx.a HARDWARE.C
+.balign 8
+.global dspSRCType$437
+dspSRCType$437:
 	#ROM: 0x13FDC0
 	.4byte 0x00000001
-	.4byte 0x00020000
-.global lbl_801D39E8
-lbl_801D39E8:
+	.2byte 0x0002
+
+.balign 4
+.global dspCoefSel$442
+dspCoefSel$442:
 	#ROM: 0x13FDC8
 	.4byte 0x00000001
-	.4byte 0x00020000
-.global lbl_801D39F0
-lbl_801D39F0:
+	.2byte 0x0002
+
+# musyx.a dsp_import.c
+.balign 8
+.global dspSlaveLength
+dspSlaveLength:
 	#ROM: 0x13FDD0
-	.4byte 0x19E00000
-	.4byte 0x00000000
-.global lbl_801D39F8
-lbl_801D39F8:
+	.2byte 0x19E0
+
+# OdemuExi2.a DebuggerDriver.c
+.balign 8
+.global SendCount
+SendCount:
 	#ROM: 0x13FDD8
 	.byte 0x80
