@@ -54,5 +54,4 @@ lbl_8000579C:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte 0
 

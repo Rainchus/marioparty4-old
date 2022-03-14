@@ -8,8 +8,4 @@ lbl_8011DCE0:
 	.4byte 0x800E2AB0  ;# ptr
 	.4byte 0x800E2008  ;# ptr
 	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
 

@@ -36876,8 +36876,4 @@ lbl_80141FF0:
 	.4byte 0x3DD01000
 	.4byte 0x3F4D5E00
 	.4byte 0x3DC7B000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
 	

@@ -52,11 +52,4 @@ lbl_extab:
 	.4byte 0
 	.4byte 0x00080000
 	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
 

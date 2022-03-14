@@ -2791,4 +2791,4 @@ lbl_801D4948:
 	.skip 0x4
 .global lbl_801D494C
 lbl_801D494C:
-	.skip 0x14
+	.skip 0x01

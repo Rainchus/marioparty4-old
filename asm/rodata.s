@@ -1286,10 +1286,4 @@ lbl_8011ECC8:
 	.4byte 0x00200020
 	.4byte 0x00200020
 	.4byte 0x00200020
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
 

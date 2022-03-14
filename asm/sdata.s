@@ -993,5 +993,4 @@ lbl_801D39F0:
 .global lbl_801D39F8
 lbl_801D39F8:
 	#ROM: 0x13FDD8
-	.4byte 0x80000000
-	.4byte 0x00000000
+	.byte 0x80
