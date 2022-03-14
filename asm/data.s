@@ -32643,8 +32643,8 @@ lbl_8013E440:
 	.4byte lbl_800E4DC8
 	.4byte lbl_800E4DE0
 	.4byte 0x00000000
-.global lbl_8013E568
-lbl_8013E568:
+.global __ctype_map
+__ctype_map:
 	# ROM: 13B568
 	.4byte 0x01010101
 	.4byte 0x01010101

@@ -442,8 +442,8 @@ lbl_801A52E8:
 .global lbl_801A5300
 lbl_801A5300:
 	.skip 0x50
-.global lbl_801A5350
-lbl_801A5350:
+.global OSErrorTable
+OSErrorTable:
 	.skip 0x50
 .global lbl_801A53A0
 lbl_801A53A0:

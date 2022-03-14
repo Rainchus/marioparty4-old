@@ -957,8 +957,8 @@ fragmentID:
 	.4byte 0x00000000
 	.4byte 0x8011E55C ;#ptr
 	.4byte 0x8013E2E4 ;#ptr
-.global lbl_801D39C8
-lbl_801D39C8:
+.global "@wstringBase0"
+"@wstringBase0":
 	#ROM: 0x13FDA8
 	.4byte 0x00000000
 	.4byte 0x00000000

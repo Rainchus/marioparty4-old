@@ -800,8 +800,8 @@ lbl_8011E630:
 	.4byte 0x00323536
 	.4byte 0
 
-.global lbl_8011E710
-lbl_8011E710:
+.global "@stringBase0"
+"@stringBase0":
 	# ROM: 0x11B710
 	.4byte 0x002D494E
 	.4byte 0x46002D69

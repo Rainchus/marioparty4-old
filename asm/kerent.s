@@ -3,7 +3,9 @@
 .section .text, "ax"  # 0x800057C0 - 0x8011DCC0
 
 # kerent.o
+# linked via forcefiles
 # jumps to roughly a thousand global functions
+# purpose is to make sure these functions are used and therefore linked
 
 .global _kerjmp_OSDumpStopwatch
 _kerjmp_OSDumpStopwatch:
