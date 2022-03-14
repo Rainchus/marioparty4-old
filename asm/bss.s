@@ -556,11 +556,11 @@ lbl_801A7718:
 .global lbl_801A7730
 lbl_801A7730:
 	.skip 0x28
-.global lbl_801A7758
-lbl_801A7758:
+.global gTRKBigEndian
+gTRKBigEndian:
 	.skip 0x8
-.global lbl_801A7760
-lbl_801A7760:
+.global gTRKMsgBufs
+gTRKMsgBufs:
 	.skip 0x19B0
 .global lbl_801A9110
 lbl_801A9110:
@@ -580,8 +580,8 @@ lbl_801A9138:
 .global lbl_801A913C
 lbl_801A913C:
 	.skip 0xA4
-.global lbl_801A91E0
-lbl_801A91E0:
+.global gTRKCPUState
+gTRKCPUState:
 	.skip 0x430
 .global lbl_801A9610
 lbl_801A9610:
@@ -589,8 +589,8 @@ lbl_801A9610:
 .global lbl_801A96A4
 lbl_801A96A4:
 	.skip 0x14
-.global lbl_801A96B8
-lbl_801A96B8:
+.global lc_base
+lc_base:
 	.skip 0x8
 .global lbl_801A96C0
 lbl_801A96C0:
