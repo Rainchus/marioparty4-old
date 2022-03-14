@@ -32166,16 +32166,16 @@ lbl_8013E080:
 	.4byte 0x00000080
 	.4byte 0x00000100
 	.4byte 0x00000200
-.global lbl_8013E0A0
-lbl_8013E0A0:
+.global Si
+Si:
 	# ROM: 13B0A0
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.global lbl_8013E0B4
-lbl_8013E0B4:
+.global Type
+Type:
 	# ROM: 13B0B4
 	.4byte 0x00000008
 	.4byte 0x00000008
@@ -32224,8 +32224,8 @@ lbl_8013E0B4:
 	.4byte 0x53746565
 	.4byte 0x72696E67
 	.4byte 0x00000000
-.global lbl_8013E170
-lbl_8013E170:
+.global XYNTSC
+XYNTSC:
 	# ROM: 13B170
 	.4byte 0x00F60200
 	.4byte 0x000F1200
@@ -32239,6 +32239,8 @@ lbl_8013E170:
 	.4byte 0x00830200
 	.4byte 0x00830200
 	.4byte 0x00830200
+.global XYPAL
+XYPAL:
 	.4byte 0x01280200
 	.4byte 0x000F1500
 	.4byte 0x001D0B00

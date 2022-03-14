@@ -508,23 +508,23 @@ lbl_801A6EB8:
 .global lbl_801A6ED8
 lbl_801A6ED8:
 	.skip 0xC0
-.global lbl_801A6F98
-lbl_801A6F98:
+.global Packet
+Packet:
 	.skip 0x80
-.global lbl_801A7018
-lbl_801A7018:
+.global Alarm
+Alarm:
 	.skip 0xA0
-.global lbl_801A70B8
-lbl_801A70B8:
+.global TypeTime
+TypeTime:
 	.skip 0x20
-.global lbl_801A70D8
-lbl_801A70D8:
+.global XferTime
+XferTime:
 	.skip 0x20
 .global lbl_801A70F8
 lbl_801A70F8:
 	.skip 0x40
-.global lbl_801A7138
-lbl_801A7138:
+.global RDSTHandler
+RDSTHandler:
 	.skip 0x68
 .global lbl_801A71A0
 lbl_801A71A0:
