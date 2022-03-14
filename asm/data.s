@@ -27163,20 +27163,20 @@ lbl_801398B8:
 .global lbl_8013993C
 lbl_8013993C:
 	# ROM: 13693C
-	.4byte 0x801D3686
-	.4byte 0x801D368B
-	.4byte 0x801D3686
-	.4byte 0x801D368B
-	.4byte 0x801D3690
-	.4byte 0x801D3696
-	.4byte 0x801D3686
-	.4byte 0x801D368B
+	.4byte lbl_801D3686
+	.4byte lbl_801D368B
+	.4byte lbl_801D3686
+	.4byte lbl_801D368B
+	.4byte lbl_801D3690
+	.4byte lbl_801D3696
+	.4byte lbl_801D3686
+	.4byte lbl_801D368B
 	.4byte 0x801398C2
 	.4byte 0x801398D9
 	.4byte 0x801398F0
 	.4byte 0x801398FE
-	.4byte 0x801D369C
-	.4byte 0x801D36A2
+	.4byte lbl_801D369C
+	.4byte lbl_801D36A2
 	.4byte 0x8013990C
 	.4byte 0x80139924
 	.4byte 0x0000010D
@@ -32328,9 +32328,9 @@ XYPAL:
 .global lbl_8013E208
 lbl_8013E208:
 	# ROM: 13B208
-	.4byte 0x801D39A0
+	.4byte __RTTI__Q23std9exception_0
 	.4byte 0x00000000
-	.4byte lbl_800E20B4
+	.4byte __dt__Q23std9exceptionFv
 	.4byte lbl_800E20FC
 .global lbl_8013E218
 lbl_8013E218:
@@ -32392,13 +32392,15 @@ lbl_8013E2A0:
 	.4byte lbl_800E3C98
 	.4byte lbl_800E3C80
 	.4byte lbl_800E3C68
-	.4byte 0x801D39B8  ;# ptr
+.global lbl_8013E2E4
+lbl_8013E2E4:
+	.4byte __RTTI__Q23std9exception
 	.4byte 0x00000000
 	.4byte 0x00000000
 .global lbl_8013E2F0
 lbl_8013E2F0:
 	# ROM: 13B2F0
-	.4byte 0x801D39C0
+	.4byte __RTTI__Q23std13bad_exception
 	.4byte 0x00000000
 	.4byte lbl_800E3374
 	.4byte lbl_800E3F50
