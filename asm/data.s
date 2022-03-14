@@ -2771,7 +2771,7 @@ lbl_80122140:
 	.4byte 0x000000FF
 	.4byte 0x000080FF
 	.4byte 0x800000FF
-	.4byte 0x800080FF  ;# ptr
+	.4byte 0x800080FF
 	.4byte 0x008000FF
 	.4byte 0x008080FF
 	.4byte 0x808000FF

@@ -751,11 +751,13 @@ lbl_801D053C:
 .global lbl_801D07C0
 lbl_801D07C0:
 	.skip 0x400
+.balign 8
 .global lbl_801D0BC0
 lbl_801D0BC0:
-	.skip 0x60
-.global lbl_801D0C20
-lbl_801D0C20:
+	.skip 0x50
+.balign 32
+.global dram_image
+dram_image:
 	.skip 0x2000
 .global lbl_801D2C20
 lbl_801D2C20:
@@ -766,13 +768,14 @@ lbl_801D3120:
 .global lbl_801D3150
 lbl_801D3150:
 	.skip 0x10
-.global lbl_801D3160
-lbl_801D3160:
+.global mus
+mus:
 	.skip 0x178
-.global lbl_801D32D8
-lbl_801D32D8:
-	.skip 0xE8
-.global lbl_801D33C0
-lbl_801D33C0:
+.global se
+se:
+	.skip 0xDC
+.balign 32
+.global StreamInfo
+StreamInfo:
 	.skip 0x60
 	
