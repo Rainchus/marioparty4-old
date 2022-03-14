@@ -540,7 +540,16 @@ lbl_801A72E0:
 	.skip 0x100
 .global lbl_801A73E0
 lbl_801A73E0:
-	.skip 0x338
+	.skip 0x38
+.global stderr_buff
+stderr_buff:
+	.skip 0x100
+.global stdout_buff
+stdout_buff:
+	.skip 0x100
+.global stdin_buff
+stdin_buff:
+	.skip 0x100
 .global lbl_801A7718
 lbl_801A7718:
 	.skip 0x18

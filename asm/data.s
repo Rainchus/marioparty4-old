@@ -40,161 +40,300 @@ lbl_8011EE00:
 lbl_8011EF24:
 	# ROM: 0x11BF24
 	.4byte lbl_80006DD4
-	.4byte 0x80006E20  ;# ptr
-	.4byte 0x80006E20  ;# ptr
-	.4byte 0x80006E20  ;# ptr
-	.4byte 0x80006E20  ;# ptr
-	.4byte 0x80006DE4  ;# ptr
-	.4byte 0x80006DF4  ;# ptr
-	.4byte 0x80006E04  ;# ptr
-	.4byte 0x80006E20  ;# ptr
-	.4byte 0x80006E20  ;# ptr
-	.4byte 0x80006E20  ;# ptr
-	.4byte 0x80006E20  ;# ptr
-	.4byte 0x80006E14  ;# ptr
+	.4byte lbl_80006E20
+	.4byte lbl_80006E20
+	.4byte lbl_80006E20
+	.4byte lbl_80006E20
+	.4byte lbl_80006DE4
+	.4byte lbl_80006DF4
+	.4byte lbl_80006E04
+	.4byte lbl_80006E20
+	.4byte lbl_80006E20
+	.4byte lbl_80006E20
+	.4byte lbl_80006E20
+	.4byte lbl_80006E14
 
 .global lbl_8011EF58
 lbl_8011EF58:
 	# ROM: 0x11BF58
 	.asciz "data/E3setup.bin"
+lbl_8011EF69:
 	.asciz "data/bbattle.bin"
+lbl_8011EF7A:
 	.asciz "data/bguest.bin"
+lbl_8011EF8A:
 	.asciz "data/bkoopa.bin"
+lbl_8011EF9A:
 	.asciz "data/bkoopasuit.bin"
+lbl_8011EFAE:
 	.asciz "data/bkujiya.bin"
+lbl_8011EFBF:
 	.asciz "data/blast5.bin"
+lbl_8011EFCF:
 	.asciz "data/board.bin"
+lbl_8011EFDE:
 	.asciz "data/bpause.bin"
+lbl_8011EFEE:
 	.asciz "data/byokodori.bin"
+lbl_8011F001:
 	.asciz "data/daisy.bin"
+lbl_8011F010:
 	.asciz "data/daisymdl0.bin"
+lbl_8011F023:
 	.asciz "data/daisymdl1.bin"
+lbl_8011F036:
 	.asciz "data/daisymot.bin"
+lbl_8011F048:
 	.asciz "data/donkey.bin"
+lbl_8011F058:
 	.asciz "data/donkeymdl0.bin"
+lbl_8011F06C:
 	.asciz "data/donkeymdl1.bin"
+lbl_8011F080:
 	.asciz "data/donkeymot.bin"
+lbl_8011F093:
 	.asciz "data/effect.bin"
+lbl_8011F0A3:
 	.asciz "data/gamemes.bin"
+lbl_8011F0B4:
 	.asciz "data/inst.bin"
+lbl_8011F0C2:
 	.asciz "data/instfont.bin"
+lbl_8011F0D4:
 	.asciz "data/instpic.bin"
+lbl_8011F0E5:
 	.asciz "data/luigi.bin"
+lbl_8011F0F4:
 	.asciz "data/luigimdl0.bin"
+lbl_8011F107:
 	.asciz "data/luigimdl1.bin"
+lbl_8011F11A:
 	.asciz "data/luigimot.bin"
+lbl_8011F12C:
 	.asciz "data/m300.bin"
+lbl_8011F13A:
 	.asciz "data/m302.bin"
+lbl_8011F148:
 	.asciz "data/m303.bin"
+lbl_8011F156:
 	.asciz "data/m330.bin"
+lbl_8011F164:
 	.asciz "data/m333.bin"
+lbl_8011F172:
 	.asciz "data/m401.bin"
+lbl_8011F180:
 	.asciz "data/m402.bin"
+lbl_8011F18E:
 	.asciz "data/m403.bin"
+lbl_8011F19C:
 	.asciz "data/m404.bin"
+lbl_8011F1AA:
 	.asciz "data/m405.bin"
+lbl_8011F1B8:
 	.asciz "data/m406.bin"
+lbl_8011F1C6:
 	.asciz "data/m407.bin"
+lbl_8011F1D4:
 	.asciz "data/m408.bin"
+lbl_8011F1E2:
 	.asciz "data/m409.bin"
+lbl_8011F1F0:
 	.asciz "data/m410.bin"
+lbl_8011F1FE:
 	.asciz "data/m411.bin"
+lbl_8011F20C:
 	.asciz "data/m412.bin"
+lbl_8011F21A:
 	.asciz "data/m413.bin"
+lbl_8011F228:
 	.asciz "data/m414.bin"
+lbl_8011F236:
 	.asciz "data/m415.bin"
+lbl_8011F244:
 	.asciz "data/m416.bin"
+lbl_8011F252:
 	.asciz "data/m417.bin"
+lbl_8011F260:
 	.asciz "data/m418.bin"
+lbl_8011F26E:
 	.asciz "data/m419.bin"
+lbl_8011F27C:
 	.asciz "data/m420.bin"
+lbl_8011F28A:
 	.asciz "data/m421.bin"
+lbl_8011F298:
 	.asciz "data/m422.bin"
+lbl_8011F2A6:
 	.asciz "data/m423.bin"
+lbl_8011F2B4:
 	.asciz "data/m424.bin"
+lbl_8011F2C2:
 	.asciz "data/m425.bin"
+lbl_8011F2D0:
 	.asciz "data/m426.bin"
+lbl_8011F2DE:
 	.asciz "data/m427.bin"
+lbl_8011F2EC:
 	.asciz "data/m428.bin"
+lbl_8011F2FA:
 	.asciz "data/m429.bin"
+lbl_8011F308:
 	.asciz "data/m430.bin"
+lbl_8011F316:
 	.asciz "data/m431.bin"
+lbl_8011F324:
 	.asciz "data/m432.bin"
+lbl_8011F332:
 	.asciz "data/m433.bin"
+lbl_8011F340:
 	.asciz "data/m434.bin"
+lbl_8011F34E:
 	.asciz "data/m435.bin"
+lbl_8011F35C:
 	.asciz "data/m436.bin"
+lbl_8011F36A:
 	.asciz "data/m437.bin"
+lbl_8011F378:
 	.asciz "data/m438.bin"
+lbl_8011F386:
 	.asciz "data/m439.bin"
+lbl_8011F394:
 	.asciz "data/m440.bin"
+lbl_8011F3A2:
 	.asciz "data/m441.bin"
+lbl_8011F3B0:
 	.asciz "data/m442.bin"
+lbl_8011F3BE:
 	.asciz "data/m443.bin"
+lbl_8011F3CC:
 	.asciz "data/m444.bin"
+lbl_8011F3DA:
 	.asciz "data/m445.bin"
+lbl_8011F3E8:
 	.asciz "data/m446.bin"
+lbl_8011F3F6:
 	.asciz "data/m447.bin"
+lbl_8011F404:
 	.asciz "data/m448.bin"
+lbl_8011F412:
 	.asciz "data/m449.bin"
+lbl_8011F420:
 	.asciz "data/m450.bin"
+lbl_8011F42E:
 	.asciz "data/m451.bin"
+lbl_8011F43C:
 	.asciz "data/m453.bin"
+lbl_8011F44A:
 	.asciz "data/m455.bin"
+lbl_8011F458:
 	.asciz "data/m456.bin"
+lbl_8011F466:
 	.asciz "data/m457.bin"
+lbl_8011F474:
 	.asciz "data/m458.bin"
+lbl_8011F482:
 	.asciz "data/m459.bin"
+lbl_8011F490:
 	.asciz "data/m460.bin"
+lbl_8011F49E:
 	.asciz "data/m461.bin"
+lbl_8011F4AC:
 	.asciz "data/m462.bin"
+lbl_8011F4BA:
 	.asciz "data/mario.bin"
+lbl_8011F4C9:
 	.asciz "data/mariomdl0.bin"
+lbl_8011F4DC:
 	.asciz "data/mariomdl1.bin"
+lbl_8011F4EF:
 	.asciz "data/mariomot.bin"
+lbl_8011F501:
 	.asciz "data/ment.bin"
+lbl_8011F50F:
 	.asciz "data/mgconst.bin"
+lbl_8011F520:
 	.asciz "data/mgmode.bin"
+lbl_8011F530:
 	.asciz "data/modesel.bin"
+lbl_8011F541:
 	.asciz "data/mpex.bin"
+lbl_8011F54F:
 	.asciz "data/mstory.bin"
+lbl_8011F55F:
 	.asciz "data/mstory2.bin"
+lbl_8011F570:
 	.asciz "data/mstory3.bin"
+lbl_8011F581:
 	.asciz "data/mstory4.bin"
+lbl_8011F592:
 	.asciz "data/option.bin"
+lbl_8011F5A2:
 	.asciz "data/peach.bin"
+lbl_8011F5B1:
 	.asciz "data/peachmdl0.bin"
+lbl_8011F5C4:
 	.asciz "data/peachmdl1.bin"
+lbl_8011F5D7:
 	.asciz "data/peachmot.bin"
+lbl_8011F5E9:
 	.asciz "data/present.bin"
+lbl_8011F5FA:
 	.asciz "data/result.bin"
+lbl_8011F60A:
 	.asciz "data/saf.bin"
+lbl_8011F617:
 	.asciz "data/selmenu.bin"
+lbl_8011F628:
 	.asciz "data/setup.bin"
+lbl_8011F637:
 	.asciz "data/staff.bin"
+lbl_8011F646:
 	.asciz "data/title.bin"
+lbl_8011F655:
 	.asciz "data/w01.bin"
+lbl_8011F662:
 	.asciz "data/w02.bin"
+lbl_8011F66F:
 	.asciz "data/w03.bin"
+lbl_8011F67C:
 	.asciz "data/w04.bin"
+lbl_8011F689:
 	.asciz "data/w05.bin"
+lbl_8011F696:
 	.asciz "data/w06.bin"
+lbl_8011F6A3:
 	.asciz "data/w10.bin"
+lbl_8011F6B0:
 	.asciz "data/w20.bin"
+lbl_8011F6BD:
 	.asciz "data/w21.bin"
+lbl_8011F6CA:
 	.asciz "data/waluigi.bin"
+lbl_8011F6DB:
 	.asciz "data/waluigimdl0.bin"
+lbl_8011F6F0:
 	.asciz "data/waluigimdl1.bin"
+lbl_8011F705:
 	.asciz "data/waluigimot.bin"
+lbl_8011F719:
 	.asciz "data/wario.bin"
+lbl_8011F728:
 	.asciz "data/wariomdl0.bin"
+lbl_8011F73B:
 	.asciz "data/wariomdl1.bin"
+lbl_8011F74E:
 	.asciz "data/wariomot.bin"
+lbl_8011F760:
 	.asciz "data/win.bin"
+lbl_8011F76D:
 	.asciz "data/yoshi.bin"
+lbl_8011F77C:
 	.asciz "data/yoshimdl0.bin"
+lbl_8011F78F:
 	.asciz "data/yoshimdl1.bin"
+lbl_8011F7A2:
 	.asciz "data/yoshimot.bin"
+lbl_8011F7B4:
 	.asciz "data/ztar.bin"
 	.balign 4
 
@@ -204,283 +343,283 @@ lbl_8011F7C4:
 	# table of pointers to .bin path strings
 	.4byte lbl_8011EF58
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011EF69  ;# ptr
+	.4byte lbl_8011EF69
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011EF7A  ;# ptr
+	.4byte lbl_8011EF7A
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011EF8A  ;# ptr
+	.4byte lbl_8011EF8A
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011EF9A  ;# ptr
+	.4byte lbl_8011EF9A
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011EFAE  ;# ptr
+	.4byte lbl_8011EFAE
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011EFBF  ;# ptr
+	.4byte lbl_8011EFBF
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011EFCF  ;# ptr
+	.4byte lbl_8011EFCF
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011EFDE  ;# ptr
+	.4byte lbl_8011EFDE
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011EFEE  ;# ptr
+	.4byte lbl_8011EFEE
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F001  ;# ptr
+	.4byte lbl_8011F001
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F010  ;# ptr
+	.4byte lbl_8011F010
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F023  ;# ptr
+	.4byte lbl_8011F023
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F036  ;# ptr
+	.4byte lbl_8011F036
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F048  ;# ptr
+	.4byte lbl_8011F048
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F058  ;# ptr
+	.4byte lbl_8011F058
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F06C  ;# ptr
+	.4byte lbl_8011F06C
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F080  ;# ptr
+	.4byte lbl_8011F080
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F093  ;# ptr
+	.4byte lbl_8011F093
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F0A3  ;# ptr
+	.4byte lbl_8011F0A3
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F0B4  ;# ptr
+	.4byte lbl_8011F0B4
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F0C2  ;# ptr
+	.4byte lbl_8011F0C2
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F0D4  ;# ptr
+	.4byte lbl_8011F0D4
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F0E5  ;# ptr
+	.4byte lbl_8011F0E5
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F0F4  ;# ptr
+	.4byte lbl_8011F0F4
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F107  ;# ptr
+	.4byte lbl_8011F107
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F11A  ;# ptr
+	.4byte lbl_8011F11A
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F12C  ;# ptr
+	.4byte lbl_8011F12C
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F13A  ;# ptr
+	.4byte lbl_8011F13A
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F148  ;# ptr
+	.4byte lbl_8011F148
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F156  ;# ptr
+	.4byte lbl_8011F156
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F164  ;# ptr
+	.4byte lbl_8011F164
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F172  ;# ptr
+	.4byte lbl_8011F172
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F180  ;# ptr
+	.4byte lbl_8011F180
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F18E  ;# ptr
+	.4byte lbl_8011F18E
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F19C  ;# ptr
+	.4byte lbl_8011F19C
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F1AA  ;# ptr
+	.4byte lbl_8011F1AA
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F1B8  ;# ptr
+	.4byte lbl_8011F1B8
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F1C6  ;# ptr
+	.4byte lbl_8011F1C6
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F1D4  ;# ptr
+	.4byte lbl_8011F1D4
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F1E2  ;# ptr
+	.4byte lbl_8011F1E2
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F1F0  ;# ptr
+	.4byte lbl_8011F1F0
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F1FE  ;# ptr
+	.4byte lbl_8011F1FE
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F20C  ;# ptr
+	.4byte lbl_8011F20C
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F21A  ;# ptr
+	.4byte lbl_8011F21A
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F228  ;# ptr
+	.4byte lbl_8011F228
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F236  ;# ptr
+	.4byte lbl_8011F236
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F244  ;# ptr
+	.4byte lbl_8011F244
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F252  ;# ptr
+	.4byte lbl_8011F252
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F260  ;# ptr
+	.4byte lbl_8011F260
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F26E  ;# ptr
+	.4byte lbl_8011F26E
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F27C  ;# ptr
+	.4byte lbl_8011F27C
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F28A  ;# ptr
+	.4byte lbl_8011F28A
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F298  ;# ptr
+	.4byte lbl_8011F298
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F2A6  ;# ptr
+	.4byte lbl_8011F2A6
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F2B4  ;# ptr
+	.4byte lbl_8011F2B4
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F2C2  ;# ptr
+	.4byte lbl_8011F2C2
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F2D0  ;# ptr
+	.4byte lbl_8011F2D0
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F2DE  ;# ptr
+	.4byte lbl_8011F2DE
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F2EC  ;# ptr
+	.4byte lbl_8011F2EC
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F2FA  ;# ptr
+	.4byte lbl_8011F2FA
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F308  ;# ptr
+	.4byte lbl_8011F308
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F316  ;# ptr
+	.4byte lbl_8011F316
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F324  ;# ptr
+	.4byte lbl_8011F324
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F332  ;# ptr
+	.4byte lbl_8011F332
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F340  ;# ptr
+	.4byte lbl_8011F340
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F34E  ;# ptr
+	.4byte lbl_8011F34E
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F35C  ;# ptr
+	.4byte lbl_8011F35C
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F36A  ;# ptr
+	.4byte lbl_8011F36A
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F378  ;# ptr
+	.4byte lbl_8011F378
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F386  ;# ptr
+	.4byte lbl_8011F386
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F394  ;# ptr
+	.4byte lbl_8011F394
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F3A2  ;# ptr
+	.4byte lbl_8011F3A2
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F3B0  ;# ptr
+	.4byte lbl_8011F3B0
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F3BE  ;# ptr
+	.4byte lbl_8011F3BE
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F3CC  ;# ptr
+	.4byte lbl_8011F3CC
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F3DA  ;# ptr
+	.4byte lbl_8011F3DA
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F3E8  ;# ptr
+	.4byte lbl_8011F3E8
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F3F6  ;# ptr
+	.4byte lbl_8011F3F6
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F404  ;# ptr
+	.4byte lbl_8011F404
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F412  ;# ptr
+	.4byte lbl_8011F412
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F420  ;# ptr
+	.4byte lbl_8011F420
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F42E  ;# ptr
+	.4byte lbl_8011F42E
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F43C  ;# ptr
+	.4byte lbl_8011F43C
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F44A  ;# ptr
+	.4byte lbl_8011F44A
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F458  ;# ptr
+	.4byte lbl_8011F458
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F466  ;# ptr
+	.4byte lbl_8011F466
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F474  ;# ptr
+	.4byte lbl_8011F474
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F482  ;# ptr
+	.4byte lbl_8011F482
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F490  ;# ptr
+	.4byte lbl_8011F490
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F49E  ;# ptr
+	.4byte lbl_8011F49E
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F4AC  ;# ptr
+	.4byte lbl_8011F4AC
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F4BA  ;# ptr
+	.4byte lbl_8011F4BA
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F4C9  ;# ptr
+	.4byte lbl_8011F4C9
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F4DC  ;# ptr
+	.4byte lbl_8011F4DC
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F4EF  ;# ptr
+	.4byte lbl_8011F4EF
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F501  ;# ptr
+	.4byte lbl_8011F501
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F50F  ;# ptr
+	.4byte lbl_8011F50F
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F520  ;# ptr
+	.4byte lbl_8011F520
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F530  ;# ptr
+	.4byte lbl_8011F530
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F541  ;# ptr
+	.4byte lbl_8011F541
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F54F  ;# ptr
+	.4byte lbl_8011F54F
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F55F  ;# ptr
+	.4byte lbl_8011F55F
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F570  ;# ptr
+	.4byte lbl_8011F570
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F581  ;# ptr
+	.4byte lbl_8011F581
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F592  ;# ptr
+	.4byte lbl_8011F592
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F5A2  ;# ptr
+	.4byte lbl_8011F5A2
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F5B1  ;# ptr
+	.4byte lbl_8011F5B1
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F5C4  ;# ptr
+	.4byte lbl_8011F5C4
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F5D7  ;# ptr
+	.4byte lbl_8011F5D7
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F5E9  ;# ptr
+	.4byte lbl_8011F5E9
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F5FA  ;# ptr
+	.4byte lbl_8011F5FA
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F60A  ;# ptr
+	.4byte lbl_8011F60A
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F617  ;# ptr
+	.4byte lbl_8011F617
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F628  ;# ptr
+	.4byte lbl_8011F628
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F637  ;# ptr
+	.4byte lbl_8011F637
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F646  ;# ptr
+	.4byte lbl_8011F646
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F655  ;# ptr
+	.4byte lbl_8011F655
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F662  ;# ptr
+	.4byte lbl_8011F662
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F66F  ;# ptr
+	.4byte lbl_8011F66F
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F67C  ;# ptr
+	.4byte lbl_8011F67C
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F689  ;# ptr
+	.4byte lbl_8011F689
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F696  ;# ptr
+	.4byte lbl_8011F696
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F6A3  ;# ptr
+	.4byte lbl_8011F6A3
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F6B0  ;# ptr
+	.4byte lbl_8011F6B0
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F6BD  ;# ptr
+	.4byte lbl_8011F6BD
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F6CA  ;# ptr
+	.4byte lbl_8011F6CA
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F6DB  ;# ptr
+	.4byte lbl_8011F6DB
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F6F0  ;# ptr
+	.4byte lbl_8011F6F0
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F705  ;# ptr
+	.4byte lbl_8011F705
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F719  ;# ptr
+	.4byte lbl_8011F719
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F728  ;# ptr
+	.4byte lbl_8011F728
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F73B  ;# ptr
+	.4byte lbl_8011F73B
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F74E  ;# ptr
+	.4byte lbl_8011F74E
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F760  ;# ptr
+	.4byte lbl_8011F760
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F76D  ;# ptr
+	.4byte lbl_8011F76D
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F77C  ;# ptr
+	.4byte lbl_8011F77C
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F78F  ;# ptr
+	.4byte lbl_8011F78F
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F7A2  ;# ptr
+	.4byte lbl_8011F7A2
 	.4byte 0xFFFFFFFF
-	.4byte 0x8011F7B4  ;# ptr
+	.4byte lbl_8011F7B4
 	.4byte 0xFFFFFFFF
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -19644,7 +19783,7 @@ lbl_801321F8:
 	.4byte 0x80003803
 	.4byte 0x1C707003
 	.4byte 0x0038E1CE
-	.4byte lbl_800038E0
+	.4byte 0x800038E0
 	.4byte 0x38E0E383
 	.4byte 0x000E0E1C
 	.4byte 0x00000000
@@ -19657,7 +19796,7 @@ lbl_801321F8:
 	.4byte 0x8000380F
 	.4byte 0x38707003
 	.4byte 0x0038FFC7
-	.4byte lbl_8000F8E0
+	.4byte 0x8000F8E0
 	.4byte 0xF8E0E383
 	.4byte 0x000E0E1F
 	.4byte 0x00000000
@@ -19670,7 +19809,7 @@ lbl_801321F8:
 	.4byte 0x8000383F
 	.4byte 0x38707003
 	.4byte 0x0038FFC7
-	.4byte lbl_8003F0E0
+	.4byte 0x8003F0E0
 	.4byte 0xF8E0E383
 	.4byte 0x000E0E1F
 	.4byte 0x00000000
@@ -19680,10 +19819,10 @@ lbl_801321F8:
 	.4byte 0x70000000
 	.4byte 0x0038E0E0
 	.4byte 0x0E701C00
-	.4byte lbl_8000387C
+	.4byte 0x8000387C
 	.4byte 0x38707003
 	.4byte 0x003801C7
-	.4byte lbl_8007C0E0
+	.4byte 0x8007C0E0
 	.4byte 0x38E0E383
 	.4byte 0x000E0E00
 	.4byte 0x00000000
@@ -19696,7 +19835,7 @@ lbl_801321F8:
 	.4byte 0x000038E0
 	.4byte 0xF0707007
 	.4byte 0x003801C3
-	.4byte lbl_800E00E0
+	.4byte 0x800E00E0
 	.4byte 0x38E0E383
 	.4byte 0x000E0E00
 	.4byte 0x00000000
@@ -19709,7 +19848,7 @@ lbl_801321F8:
 	.4byte 0x000038E0
 	.4byte 0xF0707007
 	.4byte 0x003801C3
-	.4byte lbl_800E00E0
+	.4byte 0x800E00E0
 	.4byte 0x38E0E383
 	.4byte 0x000E0E00
 	.4byte 0x00000000
@@ -26175,7 +26314,7 @@ lbl_801321F8:
 	.4byte 0xEE0E3801
 	.4byte 0xE3C7007F
 	.4byte 0x39C1CFC0
-	.4byte lbl_80038038
+	.4byte 0x80038038
 	.4byte 0x9C1C039F
 	.4byte 0xE7038703
 	.4byte 0x8E1C7E0F
@@ -32344,8 +32483,8 @@ lbl_8013E2F0:
 	.4byte 0x00000000
 	.4byte lbl_800E3374
 	.4byte lbl_800E3F50
-.global lbl_8013E300
-lbl_8013E300:
+.global __files
+__files:
 	# ROM: 13B300
 	.4byte 0x00000000
 	.4byte 0x0A800000
@@ -32354,17 +32493,17 @@ lbl_8013E300:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte 0x801A7618  ;# ptr
+	.4byte stdin_buff
 	.4byte 0x00000100
-	.4byte 0x801A7618  ;# ptr
+	.4byte stdin_buff
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte lbl_800F27C4
-	.4byte lbl_800E86CC
-	.4byte lbl_800E86C4
+	.4byte __read_console
+	.4byte __write_console
+	.4byte __close_console
 	.4byte 0x00000000
 	.4byte 0x8013E350  ;# ptr
 	.4byte 0x00000001
@@ -32374,17 +32513,17 @@ lbl_8013E300:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte 0x801A7518  ;# ptr
+	.4byte stdout_buff
 	.4byte 0x00000100
-	.4byte 0x801A7518
+	.4byte stdout_buff
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte lbl_800F27C4
-	.4byte lbl_800E86CC
-	.4byte lbl_800E86C4
+	.4byte __read_console
+	.4byte __write_console
+	.4byte __close_console
 	.4byte 0x00000000
 	.4byte 0x8013E3A0
 	.4byte 0x00000002
@@ -32394,17 +32533,17 @@ lbl_8013E300:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte 0x801A7418
+	.4byte stderr_buff
 	.4byte 0x00000100
-	.4byte 0x801A7418
+	.4byte stderr_buff
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte lbl_800F27C4
-	.4byte lbl_800E86CC
-	.4byte lbl_800E86C4
+	.4byte __read_console
+	.4byte __write_console
+	.4byte __close_console
 	.4byte 0x00000000
 	.4byte 0x8013E3F0
 	.4byte 0x00000000
