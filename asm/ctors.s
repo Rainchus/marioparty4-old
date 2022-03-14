@@ -1,9 +1,7 @@
 .include "macros.inc"
 
 .section .ctors, "wa"  # 0x8011DCC0 - 0x8011DCE0
-.global lbl_8011DCC0
-lbl_8011DCC0:
+.global __init_cpp_exceptions_reference
+__init_cpp_exceptions_reference:
 	# ROM: 0x11ACC0
-	.4byte 0x800E2AE4  ;# ptr
-	.4byte 0
-
+	.4byte __init_cpp_exceptions

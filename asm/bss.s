@@ -1,17 +1,20 @@
 .include "macros.inc"
 
 .section .bss, "wa"  # 0x80142800 - 0x801D6BE8
-.global lbl_80142800
-lbl_80142800:
+.balign 4
+.global padStatErrOld
+padStatErrOld:
 	.skip 0x10
-.global lbl_80142810
-lbl_80142810:
-	.skip 0x30
-.global lbl_80142840
-lbl_80142840:
+.balign 2
+.global rumbleData
+rumbleData:
+	.skip 0x20
+.balign 32
+.global ReadDataStat
+ReadDataStat:
 	.skip 0x2E00
-.global lbl_80145640
-lbl_80145640:
+.global textBuffer
+textBuffer:
 	.skip 0x400
 .global lbl_80145A40
 lbl_80145A40:
@@ -529,8 +532,8 @@ lbl_801A71A0:
 .global lbl_801A72B8
 lbl_801A72B8:
 	.skip 0x18
-.global lbl_801A72D0
-lbl_801A72D0:
+.global fragmentinfo
+fragmentinfo:
 	.skip 0x10
 .global lbl_801A72E0
 lbl_801A72E0:

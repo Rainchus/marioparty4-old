@@ -1816,8 +1816,8 @@ lbl_801D42F0:
 .global lbl_801D42F4
 lbl_801D42F4:
 	.skip 0x4
-.global lbl_801D42F8
-lbl_801D42F8:
+.global __OSArenaHi
+__OSArenaHi:
 	.skip 0x8
 .global lbl_801D4300
 lbl_801D4300:
@@ -2176,8 +2176,8 @@ lbl_801D4504:
 .global lbl_801D4508
 lbl_801D4508:
 	.skip 0x4
-.global lbl_801D450C
-lbl_801D450C:
+.global __PADSpec
+__PADSpec:
 	.skip 0x4
 .global lbl_801D4510
 lbl_801D4510:
@@ -2422,11 +2422,11 @@ lbl_801D4750:
 .global lbl_801D4754
 lbl_801D4754:
 	.skip 0x4
-.global lbl_801D4758
-lbl_801D4758:
+.global __global_destructor_chain
+__global_destructor_chain:
 	.skip 0x8
-.global lbl_801D4760
-lbl_801D4760:
+.global __aborting
+__aborting:
 	.skip 0x4
 .global lbl_801D4764
 lbl_801D4764:
@@ -2434,8 +2434,8 @@ lbl_801D4764:
 .global lbl_801D4768
 lbl_801D4768:
 	.skip 0x4
-.global lbl_801D476C
-lbl_801D476C:
+.global __console_exit
+__console_exit:
 	.skip 0x4
 .global lbl_801D4770
 lbl_801D4770:

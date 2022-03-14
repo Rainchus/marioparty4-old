@@ -779,13 +779,13 @@ lbl_801D38B4:
 lbl_801D38B6:
 	#ROM: 0x13FC96
 	.2byte 0xFFFF
-.global lbl_801D38B8
-lbl_801D38B8:
+.global __OSCurrHeap
+__OSCurrHeap:
 	#ROM: 0x13FC98
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000000
-.global lbl_801D38C0
-lbl_801D38C0:
+.global __OSArenaLo
+__OSArenaLo:
 	#ROM: 0x13FCA0
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000000
@@ -948,8 +948,8 @@ lbl_801D39A8:
 lbl_801D39AC:
 	#ROM: 0x13FD8C
 	.4byte lbl_800E2384
-.global lbl_801D39B0
-lbl_801D39B0:
+.global fragmentID
+fragmentID:
 	#ROM: 0x13FD90
 	.4byte 0xFFFFFFFE
 	.4byte 0x00000000
