@@ -442,8 +442,8 @@ lbl_801A52E8:
 .global lbl_801A5300
 lbl_801A5300:
 	.skip 0x50
-.global lbl_801A5350
-lbl_801A5350:
+.global OSErrorTable
+OSErrorTable:
 	.skip 0x50
 .global lbl_801A53A0
 lbl_801A53A0:
@@ -508,23 +508,23 @@ lbl_801A6EB8:
 .global lbl_801A6ED8
 lbl_801A6ED8:
 	.skip 0xC0
-.global lbl_801A6F98
-lbl_801A6F98:
+.global Packet
+Packet:
 	.skip 0x80
-.global lbl_801A7018
-lbl_801A7018:
+.global Alarm
+Alarm:
 	.skip 0xA0
-.global lbl_801A70B8
-lbl_801A70B8:
+.global TypeTime
+TypeTime:
 	.skip 0x20
-.global lbl_801A70D8
-lbl_801A70D8:
+.global XferTime
+XferTime:
 	.skip 0x20
 .global lbl_801A70F8
 lbl_801A70F8:
 	.skip 0x40
-.global lbl_801A7138
-lbl_801A7138:
+.global RDSTHandler
+RDSTHandler:
 	.skip 0x68
 .global lbl_801A71A0
 lbl_801A71A0:
@@ -540,21 +540,30 @@ lbl_801A72E0:
 	.skip 0x100
 .global lbl_801A73E0
 lbl_801A73E0:
-	.skip 0x338
+	.skip 0x38
+.global stderr_buff
+stderr_buff:
+	.skip 0x100
+.global stdout_buff
+stdout_buff:
+	.skip 0x100
+.global stdin_buff
+stdin_buff:
+	.skip 0x100
 .global lbl_801A7718
 lbl_801A7718:
 	.skip 0x18
 .global lbl_801A7730
 lbl_801A7730:
 	.skip 0x28
-.global lbl_801A7758
-lbl_801A7758:
+.global gTRKBigEndian
+gTRKBigEndian:
 	.skip 0x8
-.global lbl_801A7760
-lbl_801A7760:
+.global gTRKMsgBufs
+gTRKMsgBufs:
 	.skip 0x19B0
-.global lbl_801A9110
-lbl_801A9110:
+.global gTRKInputPendingPtr
+gTRKInputPendingPtr:
 	.skip 0x4
 .global lbl_801A9114
 lbl_801A9114:
@@ -571,8 +580,8 @@ lbl_801A9138:
 .global lbl_801A913C
 lbl_801A913C:
 	.skip 0xA4
-.global lbl_801A91E0
-lbl_801A91E0:
+.global gTRKCPUState
+gTRKCPUState:
 	.skip 0x430
 .global lbl_801A9610
 lbl_801A9610:
@@ -580,11 +589,11 @@ lbl_801A9610:
 .global lbl_801A96A4
 lbl_801A96A4:
 	.skip 0x14
-.global lbl_801A96B8
-lbl_801A96B8:
+.global lc_base
+lc_base:
 	.skip 0x8
-.global lbl_801A96C0
-lbl_801A96C0:
+.global TRK_mainError
+TRK_mainError:
 	.skip 0x8
 .global lbl_801A96C8
 lbl_801A96C8:
@@ -742,11 +751,13 @@ lbl_801D053C:
 .global lbl_801D07C0
 lbl_801D07C0:
 	.skip 0x400
+.balign 8
 .global lbl_801D0BC0
 lbl_801D0BC0:
-	.skip 0x60
-.global lbl_801D0C20
-lbl_801D0C20:
+	.skip 0x50
+.balign 32
+.global dram_image
+dram_image:
 	.skip 0x2000
 .global lbl_801D2C20
 lbl_801D2C20:
@@ -757,13 +768,14 @@ lbl_801D3120:
 .global lbl_801D3150
 lbl_801D3150:
 	.skip 0x10
-.global lbl_801D3160
-lbl_801D3160:
+.global mus
+mus:
 	.skip 0x178
-.global lbl_801D32D8
-lbl_801D32D8:
-	.skip 0xE8
-.global lbl_801D33C0
-lbl_801D33C0:
+.global se
+se:
+	.skip 0xDC
+.balign 32
+.global StreamInfo
+StreamInfo:
 	.skip 0x60
 	

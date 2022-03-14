@@ -74,9 +74,7 @@ lbl_801D3476:
 lbl_801D347A:
 	#ROM: 0x13F85A
 	.asciz "Error\n"
-	.4byte 0x00000000
-	.2byte 0x0000
-	.byte 0x00
+.balign 8
 .global lbl_801D3488
 lbl_801D3488:
 	#ROM: 0x13F868
@@ -85,9 +83,7 @@ lbl_801D3488:
 lbl_801D348C:
 	#ROM: 0x13F86C
 	.asciz "DRAW"
-	.4byte 0x00000000 
-	.2byte 0x0000
-	.byte 0x00
+.balign 8
 .global lbl_801D3498
 lbl_801D3498:
 	#ROM: 0x13F878
@@ -99,20 +95,20 @@ lbl_801D349C:
 .global lbl_801D34A0
 lbl_801D34A0:
 	#ROM: 0x13F880
-	.4byte 0x8012E4D7 ;#ptr
+	.4byte lbl_8012E4D7
 .global lbl_801D34A4
 lbl_801D34A4:
 	#ROM: 0x13F884
 	.asciz "%s:%d"
-	.4byte 0x00000000 
-	.2byte 0x0000
+.balign 8
+.global lbl_801D34B0
+lbl_801D34B0:
 	.byte 0x00
 .global lbl_801D34B1
 lbl_801D34B1:
 	#ROM: 0x13F891
 	.asciz "%d\n"
-	.2byte 0x0000
-	.byte 0x00
+.balign 8
 .global lbl_801D34B8
 lbl_801D34B8:
 	#ROM: 0x13F898
@@ -184,16 +180,17 @@ lbl_801D34C3:
 	.4byte 0xD5B3BCAE
 	.2byte 0xB321
 	.byte 0x00
+lbl_801D35AA:
 	.4byte 0xCEDFB0BD
 	.2byte 0xDE00
+lbl_801D35B0:
 	.asciz "PAUSE"
-	.2byte 0x0000
-
+.balign 4
 .global lbl_801D35B8
 lbl_801D35B8:
 	#ROM: 0x13F998
-	.4byte 0x801D35AA ;#ptr
-	.4byte 0x801D35B0 ;#ptr
+	.4byte lbl_801D35AA
+	.4byte lbl_801D35B0
 	.4byte 0x000D0026
 	.4byte 0x00080017
 	.4byte 0x0005001E
@@ -283,12 +280,15 @@ lbl_801D3638:
 lbl_801D3640:
 	#ROM: 0x13FA20
 	.4byte 0x00000001
-	.4byte 0x41004200
+lbl_801D3644:
+	.2byte 0x4100
+lbl_801D3646:
+	.2byte 0x4200
 .global lbl_801D3648
 lbl_801D3648:
 	#ROM: 0x13FA28
-	.4byte 0x801D3644
-	.4byte 0x801D3646
+	.4byte lbl_801D3644
+	.4byte lbl_801D3646
 .global lbl_801D3650
 lbl_801D3650:
 	#ROM: 0x13FA30
@@ -346,22 +346,49 @@ lbl_801D3682:
 lbl_801D3684:
 	#ROM: 0x13FA64
 	.2byte 0xFFFF
+.global lbl_801D3686
+lbl_801D3686:
 	.asciz "eye1"
+.global lbl_801D368B
+lbl_801D368B:
 	.asciz "eye2"
+.global lbl_801D3690
+lbl_801D3690:
 	.asciz "mat14"
+.global lbl_801D3696
+lbl_801D3696:
 	.asciz "mat16"
+.global lbl_801D369C
+lbl_801D369C:
 	.asciz "mat65"
+.global lbl_801D36A2
+lbl_801D36A2:
 	.asciz "mat66"
+.global lbl_801D36A8
+lbl_801D36A8:
 	.asciz "Mario"
+.global lbl_801D36AE
+lbl_801D36AE:
 	.asciz "Luigi"
+.global lbl_801D36B4
+lbl_801D36B4:
 	.asciz "Peach"
+.global lbl_801D36BA
+lbl_801D36BA:
 	.asciz "Yoshi"
+.global lbl_801D36C0
+lbl_801D36C0:
 	.asciz "Wario"
+.global lbl_801D36C6
+lbl_801D36C6:
 	.asciz "Donky"
+.global lbl_801D36CC
+lbl_801D36CC:
 	.asciz "Daisy"
+.global lbl_801D36D2
+lbl_801D36D2:
 	.asciz "Waluigi"
-	.2byte 0x0000
-	.4byte 0x00000000
+.balign 8
 .global lbl_801D36E0
 lbl_801D36E0:
 	#ROM: 0x13FAC0
@@ -425,9 +452,7 @@ lbl_801D371C:
 lbl_801D371D:
 	#ROM: 0x13FAFD
 	.4byte 0x05070203
-	.4byte 0x00000000
-	.2byte 0x0000
-	.byte 0x00
+.balign 8
 .global lbl_801D3728
 lbl_801D3728:
 	#ROM: 0x13FB08
@@ -600,7 +625,7 @@ lbl_801D37C8:
 lbl_801D37D0:
 	#ROM: 0x13FBB0
 	.asciz "player"
-	.byte 0x00
+.balign 8
 .global lbl_801D37D8
 lbl_801D37D8:
 	#ROM: 0x13FBB8
@@ -744,9 +769,7 @@ lbl_801D3858:
 	.asciz "kao1"
 	.asciz "kao2"
 	.asciz "kao3"
-	.4byte 0x00000000
-	.2byte 0x0000
-	.byte 0x00
+.balign 8
 .global lbl_801D38A8
 lbl_801D38A8:
 	#ROM: 0x13FC88
@@ -873,7 +896,7 @@ lbl_801D3930:
 .global lbl_801D3938
 lbl_801D3938:
 	#ROM: 0x13FD18
-	.4byte 0x801A6200
+	.4byte lbl_801A6200
 	.4byte 0x00000000
 .global lbl_801D3940
 lbl_801D3940:
@@ -938,14 +961,16 @@ lbl_801D3998:
 	#ROM: 0x13FD78
 	.4byte 0xFFFF0000
 	.4byte 0x00000000
-	.4byte 0x8011E4D0 ;#ptr
+.global __RTTI__Q23std9exception_0
+__RTTI__Q23std9exception_0: # local, remove _0 from the label once split
+	.4byte lbl_8011E4D0
 	.4byte 0x00000000
-.global lbl_801D39A8
-lbl_801D39A8:
+.global thandler__3std
+thandler__3std:
 	#ROM: 0x13FD88
 	.4byte lbl_800E23AC
-.global lbl_801D39AC
-lbl_801D39AC:
+.global uhandler__3std
+uhandler__3std:
 	#ROM: 0x13FD8C
 	.4byte lbl_800E2384
 .global fragmentID
@@ -953,44 +978,64 @@ fragmentID:
 	#ROM: 0x13FD90
 	.4byte 0xFFFFFFFE
 	.4byte 0x00000000
-	.4byte 0x8011E570 ;#ptr
+.global __RTTI__Q23std9exception
+__RTTI__Q23std9exception:
+	.4byte lbl_8011E570
 	.4byte 0x00000000
-	.4byte 0x8011E55C ;#ptr
-	.4byte 0x8013E2E4 ;#ptr
-.global lbl_801D39C8
-lbl_801D39C8:
+.global __RTTI__Q23std13bad_exception
+__RTTI__Q23std13bad_exception:
+	.4byte lbl_8011E55C
+	.4byte lbl_8013E2E4
+
+# MSL_C.PPCEABI.bare.H.a printf.c
+.global "@wstringBase0"
+"@wstringBase0":
 	#ROM: 0x13FDA8
-	.4byte 0x00000000
-	.4byte 0x00000000
-.global lbl_801D39D0
-lbl_801D39D0:
+	.2byte 0x0000
+
+# MSL_C.PPCEABI.bare.H.a float.c
+.balign 8
+.global __float_nan
+__float_nan:
 	#ROM: 0x13FDB0
 	.4byte 0x7FFFFFFF
-.global lbl_801D39D4
-lbl_801D39D4:
+.global __float_huge
+__float_huge:
 	#ROM: 0x13FDB4
 	.4byte 0x7F800000
-.global lbl_801D39D8
-lbl_801D39D8:
+
+# musyx.a snd_service.c
+.balign 8
+.global last_rnd
+last_rnd:
 	#ROM: 0x13FDB8
 	.4byte 0x00000001
-	.4byte 0x00000000
-.global lbl_801D39E0
-lbl_801D39E0:
+
+# musyx.a HARDWARE.C
+.balign 8
+.global dspSRCType$437
+dspSRCType$437:
 	#ROM: 0x13FDC0
 	.4byte 0x00000001
-	.4byte 0x00020000
-.global lbl_801D39E8
-lbl_801D39E8:
+	.2byte 0x0002
+
+.balign 4
+.global dspCoefSel$442
+dspCoefSel$442:
 	#ROM: 0x13FDC8
 	.4byte 0x00000001
-	.4byte 0x00020000
-.global lbl_801D39F0
-lbl_801D39F0:
+	.2byte 0x0002
+
+# musyx.a dsp_import.c
+.balign 8
+.global dspSlaveLength
+dspSlaveLength:
 	#ROM: 0x13FDD0
-	.4byte 0x19E00000
-	.4byte 0x00000000
-.global lbl_801D39F8
-lbl_801D39F8:
+	.2byte 0x19E0
+
+# OdemuExi2.a DebuggerDriver.c
+.balign 8
+.global SendCount
+SendCount:
 	#ROM: 0x13FDD8
 	.byte 0x80

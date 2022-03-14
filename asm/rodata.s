@@ -80,14 +80,14 @@ lbl_8011DD90:
 .global lbl_8011DDB0
 lbl_8011DDB0:
 	# ROM: 0x11ADB0
-	.4byte 0x801D36A8  ;# ptr
-	.4byte 0x801D36AE  ;# ptr
-	.4byte 0x801D36B4  ;# ptr
-	.4byte 0x801D36BA  ;# ptr
-	.4byte 0x801D36C0  ;# ptr
-	.4byte 0x801D36C6  ;# ptr
-	.4byte 0x801D36CC  ;# ptr
-	.4byte 0x801D36D2  ;# ptr
+	.4byte lbl_801D36A8
+	.4byte lbl_801D36AE
+	.4byte lbl_801D36B4
+	.4byte lbl_801D36BA
+	.4byte lbl_801D36C0
+	.4byte lbl_801D36C6
+	.4byte lbl_801D36CC
+	.4byte lbl_801D36D2
 	.4byte 0x005E0000
 	.4byte 0x00190000
 	.4byte 0x006C0000
@@ -704,6 +704,9 @@ lbl_8011E440:
 	.4byte 0x80000000
 	.4byte 0x3FD1A855
 	.4byte 0xE0000000
+
+.global lbl_8011E4D0
+lbl_8011E4D0:
 	.asciz "std::exception"
 	.balign 4
 
@@ -733,8 +736,12 @@ lbl_8011E508:
 	.balign 4
 	.asciz "!std::bad_exception!!"
 	.balign 4
+.global lbl_8011E55C
+lbl_8011E55C:
 	.asciz "std::bad_exception"
 	.balign 4
+.global lbl_8011E570
+lbl_8011E570:
 	.asciz "std::exception"
 	.balign 4
 
@@ -800,8 +807,8 @@ lbl_8011E630:
 	.4byte 0x00323536
 	.4byte 0
 
-.global lbl_8011E710
-lbl_8011E710:
+.global "@stringBase0"
+"@stringBase0":
 	# ROM: 0x11B710
 	.4byte 0x002D494E
 	.4byte 0x46002D69
@@ -1077,6 +1084,8 @@ lbl_8011EAA0:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
+.global lbl_8011EAC8
+lbl_8011EAC8:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
@@ -1286,4 +1295,3 @@ lbl_8011ECC8:
 	.4byte 0x00200020
 	.4byte 0x00200020
 	.4byte 0x00200020
-

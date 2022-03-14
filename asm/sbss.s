@@ -2347,29 +2347,29 @@ lbl_801D45F4:
 .global lbl_801D4600
 lbl_801D4600:
 	.skip 0x8
-.global lbl_801D4608
-lbl_801D4608:
+.global Chan
+Chan:
 	.skip 0x4
-.global lbl_801D460C
-lbl_801D460C:
+.global Dev
+Dev:
 	.skip 0x4
-.global lbl_801D4610
-lbl_801D4610:
+.global Enabled
+Enabled:
 	.skip 0x4
-.global lbl_801D4614
-lbl_801D4614:
+.global BarnacleEnabled
+BarnacleEnabled:
 	.skip 0x4
-.global lbl_801D4618
-lbl_801D4618:
+.global cmdTypeAndStatus$78
+cmdTypeAndStatus$78:
 	.skip 0x4
-.global lbl_801D461C
-lbl_801D461C:
+.global cmdTypeAndStatus$372
+cmdTypeAndStatus$372:
 	.skip 0x4
 .global lbl_801D4620
 lbl_801D4620:
 	.skip 0x8
-.global lbl_801D4628
-lbl_801D4628:
+.global SamplingRate
+SamplingRate:
 	.skip 0x18
 .global lbl_801D4640
 lbl_801D4640:

@@ -3,15 +3,15 @@
 .section extabindex_, "wa" # 0x80005700 - 0x800057C0
 lbl_extabindex:
 	# ROM: 0x11AC00
-	.4byte 0x800E2068  ;# ptr
+	.4byte __dl__FPv
 	.4byte 0x0000004C
-	.4byte 0x80005620  ;# ptr
-	.4byte 0x800E20B4  ;# ptr
+	.4byte lbl_extab
+	.4byte __dt__Q23std9exceptionFv
 	.4byte 0x00000048
-	.4byte 0x80005648  ;# ptr
+	.4byte lbl_80005648
 	.4byte 0x800E2334  ;# ptr
 	.4byte 0x00000028
-	.4byte 0x80005650  ;# ptr
+	.4byte lbl_80005650
 	.4byte 0x800E235C  ;# ptr
 	.4byte 0x00000028
 	.4byte 0x80005658  ;# ptr
@@ -48,7 +48,7 @@ lbl_8000579C:
 	# ROM: 0x11AC9C
 	.4byte 0x80005700  ;# ptr
 	.4byte 0x8000579C  ;# ptr
-	.4byte 0x800E2068  ;# ptr
+	.4byte __dl__FPv
 	.4byte 0x00001E80
 	.4byte 0
 	.4byte 0
