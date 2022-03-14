@@ -860,7 +860,7 @@ lbl_801D3924:
 .global lbl_801D3928
 lbl_801D3928:
 	#ROM: 0x13FD08
-	.4byte 0x800C5320
+	.4byte lbl_800C5320
 .global lbl_801D392C
 lbl_801D392C:
 	#ROM: 0x13FD0C
@@ -943,11 +943,11 @@ lbl_801D3998:
 .global lbl_801D39A8
 lbl_801D39A8:
 	#ROM: 0x13FD88
-	.4byte 0x800E23AC
+	.4byte lbl_800E23AC
 .global lbl_801D39AC
 lbl_801D39AC:
 	#ROM: 0x13FD8C
-	.4byte 0x800E2384
+	.4byte lbl_800E2384
 .global lbl_801D39B0
 lbl_801D39B0:
 	#ROM: 0x13FD90
