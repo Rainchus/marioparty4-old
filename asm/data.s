@@ -32947,8 +32947,8 @@ TRK_ISR_OFFSETS:
 	.4byte 0x00001400
 	.4byte 0x00001700
 	.4byte 0x00000000
-.global lbl_8013EAC8
-lbl_8013EAC8:
+.global gDBCommTable
+gDBCommTable:
 	# ROM: 13BAC8
 	.4byte 0x00000000
 	.4byte 0x00000000

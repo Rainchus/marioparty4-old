@@ -562,8 +562,8 @@ gTRKBigEndian:
 .global gTRKMsgBufs
 gTRKMsgBufs:
 	.skip 0x19B0
-.global lbl_801A9110
-lbl_801A9110:
+.global gTRKInputPendingPtr
+gTRKInputPendingPtr:
 	.skip 0x4
 .global lbl_801A9114
 lbl_801A9114:
@@ -592,8 +592,8 @@ lbl_801A96A4:
 .global lc_base
 lc_base:
 	.skip 0x8
-.global lbl_801A96C0
-lbl_801A96C0:
+.global TRK_mainError
+TRK_mainError:
 	.skip 0x8
 .global lbl_801A96C8
 lbl_801A96C8:
