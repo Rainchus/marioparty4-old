@@ -7409,11 +7409,11 @@ lbl_801D6BB0:
 .global lbl_801D6BB8
 lbl_801D6BB8:
 	#ROM: 142038
-	.4byte 0x80117790
+	.4byte func_80117790
 .global lbl_801D6BBC
 lbl_801D6BBC:
 	#ROM: 14203C
-	.4byte 0x801176C8
+	.4byte func_801176C8
 .global lbl_801D6BC0
 lbl_801D6BC0:
 	#ROM: 142040
