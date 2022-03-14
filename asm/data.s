@@ -798,10 +798,6 @@ lbl_8011FE00:
 	.4byte 0x000FFF00
 	.4byte 0x0000F000
 	.4byte 0
-
-.global lbl_80120004
-lbl_80120004:
-	# ROM: 0x11D004
 	.4byte 0x00FFFFF0
 	.4byte 0x0FFF00FF
 	.4byte 0x0FF000FF
@@ -15456,54 +15452,19 @@ lbl_8012DCD7:
 	.4byte 0x00000000
 	.4byte 0x03040403
 	.4byte 0x00000000
-	.4byte 0x4F535061
-	.4byte 0x6E696320
-	.4byte 0x656E636F
-	.4byte 0x756E7465
-	.4byte 0x72643A00
-	.4byte 0x00000000
-	.byte 0x00
+.global lbl_8012E4D7
+lbl_8012E4D7:
+	.asciz "OSPanic encounterd:"
+.balign 8
 .global lbl_8012E4F0
 lbl_8012E4F0:
 	# ROM: 12B4F0
-	.4byte 0x444C4C20
-	.4byte 0x44424720
-	.4byte 0x4F55540A
-	.4byte 0x00444C4C
-	.4byte 0x53746172
-	.4byte 0x74202564
-	.4byte 0x2025640A
-	.4byte 0x006F626A
-	.4byte 0x646C6C3E
-	.4byte 0x416C7265
-	.4byte 0x61647920
-	.4byte 0x4C6F6164
-	.4byte 0x65642025
-	.4byte 0x73282530
-	.4byte 0x38782025
-	.4byte 0x30387829
-	.4byte 0x0A006F62
-	.4byte 0x6A646C6C
-	.4byte 0x3E202573
-	.4byte 0x2070726F
-	.4byte 0x6C6F6720
-	.4byte 0x656E640A
-	.4byte 0x006F626A
-	.4byte 0x646C6C3E
-	.4byte 0x6F6D444C
-	.4byte 0x4C4E756D
-	.4byte 0x456E6420
-	.4byte 0x496E7661
-	.4byte 0x6C696420
-	.4byte 0x646C6C6E
-	.4byte 0x6F202564
-	.4byte 0x0A006F62
-	.4byte 0x6A646C6C
-	.4byte 0x3E6F6D44
-	.4byte 0x4C4C4E75
-	.4byte 0x6D456E64
-	.4byte 0x20256420
-	.4byte 0x25640A00
+	.asciz "DLL DBG OUT\n"
+	.asciz "DLLStart %d %d\n"
+	.asciz "objdll>Already Loaded %s(%08x %08x)\n"
+	.asciz "objdll> %s prolog end\n"
+	.asciz "objdll>omDLLNumEnd Invalid dllno %d\n"
+	.asciz "objdll>omDLLNumEnd %d %d\n"
 	.4byte 0x6F626A64
 	.4byte 0x6C6C3E6F
 	.4byte 0x6D444C4C
@@ -15772,64 +15733,22 @@ lbl_8012E715:
 .global lbl_8012E988
 lbl_8012E988:
 	# ROM: 12B988
-	.4byte 0x736F756E
-	.4byte 0x642F4D50
-	.4byte 0x4E474330
-	.4byte 0x322E736F
-	.4byte 0x6E00736F
-	.4byte 0x756E642F
-	.4byte 0x4D504E47
-	.4byte 0x4331362E
-	.4byte 0x736F6E00
-	.4byte 0x8012E988
-	.4byte 0x8012E99A
-	.4byte 0x801D34B0
-	.4byte 0x2F736F75
-	.4byte 0x6E642F6D
-	.4byte 0x70676373
-	.4byte 0x6E642E6D
-	.4byte 0x736D002F
-	.4byte 0x736F756E
-	.4byte 0x642F6D70
-	.4byte 0x67637374
-	.4byte 0x722E7064
-	.4byte 0x74004D53
-	.4byte 0x4D28536F
-	.4byte 0x756E6420
-	.4byte 0x4D616E61
-	.4byte 0x67657229
-	.4byte 0x20457272
-	.4byte 0x6F723A45
-	.4byte 0x72726F72
-	.4byte 0x20436F64
-	.4byte 0x65202564
-	.4byte 0x0A002F2F
-	.4byte 0x2F2F2F2F
-	.4byte 0x2F2F2F2F
-	.4byte 0x2F2F2F2F
-	.4byte 0x2F2F2F2F
-	.4byte 0x2F2F2F2F
-	.4byte 0x2F2F2F2F
-	.4byte 0x2F2F2F2F
-	.4byte 0x2F2F2F2F
-	.4byte 0x0A00736E
-	.4byte 0x64446973
-	.4byte 0x74202566
-	.4byte 0x0A00736E
-	.4byte 0x64537065
-	.4byte 0x65642025
-	.4byte 0x660A0073
-	.4byte 0x74617274
-	.4byte 0x44697320
-	.4byte 0x25660A00
-	.4byte 0x66726F6E
-	.4byte 0x74537572
-	.4byte 0x44697320
-	.4byte 0x25660A00
-	.4byte 0x6261636B
-	.4byte 0x53757244
-	.4byte 0x69732025
-	.4byte 0x660A0000
+	.asciz "sound/MPNGC02.son"
+lbl_8012E99A:
+	.asciz "sound/MPNGC16.son"
+	.4byte lbl_8012E988
+	.4byte lbl_8012E99A
+	.4byte lbl_801D34B0
+	.asciz "/sound/mpgcsnd.msm"
+	.asciz "/sound/mpgcstr.pdt"
+	.asciz "MSM(Sound Manager) Error:Error Code %d\n"
+	.asciz "//////////////////////////////////\n"
+	.asciz "sndDist %f\n"
+	.asciz "sndSpeed %f\n"
+	.asciz "startDis %f\n"
+	.asciz "frontSurDis %f\n"
+	.asciz "backSurDis %f\n"
+.balign 8
 	.4byte 0x0001FFFF
 	.4byte 0x00000000
 	.4byte 0x00000001

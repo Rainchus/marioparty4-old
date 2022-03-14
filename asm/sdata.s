@@ -99,13 +99,15 @@ lbl_801D349C:
 .global lbl_801D34A0
 lbl_801D34A0:
 	#ROM: 0x13F880
-	.4byte 0x8012E4D7 ;#ptr
+	.4byte lbl_8012E4D7 ;#ptr
 .global lbl_801D34A4
 lbl_801D34A4:
 	#ROM: 0x13F884
 	.asciz "%s:%d"
 	.4byte 0x00000000 
 	.2byte 0x0000
+.global lbl_801D34B0
+lbl_801D34B0:
 	.byte 0x00
 .global lbl_801D34B1
 lbl_801D34B1:

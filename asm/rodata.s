@@ -1077,6 +1077,8 @@ lbl_8011EAA0:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
+.global lbl_8011EAC8
+lbl_8011EAC8:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
