@@ -1,4 +1,5 @@
 INIT_O_FILES :=\
+	$(BUILD_DIR)/src/Dolphin/__start.o\
 	$(BUILD_DIR)/asm/init.o
 
 TEXT_O_FILES :=\
