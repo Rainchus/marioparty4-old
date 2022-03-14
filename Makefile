@@ -112,8 +112,8 @@ ifeq ($(VERBOSE),0)
 ASFLAGS += -W
 endif
 
-$(BUILD_DIR)/src/Dolphin/__start.o: MWCC_VERSION := 1.2.5
-$(BUILD_DIR)/src/Dolphin/__start.o: CFLAGS := -Cpp_exceptions off -enum int -inline auto -proc gekko -RTTI off -fp hard -fp_contract on -rostr -O4,p -use_lmw_stmw on -sdata 8 -sdata2 8 -nodefaults $(INCLUDES)
+$(BUILD_DIR)/src/os/__start.o: MWCC_VERSION := 1.2.5
+$(BUILD_DIR)/src/os/__start.o: CFLAGS := -Cpp_exceptions off -enum int -inline auto -proc gekko -RTTI off -fp hard -fp_contract on -rostr -O4,p -use_lmw_stmw on -sdata 8 -sdata2 8 -nodefaults $(INCLUDES)
 
 #-------------------------------------------------------------------------------
 # Recipes
