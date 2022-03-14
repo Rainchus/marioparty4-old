@@ -33,4 +33,5 @@ FORCEFILES
     dtors.o
     extab.o
     extabindex.o
+    kerent.o
 }

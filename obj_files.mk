@@ -3,7 +3,8 @@ INIT_O_FILES :=\
 	$(BUILD_DIR)/asm/init.o
 
 TEXT_O_FILES :=\
-	$(BUILD_DIR)/asm/text.o
+	$(BUILD_DIR)/asm/text.o\
+	$(BUILD_DIR)/asm/kerent.o
 
 EXTAB_O_FILES :=\
 	$(BUILD_DIR)/asm/extab.o
