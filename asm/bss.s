@@ -529,8 +529,8 @@ lbl_801A71A0:
 .global lbl_801A72B8
 lbl_801A72B8:
 	.skip 0x18
-.global lbl_801A72D0
-lbl_801A72D0:
+.global fragmentinfo
+fragmentinfo:
 	.skip 0x10
 .global lbl_801A72E0
 lbl_801A72E0:

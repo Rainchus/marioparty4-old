@@ -29,6 +29,8 @@ __ArenaHi = 0x81700000;
 
 FORCEFILES 
 {
+    ctors.o
+    dtors.o
     extab.o
     extabindex.o
 }
