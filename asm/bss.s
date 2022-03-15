@@ -475,8 +475,8 @@ lbl_801A5FD8:
 .global lbl_801A6018
 lbl_801A6018:
 	.skip 0x30
-.global lbl_801A6048
-lbl_801A6048:
+.global regs
+regs:
 	.skip 0x78
 .global lbl_801A60C0
 lbl_801A60C0:

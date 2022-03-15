@@ -22,8 +22,12 @@ lbl_80005648:
 lbl_80005650:
 	.4byte 0x00080000
 	.4byte 0
+.global lbl_80005658
+lbl_80005658:
 	.4byte 0x00080000
 	.4byte 0
+.global lbl_80005660
+lbl_80005660:
 	.4byte 0x00080000
 	.4byte 0
 	.4byte 0x00080000
