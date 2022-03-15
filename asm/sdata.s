@@ -968,11 +968,11 @@ __RTTI__Q23std9exception_0: # local, remove _0 from the label once split
 .global thandler__3std
 thandler__3std:
 	#ROM: 0x13FD88
-	.4byte lbl_800E23AC
+	.4byte dthandler__3stdFv
 .global uhandler__3std
 uhandler__3std:
 	#ROM: 0x13FD8C
-	.4byte lbl_800E2384
+	.4byte duhandler__3stdFv
 .global fragmentID
 fragmentID:
 	#ROM: 0x13FD90

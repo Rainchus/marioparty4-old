@@ -32402,7 +32402,7 @@ lbl_8013E2F0:
 	# ROM: 13B2F0
 	.4byte __RTTI__Q23std13bad_exception
 	.4byte 0x00000000
-	.4byte lbl_800E3374
+	.4byte __dt__Q23std13bad_exceptionFv
 	.4byte lbl_800E3F50
 .global __files
 __files:

@@ -1768,20 +1768,20 @@ lbl_801D42AB:
 .global lbl_801D42AC
 lbl_801D42AC:
 	.skip 0x4
-.global lbl_801D42B0
-lbl_801D42B0:
+.global BootInfo_1
+BootInfo_1:
 	.skip 0x4
-.global lbl_801D42B4
-lbl_801D42B4:
+.global BI2DebugFlag
+BI2DebugFlag:
 	.skip 0x4
-.global lbl_801D42B8
-lbl_801D42B8:
+.global BI2DebugFlagHolder
+BI2DebugFlagHolder:
 	.skip 0x4
 .global lbl_801D42BC
 lbl_801D42BC:
 	.skip 0x4
-.global lbl_801D42C0
-lbl_801D42C0:
+.global AreWeInitialized
+AreWeInitialized:
 	.skip 0x4
 .global lbl_801D42C4
 lbl_801D42C4:
@@ -1795,8 +1795,8 @@ lbl_801D42CC:
 .global lbl_801D42D0
 lbl_801D42D0:
 	.skip 0x8
-.global lbl_801D42D8
-lbl_801D42D8:
+.global __OSStartTime
+__OSStartTime:
 	.skip 0x4
 .global lbl_801D42DC
 lbl_801D42DC:
@@ -1948,8 +1948,8 @@ lbl_801D43BC:
 .global lbl_801D43C0
 lbl_801D43C0:
 	.skip 0x4
-.global lbl_801D43C4
-lbl_801D43C4:
+.global __DVDLongFileNameFlag
+__DVDLongFileNameFlag:
 	.skip 0x4
 .global lbl_801D43C8
 lbl_801D43C8:
@@ -2017,53 +2017,53 @@ lbl_801D441C:
 .global lbl_801D4420
 lbl_801D4420:
 	.skip 0x8
-.global lbl_801D4428
-lbl_801D4428:
+.global retraceCount
+retraceCount:
 	.skip 0x4
-.global lbl_801D442C
-lbl_801D442C:
+.global flushFlag
+flushFlag:
 	.skip 0x4
-.global lbl_801D4430
-lbl_801D4430:
+.global retraceQueue
+retraceQueue:
 	.skip 0x8
-.global lbl_801D4438
-lbl_801D4438:
+.global PreCB
+PreCB:
 	.skip 0x4
-.global lbl_801D443C
-lbl_801D443C:
+.global PostCB
+PostCB:
 	.skip 0x4
 .global lbl_801D4440
 lbl_801D4440:
 	.skip 0x4
-.global lbl_801D4444
-lbl_801D4444:
+.global displayOffsetH
+displayOffsetH:
 	.skip 0x2
-.global lbl_801D4446
-lbl_801D4446:
+.global displayOffsetV
+displayOffsetV:
 	.skip 0x2
-.global lbl_801D4448
-lbl_801D4448:
+.global changeMode
+changeMode:
 	.skip 0x8
-.global lbl_801D4450
-lbl_801D4450:
+.global changed
+changed:
 	.skip 0x4
 .global lbl_801D4454
 lbl_801D4454:
 	.skip 0x4
-.global lbl_801D4458
-lbl_801D4458:
+.global shdwChangeMode
+shdwChangeMode:
 	.skip 0x8
-.global lbl_801D4460
-lbl_801D4460:
+.global shdwChanged
+shdwChanged:
 	.skip 0x4
 .global lbl_801D4464
 lbl_801D4464:
 	.skip 0x4
-.global lbl_801D4468
-lbl_801D4468:
+.global CurrTiming
+CurrTiming:
 	.skip 0x4
-.global lbl_801D446C
-lbl_801D446C:
+.global CurrTvMode
+CurrTvMode:
 	.skip 0x4
 .global lbl_801D4470
 lbl_801D4470:

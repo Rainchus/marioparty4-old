@@ -37,7 +37,7 @@ typedef struct {
 } Elf32_Ehdr;
 
 #define EI_CLASS	4
-#define EI_DATA	    5
+#define EI_DATA		5
 #define EI_VERSION	6
 #define EI_PAD		7
 #define EI_NIDENT	16
