@@ -16634,550 +16634,204 @@ lbl_8012F6A0:
 	.4byte 0xFFFF0000
 	.4byte 0x00000000
 	lbl_8012F790:
-	.4byte 0x646C6C2F
-	.4byte 0x5F6D696E
-	.4byte 0x6967616D
-	.4byte 0x65444C4C
-	.4byte 0x2E72656C
-	.byte 0x00
+	.asciz "dll/_minigameDLL.rel"
 	lbl_8012F7A5:
-	.byte 0x64
-	.2byte 0x6C6C
-	.4byte 0x2F626F6F
-	.4byte 0x74646C6C
-	.4byte 0x2E72656C
-	.byte 0x00
+	.asciz "dll/bootdll.rel"
 	lbl_8012F7B5:
-	.byte 0x64
-	.2byte 0x6C6C
-	.4byte 0x2F653373
-	.4byte 0x65747570
-	.4byte 0x444C4C2E
-	.2byte 0x7265
-	.2byte 0x6C00
+	.asciz "dll/e3setupDLL.rel"
 	lbl_8012F7C8:
-	.4byte 0x646C6C2F
-	.4byte 0x696E7374
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/instdll.rel"
 	lbl_8012F7D8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D333030
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m300dll.rel"
 	lbl_8012F7E8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D333032
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m302dll.rel"
 	lbl_8012F7F8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D333033
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m303dll.rel"
 	lbl_8012F808:
-	.4byte 0x646C6C2F
-	.4byte 0x6D333330
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m330dll.rel"
 	lbl_8012F818:
-	.4byte 0x646C6C2F
-	.4byte 0x6D333333
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m333dll.rel"
 	lbl_8012F828:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343031
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m401dll.rel"
 	lbl_8012F838:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343032
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m402dll.rel"
 	lbl_8012F848:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343033
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m403dll.rel"
 	lbl_8012F858:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343034
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m404dll.rel"
 	lbl_8012F868:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343035
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m405dll.rel"
 	lbl_8012F878:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343036
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m406dll.rel"
 	lbl_8012F888:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343037
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m407dll.rel"
 	lbl_8012F898:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343038
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m408dll.rel"
 	lbl_8012F8A8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343039
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m409dll.rel"
 	lbl_8012F8B8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343130
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m410dll.rel"
 	lbl_8012F8C8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343131
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m411dll.rel"
 	lbl_8012F8D8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343132
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m412dll.rel"
 	lbl_8012F8E8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343133
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m413dll.rel"
 	lbl_8012F8F8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343134
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m414dll.rel"
 	lbl_8012F908:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343135
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m415dll.rel"
 	lbl_8012F918:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343136
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m416dll.rel"
 	lbl_8012F928:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343137
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m417dll.rel"
 	lbl_8012F938:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343138
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m418dll.rel"
 	lbl_8012F948:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343139
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m419dll.rel"
 	lbl_8012F958:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343230
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m420dll.rel"
 	lbl_8012F968:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343231
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m421dll.rel"
 	lbl_8012F978:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343232
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m422dll.rel"
 	lbl_8012F988:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343233
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m423dll.rel"
 	lbl_8012F998:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343234
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m424dll.rel"
 	lbl_8012F9A8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343235
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m425dll.rel"
 	lbl_8012F9B8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343236
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m426dll.rel"
 	lbl_8012F9C8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343237
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m427dll.rel"
 	lbl_8012F9D8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343238
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m428dll.rel"
 	lbl_8012F9E8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343239
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m429dll.rel"
 	lbl_8012F9F8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343330
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m430dll.rel"
 	lbl_8012FA08:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343331
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m431dll.rel"
 	lbl_8012FA18:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343332
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m432dll.rel"
 	lbl_8012FA28:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343333
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m433dll.rel"
 	lbl_8012FA38:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343334
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m434dll.rel"
 	lbl_8012FA48:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343335
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m435dll.rel"
 	lbl_8012FA58:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343336
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m436dll.rel"
 	lbl_8012FA68:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343337
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m437dll.rel"
 	lbl_8012FA78:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343338
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m438dll.rel"
 	lbl_8012FA88:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343339
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m439dll.rel"
 	lbl_8012FA98:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343430
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m440dll.rel"
 	lbl_8012FAA8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343431
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m441dll.rel"
 	lbl_8012FAB8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343432
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m442dll.rel"
 	lbl_8012FAC8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343433
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m443dll.rel"
 	lbl_8012FAD8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343434
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m444dll.rel"
 	lbl_8012FAE8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343435
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m445dll.rel"
 	lbl_8012FAF8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343436
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m446dll.rel"
 	lbl_8012FB08:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343437
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m447dll.rel"
 	lbl_8012FB18:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343438
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m448dll.rel"
 	lbl_8012FB28:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343439
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m449dll.rel"
 	lbl_8012FB38:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343530
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m450dll.rel"
 	lbl_8012FB48:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343531
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m451dll.rel"
 	lbl_8012FB58:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343533
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m453dll.rel"
 	lbl_8012FB68:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343535
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m455dll.rel"
 	lbl_8012FB78:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343536
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m456dll.rel"
 	lbl_8012FB88:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343537
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m457dll.rel"
 	lbl_8012FB98:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343538
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m458dll.rel"
 	lbl_8012FBA8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343539
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m459dll.rel"
 	lbl_8012FBB8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343630
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m460dll.rel"
 	lbl_8012FBC8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343631
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m461dll.rel"
 	lbl_8012FBD8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343632
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m462dll.rel"
 	lbl_8012FBE8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D343633
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/m463dll.rel"
 	lbl_8012FBF8:
-	.4byte 0x646C6C2F
-	.4byte 0x6D656E74
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/mentdll.rel"
 	lbl_8012FC08:
-	.4byte 0x646C6C2F
-	.4byte 0x6D657373
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/messdll.rel"
 	lbl_8012FC18:
-	.4byte 0x646C6C2F
-	.4byte 0x6D676D6F
-	.4byte 0x6465646C
-	.4byte 0x6C2E7265
-	.2byte 0x6C00
+	.asciz "dll/mgmodedll.rel"
 	lbl_8012FC2A:
-	.2byte 0x646C
-	.4byte 0x6C2F6D6F
-	.4byte 0x64656C74
-	.4byte 0x65737464
-	.4byte 0x6C6C2E72
-	.2byte 0x656C
-	.byte 0x00
+	.asciz "dll/modeltestdll.rel"
 	lbl_8012FC3F:
-	.byte 0x64
-	.4byte 0x6C6C2F6D
-	.4byte 0x6F646573
-	.4byte 0x656C646C
-	.4byte 0x6C2E7265
-	.2byte 0x6C00
+	.asciz "dll/modeseldll.rel"
 	lbl_8012FC52:
-	.2byte 0x646C
-	.4byte 0x6C2F6D70
-	.4byte 0x6578646C
-	.4byte 0x6C2E7265
-	.2byte 0x6C00
+	.asciz "dll/mpexdll.rel"
 	lbl_8012FC62:
-	.2byte 0x646C
-	.4byte 0x6C2F6D73
-	.4byte 0x65747570
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/msetupdll.rel"
 	lbl_8012FC74:
-	.4byte 0x646C6C2F
-	.4byte 0x6D73746F
-	.4byte 0x72793264
-	.4byte 0x6C6C2E72
-	.byte 0x65
-	.2byte 0x6C00
+	.asciz "dll/mstory2dll.rel"
 	lbl_8012FC87:
-	.byte 0x64
-	.4byte 0x6C6C2F6D
-	.4byte 0x73746F72
-	.4byte 0x7933646C
-	.4byte 0x6C2E7265
-	.2byte 0x6C00
+	.asciz "dll/mstory3dll.rel"
 	lbl_8012FC9A:
-	.2byte 0x646C
-	.4byte 0x6C2F6D73
-	.4byte 0x746F7279
-	.4byte 0x34646C6C
-	.4byte 0x2E72656C
-	.byte 0x00
+	.asciz "dll/mstory4dll.rel"
 	lbl_8012FCAD:
-	.byte 0x64
-	.2byte 0x6C6C
-	.4byte 0x2F6D7374
-	.4byte 0x6F727964
-	.4byte 0x6C6C2E72
-	.2byte 0x656C
-	.byte 0x00
+	.asciz "dll/mstorydll.rel"
 	lbl_8012FCBF:
-	.byte 0x64
-	.4byte 0x6C6C2F6E
-	.4byte 0x6973646C
-	.4byte 0x6C2E7265
-	.2byte 0x6C00
+	.asciz "dll/nisdll.rel"
 	lbl_8012FCCE:
-	.2byte 0x646C
-	.4byte 0x6C2F6F70
-	.4byte 0x74696F6E
-	.4byte 0x2E72656C
-	.byte 0x00
+	.asciz "dll/option.rel"
 	lbl_8012FCDD:
-	.byte 0x64
-	.2byte 0x6C6C
-	.4byte 0x2F707265
-	.4byte 0x73656E74
-	.4byte 0x2E72656C
-	.byte 0x00
+	.asciz "dll/present.rel"
 	lbl_8012FCED:
-	.byte 0x64
-	.2byte 0x6C6C
-	.4byte 0x2F726573
-	.4byte 0x756C7464
-	.4byte 0x6C6C2E72
-	.2byte 0x656C
-	.byte 0x00
+	.asciz "dll/resultdll.rel"
 	lbl_8012FCFF:
-	.byte 0x64
-	.4byte 0x6C6C2F73
-	.4byte 0x6166646C
-	.4byte 0x6C2E7265
-	.2byte 0x6C00
+	.asciz "dll/safdll.rel"
 	lbl_8012FD0E:
-	.2byte 0x646C
-	.4byte 0x6C2F7365
-	.4byte 0x6C6D656E
-	.4byte 0x75444C4C
-	.4byte 0x2E72656C
-	.byte 0x00
+	.asciz "dll/selmenuDLL.rel"
 	lbl_8012FD21:
-	.byte 0x64
-	.2byte 0x6C6C
-	.4byte 0x2F737461
-	.4byte 0x6666646C
-	.4byte 0x6C2E7265
-	.2byte 0x6C00
+	.asciz "dll/staffdll.rel"
 	lbl_8012FD32:
-	.2byte 0x646C
-	.4byte 0x6C2F7375
-	.4byte 0x62636872
-	.4byte 0x73656C64
-	.4byte 0x6C6C2E72
-	.2byte 0x656C
-	.byte 0x00
+	.asciz "dll/subchrseldll.rel"
 	lbl_8012FD47:
-	.byte 0x64
-	.4byte 0x6C6C2F77
-	.4byte 0x3031646C
-	.4byte 0x6C2E7265
-	.2byte 0x6C00
+	.asciz "dll/w01dll.rel"
 	lbl_8012FD56:
-	.2byte 0x646C
-	.4byte 0x6C2F7730
-	.4byte 0x32646C6C
-	.4byte 0x2E72656C
-	.byte 0x00
+	.asciz "dll/w02dll.rel"
 	lbl_8012FD65:
-	.byte 0x64
-	.2byte 0x6C6C
-	.4byte 0x2F773033
-	.4byte 0x646C6C2E
-	.2byte 0x7265
-	.2byte 0x6C00
+	.asciz "dll/w03dll.rel"
 	lbl_8012FD74:
-	.4byte 0x646C6C2F
-	.4byte 0x77303464
-	.4byte 0x6C6C2E72
-	.2byte 0x656C
-	.byte 0x00
+	.asciz "dll/w04dll.rel"
 	lbl_8012FD83:
-	.byte 0x64
-	.4byte 0x6C6C2F77
-	.4byte 0x3035646C
-	.4byte 0x6C2E7265
-	.2byte 0x6C00
+	.asciz "dll/w05dll.rel"
 	lbl_8012FD92:
-	.2byte 0x646C
-	.4byte 0x6C2F7730
-	.4byte 0x36646C6C
-	.4byte 0x2E72656C
-	.byte 0x00
+	.asciz "dll/w06dll.rel"
 	lbl_8012FDA1:
-	.byte 0x64
-	.2byte 0x6C6C
-	.4byte 0x2F773130
-	.4byte 0x646C6C2E
-	.4byte 0x72656C00
+	.asciz "dll/w10dll.rel"
 	lbl_8012FDB0:
-	.4byte 0x646C6C2F
-	.4byte 0x77323064
-	.4byte 0x6C6C2E72
-	.2byte 0x656C
-	.byte 0x00
+	.asciz "dll/w20dll.rel"
 	lbl_8012FDBF:
-	.byte 0x64
-	.4byte 0x6C6C2F77
-	.4byte 0x3231646C
-	.4byte 0x6C2E7265
-	.2byte 0x6C00
+	.asciz "dll/w21dll.rel"
 	lbl_8012FDCE:
-	.2byte 0x646C
-	.4byte 0x6C2F7A74
-	.4byte 0x6172646C
-	.4byte 0x6C2E7265
-	.4byte 0x6C000000
+	.asciz "dll/ztardll.rel"
+	.balign 4
 .global lbl_8012FDE0
 lbl_8012FDE0:
 	# ROM: 12CDE0
