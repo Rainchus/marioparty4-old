@@ -2758,12 +2758,7 @@ lbl_80122018:
 	.asciz "%08x %08x %02x %02x %08x %08x %08x %08x %08x\n"
 	.asciz "MCB:%d(%d/%d) MEM:%08x(%08x/%08x)\n"
 	.asciz "======== HuMem heap dump %08x end =====\n"
-	.balign 4
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
+	.balign 0x20
 
 .global lbl_80122140
 lbl_80122140:
@@ -2789,92 +2784,39 @@ lbl_80122140:
 lbl_80122180:
 	# ROM: 0x11F180
 	.asciz "process> malloc error size %d\n"
-
 .global lbl_8012219F
 lbl_8012219F:
 	# ROM: 0x11F19F
 	.asciz "stack overlap error.(process pointer %x)\n"
-	.balign 4
-	.4byte 0
+	.balign 8
 .global lbl_801221D0
 lbl_801221D0:
 	# ROM: 11F1D0
-	.4byte 0x4F726465
-	.4byte 0x72204D61
-	.4byte 0x78204F76
-	.4byte 0x6572210A
-	.2byte 0x0000
+	.asciz "Order Max Over!\n"
+	.balign 2
 .global lbl_801221E2
 lbl_801221E2:
 	# ROM: 11F1E2
-	.4byte 0x00200018
-	.4byte 0x00100008
-	.4byte 0x00040010
-	.4byte 0x00080008
-	.4byte 0x00040008
-	.4byte 0x00047061
-	.4byte 0x744E756D
-	.4byte 0x2025642C
-	.4byte 0x62616E6B
-	.4byte 0x4E756D20
-	.4byte 0x25642C62
-	.4byte 0x6D704E75
-	.4byte 0x6D202564
-	.4byte 0x0A005041
-	.4byte 0x54544552
-	.4byte 0x4E25643A
-	.4byte 0x0A00096C
-	.4byte 0x61796572
-	.4byte 0x4E756D20
-	.4byte 0x25642C63
-	.4byte 0x656E7465
-	.4byte 0x72202825
-	.4byte 0x642C2564
-	.4byte 0x292C7369
-	.4byte 0x7A652028
-	.4byte 0x25642C25
-	.4byte 0x64290A00
-	.4byte 0x09096669
-	.4byte 0x6C654E6F
-	.4byte 0x2025642C
-	.4byte 0x666C6970
-	.4byte 0x2025780A
-	.4byte 0x00090973
-	.4byte 0x74617274
-	.4byte 0x20282564
-	.4byte 0x2C256429
-	.4byte 0x2C73697A
-	.4byte 0x65202825
-	.4byte 0x642C2564
-	.4byte 0x292C7368
-	.4byte 0x69667420
-	.4byte 0x2825642C
-	.4byte 0x2564290A
-	.4byte 0x0042414E
-	.4byte 0x4B25643A
-	.4byte 0x0A000974
-	.4byte 0x696D654E
-	.4byte 0x756D2025
-	.4byte 0x640A0009
-	.4byte 0x09706174
-	.4byte 0x2025642C
-	.4byte 0x74696D65
-	.4byte 0x2025642C
-	.4byte 0x73686966
-	.4byte 0x74282564
-	.4byte 0x2C256429
-	.4byte 0x2C666C69
-	.4byte 0x70202578
-	.4byte 0x0A000970
-	.4byte 0x69785369
-	.4byte 0x7A652025
-	.4byte 0x642C7061
-	.4byte 0x6C4E756D
-	.4byte 0x2025642C
-	.4byte 0x73697A65
-	.4byte 0x20282564
-	.4byte 0x2C256429
-	.2byte 0x0A00
+	.2byte 0x0020
+	.2byte 0x0018
+	.2byte 0x0010
+	.2byte 0x0008
+	.2byte 0x0004
+	.2byte 0x0010
+	.2byte 0x0008
+	.2byte 0x0008
+	.2byte 0x0004
+	.2byte 0x0008
+	.2byte 0x0004
+	.asciz "patNum %d,bankNum %d,bmpNum %d\n"
+	.asciz "PATTERN%d:\n"
+	.asciz "\tlayerNum %d,center (%d,%d),size (%d,%d)\n"
+	.asciz "\t\tfileNo %d,flip %x\n"
+	.asciz "\t\tstart (%d,%d),size (%d,%d),shift (%d,%d)\n"
+	.asciz "BANK%d:\n"
+	.asciz "\ttimeNum %d\n"
+	.asciz "\t\tpat %d,time %d,shift(%d,%d),flip %x\n"
+	.asciz "\tpixSize %d,palNum %d,size (%d,%d)\n"
 .global lbl_801222F0
 lbl_801222F0:
 	# ROM: 11F2F0
@@ -2920,13 +2862,8 @@ lbl_80122348:
 .global lbl_80122374
 lbl_80122374:
 	# ROM: 11F374
-	.4byte 0x53656172
-	.4byte 0x6368204F
-	.4byte 0x626A6563
-	.4byte 0x74204572
-	.4byte 0x726F7220
-	.4byte 0x25730A00
-	.4byte 0x00000000
+	.asciz "Search Object Error %s\n"
+	.balign 8
 .global lbl_80122390
 lbl_80122390:
 	# ROM: 11F390
@@ -2949,12 +2886,7 @@ lbl_8012239C:
 .global lbl_801223C4
 lbl_801223C4:
 	# ROM: 11F3C4
-	.4byte 0x4572726F
-	.4byte 0x723A2044
-	.4byte 0x7261774F
-	.4byte 0x626A4964
-	.4byte 0x78204F76
-	.4byte 0x65720A00
+	.asciz "Error: DrawObjIdx Over\n"
 .global lbl_801223DC
 lbl_801223DC:
 	# ROM: 11F3DC
@@ -3026,11 +2958,8 @@ lbl_8012248C:
 .global lbl_801224BC
 lbl_801224BC:
 	# ROM: 11F4BC
-	.4byte 0x4572726F
-	.4byte 0x723A204E
-	.4byte 0x6F205465
-	.4byte 0x78747572
-	.4byte 0x650A0000
+	.asciz "Error: No Texture\n"
+	.balign 4
 .global lbl_801224D0
 lbl_801224D0:
 	# ROM: 11F4D0
@@ -3075,34 +3004,16 @@ lbl_80122528:
 .global lbl_80122550
 lbl_80122550:
 	# ROM: 11F550
-	.4byte 0x444C4275
-	.4byte 0x66204F76
-	.4byte 0x6572203E
-	.4byte 0x3E3E3E3E
-	.4byte 0x3E3E3E3E
-	.4byte 0x3E3E3E3E
-	.byte 0x00
+	.asciz "DLBuf Over >>>>>>>>>>>>>"
 .global lbl_80122569
 lbl_80122569:
 	# ROM: 11F569
-	.4byte 0x25783A25
-	.4byte 0x783A2578
-	.2byte 0x0A00
+	.asciz "%x:%x:%x\n"
 .global lbl_80122573
 lbl_80122573:
 	# ROM: 11F573
-	.4byte 0x4572726F
-	.4byte 0x723A204E
-	.4byte 0x6F742046
-	.4byte 0x6F756E64
-	.4byte 0x20257320
-	.4byte 0x666F7220
-	.4byte 0x4F626A50
-	.4byte 0x6F734765
-	.4byte 0x740A0000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.byte 0x00
+	.asciz "Error: Not Found %s for ObjPosGet\n"
+	.balign 16
 .global lbl_801225A0
 lbl_801225A0:
 	# ROM: 11F5A0
