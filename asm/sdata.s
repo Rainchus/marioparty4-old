@@ -113,19 +113,31 @@ lbl_801D34B1:
 lbl_801D34B8:
 	#ROM: 0x13F898
 	.4byte 0xFFFFFFFF
+.global lbl_801D34BC
+lbl_801D34BC:
 	.asciz "START!"
 .global lbl_801D34C3
 lbl_801D34C3:
 	#ROM: 0x13F8A3
 	.asciz "!?"
+.global lbl_801D34C6
+lbl_801D34C6:
 	.4byte 0xBDC0B0C4
 	.asciz "!"
+.global lbl_801D34CC
+lbl_801D34CC:
 	.4byte 0xCCA8C6AF
 	.2byte 0xBCAD
 	.2byte 0x2100
+.global lbl_801D34D4
+lbl_801D34D4:
 	.4byte 0xCBB7DCB9
 	.asciz "!"
+.global lbl_801D34DA
+lbl_801D34DA:
 	.asciz "FINISH!"
+.global lbl_801D34E2
+lbl_801D34E2:
 	.asciz "DRAW!"
 	.4byte 0xCFD8B500
 	.asciz "MARIO"

@@ -16401,12 +16401,12 @@ lbl_8012F324:
 .global lbl_8012F444
 lbl_8012F444:
 	# ROM: 12C444
-	.4byte 0x801D34C6
-	.4byte 0x801D34CC
-	.4byte 0x801D34D4
-	.4byte 0x801D34BC
-	.4byte 0x801D34DA
-	.4byte 0x801D34E2
+	.4byte lbl_801D34C6
+	.4byte lbl_801D34CC
+	.4byte lbl_801D34D4
+	.4byte lbl_801D34BC
+	.4byte lbl_801D34DA
+	.4byte lbl_801D34E2
 .global lbl_8012F45C
 lbl_8012F45C:
 	# ROM: 12C45C
@@ -17342,29 +17342,22 @@ lbl_8013055C:
 	.4byte 0x00860007
 	.4byte 0x00860008
 	.4byte 0x00860006
-	.4byte 0x6D657373
-	.4byte 0x2F6D696E
-	.4byte 0x692E6461
-	.4byte 0x74006D65
-	.4byte 0x73732F62
-	.4byte 0x6F617264
-	.4byte 0x2E646174
-	.4byte 0x006D6573
-	.4byte 0x732F6D69
-	.4byte 0x6E695F65
-	.4byte 0x2E646174
-	.4byte 0x006D6573
-	.4byte 0x732F626F
-	.4byte 0x6172645F
-	.4byte 0x652E6461
-	.4byte 0x74000000
+lbl_8013056C:
+	.asciz "mess/mini.dat"
+lbl_8013057A:
+	.asciz "mess/board.dat"
+lbl_80130589:
+	.asciz "mess/mini_e.dat"
+lbl_80130599:
+	.asciz "mess/board_e.dat"
+	.balign 4
 .global lbl_801305AC
 lbl_801305AC:
 	# ROM: 12D5AC
-	.4byte 0x8013056C
-	.4byte 0x8013057A
-	.4byte 0x80130589
-	.4byte 0x80130599
+	.4byte lbl_8013056C
+	.4byte lbl_8013057A
+	.4byte lbl_80130589
+	.4byte lbl_80130599
 .global lbl_801305BC
 lbl_801305BC:
 	# ROM: 12D5BC
@@ -17392,22 +17385,12 @@ lbl_801305BC:
 .global lbl_80130610
 lbl_80130610:
 	# ROM: 12D610
-	.4byte 0x4572726F
-	.4byte 0x723A204E
-	.4byte 0x6F204D65
-	.4byte 0x73736167
-	.2byte 0x650A
-	.byte 0x00
+	.asciz "Error: No Message\n"
 .global lbl_80130623
 lbl_80130623:
 	# ROM: 12D623
-	.4byte 0x4572726F
-	.4byte 0x723A204E
-	.4byte 0x6F204D65
-	.4byte 0x73736167
-	.4byte 0x65206461
-	.4byte 0x74610A00
-	.byte 0x00
+	.asciz "Error: No Message data\n"
+	.balign 4
 .global lbl_8013063C
 lbl_8013063C:
 	# ROM: 12D63C
@@ -17433,104 +17416,36 @@ lbl_8013063C:
 .global lbl_80130688
 lbl_80130688:
 	# ROM: 12D688
-	.4byte 0x536C6F74
-	.4byte 0x41204361
-	.4byte 0x7264204D
-	.4byte 0x656D5369
-	.4byte 0x7A652025
-	.4byte 0x782C5365
-	.4byte 0x63746F72
-	.4byte 0x2053697A
-	.4byte 0x65202578
-	.2byte 0x0A00
+	.asciz "SlotA Card MemSize %x,Sector Size %x\n"
 .global lbl_801306AE
 lbl_801306AE:
 	# ROM: 12D6AE
-	.4byte 0x536C6F74
-	.4byte 0x42204361
-	.4byte 0x7264204D
-	.4byte 0x656D5369
-	.4byte 0x7A652025
-	.4byte 0x782C5365
-	.4byte 0x63746F72
-	.4byte 0x2053697A
-	.4byte 0x65202578
-	.4byte 0x0A000000
-	.2byte 0x0000
+	.asciz "SlotB Card MemSize %x,Sector Size %x\n"
+	.balign 8
 .global lbl_801306D8
 lbl_801306D8:
 	# ROM: 12D6D8
-	.4byte 0x43616E27
-	.4byte 0x74204152
-	.4byte 0x414D2041
-	.4byte 0x6C6C6F63
-	.4byte 0x61746564
-	.4byte 0x2025780A
-	.byte 0x00
+	.asciz "Can't ARAM Allocated %x\n"
 .global lbl_801306F1
 lbl_801306F1:
 	# ROM: 12D6F1
-	.4byte 0x43616E27
-	.4byte 0x74204152
-	.4byte 0x414D2046
-	.4byte 0x72656520
-	.4byte 0x25780A00
+	.asciz "Can't ARAM Free %x\n"
 .global lbl_80130705
 lbl_80130705:
 	# ROM: 12D705
-	.4byte 0x43616E27
-	.4byte 0x74204669
-	.4byte 0x6E642041
-	.4byte 0x52414D20
-	.4byte 0x25780A00
-	.4byte 0x4152414D
-	.4byte 0x2044554D
-	.4byte 0x50203D3D
-	.4byte 0x3D3D3D3D
-	.4byte 0x3D3D3D3D
-	.4byte 0x3D3D3D3D
-	.4byte 0x3D3D3D3D
-	.4byte 0x3D3D3D3D
-	.4byte 0x0A00414D
-	.4byte 0x656D5074
-	.4byte 0x72202053
-	.4byte 0x74617420
-	.4byte 0x4C656E67
-	.4byte 0x74680A00
-	.4byte 0x25303878
-	.4byte 0x3A253034
-	.4byte 0x782C2530
-	.4byte 0x38782C25
-	.4byte 0x3038780A
-	.4byte 0x00253038
-	.4byte 0x783A2530
-	.4byte 0x34782C25
-	.4byte 0x3038780A
-	.4byte 0x003D3D3D
-	.4byte 0x3D3D3D3D
-	.4byte 0x3D3D3D3D
-	.4byte 0x3D3D3D3D
-	.4byte 0x3D3D3D3D
-	.4byte 0x3D3D3D3D
-	.4byte 0x3D3D3D3D
-	.4byte 0x3D3D3D3D
-	.2byte 0x3D0A
-	.byte 0x00
+	.asciz "Can't Find ARAM %x\n"
+	.asciz "ARAM DUMP ======================\n"
+	.asciz "AMemPtr  Stat Length\n"
+	.asciz "%08x:%04x,%08x,%08x\n"
+	.asciz "%08x:%04x,%08x\n"
+	.asciz "================================\n"
+	.balign 4
 .global lbl_80130798
 lbl_80130798:
 	# ROM: 12D798
-	.4byte 0x4152414D
-	.4byte 0x20547261
-	.4byte 0x6E732025
-	.4byte 0x780A0045
-	.4byte 0x72726F72
-	.4byte 0x3A206461
-	.4byte 0x7461206E
-	.4byte 0x6F6E6520
-	.4byte 0x6F6E2041
-	.4byte 0x52414D20
-	.4byte 0x2530780A
-	.4byte 0x00000000
+	.asciz "ARAM Trans %x\n"
+	.asciz "Error: data none on ARAM %0x\n"
+	.balign 4
 .global lbl_801307C8
 lbl_801307C8:
 	# ROM: 12D7C8
