@@ -855,17 +855,41 @@ lbl_801D3856:
 lbl_801D3858:
 	#ROM: 0x13FC38
 	.4byte 0xFFFFFFFF
+.global lbl_801D385C
+lbl_801D385C:
 	.asciz "plate"
+.global lbl_801D3862
+lbl_801D3862:
 	.asciz "plate1"
+.global lbl_801D3869
+lbl_801D3869:
 	.asciz "plate2"
+.global lbl_801D3870
+lbl_801D3870:
 	.asciz "plate3"
+.global lbl_801D3877
+lbl_801D3877:
 	.asciz "lite"
+.global lbl_801D387C
+lbl_801D387C:
 	.asciz "lite1"
+.global lbl_801D3882
+lbl_801D3882:
 	.asciz "lite2"
+.global lbl_801D3888
+lbl_801D3888:
 	.asciz "lite3"
+.global lbl_801D388E
+lbl_801D388E:
 	.asciz "kao"
+.global lbl_801D3892
+lbl_801D3892:
 	.asciz "kao1"
+.global lbl_801D3897
+lbl_801D3897:
 	.asciz "kao2"
+.global lbl_801D389C
+lbl_801D389C:
 	.asciz "kao3"
 .balign 8
 .global lbl_801D38A8
