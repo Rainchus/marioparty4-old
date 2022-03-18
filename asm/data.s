@@ -16974,95 +16974,95 @@ lbl_8013012C:
 .global lbl_80130140
 lbl_80130140:
 	# ROM: 12D140
-	.4byte 0x801D3DF0  ;# ptr
+	.4byte lbl_801D3DF0  ;# ptr
 	.4byte 0x00000014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x00010014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x00020014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x00030014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x00040014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x00050014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x00060014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x00070014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x00080014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x00090014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x000A0014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x000B001E
 	.4byte 0x0018000F
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x000C0014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x000D0014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x000E0014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x000F0014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x00100014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x00110014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x00120014
 	.4byte 0x0018000A
 	.4byte 0x000C0000
-	.4byte 0x801D3DF0
+	.4byte lbl_801D3DF0
 	.4byte 0x00130018
 	.4byte 0x0018000C
 	.4byte 0x000C0000
-	.4byte 0x801D3DEC
+	.4byte lbl_801D3DEC
 	.4byte 0x00000028
 	.4byte 0x0020FFF1
 	.4byte 0x00120000
-	.4byte 0x801D3DE8
+	.4byte lbl_801D3DE8
 	.4byte 0x00000020
 	.4byte 0x00200010
 	.4byte 0x00100000
-	.4byte 0x801D3DE4
+	.4byte lbl_801D3DE4
 	.4byte 0x00000020
 	.4byte 0x00200010
 	.4byte 0x00100000
