@@ -139,56 +139,124 @@ lbl_801D34DA:
 .global lbl_801D34E2
 lbl_801D34E2:
 	.asciz "DRAW!"
+.global lbl_801D34E8
+lbl_801D34E8:
 	.4byte 0xCFD8B500
+.global lbl_801D34EC
+lbl_801D34EC:
 	.asciz "MARIO"
+.global lbl_801D34F2
+lbl_801D34F2:
 	.4byte 0xD9B2B0BC
 	.2byte 0xDE00
+.global lbl_801D34F8
+lbl_801D34F8:
 	.asciz "LUIGI"
+.global lbl_801D34FE
+lbl_801D34FE:
 	.4byte 0xCBDFB0C1
 	.byte 0x00
+.global lbl_801D3503
+lbl_801D3503:
 	.asciz "PEACH"
+.global lbl_801D3509
+lbl_801D3509:
 	.4byte 0xD6AFBCB0
 	.byte 0x00
+.global lbl_801D350E
+lbl_801D350E:
 	.asciz "YOSHI"
+.global lbl_801D3514
+lbl_801D3514:
 	.4byte 0xDCD8B500
+.global lbl_801D3518
+lbl_801D3518:
 	.asciz "WARIO"
+.global lbl_801D351E
+lbl_801D351E:
 	.4byte 0xC4DEDDB7
 	.2byte 0xB000
+.global lbl_801D3524
+lbl_801D3524:
 	.asciz " DK "
+.global lbl_801D3529
+lbl_801D3529:
 	.4byte 0xC3DEB2BC
 	.2byte 0xDEB0
 	.byte 0x00
+.global lbl_801D3530
+lbl_801D3530:
 	.asciz "DAISY"
+.global lbl_801D3536
+lbl_801D3536:
 	.4byte 0xDCD9B2B0
 	.2byte 0xBCDE
 	.byte 0x00
+.global lbl_801D353D
+lbl_801D353D:
 	.asciz "WALUIGI"
+.global lbl_801D3545
+lbl_801D3545:
 	.4byte 0xB8AFCADF
 	.byte 0x00
+.global lbl_801D354A
+lbl_801D354A:
 	.asciz "BOWSER"
+.global lbl_801D3551
+lbl_801D3551:
 	.4byte 0xB7C9CBDF
 	.2byte 0xB500
+.global lbl_801D3557
+lbl_801D3557:
 	.asciz "TOAD"
+.global lbl_801D355C
+lbl_801D355C:
 	.4byte 0xCDB2CEB0
 	.byte 0x00
+.global lbl_801D3561
+lbl_801D3561:
 	.asciz "SHY GUY"
+.global lbl_801D3569
+lbl_801D3569:
 	.4byte 0xC3DABB00
+.global lbl_801D356D
+lbl_801D356D:
 	.asciz "BOO"
+.global lbl_801D3571
+lbl_801D3571:
 	.4byte 0xC9BAC9BA
 	.byte 0x00
+.global lbl_801D3576
+lbl_801D3576:
 	.asciz "KOOPA"
+.global lbl_801D357C
+lbl_801D357C:
 	.4byte 0xD0C6B8AF
 	.2byte 0xCADF
 	.byte 0x00
+.global lbl_801D3583
+lbl_801D3583:
 	.4byte 0xB8D8CEDE
 	.2byte 0xB000
+.global lbl_801D3589
+lbl_801D3589:
 	.asciz "GOOMBA"
+.global lbl_801D3590
+lbl_801D3590:
 	.2byte 0xB6C1
 	.byte 0x00
+.global lbl_801D3593
+lbl_801D3593:
 	.asciz "WON!"
+.global lbl_801D3598
+lbl_801D3598:
 	.4byte 0xCAB2CEDE
 	.2byte 0xB800
+.global lbl_801D359E
+lbl_801D359E:
 	.asciz "LOSE"
+.global lbl_801D35A3
+lbl_801D35A3:
 	.4byte 0xD5B3BCAE
 	.2byte 0xB321
 	.byte 0x00
@@ -203,12 +271,20 @@ lbl_801D35B8:
 	#ROM: 0x13F998
 	.4byte lbl_801D35AA
 	.4byte lbl_801D35B0
+.global lbl_801D35C0
+lbl_801D35C0:
 	.4byte 0x000D0026
 	.4byte 0x00080017
+.global lbl_801D35C8
+lbl_801D35C8:
 	.4byte 0x0005001E
 	.4byte 0x0001000F
+.global lbl_801D35D0
+lbl_801D35D0:
 	.4byte 0x000D0019
 	.4byte 0x000B001A
+.global lbl_801D35D8
+lbl_801D35D8:
 	.4byte 0x000C0022
 	.4byte 0x000A001B
 .global lbl_801D35E0
@@ -277,10 +353,20 @@ lbl_801D3610:
 lbl_801D3618:
 	#ROM: 0x13F9F8
 	.byte 0x00
+.global lbl_801D3619
+lbl_801D3619:
 	.asciz "eye1"
+.global lbl_801D361E
+lbl_801D361E:
 	.asciz "eye2"
+.global lbl_801D3623
+lbl_801D3623:
 	.asciz "GC-eyes"
+.global lbl_801D362B
+lbl_801D362B:
 	.asciz "mat87"
+.global lbl_801D3631
+lbl_801D3631:
 	.asciz "mat89"
 	.byte 0x00
 .global lbl_801D3638
