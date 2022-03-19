@@ -27,6 +27,8 @@ include/*.s
 
 build/
 tools/mwcc_compiler/
+tools/elf2dol
+tools/elf2rel
 decomp/
 errors.txt
 output.asm
