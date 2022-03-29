@@ -9,7 +9,6 @@
 # _unresolved: 0:0x0
 # num sections: 14
 .include "macros.inc"
-.include "kerent.s"
 # offset: 0x00000000	length: 0x00000000	flags: 0
 # offset: 0x000000B8	length: 0x000029C8	flags: 1
 # offset: 0x00002A80	length: 0x00000004	flags: 0
@@ -1474,7 +1473,7 @@ lbl_000015AC:
 /* 000015F0 DBE10080 */ stfd f31, 0x80(r1)
 /* 000015F4 F3E10088 */ .4byte 0xF3E10088  ;# (error: unknown instruction) 
 /* 000015F8 DBC10070 */ stfd f30, 0x70(r1)
-/* 000015FC F3C10078 */ xxsel vs30, vs1, vs0, vs33
+/* 000015FC F3C10078 */ .4byte 0xF3C10078 #xxsel vs30, vs1, vs0, vs33
 /* 00001600 DBA10060 */ stfd f29, 0x60(r1)
 /* 00001604 F3A10068 */ .4byte 0xF3A10068  ;# (error: unknown instruction) 
 /* 00001608 93E1005C */ stw r31, 0x5c(r1)
@@ -2458,7 +2457,7 @@ lbl_0000252C:
 /* 00002530 7C0802A6 */ mflr r0
 /* 00002534 900100C4 */ stw r0, 0xc4(r1)
 /* 00002538 DBE100B0 */ stfd f31, 0xb0(r1)
-/* 0000253C F3E100B8 */ xxsel vs31, vs1, vs0, vs34
+/* 0000253C F3E100B8 */ .4byte 0xF3E100B8 #xxsel vs31, vs1, vs0, vs34
 /* 00002540 DBC100A0 */ stfd f30, 0xa0(r1)
 /* 00002544 F3C100A8 */ .4byte 0xF3C100A8  ;# (error: unknown instruction) 
 /* 00002548 93E1009C */ stw r31, 0x9c(r1)
@@ -2957,6 +2956,7 @@ lbl_00002B60:
     .4byte 0x40A00000
 
 # 5
+.balign 32
 .section .data
 lbl_00002B80:
     # 0x2B80
@@ -2982,12 +2982,10 @@ lbl_00002BD8:
 lbl_00002BDC:
     # 0x2BDC
     .asciz ">>>>>>>>MSM_SE_SEL_01 %d\n"
-    .balign 4
 lbl_00002BF6:
     # 0x2BF6
     .byte 0x3E, 0x3E
     .asciz ">>>>>>SE Num %d\n"
-    .balign 4
 lbl_00002C09:
     # 0x2C09
     .byte 0x3E, 0x3E, 0x3E
