@@ -2814,13 +2814,13 @@ lbl_00002A5C:
 .section .ctors
 lbl_00002A80:
     # 0x2A80
-    .4byte 0x00000000
+    #.4byte 0x00000000
 
 # 3
 .section .dtors
 lbl_00002A84:
     # 0x2A84
-    .4byte 0x00000000
+    #.4byte 0x00000000
 
 # 4
 .section .rodata
@@ -2956,8 +2956,8 @@ lbl_00002B60:
     .4byte 0x40A00000
 
 # 5
-.balign 32
 .section .data
+.balign 32
 lbl_00002B80:
     # 0x2B80
     .asciz "******* Boot ObjectSetup *********\n"
@@ -2988,8 +2988,7 @@ lbl_00002BF6:
     .asciz ">>>>>>SE Num %d\n"
 lbl_00002C09:
     # 0x2C09
-    .byte 0x3E, 0x3E, 0x3E
-    .asciz ">>Error %d\n"
+    .asciz ">>>>>Error %d\n"
     .4byte 0x00000000
     .4byte 0x00000000
 lbl_00002C20:
@@ -5039,8 +5038,8 @@ lbl_00002C20:
     .4byte 0x3FDA9C57
     .4byte 0x07C84300
     .4byte 0x0C004400
-    .asciz "\t6\tD"
-    .balign 4
+    .4byte 0x09360944
+    .4byte 0x000ACF62
     .4byte 0x0501A342
     .4byte 0xC14030FF
     .4byte 0x42CA4240

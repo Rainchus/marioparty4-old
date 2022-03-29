@@ -1,0 +1,13 @@
+SECTIONS
+{
+    GROUP :
+    {
+        .init :{}
+        .text :{}
+        .ctors :{}
+        .dtors :{}
+        .rodata :{}
+        .data :{}
+        .bss :{}
+    }
+}

@@ -9,7 +9,7 @@ endif
 VERBOSE ?= 0
 
 # If MAPGENFLAG set to 1, tells LDFLAGS to generate a mapfile, which makes linking take several minutes.
-MAPGENFLAG ?= 0
+MAPGENFLAG ?= 1
 
 ifeq ($(VERBOSE),0)
   QUIET := @
@@ -36,7 +36,10 @@ S_FILES := $(wildcard asm/*.s)
 C_FILES := $(wildcard src/*.c)
 CPP_FILES := $(wildcard src/*.cpp)
 CPP_FILES += $(wildcard src/*.cp)
-LDSCRIPT := $(BUILD_DIR)/ldscript.lcf
+LDSCRIPT_DOL := $(BUILD_DIR)/ldscript.lcf
+LDSCRIPT_REL := $(BUILD_DIR)/partial.lcf
+ELF2REL_ARGS := -i 1 -o 0x0 -l 0x2F -c 14
+REL_LDFLAGS := -nodefaults -fp hard -r1 -m _prolog -g
 
 # Outputs
 DOL     := $(BUILD_DIR)/main.dol
@@ -87,6 +90,7 @@ CC_EPI  = $(WINE) tools/mwcc_compiler/$(MWCC_EPI_VERSION)/$(MWCC_EPI_EXE)
 endif
 LD      := $(WINE) tools/mwcc_compiler/$(MWLD_VERSION)/mwldeppc.exe
 ELF2DOL := tools/elf2dol
+ELF2REL := tools/elf2rel
 SHA1SUM := sha1sum
 PYTHON  := python3
 
@@ -140,14 +144,14 @@ DUMMY != mkdir -p $(ALL_DIRS)
 
 .PHONY: tools
 
-$(LDSCRIPT): ldscript.lcf
+$(LDSCRIPT_DOL): ldscript.lcf
 	$(QUIET) $(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
 
 $(DOL): $(ELF) | tools
 	$(QUIET) $(ELF2DOL) $< $@
 	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
 ifneq ($(findstring -map,$(LDFLAGS)),)
-	$(QUIET) $(PYTHON) tools/calcprogress.py $@
+#	$(QUIET) $(PYTHON) tools/calcprogress.py $@
 endif
 
 clean:
@@ -163,14 +167,14 @@ tools:
 # ELF creation makefile instructions
 ifeq ($(EPILOGUE_PROCESS),1)
 	@echo Linking ELF $@
-$(ELF): $(O_FILES) $(E_FILES) $(LDSCRIPT)
+$(ELF): $(O_FILES) $(E_FILES) $(LDSCRIPT_DOL)
 	$(QUIET) @echo $(O_FILES) > build/o_files
-	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
+	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT_DOL) @build/o_files
 else
-$(ELF): $(O_FILES) $(LDSCRIPT)
+$(ELF): $(O_FILES) $(LDSCRIPT_DOL)
 	@echo Linking ELF $@
 	$(QUIET) @echo $(O_FILES) > build/o_files
-	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
+	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT_DOL) @build/o_files
 endif
 
 $(BUILD_DIR)/%.o: %.s

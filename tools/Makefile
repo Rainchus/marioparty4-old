@@ -8,7 +8,7 @@ all: elf2dol elf2rel
 elf2dol: elf2dol.c
 	$(CC) $(CFLAGS) -o $@ $^
 
-elf2rel: elf2rel.c
+elf2rel: elf2relv2.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 clean:

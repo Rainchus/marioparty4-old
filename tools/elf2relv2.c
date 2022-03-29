@@ -127,25 +127,27 @@ typedef struct
 
 struct RelHeader
 {
-    uint32_t moduleId;               // unique module identifier
-    uint32_t nextModule;             // always 0; filled in at runtime
-    uint32_t prevModule;             // always 0; filled in at runtime
-    uint32_t sectionCount;           // number of sections in the section table
-    uint32_t sectionTableOffset;     // file position of section table
-    uint32_t moduleNameOffset;       // offset of the module name in the string table (not in this file)
-    uint32_t moduleNameSize;         // size of the module name in the string table (not in this file)
-    uint32_t formatVersion;          // REL format version
-    uint32_t bssSize;                // size of the BSS section
-    uint32_t relocationTableOffset;  // file position of relocation entries
-    uint32_t importTableOffset;      // file position of import table
-    uint32_t importTableSize;        // size of import table
-    uint8_t  prologSection;          // section in which the _prolog function is in, or 0 if absent
-    uint8_t  epilogSection;          // section in which the _epilog function is in, or 0 if absent
-    uint8_t  unresolvedSection;      // section in which the _unresolved function is in, or 0 if absent
-    uint8_t  pad33;
-    uint32_t prologOffset;           // offset of the _prolog function in its section
-    uint32_t epilogOffset;           // offset of the _epilog function in its section
-    uint32_t unresolvedOffset;       // offset of the _unresolved function in its section
+    /* 0x00 */ uint32_t moduleId;               // unique module identifier
+    /* 0x04 */ uint32_t nextModule;             // always 0; filled in at runtime
+    /* 0x08 */ uint32_t prevModule;             // always 0; filled in at runtime
+    /* 0x0C */ uint32_t sectionCount;           // number of sections in the section table
+    /* 0x10 */ uint32_t sectionTableOffset;     // file position of section table
+    /* 0x14 */ uint32_t moduleNameOffset;       // offset of the module name in the string table (not in this file)
+    /* 0x18 */ uint32_t moduleNameSize;         // size of the module name in the string table (not in this file)
+    /* 0x1C */ uint32_t formatVersion;          // REL format version
+    /* 0x20 */ uint32_t bssSize;                // size of the BSS section
+    /* 0x24 */ uint32_t relocationTableOffset;  // file position of relocation entries
+    /* 0x28 */ uint32_t importTableOffset;      // file position of import table
+    /* 0x2C */ uint32_t importTableSize;        // size of import table
+    /* 0x30 */ uint8_t  prologSection;          // section in which the _prolog function is in, or 0 if absent
+    /* 0x31 */ uint8_t  epilogSection;          // section in which the _epilog function is in, or 0 if absent
+    /* 0x32 */ uint8_t  unresolvedSection;      // section in which the _unresolved function is in, or 0 if absent
+    /* 0x33 */ uint8_t  pad33;
+    /* 0x34 */ uint32_t prologOffset;           // offset of the _prolog function in its section
+    /* 0x38 */ uint32_t epilogOffset;           // offset of the _epilog function in its section
+    /* 0x3C */ uint32_t unresolvedOffset;       // offset of the _unresolved function in its section
+    /* 0x40 */ uint32_t align;
+    /* 0x44 */ uint32_t bssAlign;
 };
 
 struct RelRelocEntry
@@ -606,7 +608,7 @@ static void write_rel_file(struct Module *module, struct RelHeader *relHdr, cons
         fatal_error("could not open %s for writing: %s\n", filename, strerror(errno));
 
     relHdr->moduleId = module->moduleId;
-    relHdr->formatVersion = 1;
+    relHdr->formatVersion = 2;
 
     find_rel_entry_functions(module, relHdr);
 
@@ -744,6 +746,10 @@ static void write_rel_file(struct Module *module, struct RelHeader *relHdr, cons
         write_checked(fout, relHdr->importTableOffset + i * 8, &ent, sizeof(ent));
     }
     relHdr->importTableSize = importsCount * 8;
+    relHdr->align = 0x20; // TODO: Read me from a section.
+    relHdr->bssAlign = 0x8; // TODO: Read me from bss section.
+    //v3 only, offset 0x48 in header
+    //relHdr->fixSize = relHdr->relocationTableOffset; // Only 1 REL is used, so we can just do this as a hack.
 
     // 4. Write REL header.
 
@@ -761,6 +767,11 @@ static void write_rel_file(struct Module *module, struct RelHeader *relHdr, cons
     bswap32(&relHdr->prologOffset);
     bswap32(&relHdr->epilogOffset);
     bswap32(&relHdr->unresolvedOffset);
+    //exclusive to v2/v3
+    bswap32(&relHdr->align);
+    bswap32(&relHdr->bssAlign);
+    //exclusive to v3
+    //bswap32(&relHdr->fixSize);
     write_checked(fout, 0, relHdr, sizeof(*relHdr));
 
     fclose(fout);
