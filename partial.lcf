@@ -11,3 +11,10 @@ SECTIONS
         .bss :{}
     }
 }
+
+FORCEACTIVE
+{
+    _prolog
+    _rodata
+    _epilog
+}

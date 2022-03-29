@@ -1,0 +1,20 @@
+to disassemble a rel:
+./tools/reldisasm.py m401Dll.rel build/mp4.1/main.elf
+
+to build a rel (until added to make file):
+/opt/devkitpro/devkitPPC/bin/powerpc-eabi-as -mgekko -I include/ -o bootdll.o asm/DLLS/bootDll/bootDll.s
+./tools/mwcc_compiler/2.6/mwldeppc.exe -lcf partial.lcf -nodefaults -fp hard -r1 -m _prolog -g bootdll.o -map ./build/mp4.1/MarioParty4.MAP -o bootdll.j
+./tools/elf2rel bootdll.j ./build/mp4.1/main.elf -i 1 -o 0x0 -l 0x2F -c 14 bootdll.rel
+
+
+elf2rel flags for each file:
+/* 0x00 */ _minigameDll.o -i 1 -o 0x0 -l 0x39 -c 13 _minigameDll.rel [module align 0x08, bss align 0x01] (?)
+/* 0x01 */ bootDll.o -i 1 -o 0x0 -l 0x2F -c 14 bootdll.rel  [module align 0x20, bss align 0x08]
+/* 0x02 */ E3setupDLL.o -i 2 -o 0x39 -l 0x35 -c 15 E3setupDLL.rel [module align 0x08, bss align 0x08]
+/* 0x03 */ instDll.o -i 1 -o 0x00 -l 0x2F -c 15 instDll.rel [module align 0x08, bss align 0x08]
+/* 0x04 */ m300Dll.o -i 2 -o 0x39 -l 0x2F -c 8 m300Dll.rel [module align 0x04, bss align 0x01] #doesnt build, no data to build
+/* 0x05 */ m302Dll.o -i 1 -o 0x00 -l 0x2F -c 8 m302Dll.rel [module align 0x04, bss align 0x01] #doesnt build, no data to build
+/* 0x06 */ m303Dll.o -i 1 -o 0x00 -l 0x2F -c 8 m303Dll.rel [module align 0x04, bss align 0x01] #doesnt build, no data to build
+/* 0x07 */ m330Dll.o -i 1 -o 0x00 -l 0x2F -c 8 m330Dll.rel [module align 0x04, bss align 0x01] #doesnt build, no data to build
+/* 0x08 */ m330Dll.o -i 1 -o 0x00 -l 0x2F -c 8 m333Dll.rel [module align 0x04, bss align 0x01] #doesnt build, no data to build
+/* 0x09 */ m401Dll.o -i 2 -0 0x39 -l 0x2F -c 12 m401Dll.rel [module align 0x08, bss align 0x08] #WIP

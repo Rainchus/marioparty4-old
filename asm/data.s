@@ -15660,6 +15660,8 @@ lbl_8012E99A:
 	.asciz "frontSurDis %f\n"
 	.asciz "backSurDis %f\n"
 .balign 8
+.global lbl_8012EA70
+lbl_8012EA70:
 	.4byte 0x0001FFFF
 	.4byte 0x00000000
 	.4byte 0x00000001
