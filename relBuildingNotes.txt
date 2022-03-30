@@ -19,3 +19,12 @@ elf2rel flags for each file:
 /* 0x08 */ m330Dll.o -i 1 -o 0x00 -l 0x2F -c 8 m333Dll.rel [module align 0x04, bss align 0x01] #doesnt build, no data to build
 /* 0x09 */ m401Dll.o -i 2 -0 0x39 -l 0x2F -c 12 m401Dll.rel [module align 0x08, bss align 0x08]
 /* 0x0A */ m402Dll.o -i 1 -o 0x00 -l 0x2F -c 15 m402Dll.rel [module align 0x08, bss align 0x08]
+/* 0x0B */ m403Dll.o -i 1 -o 0x00 -l 0x2F -c 15 m403Dll.rel [module align 0x08, bss align 0x08]
+/* 0x0C */ m404Dll.o -i 1 -o 0x00 -l 0x2F -c 15 m404Dll.rel [module align 0x08, bss align 0x08]
+/* 0x0D */ m405Dll.o -i 1 -o 0x00 -l 0x2F -c 15 m405Dll.rel [module align 0x08, bss align 0x08]
+/* 0x0E */ m406Dll.o -i 1 -o 0x00 -l 0x2F -c 15 m406Dll.rel [module align 0x08, bss align 0x08]
+/* 0x0F */ m407Dll.o -i 1 -o 0x00 -l 0x2F -c 15 m407Dll.rel [module align 0x08, bss align 0x08]
+/* 0x10 */ m408Dll.o -i 1 -o 0x00 -l 0x2F -c 15 m408Dll.rel [module align 0x08, bss align 0x08]
+/* 0x11 */ m409Dll.o -i 1 -o 0x00 -l 0x2F -c 15 m409Dll.rel [module align 0x08, bss align 0x08]
+/* 0x12 */ m410Dll.o -i 1 -o 0x00 -l 0x2F -c 15 m410Dll.rel [module align 0x08, bss align 0x08]
+/* 0x13 */ m411Dll.o -i 1 -o 0x00 -l 0x2F -c 15 m411Dll.rel [module align 0x08, bss align 0x08]
