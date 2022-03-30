@@ -746,8 +746,8 @@ static void write_rel_file(struct Module *module, struct RelHeader *relHdr, cons
         write_checked(fout, relHdr->importTableOffset + i * 8, &ent, sizeof(ent));
     }
     relHdr->importTableSize = importsCount * 8;
-    relHdr->align = 0x20; // TODO: Read me from a section.
-    relHdr->bssAlign = 0x8; // TODO: Read me from bss section.
+    relHdr->align = 8; // TODO: Read me from a section.
+    relHdr->bssAlign = 8; // TODO: Read me from bss section.
     //v3 only, offset 0x48 in header
     //relHdr->fixSize = relHdr->relocationTableOffset; // Only 1 REL is used, so we can just do this as a hack.
 

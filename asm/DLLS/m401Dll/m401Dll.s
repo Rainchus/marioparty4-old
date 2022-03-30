@@ -23184,6 +23184,7 @@ lbl_000154C0:
 lbl_000154C4:
     # 0x154C4
     .4byte 0x3F969697
+    .balign 4
 
 # 5
 .section .data
@@ -23229,8 +23230,7 @@ lbl_0001551C:
     .asciz "**** M401ObjectSetup ****\n"
 lbl_00015537:
     # 0x15537
-    .byte 0x77
-    .asciz "innercnt:%d\n"
+    .asciz "winnercnt:%d\n"
     .balign 4
 lbl_00015548:
     # 0x15548
@@ -23284,6 +23284,7 @@ lbl_000155D7:
 lbl_000155E0:
     # 0x155E0
     .asciz "kaitei05"
+    .balign 4
 lbl_000155EC:
     # 0x155EC
     .4byte lbl_000155BC

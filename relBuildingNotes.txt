@@ -1,5 +1,5 @@
 to disassemble a rel:
-./tools/reldisasm.py m401Dll.rel build/mp4.1/main.elf
+./tools/reldisasm.py m402Dll.rel build/mp4.1/main.elf
 
 to build a rel (until added to make file):
 /opt/devkitpro/devkitPPC/bin/powerpc-eabi-as -mgekko -I include/ -o bootdll.o asm/DLLS/bootDll/bootDll.s
@@ -17,4 +17,5 @@ elf2rel flags for each file:
 /* 0x06 */ m303Dll.o -i 1 -o 0x00 -l 0x2F -c 8 m303Dll.rel [module align 0x04, bss align 0x01] #doesnt build, no data to build
 /* 0x07 */ m330Dll.o -i 1 -o 0x00 -l 0x2F -c 8 m330Dll.rel [module align 0x04, bss align 0x01] #doesnt build, no data to build
 /* 0x08 */ m330Dll.o -i 1 -o 0x00 -l 0x2F -c 8 m333Dll.rel [module align 0x04, bss align 0x01] #doesnt build, no data to build
-/* 0x09 */ m401Dll.o -i 2 -0 0x39 -l 0x2F -c 12 m401Dll.rel [module align 0x08, bss align 0x08] #WIP
+/* 0x09 */ m401Dll.o -i 2 -0 0x39 -l 0x2F -c 12 m401Dll.rel [module align 0x08, bss align 0x08]
+/* 0x0A */ m402Dll.o -i 1 -o 0x00 -l 0x2F -c 15 m402Dll.rel [module align 0x08, bss align 0x08]
