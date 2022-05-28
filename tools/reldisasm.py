@@ -413,6 +413,11 @@ blacklistedInsns = {
     PPC_INS_XVCMPEQDP,
     PPC_INS_VPKUHUM,
     PPC_INS_VMRGHB,
+    PPC_INS_XVTDIVSP,
+    PPC_INS_XVNMSUBASP,
+    PPC_INS_XVNMSUBMSP,
+    PPC_INS_XVNMADDADP,
+
 
     # Instructions that Capstone gets wrong
     PPC_INS_MFESR,
