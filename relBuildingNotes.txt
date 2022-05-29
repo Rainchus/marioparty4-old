@@ -104,3 +104,8 @@ elf2rel flags for each file:
 /* 0x59 */ w03Dll.o -i 1 -o 0x00 -l 0x2D -c 15 w03Dll.rel [module align 0x08, bss align 0x08]
 /* 0x5A */ w04Dll.o -i 1 -o 0x00 -l 0x2D -c 15 w04Dll.rel [module align 0x08, bss align 0x08]
 /* 0x5B */ w05Dll.o -i 1 -o 0x00 -l 0x2D -c 15 w05Dll.rel [module align 0x08, bss align 0x08]
+/* 0x5C */ w06Dll.o -i 1 -o 0x00 -l 0x2D -c 15 w06Dll.rel [module align 0x08, bss align 0x08]
+/* 0x5D */ w10Dll.o -i 1 -o 0x00 -l 0x2D -c 15 w10Dll.rel [module align 0x08, bss align 0x08]
+/* 0x5E */ w20Dll.o -i 1 -o 0x00 -l 0x2D -c 14 w20Dll.rel [module align 0x08, bss align 0x08]
+/* 0x5F */ w21Dll.o -i 1 -o 0x00 -l 0x2D -c 13 w21Dll.rel [module align 0x08, bss align 0x01]
+/* 0x60 */ ztardll.o -i 1 -o 0x00 -l 0x2F -c 14 ztardll.rel [module align 0x08, bss align 0x08]
