@@ -99,3 +99,8 @@ elf2rel flags for each file:
 /* 0x54 */ selmenuDll.o -i 1 -o 0x00 -l 0x35 -c 16 selmenuDll.rel [module align 0x08, bss align 0x08]
 /* 0x55 */ staffDll.o -i 1 -o 0x00 -l 0x31 -c 14 staffDll.rel [module align 0x08, bss align 0x08]
 /* 0x56 */ subchrselDll.o -i 1 -o 0x00 -l 0x39 -c 15 subchrselDll.rel [module align 0x08, bss align 0x08]
+/* 0x57 */ w01Dll.o -i 1 -o 0x00 -l 0x2D -c 16 w01Dll.rel [module align 0x08, bss align 0x08]
+/* 0x58 */ w02Dll.o -i 1 -o 0x00 -l 0x2D -c 15 w02Dll.rel [module align 0x08, bss align 0x08]
+/* 0x59 */ w03Dll.o -i 1 -o 0x00 -l 0x2D -c 15 w03Dll.rel [module align 0x08, bss align 0x08]
+/* 0x5A */ w04Dll.o -i 1 -o 0x00 -l 0x2D -c 15 w04Dll.rel [module align 0x08, bss align 0x08]
+/* 0x5B */ w05Dll.o -i 1 -o 0x00 -l 0x2D -c 15 w05Dll.rel [module align 0x08, bss align 0x08]
