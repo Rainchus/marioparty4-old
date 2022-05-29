@@ -6,6 +6,8 @@ to build a rel (until added to make file):
 ./tools/mwcc_compiler/2.6/mwldeppc.exe -lcf partial.lcf -nodefaults -fp hard -r1 -m _prolog -g bootdll.o -map ./build/mp4.1/MarioParty4.MAP -o bootdll.j
 ./tools/elf2rel bootdll.j ./build/mp4.1/main.elf -i 1 -o 0x0 -l 0x2F -c 14 bootdll.rel
 
+bssalign is currently hardcoded in elf2rel to be 8
+
 
 elf2rel flags for each file:
 /* 0x00 */ _minigameDll.o -i 1 -o 0x0 -l 0x39 -c 13 _minigameDll.rel [module align 0x08, bss align 0x01] (?)
@@ -88,6 +90,12 @@ elf2rel flags for each file:
 /* 0x4B */ mstory2Dll.o -i 1 -o 0x00 -l 0x35 -c 15 mstory2Dll.rel [module align 0x08, bss align 0x08]
 /* 0x4C */ mstory3Dll.o -i 1 -o 0x00 -l 0x35 -c 16 mstory3Dll.rel [module align 0x08, bss align 0x08]
 /* 0x4D */ mstory4Dll.o -i 1 -o 0x00 -l 0x35 -c 15 mstory4Dll.rel [module align 0x08, bss align 0x08]
-/* 0x4D */ mstoryDll.o -i 1 -o 0x00 -l 0x33 -c 15 mstoryDll.rel [module align 0x08, bss align 0x08]
-
-
+/* 0x4E */ mstoryDll.o -i 1 -o 0x00 -l 0x33 -c 15 mstoryDll.rel [module align 0x08, bss align 0x08]
+/* 0x4F */ nisDll.o -i 1 -o 0x00 -l 0x2D -c 12 nisDll.rel [module align 0x08, bss align 0x01]
+/* 0x50 */ option.o -i 1 -o 0x00 -l 0x2D -c 15 option.rel [module align 0x08, bss align 0x08]
+/* 0x51 */ present.o -i 1 -o 0x00 -l 0x2F -c 15 present.rel [module align 0x08, bss align 0x08]
+/* 0x52 */ resultDll.o -i 1 -o 0x00 -l 0x33 -c 14 resultDll.rel [module align 0x08, bss align 0x08]
+/* 0x53 */ safDll.o -i 1 -o 0x00 -l 0x2D -c 15 safDll.rel #broken, doesn't build correctly at all
+/* 0x54 */ selmenuDll.o -i 1 -o 0x00 -l 0x35 -c 16 selmenuDll.rel [module align 0x08, bss align 0x08]
+/* 0x55 */ staffDll.o -i 1 -o 0x00 -l 0x31 -c 14 staffDll.rel [module align 0x08, bss align 0x08]
+/* 0x56 */ subchrselDll.o -i 1 -o 0x00 -l 0x39 -c 15 subchrselDll.rel [module align 0x08, bss align 0x08]
