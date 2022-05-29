@@ -78,3 +78,16 @@ elf2rel flags for each file:
 /* 0x43 */ m461Dll.o -i 1 -o 0x00 -l 0x2F -c 15 m461Dll.rel [module align 0x08, bss align 0x08]
 /* 0x44 */ m462Dll.o -i 1 -o 0x00 -l 0x2F -c 14 m462Dll.rel [module align 0x08, bss align 0x08]
 /* 0x45 */ m463Dll.o -i 1 -o 0x00 -l 0x2F -c 15 m463Dll.rel [module align 0x08, bss align 0x08]
+/* 0x45 */ mentDll.o -i 1 -o 0x00 -l 0x2F -c 15 mentDll.rel [module align 0x08, bss align 0x08]
+/* 0x45 */ messDll.o -i 1 -o 0x00 -l 0x2F -c 15 messDll.rel [module align 0x08, bss align 0x08]
+/* 0x46 */ mgmodedll.o -i 1 -o 0x00 -l 0x33 -c 14 mgmodedll.rel [module align 0x08, bss align 0x08]
+/* 0x47 */ modeltestDll.o -i 1 -o 0x00 -l 0x39 -c 15 modeltestDll.rel [module align 0x08, bss align 0x08]
+/* 0x48 */ modeseldll.o -i 1 -o 0x00 -l 0x35 -c 15 modeseldll.rel [module align 0x08, bss align 0x08]
+/* 0x49 */ mpexDll.o -i 1 -o 0x00 -l 0x2F -c 15 mpexDll.rel [module align 0x08, bss align 0x08]
+/* 0x4A */ msetupDll.o -i 1 -o 0x00 -l 0x33 -c 8 msetupDll.rel  #doesnt build, no data to build
+/* 0x4B */ mstory2Dll.o -i 1 -o 0x00 -l 0x35 -c 15 mstory2Dll.rel [module align 0x08, bss align 0x08]
+/* 0x4C */ mstory3Dll.o -i 1 -o 0x00 -l 0x35 -c 16 mstory3Dll.rel [module align 0x08, bss align 0x08]
+/* 0x4D */ mstory4Dll.o -i 1 -o 0x00 -l 0x35 -c 15 mstory4Dll.rel [module align 0x08, bss align 0x08]
+/* 0x4D */ mstoryDll.o -i 1 -o 0x00 -l 0x33 -c 15 mstoryDll.rel [module align 0x08, bss align 0x08]
+
+

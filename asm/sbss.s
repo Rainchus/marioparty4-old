@@ -897,7 +897,9 @@ lbl_801D3E90:
 	.skip 0x4
 .global lbl_801D3E94
 lbl_801D3E94:
-	.skip 0x4
+	.skip 0x2
+lbl_801D3E96:
+	.skip 0x2
 .global lbl_801D3E98
 lbl_801D3E98:
 	.skip 0x8
