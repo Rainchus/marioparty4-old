@@ -35,4 +35,8 @@ output.asm
 Debug/
 .vs/
 
+.ninja_deps
+.ninja_log
+build.ninja
+
 ctx.c
