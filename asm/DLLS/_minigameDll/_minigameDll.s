@@ -24,6 +24,7 @@
 # offset: 0x00000000    length: 0x00000000      flags: 0
 # 1
 .section .text
+.balign 4
 .global _prolog
 _prolog:
 /* 000000B0 9421FFF0 */ stwu r1, -0x10(r1)
@@ -97,16 +98,19 @@ lbl_0000017C:
 
 # 2
 .section .ctors
+.balign 4
 lbl_000001A0:
     # 0x1A0
 
 # 3
 .section .dtors
+.balign 4
 lbl_000001A4:
     # 0x1A4
 
 # 4
 .section .rodata
+.balign 4
 .global _rodata
 _rodata:
     # 0x1A8
@@ -117,6 +121,10 @@ _rodata:
 
 # 5
 .section .data
+.balign 4
 lbl_000001B8:
     # 0x1B8
     .asciz "minigame dll setup\n"
+
+.section .bss
+.balign 4

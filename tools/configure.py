@@ -6,7 +6,9 @@ dir_path = 'src/'
 asm_path = 'asm/'
 rels_path = 'asm/DLLS/'
 
-aaa_rel_path = 'asm/DLLS/_minigameDll'
+_minigame_rel_path = 'asm/DLLS/_minigameDll'
+bootdll_rel_path = 'asm/DLLS/bootDll'
+E3setup_DLL_rel_path = 'asm/DLLS/E3setupDLL'
 
 #if DEVKITPPC isn't found, throw an error
 if os.getenv('DEVKITPPC') is None:
@@ -21,30 +23,58 @@ if os.getenv('WIBO') is None:
     print('https://github.com/decompals/wibo/releases')
     sys.exit()
 
-aaa_c_files = []
-for root, dirs, files in os.walk(aaa_rel_path):
-    if 'rels/bin' in root: #skip rel binaries
-        continue  # skip this directory
+_minigame_c_files = []
+for root, dirs, files in os.walk(_minigame_rel_path):
     for file in files:
         if file.endswith('.c'):
-            aaa_c_files.append(os.path.join(root, file))
+            _minigame_c_files.append(os.path.join(root, file))
 
-aaa_s_files = []
-for root, dirs, files in os.walk(aaa_rel_path):
-    if 'rels/bin' in root: #skip rel binaries
-        continue  # skip this directory
+_minigame_s_files = []
+for root, dirs, files in os.walk(_minigame_rel_path):
     for file in files:
         if file.endswith('.s'):
-            aaa_s_files.append(os.path.join(root, file))
+            _minigame_s_files.append(os.path.join(root, file))
+
+bootdll_c_files = []
+for root, dirs, files in os.walk(bootdll_rel_path):
+    for file in files:
+        if file.endswith('.c'):
+            bootdll_c_files.append(os.path.join(root, file))
+
+bootdll_s_files = []
+for root, dirs, files in os.walk(bootdll_rel_path):
+    for file in files:
+        if file.endswith('.s'):
+            bootdll_s_files.append(os.path.join(root, file))
+
+E3setup_DLL_c_files = []
+for root, dirs, files in os.walk(E3setup_DLL_rel_path):
+    for file in files:
+        if file.endswith('.c'):
+            E3setup_DLL_c_files.append(os.path.join(root, file))
+
+E3setup_DLL_s_files = []
+for root, dirs, files in os.walk(E3setup_DLL_rel_path):
+    for file in files:
+        if file.endswith('.s'):
+            E3setup_DLL_s_files.append(os.path.join(root, file))
 
 def append_extension(filename, extension='.o'):
     return filename + extension
 
 # Combine the lists and change file extensions
-aaa_o_files = []
-for file in aaa_c_files + aaa_s_files:
-    aaa_o_files.append("build/" + append_extension(file))
+_minigame_o_files = []
+for file in _minigame_c_files + _minigame_s_files:
+    _minigame_o_files.append("build/" + append_extension(file))
 
+bootdll_o_files = []
+for file in bootdll_c_files + bootdll_s_files:
+    bootdll_o_files.append("build/" + append_extension(file))
+
+E3setupDLL_o_files = []
+for file in E3setup_DLL_c_files + E3setup_DLL_s_files:
+    E3setupDLL_o_files.append("build/" + append_extension(file))
+    
 header = (
     "AS = $$DEVKITPPC/bin/powerpc-eabi-as\n"
     "CPP = $$DEVKITPPC/bin/powerpc-eabi-cpp -P\n"
@@ -86,7 +116,7 @@ ninja_file.rule('gen_ldscript',
                  deps = "msvc")
 
 ninja_file.rule('rel_ldscript',
-                 command = "wine ./tools/mwcc_compiler/2.6/mwldeppc.exe -lcf partial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in -map ./build/mp4.1/MarioParty4.MAP -o $out",
+                 command = "$$WIBO ./tools/mwcc_compiler/2.6/mwldeppc.exe -lcf partial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in -map ./build/mp4.1/MarioParty4.MAP -o $out",
                  deps = "msvc")
 
 ninja_file.rule('c_files',
@@ -114,15 +144,19 @@ ninja_file.rule('make_pre_rel2',
                  description = "ELF to pre REL",
                  deps = "msvc")
 
-ninja_file.rule('aaa_elf_to_rel',
-                 command = "./tools/elf2rel $in ./build/mp4.1/main.elf -b 1 -i 1 -o 0x0 -l 0x39 -c 13 $out",
-                 description = "aaa.rel.rel building...",
+ninja_file.rule('_minigame_elf_to_rel',
+                 command = "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -a 8 -b 1 -i 1 -o 0x0 -l 0x39 -c 13 $out",
+                 description = "_minigame.rel building...",
                  deps = "msvc")
 
+ninja_file.rule('bootdll_elf_to_rel',
+                 command = "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -a 32 -b 8 -i 1 -o 0x0 -l 0x2F -c 14 $out",
+                 description = "bootDll.rel. building...",
+                 deps = "msvc")
 
-ninja_file.rule('aaa_elf_to_rel_ppcdis',
-                 command = "python3 ./tools/ppcdis/elf2rel.py $in ./build/mp4.1/main.elf $out",
-                 description = "aaa.rel.rel building...",
+ninja_file.rule('E3setupDLL_elf_to_rel',
+                 command = "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 2 -o 0x39 -l 0x35 -c 15 $out",
+                 description = "E3setupDLL.rel. building...",
                  deps = "msvc")
    
 ninja_file.rule('copy_elf',
@@ -130,28 +164,36 @@ ninja_file.rule('copy_elf',
                  description = "Copy elf",
                  deps = "msvc")
 
-for aaa_c_file in aaa_c_files:
-    ninja_file.build("build/" + append_extension(aaa_c_file), "c_files", aaa_c_file)
-for aaa_s_file in aaa_s_files:
-    ninja_file.build("build/" + append_extension(aaa_s_file), "s_files", aaa_s_file)
+ninja_file.rule('check_rel_checksums',
+                 command = "python3 ./tools/checkRelChecksums.py")
 
-ninja_file.build('build/mp4.1/main.elf', "copy_elf ", 'build/mp4.1/main.elf')
-ninja_file.build("build/mp4.1/_minigame.elf", "rel_ldscript ", aaa_o_files)
-ninja_file.build("build/mp4.1/_minigame.rel", "aaa_elf_to_rel ", "build/mp4.1/_minigame.elf")
+for _minigame_c_file in _minigame_c_files:
+    ninja_file.build("build/" + append_extension(_minigame_c_file), "c_files", _minigame_c_file)
+for _minigame_s_file in _minigame_s_files:
+    ninja_file.build("build/" + append_extension(_minigame_s_file), "s_files", _minigame_s_file)
 
-# ninja_file.build("build/ttyd_us.elf", "make_elf ", o_files)
-# ninja_file.build("build/ttyd_us.dol", "make_dol ", "build/ttyd_us.elf")
+for bootdll_c_file in bootdll_c_files:
+    ninja_file.build("build/" + append_extension(bootdll_c_file), "c_files", bootdll_c_file)
+for bootdll_s_file in bootdll_s_files:
+    ninja_file.build("build/" + append_extension(bootdll_s_file), "s_files", bootdll_s_file)
 
-# for aaa_c_file in aaa_c_files:
-#     ninja_file.build("build/" + append_extension(aaa_c_file), "c_files", aaa_c_file)
-# for aaa_s_file in aaa_s_files:
-#     ninja_file.build("build/" + append_extension(aaa_s_file), "s_files", aaa_s_file)
+for E3setup_DLL_c_file in E3setup_DLL_c_files:
+    ninja_file.build("build/" + append_extension(E3setup_DLL_c_file), "c_files", E3setup_DLL_c_file)
+for E3setup_DLL_s_file in E3setup_DLL_s_files:
+    ninja_file.build("build/" + append_extension(E3setup_DLL_s_file), "s_files", E3setup_DLL_s_file)
 
-# ninja_file.build("build/rels/aaa/aaa.rel", "make_pre_rel2",  aaa_o_files, "build/ttyd_us.elf")
-# ninja_file.build("build build/rels/aaa/aaa.rel.ok", "aaa_elf_to_rel",  "build/rels/aaa/aaa.rel")
+ninja_file.build("build/mp4.1/_minigame.elf", "rel_ldscript ", _minigame_o_files)
+ninja_file.build("build/mp4.1/_minigame.rel", "_minigame_elf_to_rel ", "build/mp4.1/_minigame.elf")
 
-# ninja_file.build("build/rels/aji/aja.rel", "make_pre_rel2",  aji_o_files, "build/ttyd_us.elf")
-# ninja_file.build("build build/rels/aji/aji.rel.ok", "aji_elf_to_rel",  "build/rels/aji/aji.rel")
+ninja_file.build("build/mp4.1/bootDll.elf", "rel_ldscript ", bootdll_o_files)
+ninja_file.build("build/mp4.1/bootDll.rel", "bootdll_elf_to_rel ", "build/mp4.1/bootDll.elf")
+
+ninja_file.build("build/mp4.1/E3setupDLL.elf", "rel_ldscript ", E3setupDLL_o_files)
+ninja_file.build("build/mp4.1/E3setupDLL.rel", "E3setupDLL_elf_to_rel ", "build/mp4.1/E3setupDLL.elf")
+
+#depend on last file built to not run early (fix later)
+ninja_file.build("build/temp.j", "check_rel_checksums ", "build/mp4.1/E3setupDLL.rel")
+
 
 print ("build.ninja generated")
 ninja_file.close()

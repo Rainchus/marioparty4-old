@@ -597,7 +597,7 @@ static int compare_imports(const void *a, const void *b)
     return impA->moduleId - impB->moduleId;
 }
 
-static void write_rel_file(struct Module *module, struct RelHeader *relHdr, const char *filename, int bssAlign)
+static void write_rel_file(struct Module *module, struct RelHeader *relHdr, const char *filename, int bssAlign, int a_align)
 {
     int i, j;
     size_t filePos = sizeof(struct RelHeader);  // skip over header for now
@@ -746,7 +746,7 @@ static void write_rel_file(struct Module *module, struct RelHeader *relHdr, cons
         write_checked(fout, relHdr->importTableOffset + i * 8, &ent, sizeof(ent));
     }
     relHdr->importTableSize = importsCount * 8;
-    relHdr->align = 8; // TODO: Read me from a section.
+    relHdr->align = a_align; // TODO: Read me from a section.
     relHdr->bssAlign = bssAlign; // TODO: Read me from bss section.
     //v3 only, offset 0x48 in header
     //relHdr->fixSize = relHdr->relocationTableOffset; // Only 1 REL is used, so we can just do this as a hack.
@@ -793,11 +793,19 @@ int main(int argc, char **argv)
     const char *relName = NULL;
     struct RelHeader relHdr = {0};
     int bssAlign = 0;
+    int a_align = 8; //defaults to 8
 
     // Read command-line args
     for (i = 1; i < argc; i++)
     {
-        if (strcmp(argv[i], "-b") == 0)
+        if (strcmp(argv[i], "-a") == 0)
+        {
+            if (i + 1 < argc && parse_number(argv[i + 1], &a_align))
+                i++;
+            else
+                goto usage;
+        }
+        else if (strcmp(argv[i], "-b") == 0)
         {
             if (i + 1 < argc && parse_number(argv[i + 1], &bssAlign))
                 i++;
@@ -858,7 +866,7 @@ int main(int argc, char **argv)
     // TODO: Read this information from string table
     relHdr.moduleNameOffset = nameOffset;
     relHdr.moduleNameSize = nameLen;
-    write_rel_file(&relModule, &relHdr, relName, bssAlign);
+    write_rel_file(&relModule, &relHdr, relName, bssAlign, a_align);
 
     fclose(relModule.file);
     fclose(dolModule.file);

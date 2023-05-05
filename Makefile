@@ -84,11 +84,11 @@ else
   AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
   CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp -P
 endif
-CC      = $(WINE) tools/mwcc_compiler/$(MWCC_VERSION)/mwcceppc.exe
+CC      = $(WIBO) tools/mwcc_compiler/$(MWCC_VERSION)/mwcceppc.exe
 ifeq ($(EPILOGUE_PROCESS),1)
-CC_EPI  = $(WINE) tools/mwcc_compiler/$(MWCC_EPI_VERSION)/$(MWCC_EPI_EXE)
+CC_EPI  = $(WIBO) tools/mwcc_compiler/$(MWCC_EPI_VERSION)/$(MWCC_EPI_EXE)
 endif
-LD      := $(WINE) tools/mwcc_compiler/$(MWLD_VERSION)/mwldeppc.exe
+LD      := $(WIBO) tools/mwcc_compiler/$(MWLD_VERSION)/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 ELF2REL := tools/elf2rel
 SHA1SUM := sha1sum

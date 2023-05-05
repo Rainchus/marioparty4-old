@@ -26,6 +26,7 @@
 # offset: 0x00000000	length: 0x00000000	flags: 0
 # 1
 .section .text
+.balign 4
 lbl_000000C0:
 /* 000000C0 9421FFE0 */ stwu r1, -0x20(r1)
 /* 000000C4 7C0802A6 */ mflr r0
@@ -6001,16 +6002,19 @@ lbl_000058F8:
 
 # 2
 .section .ctors
+.balign 4
 lbl_00005910:
     # 0x5910
 
 # 3
 .section .dtors
+.balign 4
 lbl_00005914:
     # 0x5914
 
 # 4
 .section .rodata
+.balign 4
     # 0x5918
     .4byte 0x3FE00000
     .4byte 0x00000000
@@ -6231,6 +6235,7 @@ lbl_00005A44:
 
 # 5
 .section .data
+.balign 4
     # 0x5A48
     .4byte 0x00000000
     .4byte 0x463B8000
@@ -6572,6 +6577,7 @@ lbl_00005EE4:
 
 # 6
 .section .bss
+.balign 4
     .skip 0xA
 lbl_1000000A:
     .skip 0x2
