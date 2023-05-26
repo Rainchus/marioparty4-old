@@ -1,0 +1,18 @@
+SECTIONS
+{
+    GROUP :
+    {
+        .init :{}
+        .text :{}
+        .ctors :{}
+        .dtors :{}
+        .rodata :{}
+    }
+}
+
+FORCEACTIVE
+{
+    _prolog
+    _rodata
+    _epilog
+}

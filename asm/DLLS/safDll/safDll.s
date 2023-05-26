@@ -29,6 +29,7 @@
 
 # 1
 .section .text
+.balign 4
 .global _prolog
 _prolog:
 .global _epilog
@@ -279,10 +280,12 @@ lbl_0000043C:
 
 # 2
 .section .ctors
+.balign 4
     # 0x46C
 
 # 3
 .section .dtors
+.balign 4
     # 0x470
 
 # 4
@@ -327,5 +330,6 @@ lbl_000004CB:
 
 # 6
 .section .bss
+.balign 4
 lbl_000004D9:
-    .skip 0x39
+    .skip 0x300

@@ -80,6 +80,25 @@ rel_paths = {
     'm461Dll': 'asm/DLLS/m461Dll',
     'm462Dll': 'asm/DLLS/m462Dll',
     'm463Dll': 'asm/DLLS/m463Dll',
+    'mentDll': 'asm/DLLS/mentDll',
+    'messDll': 'asm/DLLS/messDll',
+    'mgmodedll': 'asm/DLLS/mgmodedll',
+    'modeltestDll': 'asm/DLLS/modeltestDll',
+    'modeseldll': 'asm/DLLS/modeseldll',
+    'mpexDll': 'asm/DLLS/mpexDll',
+    #'msetupDll': 'asm/DLLS/msetupDll',
+    'mstory2Dll': 'asm/DLLS/mstory2Dll',
+    'mstory3Dll': 'asm/DLLS/mstory3Dll',
+    'mstory4Dll': 'asm/DLLS/mstory4Dll',
+    'mstoryDll': 'asm/DLLS/mstoryDll',
+    'nisDll': 'asm/DLLS/nisDll',
+    'option': 'asm/DLLS/option',
+    'present': 'asm/DLLS/present',
+    'resultDll': 'asm/DLLS/resultDll',
+    #'safDll': 'asm/DLLS/safDll', #broken?
+    'selmenuDll': 'asm/DLLS/selmenuDll',
+    'staffDll': 'asm/DLLS/staffDll',
+    'subchrselDll': 'asm/DLLS/subchrselDll',
 }
 
 #if DEVKITPPC isn't found, throw an error
@@ -163,6 +182,9 @@ ninja_file.rule('gen_ldscript',
 
 ninja_file.rule('rel_ldscript',
                  command = "wine ./tools/mwcc_compiler/2.6/mwldeppc.exe -lcf partial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in -o $out")
+
+ninja_file.rule('nis_rel_ldscript',
+                 command = "wine ./tools/mwcc_compiler/2.6/mwldeppc.exe -lcf nisPartial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in -o $out")
 
 ninja_file.rule('c_files',
                  command = "$CC $CFLAGS -c -o $in $out",
@@ -267,12 +289,34 @@ elf_to_rel_map = {
     'm461Dll': 'm461Dll_elf_to_rel',
     'm462Dll': 'm462Dll_elf_to_rel',
     'm463Dll': 'm463Dll_elf_to_rel',
+    'mentDll': 'mentDll_elf_to_rel',
+    'messDll': 'messDll_elf_to_rel',
+    'mgmodedll': 'mgmodedll_elf_to_rel',
+    'modeltestDll': 'modeltestDll_elf_to_rel',
+    'modeseldll': 'modeseldll_elf_to_rel',
+    'mpexDll': 'mpexDll_elf_to_rel',
+    #'msetupDll': 'msetupDll_elf_to_rel',
+    'mstory2Dll': 'mstory2Dll_elf_to_rel',
+    'mstory3Dll': 'mstory3Dll_elf_to_rel',
+    'mstory4Dll': 'mstory4Dll_elf_to_rel',
+    'mstoryDll': 'mstoryDll_elf_to_rel',
+    'nisDll': 'nisDll_elf_to_rel',
+    'option': 'option_elf_to_rel',
+    'present': 'present_elf_to_rel',
+    'resultDll': 'resultDll_elf_to_rel',
+    #'safDll': 'safDll_elf_to_rel',
+    'selmenuDll': 'selmenuDll_elf_to_rel',
+    'staffDll': 'staffDll_elf_to_rel',
+    'subchrselDll': 'subchrselDll_elf_to_rel',
 }
 
 for name in rel_paths.keys():
     elf_path = f"build/mp4.1/{name}.elf"
     rel_path = f"build/mp4.1/{name}.rel"
-    ninja_file.build(elf_path, "rel_ldscript", o_files[name])
+    if name == 'nisDll':
+        ninja_file.build(elf_path, "nis_rel_ldscript", o_files[name])
+    else:
+        ninja_file.build(elf_path, "rel_ldscript", o_files[name])
     ninja_file.build(rel_path, elf_to_rel_map[name], elf_path)
 
 # Specify that check_rel_checksums rule depends on all other rules
@@ -347,6 +391,25 @@ ninja_file.build("build/checksums.stamp", "check_rel_checksums", [
     "build/mp4.1/m461Dll.rel",
     "build/mp4.1/m462Dll.rel",
     "build/mp4.1/m463Dll.rel",
+    "build/mp4.1/mentDll.rel",
+    "build/mp4.1/messDll.rel",
+    "build/mp4.1/mgmodedll.rel",
+    "build/mp4.1/modeltestDll.rel",
+    "build/mp4.1/modeseldll.rel",
+    "build/mp4.1/mpexDll.rel",
+    #"build/mp4.1/msetupDll.rel",
+    "build/mp4.1/mstory2Dll.rel",
+    "build/mp4.1/mstory3Dll.rel",
+    "build/mp4.1/mstory4Dll.rel",
+    "build/mp4.1/mstoryDll.rel",
+    "build/mp4.1/nisDll.rel",
+    "build/mp4.1/option.rel",
+    "build/mp4.1/present.rel",
+    "build/mp4.1/resultDll.rel",
+    #"build/mp4.1/safDll.rel",
+    "build/mp4.1/selmenuDll.rel",
+    "build/mp4.1/staffDll.rel",
+    "build/mp4.1/subchrselDll.rel",
 ])
 
 

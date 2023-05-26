@@ -279,4 +279,80 @@ rule_dict = {
         'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
         'description': "m463Dll.rel building..."
     },
+    'mentDll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "mentDll.rel building..."
+    },
+    'messDll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "messDll.rel building..."
+    },
+    'mgmodedll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x33 -c 14 $out",
+        'description': "mgmodedll.rel building..."
+    },
+    'modeltestDll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x39 -c 15 $out",
+        'description': "modeltestDll.rel building..."
+    },
+    'modeseldll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x35 -c 15 $out",
+        'description': "modeseldll.rel building..."
+    },
+    'mpexDll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "mpexDll.rel building..."
+    },
+    'msetupDll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x33 -c 8 $out",
+        'description': "msetupDll.rel building..."
+    },
+    'mstory2Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x35 -c 15 $out",
+        'description': "mstory2Dll.rel building..."
+    },
+    'mstory3Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x35 -c 16 $out",
+        'description': "mstory3Dll.rel building..."
+    },
+    'mstory4Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x35 -c 15 $out",
+        'description': "mstory4Dll.rel building..."
+    },
+    'mstoryDll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x33 -c 15 $out",
+        'description': "mstoryDll.rel building..."
+    },
+    'nisDll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 1 -i 1 -o 0x00 -l 0x2D -c 12 $out",
+        'description': "nisDll.rel building..."
+    },
+    'option_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2D -c 15 $out",
+        'description': "option.rel building..."
+    },
+    'present_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "present.rel building..."
+    },
+    'resultDll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x33 -c 14 $out",
+        'description': "resultDll.rel building..."
+    },
+    'safDll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2D -c 15 $out",
+        'description': "safDll.rel building..."
+    },
+    'selmenuDll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x35 -c 16 $out",
+        'description': "selmenuDll.rel building..."
+    },
+    'staffDll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x31 -c 14 $out",
+        'description': "staffDll.rel building..."
+    },
+    'subchrselDll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x39 -c 15 $out",
+        'description': "subchrselDll.rel building..."
+    },
 }

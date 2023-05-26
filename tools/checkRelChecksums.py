@@ -72,6 +72,25 @@ us_rel_sha1 = {
     "build/mp4.1/m461Dll.rel": "ab058151bd25600f05f8b6fedbec1c7448175123",
     "build/mp4.1/m462Dll.rel": "78d6ab00677791ece684a0c149d1ae72efc52d1c",
     "build/mp4.1/m463Dll.rel": "32010595b4fd0b75293fc46b9026c5613d0ea4c2",
+    "build/mp4.1/mentDll.rel": "9e63dd96943ffd2747be5aad924b95892d46051a",
+    "build/mp4.1/messDll.rel": "7e119de456b3557dcf514c70bd7ab81dc5f9cf54",
+    "build/mp4.1/mgmodedll.rel": "376c78e2d1b7d7a429959c532e9cb92c98f73b7e",
+    "build/mp4.1/modeltestDll.rel": "8de28c0f254a2c574c4da9b6a3a17e5ad7ffe1f9",
+    "build/mp4.1/modeseldll.rel": "bdf8cd57fa23f07c429393817037ade04e2c6024",
+    "build/mp4.1/mpexDll.rel": "4524e63b63510b42bca907f72e67affddec856f9",
+    #"build/mp4.1/msetupDll.rel": "86ff8288bb92472376d02cade1d3c9603b613c57", #broken rel, cannot build
+    "build/mp4.1/mstory2Dll.rel": "7579ff7aa9638488d876dbb61d3e4b868974a040",
+    "build/mp4.1/mstory3Dll.rel": "951f1951eac515fce1d3314059f27fdc7b39f035",
+    "build/mp4.1/mstory4Dll.rel": "7f9cc4a18a137f861b2c326b099c02ba4e5bd94b",
+    "build/mp4.1/mstoryDll.rel": "979a83f2d6f5200e2de4333ec8f943701a250131",
+    "build/mp4.1/nisDll.rel": "d74a5147245a1877b140ee2af7f75b2b6c90892d",
+    "build/mp4.1/option.rel": "5c6973fe7e0271885a5a87d87d4e7164ef711abb",
+    "build/mp4.1/present.rel": "ddb8d8a825578a588276b9d4f65eceee26f91253",
+    "build/mp4.1/resultDll.rel": "41a820438884ae8566f34f895198a186aae60305",
+    #"build/mp4.1/safDll.rel": "f34c104078b41971412cb09b37c4dc9526be02e3", #broken but maybe buildable?
+    "build/mp4.1/selmenuDll.rel": "81a00a71b8d1ab22bfd3df10d815c87ba618ec84",
+    "build/mp4.1/staffDll.rel": "a6210fbcdf3d7f0063f3052e2ae525abacac08e7",
+    "build/mp4.1/subchrselDll.rel": "7488bc249dc7c656f60105e4d24c4011983c2ba2",
 }
 
 # ANSI color codes for green and red

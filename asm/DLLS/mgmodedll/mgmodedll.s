@@ -23,26 +23,9 @@
 # offset: 0x00000000	length: 0x00000000	flags: 0
 # offset: 0x00000000	length: 0x00000000	flags: 0
 # offset: 0x00000000	length: 0x00000000	flags: 0
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
-# error: symbol for lbl_801D3E96 not found
 # 1
 .section .text
+.balign 4
 .global _prolog
 _prolog:
 /* 000000B8 9421FFF0 */ stwu r1, -0x10(r1)
@@ -42672,11 +42655,13 @@ lbl_00027D7C:
 
 # 2
 .section .ctors
+.balign 4
 lbl_00027DA8:
     # 0x27DA8
 
 # 3
 .section .dtors
+.balign 4
 lbl_00027DAC:
     # 0x27DAC
 
@@ -44486,6 +44471,7 @@ lbl_00028F40:
 
 # 6
 .section .bss
+.balign 4
 lbl_10000000:
     .skip 0x4
 lbl_10000004:

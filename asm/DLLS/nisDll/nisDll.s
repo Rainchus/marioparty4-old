@@ -23,6 +23,7 @@
 # offset: 0x00000000	length: 0x00000000	flags: 0
 # 1
 .section .text
+.balign 4
 /* 000000A8 9421FFE0 */ stwu r1, -0x20(r1)
 /* 000000AC 7C0802A6 */ mflr r0
 /* 000000B0 90010024 */ stw r0, 0x24(r1)
@@ -131,11 +132,13 @@ lbl_00000204:
 
 # 2
 .section .ctors
+.balign 4
 lbl_00000224:
     # 0x224
 
 # 3
 .section .dtors
+.balign 4
 lbl_00000228:
     # 0x228
 
