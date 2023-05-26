@@ -51,6 +51,16 @@ us_rel_sha1 = {
     "build/mp4.1/m438Dll.rel": "9bddf4b81b9a792260000abe2631da493a8b8564",
     "build/mp4.1/m439Dll.rel": "a2a18c9d26dedfa8e2ae003c3a2e1bdcc1cbd4cc",
     "build/mp4.1/m440Dll.rel": "227ca13bcd72059bdd506e9611d9b52f661af6c5",
+    "build/mp4.1/m441Dll.rel": "d6cbf72115374e06ffea3f15001977c288a9c3fb",
+    "build/mp4.1/m442Dll.rel": "347fcb836b5266dfe3d1088e1aa796c043b0fe60",
+    "build/mp4.1/m443Dll.rel": "77444c6739a4d9390f30ba56c5fcd82ee4efc0c2",
+    "build/mp4.1/m444dll.rel": "76154b165cd86472ce3155028ea049ba0a0f3dcb",
+    "build/mp4.1/m445Dll.rel": "d4d9f2aad53aa7f4e1c313438a0e3767f8e58eb9",
+    "build/mp4.1/m446dll.rel": "4b16e5eff613eaf4cc98411809cd1f1578e33fd1",
+    "build/mp4.1/m447dll.rel": "775ca8f8b3be867ad67f91bc3b6ebcc8c3068d2b",
+    "build/mp4.1/m448Dll.rel": "e6f7586dadbe3f5b5045c0bdf2fe618d42ef3a44",
+    "build/mp4.1/m449Dll.rel": "e797c2ff132ab35e768be62cb62219592464ca9d",
+    "build/mp4.1/m450Dll.rel": "f2ea7da07cf8be4f449c97b829d3231911e158a0",
 }
 
 # ANSI color codes for green and red

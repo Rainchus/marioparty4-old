@@ -195,4 +195,44 @@ rule_dict = {
         'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
         'description': "m440Dll.rel building..."
     },
+    'm441Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m441Dll.rel building..."
+    },
+    'm442Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m442Dll.rel building..."
+    },
+    'm443Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m443Dll.rel building..."
+    },
+    'm444dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m444dll.rel building..."
+    },
+    'm445Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m445Dll.rel building..."
+    },
+    'm446dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m446dll.rel building..."
+    },
+    'm447dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m447dll.rel building..."
+    },
+    'm448Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m448Dll.rel building..."
+    },
+    'm449Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m449Dll.rel building..."
+    },
+    'm450Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m450Dll.rel building..."
+    },
 }

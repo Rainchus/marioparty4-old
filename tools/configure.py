@@ -59,6 +59,16 @@ rel_paths = {
     'm438Dll': 'asm/DLLS/m438Dll',
     'm439Dll': 'asm/DLLS/m439Dll',
     'm440Dll': 'asm/DLLS/m440Dll',
+    'm441Dll': 'asm/DLLS/m441Dll',
+    'm442Dll': 'asm/DLLS/m442Dll',
+    'm443Dll': 'asm/DLLS/m443Dll',
+    'm444dll': 'asm/DLLS/m444dll',
+    'm445Dll': 'asm/DLLS/m445Dll',
+    'm446dll': 'asm/DLLS/m446dll',
+    'm447dll': 'asm/DLLS/m447dll',
+    'm448Dll': 'asm/DLLS/m448Dll',
+    'm449Dll': 'asm/DLLS/m449Dll',
+    'm450Dll': 'asm/DLLS/m450Dll',
 }
 
 #if DEVKITPPC isn't found, throw an error
@@ -225,6 +235,16 @@ elf_to_rel_map = {
     'm438Dll': 'm438Dll_elf_to_rel',
     'm439Dll': 'm439Dll_elf_to_rel',
     'm440Dll': 'm440Dll_elf_to_rel',
+    'm441Dll': 'm441Dll_elf_to_rel',
+    'm442Dll': 'm442Dll_elf_to_rel',
+    'm443Dll': 'm443Dll_elf_to_rel',
+    'm444dll': 'm444dll_elf_to_rel',
+    'm445Dll': 'm445Dll_elf_to_rel',
+    'm446dll': 'm446dll_elf_to_rel',
+    'm447dll': 'm447dll_elf_to_rel',
+    'm448Dll': 'm448Dll_elf_to_rel',
+    'm449Dll': 'm449Dll_elf_to_rel',
+    'm450Dll': 'm450Dll_elf_to_rel',
 }
 
 for name in rel_paths.keys():
@@ -284,6 +304,16 @@ ninja_file.build("build/checksums.stamp", "check_rel_checksums", [
     "build/mp4.1/m438Dll.rel",
     "build/mp4.1/m439Dll.rel",
     "build/mp4.1/m440Dll.rel",
+    "build/mp4.1/m441Dll.rel",
+    "build/mp4.1/m442Dll.rel",
+    "build/mp4.1/m443Dll.rel",
+    "build/mp4.1/m444dll.rel",
+    "build/mp4.1/m445Dll.rel",
+    "build/mp4.1/m446dll.rel",
+    "build/mp4.1/m447dll.rel",
+    "build/mp4.1/m448Dll.rel",
+    "build/mp4.1/m449Dll.rel",
+    "build/mp4.1/m450Dll.rel",
 ])
 
 
