@@ -1,5 +1,19 @@
 .include "macros.inc"
 
+.equ MINI_MUSHROOM, 0
+.equ MUSHROOM, 1
+.equ SUPER_MINI_MUSHROOM, 2
+.equ SUPER_MEGA_MUSHROOM, 3
+.equ MINI_MEGA_HAMMER, 4
+.equ WARP_PIPE, 5
+.equ SWAP_CARD, 6
+.equ SPARKY_STICKER, 7
+.equ GADDLIGHT, 8
+.equ CHOMP_CALL, 9
+.equ BOWSER_SUIT, 0xA
+.equ BOO_CRYSTAL_BALL, 0xB
+.equ MAGIC_LAMP, 0xC
+
 .section .data, "wa"  # 0x8011EDE0 - 0x80142800
 .global lbl_8011EDE0
 lbl_8011EDE0:
@@ -17,8 +31,8 @@ lbl_8011EDF0:
 .global lbl_8011EE00
 lbl_8011EE00:
 	# ROM: 0x11BE00
-	.4byte 0x4D504743
-	.4byte 0x48550101
+	.ascii "MPGCHU"
+	.2byte 0x0101
 	.4byte 0x01000000
 	.4byte 0
 	.4byte 0
@@ -26891,33 +26905,121 @@ lbl_80139AE8:
 	.4byte 0x00280029
 	.4byte 0x002A0000
 	.4byte 0x00000000
-.global lbl_80139B00
-lbl_80139B00:
+.global characterItemShopPreferences
+characterItemShopPreferences:
 	# ROM: 136B00
-	.4byte 0x0C0B0503
-	.4byte 0x01020604
-	.4byte 0x0007090A
-	.4byte 0x0C0B050A
-	.4byte 0x03010200
-	.4byte 0x06040709
-	.4byte 0x0C0B0506
-	.4byte 0x0301020A
-	.4byte 0x07090004
-	.4byte 0x0C050B09
-	.4byte 0x03010206
-	.4byte 0x00040A07
-	.4byte 0x0C0B0409
-	.4byte 0x0A030105
-	.4byte 0x02060007
-	.4byte 0x0C0B0503
-	.4byte 0x010A0602
-	.4byte 0x00040907
-	.4byte 0x0C050B04
-	.4byte 0x07090301
-	.4byte 0x0A060200
-	.4byte 0x0C05070B
-	.4byte 0x0A090406
-	.4byte 0x03010200
+	# Character Mario
+	.byte MAGIC_LAMP
+	.byte BOO_CRYSTAL_BALL
+	.byte WARP_PIPE
+	.byte SUPER_MEGA_MUSHROOM
+	.byte MUSHROOM
+	.byte SUPER_MINI_MUSHROOM
+	.byte SWAP_CARD
+	.byte MINI_MEGA_HAMMER
+	.byte MINI_MUSHROOM
+	.byte SPARKY_STICKER
+	.byte CHOMP_CALL
+	.byte BOWSER_SUIT
+
+	# Character Luigi
+	.byte MAGIC_LAMP
+	.byte BOO_CRYSTAL_BALL
+	.byte WARP_PIPE
+	.byte BOWSER_SUIT
+	.byte SUPER_MEGA_MUSHROOM
+	.byte MUSHROOM
+	.byte SUPER_MINI_MUSHROOM
+	.byte MINI_MUSHROOM
+	.byte SWAP_CARD
+	.byte MINI_MEGA_HAMMER
+	.byte SPARKY_STICKER
+	.byte CHOMP_CALL
+
+	# Character Peach
+	.byte MAGIC_LAMP
+	.byte BOO_CRYSTAL_BALL
+	.byte WARP_PIPE
+	.byte SWAP_CARD
+	.byte SUPER_MEGA_MUSHROOM
+	.byte MUSHROOM
+	.byte SUPER_MINI_MUSHROOM
+	.byte BOWSER_SUIT
+	.byte SPARKY_STICKER
+	.byte CHOMP_CALL
+	.byte MINI_MUSHROOM
+	.byte MINI_MEGA_HAMMER
+
+	# Character Yoshi
+	.byte MAGIC_LAMP
+	.byte WARP_PIPE
+	.byte BOO_CRYSTAL_BALL
+	.byte CHOMP_CALL
+	.byte SUPER_MEGA_MUSHROOM
+	.byte MUSHROOM
+	.byte SUPER_MINI_MUSHROOM
+	.byte SWAP_CARD
+	.byte MINI_MUSHROOM
+	.byte MINI_MEGA_HAMMER
+	.byte BOWSER_SUIT
+	.byte SPARKY_STICKER
+
+	# Character Wario
+	.byte MAGIC_LAMP
+	.byte BOO_CRYSTAL_BALL
+	.byte MINI_MEGA_HAMMER
+	.byte CHOMP_CALL
+	.byte BOWSER_SUIT
+	.byte SUPER_MEGA_MUSHROOM
+	.byte MUSHROOM
+	.byte WARP_PIPE
+	.byte SUPER_MINI_MUSHROOM
+	.byte SWAP_CARD
+	.byte MINI_MUSHROOM
+	.byte SPARKY_STICKER
+
+	# Character DK
+	.byte MAGIC_LAMP
+	.byte BOO_CRYSTAL_BALL
+	.byte WARP_PIPE
+	.byte SUPER_MEGA_MUSHROOM
+	.byte MUSHROOM
+	.byte BOWSER_SUIT
+	.byte SWAP_CARD
+	.byte SUPER_MINI_MUSHROOM
+	.byte MINI_MUSHROOM
+	.byte MINI_MEGA_HAMMER
+	.byte CHOMP_CALL
+	.byte SPARKY_STICKER
+
+	# Character Daisy
+	.byte MAGIC_LAMP
+	.byte WARP_PIPE
+	.byte BOO_CRYSTAL_BALL
+	.byte MINI_MEGA_HAMMER
+	.byte SPARKY_STICKER
+	.byte CHOMP_CALL
+	.byte SUPER_MEGA_MUSHROOM
+	.byte MUSHROOM
+	.byte BOWSER_SUIT
+	.byte SWAP_CARD
+	.byte SUPER_MINI_MUSHROOM
+	.byte MINI_MUSHROOM
+
+	# Character Waluigi
+	.byte MAGIC_LAMP
+	.byte WARP_PIPE
+	.byte SPARKY_STICKER
+	.byte BOO_CRYSTAL_BALL
+	.byte BOWSER_SUIT
+	.byte CHOMP_CALL
+	.byte MINI_MEGA_HAMMER
+	.byte SWAP_CARD
+	.byte SUPER_MEGA_MUSHROOM
+	.byte MUSHROOM
+	.byte SUPER_MINI_MUSHROOM
+	.byte MINI_MUSHROOM
+
 .global lbl_80139B60
 lbl_80139B60:
 	# ROM: 136B60

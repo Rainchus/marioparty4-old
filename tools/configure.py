@@ -62,18 +62,21 @@ for root, dirs, files in os.walk(E3setup_DLL_rel_path):
 def append_extension(filename, extension='.o'):
     return filename + extension
 
+def append_prefix(filename, prefix='build/'):
+    return prefix + filename
+
 # Combine the lists and change file extensions
 _minigame_o_files = []
 for file in _minigame_c_files + _minigame_s_files:
-    _minigame_o_files.append("build/" + append_extension(file))
+    _minigame_o_files.append(append_prefix(append_extension(file)))
 
 bootdll_o_files = []
 for file in bootdll_c_files + bootdll_s_files:
-    bootdll_o_files.append("build/" + append_extension(file))
+    bootdll_o_files.append(append_prefix(append_extension(file)))
 
 E3setupDLL_o_files = []
 for file in E3setup_DLL_c_files + E3setup_DLL_s_files:
-    E3setupDLL_o_files.append("build/" + append_extension(file))
+    E3setupDLL_o_files.append(append_prefix(append_extension(file)))
     
 header = (
     "AS = $$DEVKITPPC/bin/powerpc-eabi-as\n"
