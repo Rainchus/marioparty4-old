@@ -153,3 +153,11 @@ _rodata:
     .4byte 0x40080000
     .4byte 0x00000000
 
+# 5
+.section .data
+.balign 4
+
+# 6
+.section .bss
+.balign 4
+

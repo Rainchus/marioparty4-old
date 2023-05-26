@@ -7,6 +7,8 @@ SECTIONS
         .ctors :{}
         .dtors :{}
         .rodata :{}
+        .data :{}
+        .bss :{}
     }
 }
 

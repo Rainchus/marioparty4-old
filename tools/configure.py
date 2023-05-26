@@ -99,6 +99,16 @@ rel_paths = {
     'selmenuDll': 'asm/DLLS/selmenuDll',
     'staffDll': 'asm/DLLS/staffDll',
     'subchrselDll': 'asm/DLLS/subchrselDll',
+    'w01Dll': 'asm/DLLS/w01Dll',
+    'w02Dll': 'asm/DLLS/w02Dll',
+    'w03Dll': 'asm/DLLS/w03Dll',
+    'w04Dll': 'asm/DLLS/w04Dll',
+    'w05Dll': 'asm/DLLS/w05Dll',
+    'w06Dll': 'asm/DLLS/w06Dll',
+    'w10Dll': 'asm/DLLS/w10Dll',
+    'w20Dll': 'asm/DLLS/w20Dll',
+    'w21Dll': 'asm/DLLS/w21Dll',
+    'ztardll': 'asm/DLLS/ztardll',
 }
 
 #if DEVKITPPC isn't found, throw an error
@@ -308,6 +318,16 @@ elf_to_rel_map = {
     'selmenuDll': 'selmenuDll_elf_to_rel',
     'staffDll': 'staffDll_elf_to_rel',
     'subchrselDll': 'subchrselDll_elf_to_rel',
+    'w01Dll': 'w01Dll_elf_to_rel',
+    'w02Dll': 'w02Dll_elf_to_rel',
+    'w03Dll': 'w03Dll_elf_to_rel',
+    'w04Dll': 'w04Dll_elf_to_rel',
+    'w05Dll': 'w05Dll_elf_to_rel',
+    'w06Dll': 'w06Dll_elf_to_rel',
+    'w10Dll': 'w10Dll_elf_to_rel',
+    'w20Dll': 'w20Dll_elf_to_rel',
+    'w21Dll': 'w21Dll_elf_to_rel',
+    'ztardll': 'ztardll_elf_to_rel',
 }
 
 for name in rel_paths.keys():
@@ -410,6 +430,16 @@ ninja_file.build("build/checksums.stamp", "check_rel_checksums", [
     "build/mp4.1/selmenuDll.rel",
     "build/mp4.1/staffDll.rel",
     "build/mp4.1/subchrselDll.rel",
+    "build/mp4.1/w01Dll.rel",
+    "build/mp4.1/w02Dll.rel",
+    "build/mp4.1/w03Dll.rel",
+    "build/mp4.1/w04Dll.rel",
+    "build/mp4.1/w05Dll.rel",
+    "build/mp4.1/w06Dll.rel",
+    "build/mp4.1/w10Dll.rel",
+    "build/mp4.1/w20Dll.rel",
+    "build/mp4.1/w21Dll.rel",
+    "build/mp4.1/ztardll.rel",
 ])
 
 

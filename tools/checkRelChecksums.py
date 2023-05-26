@@ -91,6 +91,16 @@ us_rel_sha1 = {
     "build/mp4.1/selmenuDll.rel": "81a00a71b8d1ab22bfd3df10d815c87ba618ec84",
     "build/mp4.1/staffDll.rel": "a6210fbcdf3d7f0063f3052e2ae525abacac08e7",
     "build/mp4.1/subchrselDll.rel": "7488bc249dc7c656f60105e4d24c4011983c2ba2",
+    "build/mp4.1/w01Dll.rel": "d3de36269886995d959e1fd58d8ad806843c8819",
+    "build/mp4.1/w02Dll.rel": "750c4d6cd6a49d290f5cc63432d4f65642fbd7e4",
+    "build/mp4.1/w03Dll.rel": "f9e8d9c4581d44488adaffa3d46d9bc835d4f9bd",
+    "build/mp4.1/w04Dll.rel": "821126eeb7054150744b925cc4cb06c751ddcefd",
+    "build/mp4.1/w05Dll.rel": "d29f7ccadcba23c8446d05101c4efa5caba26dfd",
+    "build/mp4.1/w06Dll.rel": "d11a7a6d44189ba8d1e3a7168ea640ea9f2152fe",
+    "build/mp4.1/w10Dll.rel": "54bb23228b04c5aaa6aa7c8ca1f846baec5a1f2c",
+    "build/mp4.1/w20Dll.rel": "98cc41456afa9e1ccbb8e03718b8d3cb64e4e86f",
+    "build/mp4.1/w21Dll.rel": "b888f2c6703e680699ff8c59ad9200b9d78d30a1",
+    "build/mp4.1/ztardll.rel": "87d9fee70ed4f011e0b30e05156d087204cf686f",
 }
 
 # ANSI color codes for green and red

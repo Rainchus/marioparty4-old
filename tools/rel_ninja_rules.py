@@ -355,4 +355,45 @@ rule_dict = {
         'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x39 -c 15 $out",
         'description': "subchrselDll.rel building..."
     },
+    'w01Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2D -c 16 $out",
+        'description': "w01Dll.rel building..."
+    },
+    'w02Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2D -c 15 $out",
+        'description': "w02Dll.rel building..."
+    },
+    'w03Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2D -c 15 $out",
+        'description': "w03Dll.rel building..."
+    },
+    'w04Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2D -c 15 $out",
+        'description': "w04Dll.rel building..."
+    },
+    'w05Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2D -c 15 $out",
+        'description': "w05Dll.rel building..."
+    },
+    'w06Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2D -c 15 $out",
+        'description': "w06Dll.rel building..."
+    },
+    'w10Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2D -c 15 $out",
+        'description': "w10Dll.rel building..."
+    },
+    'w20Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2D -c 14 $out",
+        'description': "w20Dll.rel building..."
+    },
+    'w21Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 1 -i 1 -o 0x00 -l 0x2D -c 13 $out",
+        'description': "w21Dll.rel building..."
+    },
+    'ztardll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 14 $out",
+        'description': "ztardll.rel building..."
+    },
+    
 }
