@@ -6,9 +6,11 @@ dir_path = 'src/'
 asm_path = 'asm/'
 rels_path = 'asm/DLLS/'
 
-_minigame_rel_path = 'asm/DLLS/_minigameDll'
-bootdll_rel_path = 'asm/DLLS/bootDll'
-E3setup_DLL_rel_path = 'asm/DLLS/E3setupDLL'
+rel_paths = {
+    '_minigameDll': 'asm/DLLS/_minigameDll',
+    'bootDll': 'asm/DLLS/bootDll',
+    'E3setupDLL': 'asm/DLLS/E3setupDLL'
+}
 
 #if DEVKITPPC isn't found, throw an error
 if os.getenv('DEVKITPPC') is None:
@@ -23,41 +25,13 @@ if os.getenv('WIBO') is None:
     print('https://github.com/decompals/wibo/releases')
     sys.exit()
 
-_minigame_c_files = []
-for root, dirs, files in os.walk(_minigame_rel_path):
-    for file in files:
-        if file.endswith('.c'):
-            _minigame_c_files.append(os.path.join(root, file))
-
-_minigame_s_files = []
-for root, dirs, files in os.walk(_minigame_rel_path):
-    for file in files:
-        if file.endswith('.s'):
-            _minigame_s_files.append(os.path.join(root, file))
-
-bootdll_c_files = []
-for root, dirs, files in os.walk(bootdll_rel_path):
-    for file in files:
-        if file.endswith('.c'):
-            bootdll_c_files.append(os.path.join(root, file))
-
-bootdll_s_files = []
-for root, dirs, files in os.walk(bootdll_rel_path):
-    for file in files:
-        if file.endswith('.s'):
-            bootdll_s_files.append(os.path.join(root, file))
-
-E3setup_DLL_c_files = []
-for root, dirs, files in os.walk(E3setup_DLL_rel_path):
-    for file in files:
-        if file.endswith('.c'):
-            E3setup_DLL_c_files.append(os.path.join(root, file))
-
-E3setup_DLL_s_files = []
-for root, dirs, files in os.walk(E3setup_DLL_rel_path):
-    for file in files:
-        if file.endswith('.s'):
-            E3setup_DLL_s_files.append(os.path.join(root, file))
+def get_files_with_extension(path, extension):
+    result_files = []
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            if file.endswith(extension):
+                result_files.append(os.path.join(root, file))
+    return result_files
 
 def append_extension(filename, extension='.o'):
     return filename + extension
@@ -65,18 +39,18 @@ def append_extension(filename, extension='.o'):
 def append_prefix(filename, prefix='build/'):
     return prefix + filename
 
-# Combine the lists and change file extensions
-_minigame_o_files = []
-for file in _minigame_c_files + _minigame_s_files:
-    _minigame_o_files.append(append_prefix(append_extension(file)))
+c_files = {}
+s_files = {}
+o_files = {}
 
-bootdll_o_files = []
-for file in bootdll_c_files + bootdll_s_files:
-    bootdll_o_files.append(append_prefix(append_extension(file)))
+for name, path in rel_paths.items():
+    c_files[name] = get_files_with_extension(path, '.c')
+    s_files[name] = get_files_with_extension(path, '.s')
 
-E3setupDLL_o_files = []
-for file in E3setup_DLL_c_files + E3setup_DLL_s_files:
-    E3setupDLL_o_files.append(append_prefix(append_extension(file)))
+    # Combine the lists and change file extensions
+    o_files[name] = []
+    for file in c_files[name] + s_files[name]:
+        o_files[name].append(append_prefix(append_extension(file)))
     
 header = (
     "AS = $$DEVKITPPC/bin/powerpc-eabi-as\n"
@@ -91,8 +65,8 @@ header = (
     "DOL = $BUILD_DIR/main.dol\n"
     "MWCC_VERSION = 2.6\n"
     "MWLD_VERSION = 2.6\n"
-    "CC = $$WIBO tools/mwcc_compiler/$MWCC_VERSION/mwcceppc.exe\n"
-    "LD = $$WIBO tools/mwcc_compiler/$MWLD_VERSION/mwldeppc.exe\n"
+    "CC = wine tools/mwcc_compiler/$MWCC_VERSION/mwcceppc.exe\n"
+    "LD = wine tools/mwcc_compiler/$MWLD_VERSION/mwldeppc.exe\n"
     "ELF2DOL = ./tools/ppcdis/elf2dol.py\n"
     "ELF2REL = tools/elf2rel\n"
     "SHA1SUM = sha1sum\n"
@@ -119,7 +93,7 @@ ninja_file.rule('gen_ldscript',
                  deps = "msvc")
 
 ninja_file.rule('rel_ldscript',
-                 command = "$$WIBO ./tools/mwcc_compiler/2.6/mwldeppc.exe -lcf partial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in -map ./build/mp4.1/MarioParty4.MAP -o $out",
+                 command = "wine ./tools/mwcc_compiler/2.6/mwldeppc.exe -lcf partial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in -map ./build/mp4.1/MarioParty4.MAP -o $out",
                  deps = "msvc")
 
 ninja_file.rule('c_files',
@@ -170,32 +144,30 @@ ninja_file.rule('copy_elf',
 ninja_file.rule('check_rel_checksums',
                  command = "python3 ./tools/checkRelChecksums.py")
 
-for _minigame_c_file in _minigame_c_files:
-    ninja_file.build("build/" + append_extension(_minigame_c_file), "c_files", _minigame_c_file)
-for _minigame_s_file in _minigame_s_files:
-    ninja_file.build("build/" + append_extension(_minigame_s_file), "s_files", _minigame_s_file)
+for name in rel_paths.keys():
+    for c_file in c_files[name]:
+        ninja_file.build("build/" + append_extension(c_file), "c_files", c_file)
+    for s_file in s_files[name]:
+        ninja_file.build("build/" + append_extension(s_file), "s_files", s_file)
 
-for bootdll_c_file in bootdll_c_files:
-    ninja_file.build("build/" + append_extension(bootdll_c_file), "c_files", bootdll_c_file)
-for bootdll_s_file in bootdll_s_files:
-    ninja_file.build("build/" + append_extension(bootdll_s_file), "s_files", bootdll_s_file)
+elf_to_rel_map = {
+    '_minigameDll': '_minigame_elf_to_rel',
+    'bootDll': 'bootdll_elf_to_rel',
+    'E3setupDLL': 'E3setupDLL_elf_to_rel',
+}
 
-for E3setup_DLL_c_file in E3setup_DLL_c_files:
-    ninja_file.build("build/" + append_extension(E3setup_DLL_c_file), "c_files", E3setup_DLL_c_file)
-for E3setup_DLL_s_file in E3setup_DLL_s_files:
-    ninja_file.build("build/" + append_extension(E3setup_DLL_s_file), "s_files", E3setup_DLL_s_file)
+for name in rel_paths.keys():
+    elf_path = f"build/mp4.1/{name}.elf"
+    rel_path = f"build/mp4.1/{name}.rel"
+    ninja_file.build(elf_path, "rel_ldscript", o_files[name])
+    ninja_file.build(rel_path, elf_to_rel_map[name], elf_path)
 
-ninja_file.build("build/mp4.1/_minigame.elf", "rel_ldscript ", _minigame_o_files)
-ninja_file.build("build/mp4.1/_minigame.rel", "_minigame_elf_to_rel ", "build/mp4.1/_minigame.elf")
-
-ninja_file.build("build/mp4.1/bootDll.elf", "rel_ldscript ", bootdll_o_files)
-ninja_file.build("build/mp4.1/bootDll.rel", "bootdll_elf_to_rel ", "build/mp4.1/bootDll.elf")
-
-ninja_file.build("build/mp4.1/E3setupDLL.elf", "rel_ldscript ", E3setupDLL_o_files)
-ninja_file.build("build/mp4.1/E3setupDLL.rel", "E3setupDLL_elf_to_rel ", "build/mp4.1/E3setupDLL.elf")
-
-#depend on last file built to not run early (fix later)
-ninja_file.build("build/temp.j", "check_rel_checksums ", "build/mp4.1/E3setupDLL.rel")
+# Specify that check_rel_checksums rule depends on all other rules
+ninja_file.build("build/checksums.stamp", "check_rel_checksums", [
+    "build/mp4.1/_minigameDll.rel",
+    "build/mp4.1/bootDll.rel",
+    "build/mp4.1/E3setupDLL.rel"
+])
 
 
 print ("build.ninja generated")
