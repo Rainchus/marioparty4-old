@@ -6039,8 +6039,8 @@ lbl_00005974:
 /* 000059A0 4082003C */ bne lbl_000059DC
 /* 000059A4 38C0000A */ li r6, 0xa
 /* 000059A8 1CB50030 */ mulli r5, r21, 0x30
-/* 000059AC 3C800000 */ lis r4, lbl_8018FC38@ha
-/* 000059B0 38640000 */ addi r3, r4, lbl_8018FC38@l
+/* 000059AC 3C800000 */ lis r4, gPlayerData@ha
+/* 000059B0 38640000 */ addi r3, r4, gPlayerData@l
 /* 000059B4 7C632A14 */ add r3, r3, r5
 /* 000059B8 B0C30028 */ sth r6, 0x28(r3)
 /* 000059BC 48000020 */ b lbl_000059DC

@@ -154,8 +154,8 @@ lbl_8018FBF8:
 .global lbl_8018FC10
 lbl_8018FC10:
 	.skip 0x28
-.global lbl_8018FC38
-lbl_8018FC38:
+.global gPlayerData
+gPlayerData:
 	.skip 0xC0
 .global lbl_8018FCF8
 lbl_8018FCF8:

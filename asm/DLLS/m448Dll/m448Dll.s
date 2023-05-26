@@ -8406,8 +8406,8 @@ lbl_00007D84:
 /* 00007DB0 4082003C */ bne lbl_00007DEC
 /* 00007DB4 38E0000A */ li r7, 0xa
 /* 00007DB8 1CDC0030 */ mulli r6, r28, 0x30
-/* 00007DBC 3CA00000 */ lis r5, lbl_8018FC38@ha
-/* 00007DC0 38850000 */ addi r4, r5, lbl_8018FC38@l
+/* 00007DBC 3CA00000 */ lis r5, gPlayerData@ha
+/* 00007DC0 38850000 */ addi r4, r5, gPlayerData@l
 /* 00007DC4 7C643214 */ add r3, r4, r6
 /* 00007DC8 B0E30028 */ sth r7, 0x28(r3)
 /* 00007DCC 48000020 */ b lbl_00007DEC

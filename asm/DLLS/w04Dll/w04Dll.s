@@ -548,8 +548,8 @@ lbl_00000858:
 /* 00000874 8BE3000A */ lbz r31, 0xa(r3)
 /* 00000878 7FFF0774 */ extsb r31, r31
 /* 0000087C 1C9F0030 */ mulli r4, r31, 0x30
-/* 00000880 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00000884 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00000880 3C600000 */ lis r3, gPlayerData@ha
+/* 00000884 38030000 */ addi r0, r3, gPlayerData@l
 /* 00000888 7C602214 */ add r3, r0, r4
 /* 0000088C ABC3000C */ lha r30, 0xc(r3)
 /* 00000890 38600000 */ li r3, 0
@@ -581,8 +581,8 @@ lbl_000008BC:
 /* 000008F4 480000E4 */ b lbl_000009D8
 lbl_000008F8:
 /* 000008F8 1C9F0030 */ mulli r4, r31, 0x30
-/* 000008FC 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00000900 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 000008FC 3C600000 */ lis r3, gPlayerData@ha
+/* 00000900 38030000 */ addi r0, r3, gPlayerData@l
 /* 00000904 7C602214 */ add r3, r0, r4
 /* 00000908 88030009 */ lbz r0, 9(r3)
 /* 0000090C 5400E7FE */ rlwinm r0, r0, 0x1c, 0x1f, 0x1f
@@ -594,8 +594,8 @@ lbl_000008F8:
 lbl_00000924:
 /* 00000924 38600000 */ li r3, 0
 /* 00000928 1CBF0030 */ mulli r5, r31, 0x30
-/* 0000092C 3C800000 */ lis r4, lbl_8018FC38@ha
-/* 00000930 38040000 */ addi r0, r4, lbl_8018FC38@l
+/* 0000092C 3C800000 */ lis r4, gPlayerData@ha
+/* 00000930 38040000 */ addi r0, r4, gPlayerData@l
 /* 00000934 7C802A14 */ add r4, r0, r5
 /* 00000938 A884000C */ lha r4, 0xc(r4)
 /* 0000093C 48000001 */ bl func_800740C4
@@ -690,7 +690,7 @@ lbl_00000A6C:
 /* 00000A80 480000DC */ b lbl_00000B5C
 lbl_00000A84:
 /* 00000A84 3860000E */ li r3, 0xe
-/* 00000A88 48000001 */ bl func_80032778
+/* 00000A88 48000001 */ bl frandmod
 /* 00000A8C 7C650734 */ extsh r5, r3
 /* 00000A90 57C4083C */ slwi r4, r30, 1
 /* 00000A94 3C600000 */ lis r3, lbl_10000008@ha
@@ -759,8 +759,8 @@ lbl_00000B5C:
 /* 00000B80 38C00000 */ li r6, 0
 /* 00000B84 48000001 */ bl func_80070390
 /* 00000B88 1C9F0030 */ mulli r4, r31, 0x30
-/* 00000B8C 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00000B90 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00000B8C 3C600000 */ lis r3, gPlayerData@ha
+/* 00000B90 38030000 */ addi r0, r3, gPlayerData@l
 /* 00000B94 7C602214 */ add r3, r0, r4
 /* 00000B98 88030000 */ lbz r0, 0(r3)
 /* 00000B9C 5400DFFE */ rlwinm r0, r0, 0x1b, 0x1f, 0x1f
@@ -821,8 +821,8 @@ lbl_00000C4C:
 /* 00000C64 48000001 */ bl func_8000CE0C
 lbl_00000C68:
 /* 00000C68 1C9F0030 */ mulli r4, r31, 0x30
-/* 00000C6C 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00000C70 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00000C6C 3C600000 */ lis r3, gPlayerData@ha
+/* 00000C70 38030000 */ addi r0, r3, gPlayerData@l
 /* 00000C74 7C602214 */ add r3, r0, r4
 /* 00000C78 AB63000C */ lha r27, 0xc(r3)
 /* 00000C7C 38600000 */ li r3, 0
@@ -839,8 +839,8 @@ lbl_00000CA4:
 /* 00000CA4 48000001 */ bl func_8000CF8C
 lbl_00000CA8:
 /* 00000CA8 1C9F0030 */ mulli r4, r31, 0x30
-/* 00000CAC 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00000CB0 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00000CAC 3C600000 */ lis r3, gPlayerData@ha
+/* 00000CB0 38030000 */ addi r0, r3, gPlayerData@l
 /* 00000CB4 7C602214 */ add r3, r0, r4
 /* 00000CB8 88030008 */ lbz r0, 8(r3)
 /* 00000CBC 5400DFFE */ rlwinm r0, r0, 0x1b, 0x1f, 0x1f
@@ -892,8 +892,8 @@ lbl_00000D60:
 /* 00000D60 48000001 */ bl func_8000CF8C
 lbl_00000D64:
 /* 00000D64 1C9F0030 */ mulli r4, r31, 0x30
-/* 00000D68 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00000D6C 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00000D68 3C600000 */ lis r3, gPlayerData@ha
+/* 00000D6C 38030000 */ addi r0, r3, gPlayerData@l
 /* 00000D70 7C602214 */ add r3, r0, r4
 /* 00000D74 88030008 */ lbz r0, 8(r3)
 /* 00000D78 5400DFFE */ rlwinm r0, r0, 0x1b, 0x1f, 0x1f
@@ -980,15 +980,15 @@ lbl_00000E70:
 /* 00000EAC 38C00000 */ li r6, 0
 /* 00000EB0 48000001 */ bl func_80070390
 /* 00000EB4 1C9F0030 */ mulli r4, r31, 0x30
-/* 00000EB8 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00000EBC 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00000EB8 3C600000 */ lis r3, gPlayerData@ha
+/* 00000EBC 38030000 */ addi r0, r3, gPlayerData@l
 /* 00000EC0 7C602214 */ add r3, r0, r4
 /* 00000EC4 88030000 */ lbz r0, 0(r3)
 /* 00000EC8 5400DFFE */ rlwinm r0, r0, 0x1b, 0x1f, 0x1f
 /* 00000ECC 5400063E */ clrlwi r0, r0, 0x18
 /* 00000ED0 28000000 */ cmplwi r0, 0
 /* 00000ED4 41820020 */ beq lbl_00000EF4
-/* 00000ED8 48000001 */ bl func_800325F4
+/* 00000ED8 48000001 */ bl frand
 /* 00000EDC 546007FE */ clrlwi r0, r3, 0x1f
 /* 00000EE0 2C000000 */ cmpwi r0, 0
 /* 00000EE4 4182000C */ beq lbl_00000EF0
@@ -1057,8 +1057,8 @@ lbl_00000F54:
 /* 00000FC8 38C00015 */ li r6, 0x15
 /* 00000FCC 48000001 */ bl func_8005DB6C
 /* 00000FD0 1C9F0030 */ mulli r4, r31, 0x30
-/* 00000FD4 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00000FD8 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00000FD4 3C600000 */ lis r3, gPlayerData@ha
+/* 00000FD8 38030000 */ addi r0, r3, gPlayerData@l
 /* 00000FDC 7C602214 */ add r3, r0, r4
 /* 00000FE0 ABA3000C */ lha r29, 0xc(r3)
 /* 00000FE4 38600000 */ li r3, 0
@@ -1079,8 +1079,8 @@ lbl_0000101C:
 /* 0000101C 48000001 */ bl func_8000CF8C
 lbl_00001020:
 /* 00001020 1C9F0030 */ mulli r4, r31, 0x30
-/* 00001024 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00001028 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00001024 3C600000 */ lis r3, gPlayerData@ha
+/* 00001028 38030000 */ addi r0, r3, gPlayerData@l
 /* 0000102C 7C602214 */ add r3, r0, r4
 /* 00001030 88030008 */ lbz r0, 8(r3)
 /* 00001034 5400DFFE */ rlwinm r0, r0, 0x1b, 0x1f, 0x1f
@@ -1098,8 +1098,8 @@ lbl_00001060:
 /* 00001060 48000001 */ bl func_8000CF8C
 lbl_00001064:
 /* 00001064 1C9F0030 */ mulli r4, r31, 0x30
-/* 00001068 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 0000106C 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00001068 3C600000 */ lis r3, gPlayerData@ha
+/* 0000106C 38030000 */ addi r0, r3, gPlayerData@l
 /* 00001070 7C602214 */ add r3, r0, r4
 /* 00001074 88030008 */ lbz r0, 8(r3)
 /* 00001078 5400DFFE */ rlwinm r0, r0, 0x1b, 0x1f, 0x1f
@@ -1118,8 +1118,8 @@ lbl_000010A0:
 /* 000010A0 48000001 */ bl func_8000CF8C
 lbl_000010A4:
 /* 000010A4 1C9F0030 */ mulli r4, r31, 0x30
-/* 000010A8 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 000010AC 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 000010A8 3C600000 */ lis r3, gPlayerData@ha
+/* 000010AC 38030000 */ addi r0, r3, gPlayerData@l
 /* 000010B0 7C602214 */ add r3, r0, r4
 /* 000010B4 88030008 */ lbz r0, 8(r3)
 /* 000010B8 5400DFFE */ rlwinm r0, r0, 0x1b, 0x1f, 0x1f
@@ -1151,8 +1151,8 @@ lbl_000010FC:
 /* 00001118 8803000A */ lbz r0, 0xa(r3)
 /* 0000111C 7C000774 */ extsb r0, r0
 /* 00001120 1C800030 */ mulli r4, r0, 0x30
-/* 00001124 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00001128 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00001124 3C600000 */ lis r3, gPlayerData@ha
+/* 00001128 38030000 */ addi r0, r3, gPlayerData@l
 /* 0000112C 7C602214 */ add r3, r0, r4
 /* 00001130 ABC3000C */ lha r30, 0xc(r3)
 /* 00001134 38600000 */ li r3, 0
@@ -1552,8 +1552,8 @@ lbl_000016D8:
 /* 000016F8 7FFF0774 */ extsb r31, r31
 /* 000016FC 7FE3FB78 */ mr r3, r31
 /* 00001700 1CBF0030 */ mulli r5, r31, 0x30
-/* 00001704 3C800000 */ lis r4, lbl_8018FC38@ha
-/* 00001708 38040000 */ addi r0, r4, lbl_8018FC38@l
+/* 00001704 3C800000 */ lis r4, gPlayerData@ha
+/* 00001708 38040000 */ addi r0, r4, gPlayerData@l
 /* 0000170C 7C802A14 */ add r4, r0, r5
 /* 00001710 88040000 */ lbz r0, 0(r4)
 /* 00001714 5400FF3E */ rlwinm r0, r0, 0x1f, 0x1c, 0x1f
@@ -2307,8 +2307,8 @@ lbl_000021AC:
 /* 000021F0 38630000 */ addi r3, r3, lbl_1000007C@l
 /* 000021F4 B0830000 */ sth r4, 0(r3)
 /* 000021F8 1C9E0030 */ mulli r4, r30, 0x30
-/* 000021FC 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00002200 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 000021FC 3C600000 */ lis r3, gPlayerData@ha
+/* 00002200 38030000 */ addi r0, r3, gPlayerData@l
 /* 00002204 7C602214 */ add r3, r0, r4
 /* 00002208 88030000 */ lbz r0, 0(r3)
 /* 0000220C 5400FF3E */ rlwinm r0, r0, 0x1f, 0x1c, 0x1f
@@ -2331,8 +2331,8 @@ lbl_000021AC:
 /* 00002250 B0A30000 */ sth r5, 0(r3)
 /* 00002254 7FC3F378 */ mr r3, r30
 /* 00002258 1CBE0030 */ mulli r5, r30, 0x30
-/* 0000225C 3C800000 */ lis r4, lbl_8018FC38@ha
-/* 00002260 38040000 */ addi r0, r4, lbl_8018FC38@l
+/* 0000225C 3C800000 */ lis r4, gPlayerData@ha
+/* 00002260 38040000 */ addi r0, r4, gPlayerData@l
 /* 00002264 7C802A14 */ add r4, r0, r5
 /* 00002268 88040000 */ lbz r0, 0(r4)
 /* 0000226C 5400FF3E */ rlwinm r0, r0, 0x1f, 0x1c, 0x1f
@@ -2367,8 +2367,8 @@ lbl_000022A8:
 /* 000022DC B0A30000 */ sth r5, 0(r3)
 /* 000022E0 7FE3FB78 */ mr r3, r31
 /* 000022E4 1CBF0030 */ mulli r5, r31, 0x30
-/* 000022E8 3C800000 */ lis r4, lbl_8018FC38@ha
-/* 000022EC 38040000 */ addi r0, r4, lbl_8018FC38@l
+/* 000022E8 3C800000 */ lis r4, gPlayerData@ha
+/* 000022EC 38040000 */ addi r0, r4, gPlayerData@l
 /* 000022F0 7C802A14 */ add r4, r0, r5
 /* 000022F4 88040000 */ lbz r0, 0(r4)
 /* 000022F8 5400FF3E */ rlwinm r0, r0, 0x1f, 0x1c, 0x1f
@@ -2386,8 +2386,8 @@ lbl_000022A8:
 /* 00002328 B0A30002 */ sth r5, 2(r3)
 /* 0000232C 7FE3FB78 */ mr r3, r31
 /* 00002330 1CBF0030 */ mulli r5, r31, 0x30
-/* 00002334 3C800000 */ lis r4, lbl_8018FC38@ha
-/* 00002338 38040000 */ addi r0, r4, lbl_8018FC38@l
+/* 00002334 3C800000 */ lis r4, gPlayerData@ha
+/* 00002338 38040000 */ addi r0, r4, gPlayerData@l
 /* 0000233C 7C802A14 */ add r4, r0, r5
 /* 00002340 88040000 */ lbz r0, 0(r4)
 /* 00002344 5400FF3E */ rlwinm r0, r0, 0x1f, 0x1c, 0x1f
@@ -2579,8 +2579,8 @@ lbl_000025B8:
 /* 00002604 48000001 */ bl CloseMessage
 /* 00002608 38600000 */ li r3, 0
 /* 0000260C 1CBE0030 */ mulli r5, r30, 0x30
-/* 00002610 3C800000 */ lis r4, lbl_8018FC38@ha
-/* 00002614 38040000 */ addi r0, r4, lbl_8018FC38@l
+/* 00002610 3C800000 */ lis r4, gPlayerData@ha
+/* 00002614 38040000 */ addi r0, r4, gPlayerData@l
 /* 00002618 7C802A14 */ add r4, r0, r5
 /* 0000261C A884000C */ lha r4, 0xc(r4)
 /* 00002620 48000001 */ bl func_800740C4
@@ -3103,7 +3103,7 @@ lbl_00002CEC:
 /* 00002DA8 A87F0004 */ lha r3, 4(r31)
 /* 00002DAC 38800000 */ li r4, 0
 /* 00002DB0 48000001 */ bl func_8006F50C
-/* 00002DB4 48000001 */ bl func_800325F4
+/* 00002DB4 48000001 */ bl frand
 /* 00002DB8 5460063E */ clrlwi r0, r3, 0x18
 /* 00002DBC 3C600000 */ lis r3, lbl_0000EBB8@ha
 /* 00002DC0 38630000 */ addi r3, r3, lbl_0000EBB8@l
@@ -3974,8 +3974,8 @@ lbl_00003998:
 /* 00003A5C A8A30000 */ lha r5, 0(r3)
 /* 00003A60 7FE00734 */ extsh r0, r31
 /* 00003A64 1C800030 */ mulli r4, r0, 0x30
-/* 00003A68 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00003A6C 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00003A68 3C600000 */ lis r3, gPlayerData@ha
+/* 00003A6C 38030000 */ addi r0, r3, gPlayerData@l
 /* 00003A70 7C602214 */ add r3, r0, r4
 /* 00003A74 B0A3000C */ sth r5, 0xc(r3)
 /* 00003A78 7FE30734 */ extsh r3, r31
@@ -4413,8 +4413,8 @@ lbl_00004040:
 /* 000040EC 8A23000A */ lbz r17, 0xa(r3)
 /* 000040F0 7E310774 */ extsb r17, r17
 /* 000040F4 1C910030 */ mulli r4, r17, 0x30
-/* 000040F8 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 000040FC 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 000040F8 3C600000 */ lis r3, gPlayerData@ha
+/* 000040FC 38030000 */ addi r0, r3, gPlayerData@l
 /* 00004100 7C602214 */ add r3, r0, r4
 /* 00004104 8A830004 */ lbz r20, 4(r3)
 /* 00004108 7E940774 */ extsb r20, r20
@@ -4437,15 +4437,15 @@ lbl_00004040:
 /* 0000414C EFBD002A */ fadds f29, f29, f0
 lbl_00004150:
 /* 00004150 3860001E */ li r3, 0x1e
-/* 00004154 48000001 */ bl func_80032778
+/* 00004154 48000001 */ bl frandmod
 /* 00004158 3803001E */ addi r0, r3, 0x1e
 /* 0000415C 7C150734 */ extsh r21, r0
 /* 00004160 3A400000 */ li r18, 0
 lbl_00004164:
 /* 00004164 7F77DB78 */ mr r23, r27
 /* 00004168 1C910030 */ mulli r4, r17, 0x30
-/* 0000416C 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00004170 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 0000416C 3C600000 */ lis r3, gPlayerData@ha
+/* 00004170 38030000 */ addi r0, r3, gPlayerData@l
 /* 00004174 7C602214 */ add r3, r0, r4
 /* 00004178 88030000 */ lbz r0, 0(r3)
 /* 0000417C 5400DFFE */ rlwinm r0, r0, 0x1b, 0x1f, 0x1f
@@ -4462,10 +4462,10 @@ lbl_00004164:
 /* 000041A8 480000A4 */ b lbl_0000424C
 lbl_000041AC:
 /* 000041AC 3860000A */ li r3, 0xa
-/* 000041B0 48000001 */ bl func_80032778
+/* 000041B0 48000001 */ bl frandmod
 /* 000041B4 3803000F */ addi r0, r3, 0xf
 /* 000041B8 7C150734 */ extsh r21, r0
-/* 000041BC 48000001 */ bl func_800325F4
+/* 000041BC 48000001 */ bl frand
 /* 000041C0 546007FE */ clrlwi r0, r3, 0x1f
 /* 000041C4 2C000000 */ cmpwi r0, 0
 /* 000041C8 40820010 */ bne lbl_000041D8
@@ -4483,7 +4483,7 @@ lbl_000041E0:
 /* 000041F0 48000001 */ bl OSReport
 /* 000041F4 3A520001 */ addi r18, r18, 1
 /* 000041F8 7FA30734 */ extsh r3, r29
-/* 000041FC 48000001 */ bl func_80032778
+/* 000041FC 48000001 */ bl frandmod
 /* 00004200 7C770734 */ extsh r23, r3
 /* 00004204 48000048 */ b lbl_0000424C
 lbl_00004208:
@@ -4883,8 +4883,8 @@ lbl_00004788:
 /* 0000479C 41820044 */ beq lbl_000047E0
 /* 000047A0 7F850734 */ extsh r5, r28
 /* 000047A4 1C9F0030 */ mulli r4, r31, 0x30
-/* 000047A8 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 000047AC 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 000047A8 3C600000 */ lis r3, gPlayerData@ha
+/* 000047AC 38030000 */ addi r0, r3, gPlayerData@l
 /* 000047B0 7C602214 */ add r3, r0, r4
 /* 000047B4 A803000C */ lha r0, 0xc(r3)
 /* 000047B8 7C050000 */ cmpw r5, r0
@@ -5423,8 +5423,8 @@ lbl_00004F5C:
 /* 00004F84 38A0FFFF */ li r5, -1
 /* 00004F88 48000001 */ bl func_80070530
 /* 00004F8C 1C9E0030 */ mulli r4, r30, 0x30
-/* 00004F90 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00004F94 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00004F90 3C600000 */ lis r3, gPlayerData@ha
+/* 00004F94 38030000 */ addi r0, r3, gPlayerData@l
 /* 00004F98 7C602214 */ add r3, r0, r4
 /* 00004F9C 88030000 */ lbz r0, 0(r3)
 /* 00004FA0 5403FF3E */ rlwinm r3, r0, 0x1f, 0x1c, 0x1f
@@ -5790,8 +5790,8 @@ lbl_000054C4:
 /* 000054E4 7C840214 */ add r4, r4, r0
 /* 000054E8 48000001 */ bl func_800632F4
 /* 000054EC 1C9F0030 */ mulli r4, r31, 0x30
-/* 000054F0 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 000054F4 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 000054F0 3C600000 */ lis r3, gPlayerData@ha
+/* 000054F4 38030000 */ addi r0, r3, gPlayerData@l
 /* 000054F8 7C602214 */ add r3, r0, r4
 /* 000054FC A883000C */ lha r4, 0xc(r3)
 /* 00005500 57E0083C */ slwi r0, r31, 1
@@ -5864,8 +5864,8 @@ lbl_000055C8:
 /* 000055F4 38610008 */ addi r3, r1, 8
 /* 000055F8 7CA302AE */ lhax r5, r3, r0
 /* 000055FC 1C9F0030 */ mulli r4, r31, 0x30
-/* 00005600 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00005604 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00005600 3C600000 */ lis r3, gPlayerData@ha
+/* 00005604 38030000 */ addi r0, r3, gPlayerData@l
 /* 00005608 7C602214 */ add r3, r0, r4
 /* 0000560C B0A3000C */ sth r5, 0xc(r3)
 /* 00005610 3BFF0001 */ addi r31, r31, 1
@@ -6255,7 +6255,7 @@ lbl_00005BA0:
 /* 00005BA0 A81E0030 */ lha r0, 0x30(r30)
 /* 00005BA4 7C1C0000 */ cmpw r28, r0
 /* 00005BA8 4182036C */ beq lbl_00005F14
-/* 00005BAC 48000001 */ bl func_800325F4
+/* 00005BAC 48000001 */ bl frand
 /* 00005BB0 5460063E */ clrlwi r0, r3, 0x18
 /* 00005BB4 3C600000 */ lis r3, lbl_0000EBB8@ha
 /* 00005BB8 38630000 */ addi r3, r3, lbl_0000EBB8@l
@@ -6275,7 +6275,7 @@ lbl_00005BA0:
 /* 00005BF0 C0030000 */ lfs f0, 0(r3)
 /* 00005BF4 EC000072 */ fmuls f0, f0, f1
 /* 00005BF8 D01F0008 */ stfs f0, 8(r31)
-/* 00005BFC 48000001 */ bl func_800325F4
+/* 00005BFC 48000001 */ bl frand
 /* 00005C00 5460063E */ clrlwi r0, r3, 0x18
 /* 00005C04 3C600000 */ lis r3, lbl_0000EBB8@ha
 /* 00005C08 38630000 */ addi r3, r3, lbl_0000EBB8@l
@@ -6309,7 +6309,7 @@ lbl_00005BA0:
 /* 00005C78 981F0041 */ stb r0, 0x41(r31)
 /* 00005C7C 380000FF */ li r0, 0xff
 /* 00005C80 981F0042 */ stb r0, 0x42(r31)
-/* 00005C84 48000001 */ bl func_800325F4
+/* 00005C84 48000001 */ bl frand
 /* 00005C88 5460063E */ clrlwi r0, r3, 0x18
 /* 00005C8C 3C600000 */ lis r3, lbl_0000EBB8@ha
 /* 00005C90 38630000 */ addi r3, r3, lbl_0000EBB8@l
@@ -6333,7 +6333,7 @@ lbl_00005BA0:
 /* 00005CD8 C0030000 */ lfs f0, 0(r3)
 /* 00005CDC EC00082A */ fadds f0, f0, f1
 /* 00005CE0 D01F0020 */ stfs f0, 0x20(r31)
-/* 00005CE4 48000001 */ bl func_800325F4
+/* 00005CE4 48000001 */ bl frand
 /* 00005CE8 5460063E */ clrlwi r0, r3, 0x18
 /* 00005CEC 3C600000 */ lis r3, lbl_0000EBB8@ha
 /* 00005CF0 38630000 */ addi r3, r3, lbl_0000EBB8@l
@@ -6357,7 +6357,7 @@ lbl_00005BA0:
 /* 00005D38 C0030000 */ lfs f0, 0(r3)
 /* 00005D3C EC00082A */ fadds f0, f0, f1
 /* 00005D40 D01F0024 */ stfs f0, 0x24(r31)
-/* 00005D44 48000001 */ bl func_800325F4
+/* 00005D44 48000001 */ bl frand
 /* 00005D48 5460063E */ clrlwi r0, r3, 0x18
 /* 00005D4C 3C600000 */ lis r3, lbl_0000EBB8@ha
 /* 00005D50 38630000 */ addi r3, r3, lbl_0000EBB8@l
@@ -6381,7 +6381,7 @@ lbl_00005BA0:
 /* 00005D98 C0030000 */ lfs f0, 0(r3)
 /* 00005D9C EC00082A */ fadds f0, f0, f1
 /* 00005DA0 D01F0028 */ stfs f0, 0x28(r31)
-/* 00005DA4 48000001 */ bl func_800325F4
+/* 00005DA4 48000001 */ bl frand
 /* 00005DA8 5460063E */ clrlwi r0, r3, 0x18
 /* 00005DAC 3C600000 */ lis r3, lbl_0000EBB8@ha
 /* 00005DB0 38630000 */ addi r3, r3, lbl_0000EBB8@l
@@ -6405,7 +6405,7 @@ lbl_00005BA0:
 /* 00005DF8 C0030000 */ lfs f0, 0(r3)
 /* 00005DFC EC00082A */ fadds f0, f0, f1
 /* 00005E00 D01F0034 */ stfs f0, 0x34(r31)
-/* 00005E04 48000001 */ bl func_800325F4
+/* 00005E04 48000001 */ bl frand
 /* 00005E08 5460063E */ clrlwi r0, r3, 0x18
 /* 00005E0C 3C600000 */ lis r3, lbl_0000EBB8@ha
 /* 00005E10 38630000 */ addi r3, r3, lbl_0000EBB8@l
@@ -6425,7 +6425,7 @@ lbl_00005BA0:
 /* 00005E48 C0030000 */ lfs f0, 0(r3)
 /* 00005E4C EC000072 */ fmuls f0, f0, f1
 /* 00005E50 D01F0038 */ stfs f0, 0x38(r31)
-/* 00005E54 48000001 */ bl func_800325F4
+/* 00005E54 48000001 */ bl frand
 /* 00005E58 5460063E */ clrlwi r0, r3, 0x18
 /* 00005E5C 3C600000 */ lis r3, lbl_0000EBB8@ha
 /* 00005E60 38630000 */ addi r3, r3, lbl_0000EBB8@l
@@ -6449,7 +6449,7 @@ lbl_00005BA0:
 /* 00005EA8 C0030000 */ lfs f0, 0(r3)
 /* 00005EAC EC00082A */ fadds f0, f0, f1
 /* 00005EB0 D01F003C */ stfs f0, 0x3c(r31)
-/* 00005EB4 48000001 */ bl func_800325F4
+/* 00005EB4 48000001 */ bl frand
 /* 00005EB8 5460063E */ clrlwi r0, r3, 0x18
 /* 00005EBC 3C600000 */ lis r3, lbl_0000EBB8@ha
 /* 00005EC0 38630000 */ addi r3, r3, lbl_0000EBB8@l
@@ -6784,8 +6784,8 @@ lbl_00006370:
 /* 000063B4 38630000 */ addi r3, r3, lbl_10000282@l
 /* 000063B8 A8030000 */ lha r0, 0(r3)
 /* 000063BC 1C800030 */ mulli r4, r0, 0x30
-/* 000063C0 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 000063C4 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 000063C0 3C600000 */ lis r3, gPlayerData@ha
+/* 000063C4 38030000 */ addi r0, r3, gPlayerData@l
 /* 000063C8 7C602214 */ add r3, r0, r4
 /* 000063CC A803000C */ lha r0, 0xc(r3)
 /* 000063D0 3C600000 */ lis r3, lbl_10000272@ha
@@ -6811,8 +6811,8 @@ lbl_00006414:
 /* 00006418 38630000 */ addi r3, r3, lbl_10000282@l
 /* 0000641C A8030000 */ lha r0, 0(r3)
 /* 00006420 1C800030 */ mulli r4, r0, 0x30
-/* 00006424 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00006428 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00006424 3C600000 */ lis r3, gPlayerData@ha
+/* 00006428 38030000 */ addi r0, r3, gPlayerData@l
 /* 0000642C 7C602214 */ add r3, r0, r4
 /* 00006430 88030008 */ lbz r0, 8(r3)
 /* 00006434 5400DFFE */ rlwinm r0, r0, 0x1b, 0x1f, 0x1f
@@ -6937,8 +6937,8 @@ lbl_00006580:
 /* 000065FC 38630000 */ addi r3, r3, lbl_10000282@l
 /* 00006600 A8030000 */ lha r0, 0(r3)
 /* 00006604 1C800030 */ mulli r4, r0, 0x30
-/* 00006608 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 0000660C 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00006608 3C600000 */ lis r3, gPlayerData@ha
+/* 0000660C 38030000 */ addi r0, r3, gPlayerData@l
 /* 00006610 7C602214 */ add r3, r0, r4
 /* 00006614 88630004 */ lbz r3, 4(r3)
 /* 00006618 7C630774 */ extsb r3, r3
@@ -6986,8 +6986,8 @@ lbl_00006640:
 /* 000066BC 38630000 */ addi r3, r3, lbl_10000282@l
 /* 000066C0 A8030000 */ lha r0, 0(r3)
 /* 000066C4 1C800030 */ mulli r4, r0, 0x30
-/* 000066C8 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 000066CC 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 000066C8 3C600000 */ lis r3, gPlayerData@ha
+/* 000066CC 38030000 */ addi r0, r3, gPlayerData@l
 /* 000066D0 7C602214 */ add r3, r0, r4
 /* 000066D4 88630004 */ lbz r3, 4(r3)
 /* 000066D8 7C630774 */ extsb r3, r3
@@ -7150,8 +7150,8 @@ lbl_00006930:
 /* 00006934 38630000 */ addi r3, r3, lbl_10000282@l
 /* 00006938 A8030000 */ lha r0, 0(r3)
 /* 0000693C 1C800030 */ mulli r4, r0, 0x30
-/* 00006940 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00006944 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00006940 3C600000 */ lis r3, gPlayerData@ha
+/* 00006944 38030000 */ addi r0, r3, gPlayerData@l
 /* 00006948 7C602214 */ add r3, r0, r4
 /* 0000694C 88030008 */ lbz r0, 8(r3)
 /* 00006950 5400DFFE */ rlwinm r0, r0, 0x1b, 0x1f, 0x1f
@@ -7281,8 +7281,8 @@ lbl_00006B00:
 /* 00006B04 38630000 */ addi r3, r3, lbl_10000282@l
 /* 00006B08 A8030000 */ lha r0, 0(r3)
 /* 00006B0C 1C800030 */ mulli r4, r0, 0x30
-/* 00006B10 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00006B14 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00006B10 3C600000 */ lis r3, gPlayerData@ha
+/* 00006B14 38030000 */ addi r0, r3, gPlayerData@l
 /* 00006B18 7C602214 */ add r3, r0, r4
 /* 00006B1C 88030000 */ lbz r0, 0(r3)
 /* 00006B20 5400DFFE */ rlwinm r0, r0, 0x1b, 0x1f, 0x1f
@@ -7600,8 +7600,8 @@ lbl_00006EC8:
 /* 00006F90 38610008 */ addi r3, r1, 8
 /* 00006F94 7F2302AE */ lhax r25, r3, r0
 /* 00006F98 1C990030 */ mulli r4, r25, 0x30
-/* 00006F9C 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00006FA0 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00006F9C 3C600000 */ lis r3, gPlayerData@ha
+/* 00006FA0 38030000 */ addi r0, r3, gPlayerData@l
 /* 00006FA4 7F002214 */ add r24, r0, r4
 /* 00006FA8 7F1AC378 */ mr r26, r24
 /* 00006FAC 881A0002 */ lbz r0, 2(r26)
@@ -7620,8 +7620,8 @@ lbl_00006EC8:
 /* 00006FE0 38610008 */ addi r3, r1, 8
 /* 00006FE4 7C0302AE */ lhax r0, r3, r0
 /* 00006FE8 1C800030 */ mulli r4, r0, 0x30
-/* 00006FEC 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00006FF0 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 00006FEC 3C600000 */ lis r3, gPlayerData@ha
+/* 00006FF0 38030000 */ addi r0, r3, gPlayerData@l
 /* 00006FF4 7C602214 */ add r3, r0, r4
 /* 00006FF8 88030000 */ lbz r0, 0(r3)
 /* 00006FFC 5400FF3E */ rlwinm r0, r0, 0x1f, 0x1c, 0x1f
@@ -8208,7 +8208,7 @@ lbl_000077E8:
 /* 0000789C FC0107B2 */ fmul f0, f1, f30
 /* 000078A0 FC000018 */ frsp f0, f0
 /* 000078A4 D0010018 */ stfs f0, 0x18(r1)
-/* 000078A8 48000001 */ bl func_800325F4
+/* 000078A8 48000001 */ bl frand
 /* 000078AC 5460063E */ clrlwi r0, r3, 0x18
 /* 000078B0 3C600000 */ lis r3, lbl_0000ECD0@ha
 /* 000078B4 38630000 */ addi r3, r3, lbl_0000ECD0@l
@@ -8358,8 +8358,8 @@ lbl_00007AC0:
 /* 00007ACC 7C1E1800 */ cmpw r30, r3
 /* 00007AD0 41820188 */ beq lbl_00007C58
 /* 00007AD4 1C9E0030 */ mulli r4, r30, 0x30
-/* 00007AD8 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00007ADC 38630000 */ addi r3, r3, lbl_8018FC38@l
+/* 00007AD8 3C600000 */ lis r3, gPlayerData@ha
+/* 00007ADC 38630000 */ addi r3, r3, gPlayerData@l
 /* 00007AE0 7C832214 */ add r4, r3, r4
 /* 00007AE4 88640000 */ lbz r3, 0(r4)
 /* 00007AE8 5463DFFE */ rlwinm r3, r3, 0x1b, 0x1f, 0x1f
@@ -8367,8 +8367,8 @@ lbl_00007AC0:
 /* 00007AF0 28030000 */ cmplwi r3, 0
 /* 00007AF4 41820084 */ beq lbl_00007B78
 /* 00007AF8 1C1E0030 */ mulli r0, r30, 0x30
-/* 00007AFC 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00007B00 38630000 */ addi r3, r3, lbl_8018FC38@l
+/* 00007AFC 3C600000 */ lis r3, gPlayerData@ha
+/* 00007B00 38630000 */ addi r3, r3, gPlayerData@l
 /* 00007B04 7C830214 */ add r4, r3, r0
 /* 00007B08 88640000 */ lbz r3, 0(r4)
 /* 00007B0C 5463D7BE */ rlwinm r3, r3, 0x1a, 0x1e, 0x1f
@@ -8396,7 +8396,7 @@ lbl_00007B50:
 /* 00007B50 3B8003E8 */ li r28, 0x3e8
 lbl_00007B54:
 /* 00007B54 38600064 */ li r3, 0x64
-/* 00007B58 48000001 */ bl func_80032778
+/* 00007B58 48000001 */ bl frandmod
 /* 00007B5C 7F800734 */ extsh r0, r28
 /* 00007B60 7C030000 */ cmpw r3, r0
 /* 00007B64 4080000C */ bge lbl_00007B70
@@ -8407,8 +8407,8 @@ lbl_00007B70:
 /* 00007B74 48000034 */ b lbl_00007BA8
 lbl_00007B78:
 /* 00007B78 1C9E0030 */ mulli r4, r30, 0x30
-/* 00007B7C 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 00007B80 38630000 */ addi r3, r3, lbl_8018FC38@l
+/* 00007B7C 3C600000 */ lis r3, gPlayerData@ha
+/* 00007B80 38630000 */ addi r3, r3, gPlayerData@l
 /* 00007B84 7C632214 */ add r3, r3, r4
 /* 00007B88 8B030004 */ lbz r24, 4(r3)
 /* 00007B8C 7F180774 */ extsb r24, r24
@@ -8901,7 +8901,7 @@ lbl_000080D4:
 /* 00008290 38C1040C */ addi r6, r1, 0x40c
 /* 00008294 38A50008 */ addi r5, r5, 8
 /* 00008298 7C062D2E */ stfsx f0, r6, r5
-/* 0000829C 48000001 */ bl func_800325F4
+/* 0000829C 48000001 */ bl frand
 /* 000082A0 5463063E */ clrlwi r3, r3, 0x18
 /* 000082A4 3C800000 */ lis r4, lbl_0000ECD0@ha
 /* 000082A8 38840000 */ addi r4, r4, lbl_0000ECD0@l
@@ -8934,7 +8934,7 @@ lbl_000080D4:
 /* 00008314 57A0103A */ slwi r0, r29, 2
 /* 00008318 38610268 */ addi r3, r1, 0x268
 /* 0000831C 7C03052E */ stfsx f0, r3, r0
-/* 00008320 48000001 */ bl func_800325F4
+/* 00008320 48000001 */ bl frand
 /* 00008324 5464063E */ clrlwi r4, r3, 0x18
 /* 00008328 3C600000 */ lis r3, lbl_0000ECD0@ha
 /* 0000832C 38630000 */ addi r3, r3, lbl_0000ECD0@l
@@ -9165,7 +9165,7 @@ lbl_00008660:
 /* 00008674 38800001 */ li r4, 1
 /* 00008678 48000001 */ bl func_8006F50C
 /* 0000867C 7C601B78 */ mr r0, r3
-/* 00008680 48000001 */ bl func_800325F4
+/* 00008680 48000001 */ bl frand
 /* 00008684 5460063E */ clrlwi r0, r3, 0x18
 /* 00008688 3C800000 */ lis r4, lbl_0000ECD0@ha
 /* 0000868C 38640000 */ addi r3, r4, lbl_0000ECD0@l
@@ -9193,7 +9193,7 @@ lbl_00008660:
 /* 000086E4 1C1F000C */ mulli r0, r31, 0xc
 /* 000086E8 38A108F8 */ addi r5, r1, 0x8f8
 /* 000086EC 7C05052E */ stfsx f0, r5, r0
-/* 000086F0 48000001 */ bl func_800325F4
+/* 000086F0 48000001 */ bl frand
 /* 000086F4 5463063E */ clrlwi r3, r3, 0x18
 /* 000086F8 3CA00000 */ lis r5, lbl_0000ECD0@ha
 /* 000086FC 38850000 */ addi r4, r5, lbl_0000ECD0@l
@@ -9236,7 +9236,7 @@ lbl_00008660:
 /* 00008790 386108F8 */ addi r3, r1, 0x8f8
 /* 00008794 38040004 */ addi r0, r4, 4
 /* 00008798 7C03052E */ stfsx f0, r3, r0
-/* 0000879C 48000001 */ bl func_800325F4
+/* 0000879C 48000001 */ bl frand
 /* 000087A0 5464063E */ clrlwi r4, r3, 0x18
 /* 000087A4 3C600000 */ lis r3, lbl_0000ECD0@ha
 /* 000087A8 38630000 */ addi r3, r3, lbl_0000ECD0@l
@@ -9756,7 +9756,7 @@ lbl_00008DFC:
 /* 00008F28 38610058 */ addi r3, r1, 0x58
 /* 00008F2C 38840008 */ addi r4, r4, 8
 /* 00008F30 7C03252E */ stfsx f0, r3, r4
-/* 00008F34 48000001 */ bl func_800325F4
+/* 00008F34 48000001 */ bl frand
 /* 00008F38 5460063E */ clrlwi r0, r3, 0x18
 /* 00008F3C 3C600000 */ lis r3, lbl_0000ECD0@ha
 /* 00008F40 38630000 */ addi r3, r3, lbl_0000ECD0@l
@@ -9784,7 +9784,7 @@ lbl_00008DFC:
 /* 00008F98 38810058 */ addi r4, r1, 0x58
 /* 00008F9C 38630004 */ addi r3, r3, 4
 /* 00008FA0 7C041D2E */ stfsx f0, r4, r3
-/* 00008FA4 48000001 */ bl func_800325F4
+/* 00008FA4 48000001 */ bl frand
 /* 00008FA8 5465063E */ clrlwi r5, r3, 0x18
 /* 00008FAC 3C800000 */ lis r4, lbl_0000ECD0@ha
 /* 00008FB0 38640000 */ addi r3, r4, lbl_0000ECD0@l
@@ -11361,8 +11361,8 @@ lbl_0000A714:
 /* 0000A718 38630000 */ addi r3, r3, lbl_100002AC@l
 /* 0000A71C A8030000 */ lha r0, 0(r3)
 /* 0000A720 1C800030 */ mulli r4, r0, 0x30
-/* 0000A724 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 0000A728 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 0000A724 3C600000 */ lis r3, gPlayerData@ha
+/* 0000A728 38030000 */ addi r0, r3, gPlayerData@l
 /* 0000A72C 7C602214 */ add r3, r0, r4
 /* 0000A730 88030008 */ lbz r0, 8(r3)
 /* 0000A734 5400DFFE */ rlwinm r0, r0, 0x1b, 0x1f, 0x1f
@@ -11599,8 +11599,8 @@ lbl_0000A9A4:
 /* 0000AA9C 38840000 */ addi r4, r4, lbl_100002AC@l
 /* 0000AAA0 A8A40000 */ lha r5, 0(r4)
 /* 0000AAA4 1CC50030 */ mulli r6, r5, 0x30
-/* 0000AAA8 3CE00000 */ lis r7, lbl_8018FC38@ha
-/* 0000AAAC 38A70000 */ addi r5, r7, lbl_8018FC38@l
+/* 0000AAA8 3CE00000 */ lis r7, gPlayerData@ha
+/* 0000AAAC 38A70000 */ addi r5, r7, gPlayerData@l
 /* 0000AAB0 7C853214 */ add r4, r5, r6
 /* 0000AAB4 8A440004 */ lbz r18, 4(r4)
 /* 0000AAB8 7E520774 */ extsb r18, r18
@@ -11623,8 +11623,8 @@ lbl_0000AAF0:
 /* 0000AAF4 38830000 */ addi r4, r3, lbl_100002AC@l
 /* 0000AAF8 A8840000 */ lha r4, 0(r4)
 /* 0000AAFC 1C840030 */ mulli r4, r4, 0x30
-/* 0000AB00 3CA00000 */ lis r5, lbl_8018FC38@ha
-/* 0000AB04 38650000 */ addi r3, r5, lbl_8018FC38@l
+/* 0000AB00 3CA00000 */ lis r5, gPlayerData@ha
+/* 0000AB04 38650000 */ addi r3, r5, gPlayerData@l
 /* 0000AB08 7C632214 */ add r3, r3, r4
 /* 0000AB0C 88630000 */ lbz r3, 0(r3)
 /* 0000AB10 5463DFFE */ rlwinm r3, r3, 0x1b, 0x1f, 0x1f
@@ -11638,11 +11638,11 @@ lbl_0000AAF0:
 /* 0000AB30 4800008C */ b lbl_0000ABBC
 lbl_0000AB34:
 /* 0000AB34 3860001E */ li r3, 0x1e
-/* 0000AB38 48000001 */ bl func_80032778
+/* 0000AB38 48000001 */ bl frandmod
 /* 0000AB3C 7C671B78 */ mr r7, r3
 /* 0000AB40 38E7000F */ addi r7, r7, 0xf
 /* 0000AB44 7CF60734 */ extsh r22, r7
-/* 0000AB48 48000001 */ bl func_800325F4
+/* 0000AB48 48000001 */ bl frand
 /* 0000AB4C 546007FE */ clrlwi r0, r3, 0x1f
 /* 0000AB50 2C000000 */ cmpwi r0, 0
 /* 0000AB54 40820010 */ bne lbl_0000AB64
@@ -11653,7 +11653,7 @@ lbl_0000AB64:
 /* 0000AB64 3A200100 */ li r17, 0x100
 /* 0000AB68 48000054 */ b lbl_0000ABBC
 lbl_0000AB6C:
-/* 0000AB6C 48000001 */ bl func_800325F4
+/* 0000AB6C 48000001 */ bl frand
 /* 0000AB70 546007FE */ clrlwi r0, r3, 0x1f
 /* 0000AB74 2C000000 */ cmpwi r0, 0
 /* 0000AB78 4182000C */ beq lbl_0000AB84
@@ -12021,7 +12021,7 @@ lbl_0000B0A4:
 /* 0000B0E0 FC01E040 */ fcmpo cr0, f1, f28
 /* 0000B0E4 4180FF48 */ blt lbl_0000B02C
 /* 0000B0E8 38600003 */ li r3, 3
-/* 0000B0EC 48000001 */ bl func_80032778
+/* 0000B0EC 48000001 */ bl frandmod
 /* 0000B0F0 547D043E */ clrlwi r29, r3, 0x10
 /* 0000B0F4 3C800000 */ lis r4, lbl_10000014@ha
 /* 0000B0F8 38640000 */ addi r3, r4, lbl_10000014@l
@@ -12438,8 +12438,8 @@ lbl_0000B71C:
 /* 0000B720 38640000 */ addi r3, r4, lbl_100002AC@l
 /* 0000B724 A8030000 */ lha r0, 0(r3)
 /* 0000B728 1C800030 */ mulli r4, r0, 0x30
-/* 0000B72C 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 0000B730 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 0000B72C 3C600000 */ lis r3, gPlayerData@ha
+/* 0000B730 38030000 */ addi r0, r3, gPlayerData@l
 /* 0000B734 7C802214 */ add r4, r0, r4
 /* 0000B738 88640008 */ lbz r3, 8(r4)
 /* 0000B73C 5460DFFE */ rlwinm r0, r3, 0x1b, 0x1f, 0x1f
@@ -13387,7 +13387,7 @@ lbl_0000C528:
 /* 0000C528 A81E0030 */ lha r0, 0x30(r30)
 /* 0000C52C 7C1C0000 */ cmpw r28, r0
 /* 0000C530 41820268 */ beq lbl_0000C798
-/* 0000C534 48000001 */ bl func_800325F4
+/* 0000C534 48000001 */ bl frand
 /* 0000C538 5460063E */ clrlwi r0, r3, 0x18
 /* 0000C53C 3C600000 */ lis r3, lbl_0000EE30@ha
 /* 0000C540 38630000 */ addi r3, r3, lbl_0000EE30@l
@@ -13406,7 +13406,7 @@ lbl_0000C528:
 /* 0000C574 38630000 */ addi r3, r3, lbl_0000EDD8@l
 /* 0000C578 C0030000 */ lfs f0, 0(r3)
 /* 0000C57C EFC00072 */ fmuls f30, f0, f1
-/* 0000C580 48000001 */ bl func_800325F4
+/* 0000C580 48000001 */ bl frand
 /* 0000C584 5460063E */ clrlwi r0, r3, 0x18
 /* 0000C588 3C600000 */ lis r3, lbl_0000EE30@ha
 /* 0000C58C 38630000 */ addi r3, r3, lbl_0000EE30@l
@@ -13458,7 +13458,7 @@ lbl_0000C528:
 /* 0000C644 FC00082A */ fadd f0, f0, f1
 /* 0000C648 FC000018 */ frsp f0, f0
 /* 0000C64C D01F003C */ stfs f0, 0x3c(r31)
-/* 0000C650 48000001 */ bl func_800325F4
+/* 0000C650 48000001 */ bl frand
 /* 0000C654 5460063E */ clrlwi r0, r3, 0x18
 /* 0000C658 3C600000 */ lis r3, lbl_0000EE30@ha
 /* 0000C65C 38630000 */ addi r3, r3, lbl_0000EE30@l
@@ -13485,7 +13485,7 @@ lbl_0000C528:
 /* 0000C6B0 C001000C */ lfs f0, 0xc(r1)
 /* 0000C6B4 EC00082A */ fadds f0, f0, f1
 /* 0000C6B8 D01F0038 */ stfs f0, 0x38(r31)
-/* 0000C6BC 48000001 */ bl func_800325F4
+/* 0000C6BC 48000001 */ bl frand
 /* 0000C6C0 5460063E */ clrlwi r0, r3, 0x18
 /* 0000C6C4 3C600000 */ lis r3, lbl_0000EE30@ha
 /* 0000C6C8 38630000 */ addi r3, r3, lbl_0000EE30@l
@@ -13509,7 +13509,7 @@ lbl_0000C528:
 /* 0000C710 C0030000 */ lfs f0, 0(r3)
 /* 0000C714 EC00082A */ fadds f0, f0, f1
 /* 0000C718 D01F0008 */ stfs f0, 8(r31)
-/* 0000C71C 48000001 */ bl func_800325F4
+/* 0000C71C 48000001 */ bl frand
 /* 0000C720 5460063E */ clrlwi r0, r3, 0x18
 /* 0000C724 3C600000 */ lis r3, lbl_0000EE30@ha
 /* 0000C728 38630000 */ addi r3, r3, lbl_0000EE30@l
@@ -13658,7 +13658,7 @@ lbl_0000C934:
 /* 0000C940 4800007C */ b lbl_0000C9BC
 lbl_0000C944:
 /* 0000C944 38600007 */ li r3, 7
-/* 0000C948 48000001 */ bl func_80032778
+/* 0000C948 48000001 */ bl frandmod
 /* 0000C94C 7C7E0734 */ extsh r30, r3
 /* 0000C950 57C4083C */ slwi r4, r30, 1
 /* 0000C954 3C600000 */ lis r3, lbl_100002B4@ha
@@ -13911,8 +13911,8 @@ lbl_0000CCF0:
 /* 0000CCF4 38630000 */ addi r3, r3, lbl_10000324@l
 /* 0000CCF8 A8030000 */ lha r0, 0(r3)
 /* 0000CCFC 1C800030 */ mulli r4, r0, 0x30
-/* 0000CD00 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 0000CD04 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 0000CD00 3C600000 */ lis r3, gPlayerData@ha
+/* 0000CD04 38030000 */ addi r0, r3, gPlayerData@l
 /* 0000CD08 7C602214 */ add r3, r0, r4
 /* 0000CD0C 88030008 */ lbz r0, 8(r3)
 /* 0000CD10 5400DFFE */ rlwinm r0, r0, 0x1b, 0x1f, 0x1f
@@ -14492,7 +14492,7 @@ lbl_0000D59C:
 /* 0000D5A8 80630000 */ lwz r3, 0(r3)
 /* 0000D5AC 9003004C */ stw r0, 0x4c(r3)
 /* 0000D5B0 38600028 */ li r3, 0x28
-/* 0000D5B4 48000001 */ bl func_80032778
+/* 0000D5B4 48000001 */ bl frandmod
 /* 0000D5B8 3803000A */ addi r0, r3, 0xa
 /* 0000D5BC 3C600000 */ lis r3, lbl_1000031C@ha
 /* 0000D5C0 38630000 */ addi r3, r3, lbl_1000031C@l
@@ -14763,7 +14763,7 @@ lbl_0000D92C:
 /* 0000D9B0 EC02002A */ fadds f0, f2, f0
 /* 0000D9B4 EC03002A */ fadds f0, f3, f0
 /* 0000D9B8 7C05252E */ stfsx f0, r5, r4
-/* 0000D9BC 48000001 */ bl func_800325F4
+/* 0000D9BC 48000001 */ bl frand
 /* 0000D9C0 5460063E */ clrlwi r0, r3, 0x18
 /* 0000D9C4 3C600000 */ lis r3, lbl_0000EEE8@ha
 /* 0000D9C8 38630000 */ addi r3, r3, lbl_0000EEE8@l
@@ -14791,7 +14791,7 @@ lbl_0000D92C:
 /* 0000DA20 7C03042E */ lfsx f0, r3, r0
 /* 0000DA24 EC00082A */ fadds f0, f0, f1
 /* 0000DA28 7C03052E */ stfsx f0, r3, r0
-/* 0000DA2C 48000001 */ bl func_800325F4
+/* 0000DA2C 48000001 */ bl frand
 /* 0000DA30 5460063E */ clrlwi r0, r3, 0x18
 /* 0000DA34 3C600000 */ lis r3, lbl_0000EEE8@ha
 /* 0000DA38 38630000 */ addi r3, r3, lbl_0000EEE8@l
@@ -14830,7 +14830,7 @@ lbl_0000D92C:
 /* 0000DABC 1C1F000C */ mulli r0, r31, 0xc
 /* 0000DAC0 38610024 */ addi r3, r1, 0x24
 /* 0000DAC4 7C03052E */ stfsx f0, r3, r0
-/* 0000DAC8 48000001 */ bl func_800325F4
+/* 0000DAC8 48000001 */ bl frand
 /* 0000DACC 5460063E */ clrlwi r0, r3, 0x18
 /* 0000DAD0 3C600000 */ lis r3, lbl_0000EEE8@ha
 /* 0000DAD4 38630000 */ addi r3, r3, lbl_0000EEE8@l
@@ -15360,8 +15360,8 @@ lbl_0000E24C:
 /* 0000E29C 38630000 */ addi r3, r3, lbl_10000324@l
 /* 0000E2A0 A8030000 */ lha r0, 0(r3)
 /* 0000E2A4 1C800030 */ mulli r4, r0, 0x30
-/* 0000E2A8 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 0000E2AC 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 0000E2A8 3C600000 */ lis r3, gPlayerData@ha
+/* 0000E2AC 38030000 */ addi r0, r3, gPlayerData@l
 /* 0000E2B0 7C602214 */ add r3, r0, r4
 /* 0000E2B4 8B830004 */ lbz r28, 4(r3)
 /* 0000E2B8 7F9C0774 */ extsb r28, r28
@@ -15370,8 +15370,8 @@ lbl_0000E24C:
 /* 0000E2C4 38630000 */ addi r3, r3, lbl_10000324@l
 /* 0000E2C8 A8030000 */ lha r0, 0(r3)
 /* 0000E2CC 1C800030 */ mulli r4, r0, 0x30
-/* 0000E2D0 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 0000E2D4 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 0000E2D0 3C600000 */ lis r3, gPlayerData@ha
+/* 0000E2D4 38030000 */ addi r0, r3, gPlayerData@l
 /* 0000E2D8 7C602214 */ add r3, r0, r4
 /* 0000E2DC 88030000 */ lbz r0, 0(r3)
 /* 0000E2E0 5400DFFE */ rlwinm r0, r0, 0x1b, 0x1f, 0x1f
@@ -15812,15 +15812,15 @@ lbl_0000E940:
 /* 0000E964 38630000 */ addi r3, r3, lbl_10000324@l
 /* 0000E968 A8030000 */ lha r0, 0(r3)
 /* 0000E96C 1C800030 */ mulli r4, r0, 0x30
-/* 0000E970 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 0000E974 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 0000E970 3C600000 */ lis r3, gPlayerData@ha
+/* 0000E974 38030000 */ addi r0, r3, gPlayerData@l
 /* 0000E978 7C602214 */ add r3, r0, r4
 /* 0000E97C 88030000 */ lbz r0, 0(r3)
 /* 0000E980 5400D7BE */ rlwinm r0, r0, 0x1a, 0x1e, 0x1f
 /* 0000E984 7C1C0734 */ extsh r28, r0
 /* 0000E988 3BC00000 */ li r30, 0
 /* 0000E98C 38600064 */ li r3, 0x64
-/* 0000E990 48000001 */ bl func_80032778
+/* 0000E990 48000001 */ bl frandmod
 /* 0000E994 7C7D1B78 */ mr r29, r3
 /* 0000E998 7F800734 */ extsh r0, r28
 /* 0000E99C 2C000002 */ cmpwi r0, 2

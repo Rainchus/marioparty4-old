@@ -12500,8 +12500,8 @@ lbl_0000B464:
 /* 0000B574 4082001C */ bne lbl_0000B590
 /* 0000B578 3800000A */ li r0, 0xa
 /* 0000B57C 1C920030 */ mulli r4, r18, 0x30
-/* 0000B580 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 0000B584 38630000 */ addi r3, r3, lbl_8018FC38@l
+/* 0000B580 3C600000 */ lis r3, gPlayerData@ha
+/* 0000B584 38630000 */ addi r3, r3, gPlayerData@l
 /* 0000B588 7C632214 */ add r3, r3, r4
 /* 0000B58C B0030028 */ sth r0, 0x28(r3)
 lbl_0000B590:

@@ -6883,8 +6883,8 @@ lbl_00006494:
 /* 000064C0 4082003C */ bne lbl_000064FC
 /* 000064C4 38A0000A */ li r5, 0xa
 /* 000064C8 1C9B0030 */ mulli r4, r27, 0x30
-/* 000064CC 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 000064D0 38630000 */ addi r3, r3, lbl_8018FC38@l
+/* 000064CC 3C600000 */ lis r3, gPlayerData@ha
+/* 000064D0 38630000 */ addi r3, r3, gPlayerData@l
 /* 000064D4 7C632214 */ add r3, r3, r4
 /* 000064D8 B0A30028 */ sth r5, 0x28(r3)
 /* 000064DC 48000020 */ b lbl_000064FC

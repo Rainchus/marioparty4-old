@@ -16580,8 +16580,8 @@ lbl_0000F950:
 /* 0000F960 4082001C */ bne lbl_0000F97C
 /* 0000F964 38A00000 */ li r5, 0
 /* 0000F968 1C9F0030 */ mulli r4, r31, 0x30
-/* 0000F96C 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 0000F970 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 0000F96C 3C600000 */ lis r3, gPlayerData@ha
+/* 0000F970 38030000 */ addi r0, r3, gPlayerData@l
 /* 0000F974 7C602214 */ add r3, r0, r4
 /* 0000F978 B0A30028 */ sth r5, 0x28(r3)
 lbl_0000F97C:
@@ -16597,8 +16597,8 @@ lbl_0000F980:
 /* 0000F99C 4082001C */ bne lbl_0000F9B8
 /* 0000F9A0 38A00001 */ li r5, 1
 /* 0000F9A4 1C9C0030 */ mulli r4, r28, 0x30
-/* 0000F9A8 3C600000 */ lis r3, lbl_8018FC38@ha
-/* 0000F9AC 38030000 */ addi r0, r3, lbl_8018FC38@l
+/* 0000F9A8 3C600000 */ lis r3, gPlayerData@ha
+/* 0000F9AC 38030000 */ addi r0, r3, gPlayerData@l
 /* 0000F9B0 7C602214 */ add r3, r0, r4
 /* 0000F9B4 B0A30028 */ sth r5, 0x28(r3)
 lbl_0000F9B8:
