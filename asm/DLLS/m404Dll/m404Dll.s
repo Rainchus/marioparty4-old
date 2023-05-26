@@ -7256,6 +7256,7 @@ lbl_00006D4C:
 
 # 4
 .section .rodata
+.balign 4
     # 0x6D50
     .4byte 0x3FE00000
     .4byte 0x00000000

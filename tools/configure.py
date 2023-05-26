@@ -39,6 +39,16 @@ rel_paths = {
     'm418Dll': 'asm/DLLS/m418Dll',
     'm419Dll': 'asm/DLLS/m419Dll',
     'm420dll': 'asm/DLLS/m420dll',
+    'm421Dll': 'asm/DLLS/m421Dll',
+    'm422Dll': 'asm/DLLS/m422Dll',
+    'm423Dll': 'asm/DLLS/m423Dll',
+    'm424Dll': 'asm/DLLS/m424Dll',
+    'm425Dll': 'asm/DLLS/m425Dll',
+    'm426Dll': 'asm/DLLS/m426Dll',
+    'm427Dll': 'asm/DLLS/m427Dll',
+    'm428Dll': 'asm/DLLS/m428Dll',
+    'm429Dll': 'asm/DLLS/m429Dll',
+    'm430Dll': 'asm/DLLS/m430Dll',
 }
 
 #if DEVKITPPC isn't found, throw an error
@@ -185,6 +195,16 @@ elf_to_rel_map = {
     'm418Dll': 'm418Dll_elf_to_rel',
     'm419Dll': 'm419Dll_elf_to_rel',
     'm420dll': 'm420dll_elf_to_rel',
+    'm421Dll': 'm421Dll_elf_to_rel',
+    'm422Dll': 'm422Dll_elf_to_rel',
+    'm423Dll': 'm423Dll_elf_to_rel',
+    'm424Dll': 'm424Dll_elf_to_rel',
+    'm425Dll': 'm425Dll_elf_to_rel',
+    'm426Dll': 'm426Dll_elf_to_rel',
+    'm427Dll': 'm427Dll_elf_to_rel',
+    'm428Dll': 'm428Dll_elf_to_rel',
+    'm429Dll': 'm429Dll_elf_to_rel',
+    'm430Dll': 'm430Dll_elf_to_rel',
 }
 
 for name in rel_paths.keys():
@@ -224,6 +244,16 @@ ninja_file.build("build/checksums.stamp", "check_rel_checksums", [
     "build/mp4.1/m418Dll.rel",
     "build/mp4.1/m419Dll.rel",
     "build/mp4.1/m420dll.rel",
+    "build/mp4.1/m421Dll.rel",
+    "build/mp4.1/m422Dll.rel",
+    "build/mp4.1/m423Dll.rel",
+    "build/mp4.1/m424Dll.rel",
+    "build/mp4.1/m425Dll.rel",
+    "build/mp4.1/m426Dll.rel",
+    "build/mp4.1/m427Dll.rel",
+    "build/mp4.1/m428Dll.rel",
+    "build/mp4.1/m429Dll.rel",
+    "build/mp4.1/m430Dll.rel",
 ])
 
 
