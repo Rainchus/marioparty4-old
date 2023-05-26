@@ -328,8 +328,8 @@ lbl_8019D9F8:
 .global lbl_8019DA04
 lbl_8019DA04:
 	.skip 0xC
-.global lbl_8019DA10
-lbl_8019DA10:
+.global spaceData # RAM 0x8019DA10
+spaceData:
 	.skip 0x7000
 .global lbl_801A4A10
 lbl_801A4A10:

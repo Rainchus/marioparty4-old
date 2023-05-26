@@ -26906,7 +26906,7 @@ lbl_80139AE8:
 	.4byte 0x002A0000
 	.4byte 0x00000000
 .global characterItemShopPreferences
-characterItemShopPreferences:
+characterItemShopPreferences: # RAM 0x80139B00
 	# ROM: 136B00
 	# Character Mario
 	.byte MAGIC_LAMP

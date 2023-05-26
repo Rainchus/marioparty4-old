@@ -993,8 +993,8 @@ lbl_801D3F0C:
 .global lbl_801D3F10
 lbl_801D3F10:
 	.skip 0x4
-.global lbl_801D3F14
-lbl_801D3F14:
+.global rngSeed # RAM 0x801D3F14
+rngSeed:
 	.skip 0x4
 .global lbl_801D3F18
 lbl_801D3F18:
