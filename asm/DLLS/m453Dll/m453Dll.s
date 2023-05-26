@@ -26,6 +26,7 @@
 # offset: 0x00000000	length: 0x00000000	flags: 0
 # 1
 .section .text
+.balign 4
 .global _prolog
 _prolog:
 /* 000000C0 9421FFF0 */ stwu r1, -0x10(r1)
@@ -10166,11 +10167,13 @@ lbl_00009704:
 
 # 2
 .section .ctors
+.balign 4
 lbl_00009734:
     # 0x9734
 
 # 3
 .section .dtors
+.balign 4
 lbl_00009738:
     # 0x9738
 
@@ -11412,6 +11415,7 @@ lbl_0000A578:
 
 # 6
 .section .bss
+.balign 4
 lbl_10000000:
     .skip 0x2
 lbl_10000002:

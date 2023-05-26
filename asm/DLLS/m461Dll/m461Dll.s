@@ -26,6 +26,7 @@
 # offset: 0x00000000	length: 0x00000000	flags: 0
 # 1
 .section .text
+.balign 4
 /* 000000C0 38000000 */ li r0, 0
 /* 000000C4 3C600000 */ lis r3, lbl_10000254@ha
 /* 000000C8 38630000 */ addi r3, r3, lbl_10000254@l
@@ -14542,11 +14543,13 @@ lbl_0000D888:
 
 # 2
 .section .ctors
+.balign 4
 lbl_0000D89C:
     # 0xD89C
 
 # 3
 .section .dtors
+.balign 4
 lbl_0000D8A0:
     # 0xD8A0
 
@@ -15099,6 +15102,7 @@ lbl_0000DE08:
 
 # 6
 .section .bss
+.balign 4
 lbl_10000000:
     .skip 0x4
 lbl_10000004:

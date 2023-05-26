@@ -235,4 +235,48 @@ rule_dict = {
         'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
         'description': "m450Dll.rel building..."
     },
+    'm451Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m451Dll.rel building..."
+    },
+    'm453Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m453Dll.rel building..."
+    },
+    'm455Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m455Dll.rel building..."
+    },
+    'm456Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m456Dll.rel building..."
+    },
+    'm457Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m457Dll.rel building..."
+    },
+    'm458Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m458Dll.rel building..."
+    },
+    'm459dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m459dll.rel building..."
+    },
+    'm460Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m460Dll.rel building..."
+    },
+    'm461Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m461Dll.rel building..."
+    },
+    'm462Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 14 $out",
+        'description': "m462Dll.rel building..."
+    },
+    'm463Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m463Dll.rel building..."
+    },
 }
