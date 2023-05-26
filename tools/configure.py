@@ -32,6 +32,13 @@ rel_paths = {
     'm411Dll': 'asm/DLLS/m411Dll',
     'm412Dll': 'asm/DLLS/m412Dll',
     'm413Dll': 'asm/DLLS/m413Dll',
+    'm414Dll': 'asm/DLLS/m414Dll',
+    'm415Dll': 'asm/DLLS/m415Dll',
+    'm416Dll': 'asm/DLLS/m416Dll',
+    'm417Dll': 'asm/DLLS/m417Dll',
+    'm418Dll': 'asm/DLLS/m418Dll',
+    'm419Dll': 'asm/DLLS/m419Dll',
+    'm420dll': 'asm/DLLS/m420dll',
 }
 
 #if DEVKITPPC isn't found, throw an error
@@ -171,6 +178,13 @@ elf_to_rel_map = {
     'm411Dll': 'm411Dll_elf_to_rel',
     'm412Dll': 'm412Dll_elf_to_rel',
     'm413Dll': 'm413Dll_elf_to_rel',
+    'm414Dll': 'm414Dll_elf_to_rel',
+    'm415Dll': 'm415Dll_elf_to_rel',
+    'm416Dll': 'm416Dll_elf_to_rel',
+    'm417Dll': 'm417Dll_elf_to_rel',
+    'm418Dll': 'm418Dll_elf_to_rel',
+    'm419Dll': 'm419Dll_elf_to_rel',
+    'm420dll': 'm420dll_elf_to_rel',
 }
 
 for name in rel_paths.keys():
@@ -203,6 +217,13 @@ ninja_file.build("build/checksums.stamp", "check_rel_checksums", [
     "build/mp4.1/m411Dll.rel",
     "build/mp4.1/m412Dll.rel",
     "build/mp4.1/m413Dll.rel",
+    "build/mp4.1/m414Dll.rel",
+    "build/mp4.1/m415Dll.rel",
+    "build/mp4.1/m416Dll.rel",
+    "build/mp4.1/m417Dll.rel",
+    "build/mp4.1/m418Dll.rel",
+    "build/mp4.1/m419Dll.rel",
+    "build/mp4.1/m420dll.rel",
 ])
 
 

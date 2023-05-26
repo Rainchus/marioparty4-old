@@ -87,4 +87,32 @@ rule_dict = {
         'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
         'description': "m413Dll.rel building..."
     },
+    'm414Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m414Dll.rel building..."
+    },
+    'm415Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m415Dll.rel building..."
+    },
+    'm416Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m416Dll.rel building..."
+    },
+    'm417Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 14 $out",
+        'description': "m417Dll.rel building..."
+    },
+    'm418Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 16 $out",
+        'description': "m418Dll.rel building..."
+    },
+    'm419Dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 14 $out",
+        'description': "m419Dll.rel building..."
+    },
+    'm420dll_elf_to_rel': {
+        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x2F -c 15 $out",
+        'description': "m420dll.rel building..."
+    },
 }

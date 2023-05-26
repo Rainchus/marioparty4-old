@@ -24,6 +24,13 @@ us_rel_sha1 = {
     "build/mp4.1/m411Dll.rel": "26ac81a3db9f3850bb43b23cdb7168dcddccaeea",
     "build/mp4.1/m412Dll.rel": "3ebb173a52aaea75acb414f73264e72a2943c6f8",
     "build/mp4.1/m413Dll.rel": "e59d4b66b1f57637c335b4745a696e3dbcb4bbe3",
+    "build/mp4.1/m414Dll.rel": "f7fe1aa24c7b6b8ca2bb28922696c0392dc7d029",
+    "build/mp4.1/m415Dll.rel": "3c697b54ebdd01971b99af8c812b4850fa181f4f",
+    "build/mp4.1/m416Dll.rel": "d26526935455b26beb2b9eaed1bfae3f3f458c25",
+    "build/mp4.1/m417Dll.rel": "b5c3805ec3cb023299ed09b782b92441085d0054",
+    "build/mp4.1/m418Dll.rel": "0d02610005c46ad4f47ff51f5e154f9b0d16a4f4",
+    "build/mp4.1/m419Dll.rel": "bbceb138b8cc43e578179a7892801633892cb03c",
+    "build/mp4.1/m420dll.rel": "2ef4ee163bc2aa15f87c8c89afb4f28939f088c8",
 }
 
 # ANSI color codes for green and red
