@@ -26,6 +26,7 @@
 include/*.s
 
 build/
+tools/__pycache__/
 tools/mwcc_compiler/
 tools/elf2dol
 tools/elf2rel
@@ -33,6 +34,7 @@ decomp/
 errors.txt
 output.asm
 Debug/
+rels/
 .vs/
 
 .ninja_deps

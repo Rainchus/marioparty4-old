@@ -26,6 +26,7 @@
 # offset: 0x00000000	length: 0x00000000	flags: 0
 # 1
 .section .text
+.balign 4
 /* 000000C0 38000000 */ li r0, 0
 /* 000000C4 3C600000 */ lis r3, lbl_10000204@ha
 /* 000000C8 38630000 */ addi r3, r3, lbl_10000204@l
@@ -10339,11 +10340,13 @@ lbl_00009C70:
 
 # 2
 .section .ctors
+.balign 4
 lbl_00009C84:
     # 0x9C84
 
 # 3
 .section .dtors
+.balign 4
 lbl_00009C88:
     # 0x9C88
 
@@ -10946,6 +10949,7 @@ lbl_0000A2C2:
     .asciz "******* M402 ObjectSetup *********\n"
 # 6
 .section .bss
+.balign 4
     .skip 0x4
 lbl_10000004:
     .skip 0x4
