@@ -10,7 +10,7 @@ asm_path = 'asm/'
 rels_path = 'asm/DLLS/'
 
 rel_paths = {
-    '_minigameDll': 'asm/DLLS/_minigameDll',
+    '_minigameDll': 'src/_minigameDll',
     'bootDll': 'asm/DLLS/bootDll',
     'E3setupDLL': 'asm/DLLS/E3setupDLL',
     'instDll': 'asm/DLLS/instDll',
@@ -86,7 +86,7 @@ rel_paths = {
     'modeltestDll': 'asm/DLLS/modeltestDll',
     'modeseldll': 'asm/DLLS/modeseldll',
     'mpexDll': 'asm/DLLS/mpexDll',
-    #'msetupDll': 'asm/DLLS/msetupDll',
+    #'msetupDll': 'asm/DLLS/msetupDll', #broken rel, cannot build
     'mstory2Dll': 'asm/DLLS/mstory2Dll',
     'mstory3Dll': 'asm/DLLS/mstory3Dll',
     'mstory4Dll': 'asm/DLLS/mstory4Dll',
@@ -110,6 +110,12 @@ rel_paths = {
     'w21Dll': 'asm/DLLS/w21Dll',
     'ztardll': 'asm/DLLS/ztardll',
 }
+
+#create folders for each DLL
+for key in rel_paths:
+    folder_path = os.path.join('build/src/', key)
+    print(folder_path)
+    os.makedirs(folder_path, exist_ok=True)
 
 #if DEVKITPPC isn't found, throw an error
 if os.getenv('DEVKITPPC') is None:
@@ -150,6 +156,8 @@ for name, path in rel_paths.items():
     o_files[name] = []
     for file in c_files[name] + s_files[name]:
         o_files[name].append(append_prefix(append_extension(file)))
+
+print(c_files)
     
 header = (
     "AS = $$DEVKITPPC/bin/powerpc-eabi-as\n"
@@ -160,7 +168,7 @@ header = (
     "MAP = $BUILD_DIR/mp4.1/MarioParty4.MAP\n"
     "LDSCRIPT_DOL = ldscript.lcf\n"
     "LDSCRIPT_REL = partial.lcf\n"
-    "OPTFLAGS = -O4,p\n"
+    "OPTFLAGS = -O0,p\n"
     "DOL = $BUILD_DIR/main.dol\n"
     "MWCC_VERSION = 2.6\n"
     "MWLD_VERSION = 2.6\n"
@@ -174,9 +182,9 @@ header = (
     "ASFLAGS = -mgekko $ASM_INCLUDES\n"
     "MAPGEN = -map $MAP\n"
     "LDFLAGS = $MAPGEN -fp hard -nodefaults\n"
-    "CFLAGS = -Cpp_exceptions off -proc gekko -fp hard $OPTFLAGS -nodefaults -sdata 48 -sdata2 8 -inline all,deferred -use_lmw_stmw on -enum int -rostr $INCLUDES\n"
+    "CFLAGS = -O0,p -Cpp_exceptions off -proc gekko -str pool -str reuse -fp hard -nodefaults -sdata 0 -sdata2 0 $INCLUDES\n"
     "NAME = ttyd_us\n"
-    "LD_REL = $LD -lcf partial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in $MAPGEN -o $out\n"
+    "LD_REL = $LD -lcf partial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in -o $out\n"
 )
 
 # Create a Ninja build file object
@@ -196,8 +204,17 @@ ninja_file.rule('rel_ldscript',
 ninja_file.rule('nis_rel_ldscript',
                  command = "wine ./tools/mwcc_compiler/2.6/mwldeppc.exe -lcf nisPartial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in -o $out")
 
+ninja_file.rule('_minigame_rel_ldscript',
+                 command = "wine ./tools/mwcc_compiler/2.6/mwldeppc.exe -lcf c_partial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in -o $out")
+
+
+
 ninja_file.rule('c_files',
-                 command = "$CC $CFLAGS -c -o $in $out",
+                 command = "$CC $CFLAGS -c -o $out $in",
+                 description = "Compiling .c file")
+
+ninja_file.rule('c_files_rels',
+                 command = "$CC $CFLAGS -c -o $out $in",
                  description = "Compiling .c file")
 
 ninja_file.rule('s_files',
@@ -224,7 +241,7 @@ ninja_file.rule('check_rel_checksums',
 
 for name in rel_paths.keys():
     for c_file in c_files[name]:
-        ninja_file.build("build/" + append_extension(c_file), "c_files", c_file)
+        ninja_file.build("build/" + append_extension(c_file), "c_files_rels", c_file)
     for s_file in s_files[name]:
         ninja_file.build("build/" + append_extension(s_file), "s_files", s_file)
 
@@ -335,6 +352,8 @@ for name in rel_paths.keys():
     rel_path = f"build/mp4.1/{name}.rel"
     if name == 'nisDll':
         ninja_file.build(elf_path, "nis_rel_ldscript", o_files[name])
+    elif name == '_minigameDll':
+        ninja_file.build(elf_path, "_minigame_rel_ldscript", o_files[name])
     else:
         ninja_file.build(elf_path, "rel_ldscript", o_files[name])
     ninja_file.build(rel_path, elf_to_rel_map[name], elf_path)

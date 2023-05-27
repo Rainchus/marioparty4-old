@@ -33,7 +33,7 @@ endif
 
 # Inputs
 S_FILES := $(wildcard asm/*.s)
-C_FILES := $(wildcard src/*.c)
+#C_FILES := $(wildcard src/*.c)
 CPP_FILES := $(wildcard src/*.cpp)
 CPP_FILES += $(wildcard src/*.cp)
 LDSCRIPT_DOL := $(BUILD_DIR)/ldscript.lcf
