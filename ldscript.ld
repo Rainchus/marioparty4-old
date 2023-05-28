@@ -1,3 +1,5 @@
+//used by doldisasm.py (not used for linking)
+
 ENTRY(__start)
 _SDA_BASE_ = 0x801DB420;
 _SDA2_BASE_ = 0x801DC960;
