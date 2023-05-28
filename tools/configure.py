@@ -10,7 +10,8 @@ asm_path = 'asm/'
 rels_path = 'asm/DLLS/'
 
 rel_paths = {
-    '_minigameDll': 'src/_minigameDll',
+    #'_minigameDll': 'src/_minigameDll',
+    '_minigameDll': 'asm/DLLS/_minigameDll',
     'bootDll': 'asm/DLLS/bootDll',
     'E3setupDLL': 'asm/DLLS/E3setupDLL',
     'instDll': 'asm/DLLS/instDll',
@@ -114,7 +115,6 @@ rel_paths = {
 #create folders for each DLL
 for key in rel_paths:
     folder_path = os.path.join('build/src/', key)
-    print(folder_path)
     os.makedirs(folder_path, exist_ok=True)
 
 #if DEVKITPPC isn't found, throw an error
@@ -157,7 +157,7 @@ for name, path in rel_paths.items():
     for file in c_files[name] + s_files[name]:
         o_files[name].append(append_prefix(append_extension(file)))
 
-print(c_files)
+#print(c_files)
     
 header = (
     "AS = $$DEVKITPPC/bin/powerpc-eabi-as\n"
@@ -205,7 +205,7 @@ ninja_file.rule('nis_rel_ldscript',
                  command = "wine ./tools/mwcc_compiler/2.6/mwldeppc.exe -lcf nisPartial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in -o $out")
 
 ninja_file.rule('_minigame_rel_ldscript',
-                 command = "wine ./tools/mwcc_compiler/2.6/mwldeppc.exe -lcf c_partial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in -o $out")
+                 command = "wine ./tools/mwcc_compiler/2.6/mwldeppc.exe -lcf partial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in -o $out")
 
 
 

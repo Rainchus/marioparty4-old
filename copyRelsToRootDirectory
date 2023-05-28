@@ -1,0 +1,3 @@
+cp build/mp4.1/*.rel /mnt/c/Users/Rainchus/Desktop/mp4_decomp_mod/root/dll/
+cp build/mp4.1/main.dol "/mnt/c/Users/Rainchus/Desktop/mp4_decomp_mod/root/&&systemdata/Start.dol"
+

@@ -2,6 +2,30 @@
 
 .section .sdata, "wa"  # 0x801D3420 - 0x801D3A00
 
+.global test_801D3420
+test_801D3420:
+	# ROM: 0x11BDF0
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+	.4byte 0xDEADBEEF
+
 .global lbl_801D3420
 lbl_801D3420:
 	#ROM:  0x13F800 
