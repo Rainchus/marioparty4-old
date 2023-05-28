@@ -5280,8 +5280,8 @@ lbl_00004E50:
 /* 00004EA0 7C7F1B78 */ mr r31, r3
 /* 00004EA4 7FE00734 */ extsh r0, r31
 /* 00004EA8 1C800180 */ mulli r4, r0, 0x180
-/* 00004EAC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00004EB0 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00004EAC 3C600000 */ lis r3, winData@ha
+/* 00004EB0 38030000 */ addi r0, r3, winData@l
 /* 00004EB4 7FA02214 */ add r29, r0, r4
 /* 00004EB8 80610010 */ lwz r3, 0x10(r1)
 /* 00004EBC 8003000C */ lwz r0, 0xc(r3)

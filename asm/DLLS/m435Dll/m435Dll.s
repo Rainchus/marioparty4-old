@@ -1242,8 +1242,8 @@ lbl_00001294:
 /* 00001318 D041000C */ stfs f2, 0xc(r1)
 /* 0000131C 7C9C2378 */ mr r28, r4
 /* 00001320 1C9E0180 */ mulli r4, r30, 0x180
-/* 00001324 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00001328 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00001324 3C600000 */ lis r3, winData@ha
+/* 00001328 38030000 */ addi r0, r3, winData@l
 /* 0000132C 7FA02214 */ add r29, r0, r4
 /* 00001330 C3BD006C */ lfs f29, 0x6c(r29)
 /* 00001334 C39D0070 */ lfs f28, 0x70(r29)
@@ -1666,8 +1666,8 @@ lbl_00001854:
 /* 00001978 D0210008 */ stfs f1, 8(r1)
 /* 0000197C D041000C */ stfs f2, 0xc(r1)
 /* 00001980 1C9D0180 */ mulli r4, r29, 0x180
-/* 00001984 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00001988 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00001984 3C600000 */ lis r3, winData@ha
+/* 00001988 38030000 */ addi r0, r3, winData@l
 /* 0000198C 7FE02214 */ add r31, r0, r4
 /* 00001990 C3BF006C */ lfs f29, 0x6c(r31)
 /* 00001994 C39F0070 */ lfs f28, 0x70(r31)
@@ -1954,8 +1954,8 @@ lbl_00001D94:
 /* 00001DD4 48000001 */ bl func_80042304
 /* 00001DD8 7C7F0734 */ extsh r31, r3
 /* 00001DDC 1C9F0180 */ mulli r4, r31, 0x180
-/* 00001DE0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00001DE4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00001DE0 3C600000 */ lis r3, winData@ha
+/* 00001DE4 38030000 */ addi r0, r3, winData@l
 /* 00001DE8 7C602214 */ add r3, r0, r4
 /* 00001DEC A8630004 */ lha r3, 4(r3)
 /* 00001DF0 38800000 */ li r4, 0
@@ -1980,8 +1980,8 @@ lbl_00001D94:
 /* 00001E3C 7C03002E */ lwzx r0, r3, r0
 /* 00001E40 7C050734 */ extsh r5, r0
 /* 00001E44 1C9F0180 */ mulli r4, r31, 0x180
-/* 00001E48 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00001E4C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00001E48 3C600000 */ lis r3, winData@ha
+/* 00001E4C 38030000 */ addi r0, r3, winData@l
 /* 00001E50 7C602214 */ add r3, r0, r4
 /* 00001E54 B0A30060 */ sth r5, 0x60(r3)
 /* 00001E58 1C9E0018 */ mulli r4, r30, 0x18
@@ -1990,13 +1990,13 @@ lbl_00001D94:
 /* 00001E64 7C03002E */ lwzx r0, r3, r0
 /* 00001E68 7C050734 */ extsh r5, r0
 /* 00001E6C 1C9F0180 */ mulli r4, r31, 0x180
-/* 00001E70 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00001E74 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00001E70 3C600000 */ lis r3, winData@ha
+/* 00001E74 38030000 */ addi r0, r3, winData@l
 /* 00001E78 7C602214 */ add r3, r0, r4
 /* 00001E7C B0A30062 */ sth r5, 0x62(r3)
 /* 00001E80 1C9F0180 */ mulli r4, r31, 0x180
-/* 00001E84 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00001E88 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00001E84 3C600000 */ lis r3, winData@ha
+/* 00001E88 38030000 */ addi r0, r3, winData@l
 /* 00001E8C 7C602214 */ add r3, r0, r4
 /* 00001E90 8003004C */ lwz r0, 0x4c(r3)
 /* 00001E94 60000080 */ ori r0, r0, 0x80
@@ -2022,8 +2022,8 @@ lbl_00001D94:
 /* 00001EE4 48000001 */ bl func_80045DD4
 /* 00001EE8 38A00000 */ li r5, 0
 /* 00001EEC 1C9F0180 */ mulli r4, r31, 0x180
-/* 00001EF0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00001EF4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00001EF0 3C600000 */ lis r3, winData@ha
+/* 00001EF4 38030000 */ addi r0, r3, winData@l
 /* 00001EF8 7C602214 */ add r3, r0, r4
 /* 00001EFC 98A30001 */ stb r5, 1(r3)
 /* 00001F00 7FE3FB78 */ mr r3, r31
@@ -2078,8 +2078,8 @@ lbl_00001F80:
 /* 00001FC0 48000001 */ bl func_80042304
 /* 00001FC4 7C7F0734 */ extsh r31, r3
 /* 00001FC8 1C9F0180 */ mulli r4, r31, 0x180
-/* 00001FCC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00001FD0 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00001FCC 3C600000 */ lis r3, winData@ha
+/* 00001FD0 38030000 */ addi r0, r3, winData@l
 /* 00001FD4 7C602214 */ add r3, r0, r4
 /* 00001FD8 A8630004 */ lha r3, 4(r3)
 /* 00001FDC 38800000 */ li r4, 0
@@ -2104,8 +2104,8 @@ lbl_00001F80:
 /* 00002028 7C03002E */ lwzx r0, r3, r0
 /* 0000202C 7C050734 */ extsh r5, r0
 /* 00002030 1C9F0180 */ mulli r4, r31, 0x180
-/* 00002034 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00002038 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00002034 3C600000 */ lis r3, winData@ha
+/* 00002038 38030000 */ addi r0, r3, winData@l
 /* 0000203C 7C602214 */ add r3, r0, r4
 /* 00002040 B0A30060 */ sth r5, 0x60(r3)
 /* 00002044 1C9E0018 */ mulli r4, r30, 0x18
@@ -2114,13 +2114,13 @@ lbl_00001F80:
 /* 00002050 7C03002E */ lwzx r0, r3, r0
 /* 00002054 7C050734 */ extsh r5, r0
 /* 00002058 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000205C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00002060 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000205C 3C600000 */ lis r3, winData@ha
+/* 00002060 38030000 */ addi r0, r3, winData@l
 /* 00002064 7C602214 */ add r3, r0, r4
 /* 00002068 B0A30062 */ sth r5, 0x62(r3)
 /* 0000206C 1C9F0180 */ mulli r4, r31, 0x180
-/* 00002070 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00002074 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00002070 3C600000 */ lis r3, winData@ha
+/* 00002074 38030000 */ addi r0, r3, winData@l
 /* 00002078 7C602214 */ add r3, r0, r4
 /* 0000207C 8003004C */ lwz r0, 0x4c(r3)
 /* 00002080 60000080 */ ori r0, r0, 0x80
@@ -2146,8 +2146,8 @@ lbl_00001F80:
 /* 000020D0 48000001 */ bl func_80045DD4
 /* 000020D4 38A00000 */ li r5, 0
 /* 000020D8 1C9F0180 */ mulli r4, r31, 0x180
-/* 000020DC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 000020E0 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 000020DC 3C600000 */ lis r3, winData@ha
+/* 000020E0 38030000 */ addi r0, r3, winData@l
 /* 000020E4 7C602214 */ add r3, r0, r4
 /* 000020E8 98A30001 */ stb r5, 1(r3)
 /* 000020EC 7FE3FB78 */ mr r3, r31
@@ -2200,8 +2200,8 @@ lbl_00001F80:
 /* 000021A8 D0210008 */ stfs f1, 8(r1)
 /* 000021AC D041000C */ stfs f2, 0xc(r1)
 /* 000021B0 1C9D0180 */ mulli r4, r29, 0x180
-/* 000021B4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 000021B8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 000021B4 3C600000 */ lis r3, winData@ha
+/* 000021B8 38030000 */ addi r0, r3, winData@l
 /* 000021BC 7FE02214 */ add r31, r0, r4
 /* 000021C0 C3BF006C */ lfs f29, 0x6c(r31)
 /* 000021C4 C39F0070 */ lfs f28, 0x70(r31)
@@ -2534,8 +2534,8 @@ lbl_0000269C:
 /* 000026B8 3BC00001 */ li r30, 1
 /* 000026BC 38A0000F */ li r5, 0xf
 /* 000026C0 1C9D0180 */ mulli r4, r29, 0x180
-/* 000026C4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 000026C8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 000026C4 3C600000 */ lis r3, winData@ha
+/* 000026C8 38030000 */ addi r0, r3, winData@l
 /* 000026CC 7C602214 */ add r3, r0, r4
 /* 000026D0 98A30001 */ stb r5, 1(r3)
 lbl_000026D4:
@@ -2547,8 +2547,8 @@ lbl_000026D8:
 /* 000026E4 40820034 */ bne lbl_00002718
 /* 000026E8 38A0000F */ li r5, 0xf
 /* 000026EC 1C9D0180 */ mulli r4, r29, 0x180
-/* 000026F0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 000026F4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 000026F0 3C600000 */ lis r3, winData@ha
+/* 000026F4 38030000 */ addi r0, r3, winData@l
 /* 000026F8 7C602214 */ add r3, r0, r4
 /* 000026FC 98A30001 */ stb r5, 1(r3)
 /* 00002700 38600100 */ li r3, 0x100
@@ -2593,8 +2593,8 @@ lbl_00002774:
 /* 00002790 3BE00001 */ li r31, 1
 /* 00002794 38A0000F */ li r5, 0xf
 /* 00002798 1C9D0180 */ mulli r4, r29, 0x180
-/* 0000279C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 000027A0 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000279C 3C600000 */ lis r3, winData@ha
+/* 000027A0 38030000 */ addi r0, r3, winData@l
 /* 000027A4 7C602214 */ add r3, r0, r4
 /* 000027A8 98A30001 */ stb r5, 1(r3)
 lbl_000027AC:
@@ -2606,8 +2606,8 @@ lbl_000027B0:
 /* 000027BC 40820034 */ bne lbl_000027F0
 /* 000027C0 38A0000F */ li r5, 0xf
 /* 000027C4 1C9D0180 */ mulli r4, r29, 0x180
-/* 000027C8 3C600000 */ lis r3, lbl_801923C0@ha
-/* 000027CC 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 000027C8 3C600000 */ lis r3, winData@ha
+/* 000027CC 38030000 */ addi r0, r3, winData@l
 /* 000027D0 7C602214 */ add r3, r0, r4
 /* 000027D4 98A30001 */ stb r5, 1(r3)
 /* 000027D8 38600100 */ li r3, 0x100
@@ -2654,19 +2654,19 @@ lbl_00002834:
 /* 0000286C 90810008 */ stw r4, 8(r1)
 /* 00002870 38A00000 */ li r5, 0
 /* 00002874 1C9F0180 */ mulli r4, r31, 0x180
-/* 00002878 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000287C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00002878 3C600000 */ lis r3, winData@ha
+/* 0000287C 38030000 */ addi r0, r3, winData@l
 /* 00002880 7C602214 */ add r3, r0, r4
 /* 00002884 B0A30060 */ sth r5, 0x60(r3)
 /* 00002888 38A00009 */ li r5, 9
 /* 0000288C 1C9F0180 */ mulli r4, r31, 0x180
-/* 00002890 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00002894 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00002890 3C600000 */ lis r3, winData@ha
+/* 00002894 38030000 */ addi r0, r3, winData@l
 /* 00002898 7C602214 */ add r3, r0, r4
 /* 0000289C B0A30062 */ sth r5, 0x62(r3)
 /* 000028A0 1C9F0180 */ mulli r4, r31, 0x180
-/* 000028A4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 000028A8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 000028A4 3C600000 */ lis r3, winData@ha
+/* 000028A8 38030000 */ addi r0, r3, winData@l
 /* 000028AC 7C602214 */ add r3, r0, r4
 /* 000028B0 8003004C */ lwz r0, 0x4c(r3)
 /* 000028B4 60000080 */ ori r0, r0, 0x80
@@ -13382,8 +13382,8 @@ lbl_0000C954:
 /* 0000C998 48000001 */ bl func_80042304
 /* 0000C99C 7C7E0734 */ extsh r30, r3
 /* 0000C9A0 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000C9A4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000C9A8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000C9A4 3C600000 */ lis r3, winData@ha
+/* 0000C9A8 38030000 */ addi r0, r3, winData@l
 /* 0000C9AC 7C602214 */ add r3, r0, r4
 /* 0000C9B0 A8630004 */ lha r3, 4(r3)
 /* 0000C9B4 38800000 */ li r4, 0
@@ -13397,20 +13397,20 @@ lbl_0000C954:
 /* 0000C9D4 80010060 */ lwz r0, 0x60(r1)
 /* 0000C9D8 7C050734 */ extsh r5, r0
 /* 0000C9DC 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000C9E0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000C9E4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000C9E0 3C600000 */ lis r3, winData@ha
+/* 0000C9E4 38030000 */ addi r0, r3, winData@l
 /* 0000C9E8 7C602214 */ add r3, r0, r4
 /* 0000C9EC B0A30060 */ sth r5, 0x60(r3)
 /* 0000C9F0 80010064 */ lwz r0, 0x64(r1)
 /* 0000C9F4 7C050734 */ extsh r5, r0
 /* 0000C9F8 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000C9FC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CA00 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000C9FC 3C600000 */ lis r3, winData@ha
+/* 0000CA00 38030000 */ addi r0, r3, winData@l
 /* 0000CA04 7C602214 */ add r3, r0, r4
 /* 0000CA08 B0A30062 */ sth r5, 0x62(r3)
 /* 0000CA0C 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000CA10 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CA14 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CA10 3C600000 */ lis r3, winData@ha
+/* 0000CA14 38030000 */ addi r0, r3, winData@l
 /* 0000CA18 7C602214 */ add r3, r0, r4
 /* 0000CA1C 8003004C */ lwz r0, 0x4c(r3)
 /* 0000CA20 60000080 */ ori r0, r0, 0x80
@@ -13433,8 +13433,8 @@ lbl_0000C954:
 /* 0000CA64 48000001 */ bl func_80045DD4
 /* 0000CA68 38A00000 */ li r5, 0
 /* 0000CA6C 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000CA70 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CA74 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CA70 3C600000 */ lis r3, winData@ha
+/* 0000CA74 38030000 */ addi r0, r3, winData@l
 /* 0000CA78 7C602214 */ add r3, r0, r4
 /* 0000CA7C 98A30001 */ stb r5, 1(r3)
 /* 0000CA80 7FC3F378 */ mr r3, r30
@@ -13460,19 +13460,19 @@ lbl_0000C954:
 /* 0000CAD0 9003004C */ stw r0, 0x4c(r3)
 /* 0000CAD4 38A00000 */ li r5, 0
 /* 0000CAD8 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000CADC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CAE0 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CADC 3C600000 */ lis r3, winData@ha
+/* 0000CAE0 38030000 */ addi r0, r3, winData@l
 /* 0000CAE4 7C602214 */ add r3, r0, r4
 /* 0000CAE8 B0A30060 */ sth r5, 0x60(r3)
 /* 0000CAEC 38A00009 */ li r5, 9
 /* 0000CAF0 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000CAF4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CAF8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CAF4 3C600000 */ lis r3, winData@ha
+/* 0000CAF8 38030000 */ addi r0, r3, winData@l
 /* 0000CAFC 7C602214 */ add r3, r0, r4
 /* 0000CB00 B0A30062 */ sth r5, 0x62(r3)
 /* 0000CB04 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000CB08 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CB0C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CB08 3C600000 */ lis r3, winData@ha
+/* 0000CB0C 38030000 */ addi r0, r3, winData@l
 /* 0000CB10 7C602214 */ add r3, r0, r4
 /* 0000CB14 8003004C */ lwz r0, 0x4c(r3)
 /* 0000CB18 60000080 */ ori r0, r0, 0x80
@@ -13497,8 +13497,8 @@ lbl_0000CB44:
 /* 0000CB60 3B400001 */ li r26, 1
 /* 0000CB64 38A0000F */ li r5, 0xf
 /* 0000CB68 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000CB6C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CB70 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CB6C 3C600000 */ lis r3, winData@ha
+/* 0000CB70 38030000 */ addi r0, r3, winData@l
 /* 0000CB74 7C602214 */ add r3, r0, r4
 /* 0000CB78 98A30001 */ stb r5, 1(r3)
 lbl_0000CB7C:
@@ -13510,8 +13510,8 @@ lbl_0000CB80:
 /* 0000CB8C 40820034 */ bne lbl_0000CBC0
 /* 0000CB90 38A0000F */ li r5, 0xf
 /* 0000CB94 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000CB98 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CB9C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CB98 3C600000 */ lis r3, winData@ha
+/* 0000CB9C 38030000 */ addi r0, r3, winData@l
 /* 0000CBA0 7C602214 */ add r3, r0, r4
 /* 0000CBA4 98A30001 */ stb r5, 1(r3)
 /* 0000CBA8 38600100 */ li r3, 0x100
@@ -13531,19 +13531,19 @@ lbl_0000CBC0:
 /* 0000CBDC 9003004C */ stw r0, 0x4c(r3)
 /* 0000CBE0 38A00000 */ li r5, 0
 /* 0000CBE4 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000CBE8 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CBEC 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CBE8 3C600000 */ lis r3, winData@ha
+/* 0000CBEC 38030000 */ addi r0, r3, winData@l
 /* 0000CBF0 7C602214 */ add r3, r0, r4
 /* 0000CBF4 B0A30060 */ sth r5, 0x60(r3)
 /* 0000CBF8 38A00009 */ li r5, 9
 /* 0000CBFC 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000CC00 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CC04 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CC00 3C600000 */ lis r3, winData@ha
+/* 0000CC04 38030000 */ addi r0, r3, winData@l
 /* 0000CC08 7C602214 */ add r3, r0, r4
 /* 0000CC0C B0A30062 */ sth r5, 0x62(r3)
 /* 0000CC10 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000CC14 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CC18 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CC14 3C600000 */ lis r3, winData@ha
+/* 0000CC18 38030000 */ addi r0, r3, winData@l
 /* 0000CC1C 7C602214 */ add r3, r0, r4
 /* 0000CC20 8003004C */ lwz r0, 0x4c(r3)
 /* 0000CC24 60000080 */ ori r0, r0, 0x80
@@ -13569,8 +13569,8 @@ lbl_0000CC54:
 /* 0000CC70 3B000001 */ li r24, 1
 /* 0000CC74 38A0000F */ li r5, 0xf
 /* 0000CC78 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000CC7C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CC80 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CC7C 3C600000 */ lis r3, winData@ha
+/* 0000CC80 38030000 */ addi r0, r3, winData@l
 /* 0000CC84 7C602214 */ add r3, r0, r4
 /* 0000CC88 98A30001 */ stb r5, 1(r3)
 lbl_0000CC8C:
@@ -13582,8 +13582,8 @@ lbl_0000CC90:
 /* 0000CC9C 40820034 */ bne lbl_0000CCD0
 /* 0000CCA0 38A0000F */ li r5, 0xf
 /* 0000CCA4 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000CCA8 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CCAC 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CCA8 3C600000 */ lis r3, winData@ha
+/* 0000CCAC 38030000 */ addi r0, r3, winData@l
 /* 0000CCB0 7C602214 */ add r3, r0, r4
 /* 0000CCB4 98A30001 */ stb r5, 1(r3)
 /* 0000CCB8 38600100 */ li r3, 0x100
@@ -13719,8 +13719,8 @@ lbl_0000CE68:
 /* 0000CEAC 48000001 */ bl func_80042304
 /* 0000CEB0 7C7E0734 */ extsh r30, r3
 /* 0000CEB4 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000CEB8 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CEBC 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CEB8 3C600000 */ lis r3, winData@ha
+/* 0000CEBC 38030000 */ addi r0, r3, winData@l
 /* 0000CEC0 7C602214 */ add r3, r0, r4
 /* 0000CEC4 A8630004 */ lha r3, 4(r3)
 /* 0000CEC8 38800000 */ li r4, 0
@@ -13734,20 +13734,20 @@ lbl_0000CE68:
 /* 0000CEE8 80010058 */ lwz r0, 0x58(r1)
 /* 0000CEEC 7C050734 */ extsh r5, r0
 /* 0000CEF0 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000CEF4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CEF8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CEF4 3C600000 */ lis r3, winData@ha
+/* 0000CEF8 38030000 */ addi r0, r3, winData@l
 /* 0000CEFC 7C602214 */ add r3, r0, r4
 /* 0000CF00 B0A30060 */ sth r5, 0x60(r3)
 /* 0000CF04 8001005C */ lwz r0, 0x5c(r1)
 /* 0000CF08 7C050734 */ extsh r5, r0
 /* 0000CF0C 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000CF10 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CF14 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CF10 3C600000 */ lis r3, winData@ha
+/* 0000CF14 38030000 */ addi r0, r3, winData@l
 /* 0000CF18 7C602214 */ add r3, r0, r4
 /* 0000CF1C B0A30062 */ sth r5, 0x62(r3)
 /* 0000CF20 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000CF24 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CF28 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CF24 3C600000 */ lis r3, winData@ha
+/* 0000CF28 38030000 */ addi r0, r3, winData@l
 /* 0000CF2C 7C602214 */ add r3, r0, r4
 /* 0000CF30 8003004C */ lwz r0, 0x4c(r3)
 /* 0000CF34 60000080 */ ori r0, r0, 0x80
@@ -13770,8 +13770,8 @@ lbl_0000CE68:
 /* 0000CF78 48000001 */ bl func_80045DD4
 /* 0000CF7C 38A00000 */ li r5, 0
 /* 0000CF80 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000CF84 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CF88 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CF84 3C600000 */ lis r3, winData@ha
+/* 0000CF88 38030000 */ addi r0, r3, winData@l
 /* 0000CF8C 7C602214 */ add r3, r0, r4
 /* 0000CF90 98A30001 */ stb r5, 1(r3)
 /* 0000CF94 7FC3F378 */ mr r3, r30
@@ -13797,19 +13797,19 @@ lbl_0000CE68:
 /* 0000CFE4 9003004C */ stw r0, 0x4c(r3)
 /* 0000CFE8 38A00000 */ li r5, 0
 /* 0000CFEC 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000CFF0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000CFF4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000CFF0 3C600000 */ lis r3, winData@ha
+/* 0000CFF4 38030000 */ addi r0, r3, winData@l
 /* 0000CFF8 7C602214 */ add r3, r0, r4
 /* 0000CFFC B0A30060 */ sth r5, 0x60(r3)
 /* 0000D000 38A00009 */ li r5, 9
 /* 0000D004 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000D008 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D00C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D008 3C600000 */ lis r3, winData@ha
+/* 0000D00C 38030000 */ addi r0, r3, winData@l
 /* 0000D010 7C602214 */ add r3, r0, r4
 /* 0000D014 B0A30062 */ sth r5, 0x62(r3)
 /* 0000D018 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000D01C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D020 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D01C 3C600000 */ lis r3, winData@ha
+/* 0000D020 38030000 */ addi r0, r3, winData@l
 /* 0000D024 7C602214 */ add r3, r0, r4
 /* 0000D028 8003004C */ lwz r0, 0x4c(r3)
 /* 0000D02C 60000080 */ ori r0, r0, 0x80
@@ -13951,8 +13951,8 @@ lbl_0000D1F8:
 /* 0000D23C 48000001 */ bl func_80042304
 /* 0000D240 7C7E0734 */ extsh r30, r3
 /* 0000D244 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000D248 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D24C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D248 3C600000 */ lis r3, winData@ha
+/* 0000D24C 38030000 */ addi r0, r3, winData@l
 /* 0000D250 7C602214 */ add r3, r0, r4
 /* 0000D254 A8630004 */ lha r3, 4(r3)
 /* 0000D258 38800000 */ li r4, 0
@@ -13966,20 +13966,20 @@ lbl_0000D1F8:
 /* 0000D278 8001003C */ lwz r0, 0x3c(r1)
 /* 0000D27C 7C050734 */ extsh r5, r0
 /* 0000D280 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000D284 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D288 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D284 3C600000 */ lis r3, winData@ha
+/* 0000D288 38030000 */ addi r0, r3, winData@l
 /* 0000D28C 7C602214 */ add r3, r0, r4
 /* 0000D290 B0A30060 */ sth r5, 0x60(r3)
 /* 0000D294 80010040 */ lwz r0, 0x40(r1)
 /* 0000D298 7C050734 */ extsh r5, r0
 /* 0000D29C 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000D2A0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D2A4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D2A0 3C600000 */ lis r3, winData@ha
+/* 0000D2A4 38030000 */ addi r0, r3, winData@l
 /* 0000D2A8 7C602214 */ add r3, r0, r4
 /* 0000D2AC B0A30062 */ sth r5, 0x62(r3)
 /* 0000D2B0 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000D2B4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D2B8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D2B4 3C600000 */ lis r3, winData@ha
+/* 0000D2B8 38030000 */ addi r0, r3, winData@l
 /* 0000D2BC 7C602214 */ add r3, r0, r4
 /* 0000D2C0 8003004C */ lwz r0, 0x4c(r3)
 /* 0000D2C4 60000080 */ ori r0, r0, 0x80
@@ -14002,8 +14002,8 @@ lbl_0000D1F8:
 /* 0000D308 48000001 */ bl func_80045DD4
 /* 0000D30C 38A00000 */ li r5, 0
 /* 0000D310 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000D314 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D318 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D314 3C600000 */ lis r3, winData@ha
+/* 0000D318 38030000 */ addi r0, r3, winData@l
 /* 0000D31C 7C602214 */ add r3, r0, r4
 /* 0000D320 98A30001 */ stb r5, 1(r3)
 /* 0000D324 7FC3F378 */ mr r3, r30
@@ -14031,19 +14031,19 @@ lbl_0000D1F8:
 /* 0000D37C 48000001 */ bl func_80032B5C
 /* 0000D380 38A00000 */ li r5, 0
 /* 0000D384 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000D388 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D38C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D388 3C600000 */ lis r3, winData@ha
+/* 0000D38C 38030000 */ addi r0, r3, winData@l
 /* 0000D390 7C602214 */ add r3, r0, r4
 /* 0000D394 B0A30060 */ sth r5, 0x60(r3)
 /* 0000D398 38A00009 */ li r5, 9
 /* 0000D39C 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000D3A0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D3A4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D3A0 3C600000 */ lis r3, winData@ha
+/* 0000D3A4 38030000 */ addi r0, r3, winData@l
 /* 0000D3A8 7C602214 */ add r3, r0, r4
 /* 0000D3AC B0A30062 */ sth r5, 0x62(r3)
 /* 0000D3B0 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000D3B4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D3B8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D3B4 3C600000 */ lis r3, winData@ha
+/* 0000D3B8 38030000 */ addi r0, r3, winData@l
 /* 0000D3BC 7C602214 */ add r3, r0, r4
 /* 0000D3C0 8003004C */ lwz r0, 0x4c(r3)
 /* 0000D3C4 60000080 */ ori r0, r0, 0x80
@@ -14069,8 +14069,8 @@ lbl_0000D3F4:
 /* 0000D410 3BA00001 */ li r29, 1
 /* 0000D414 38A0000F */ li r5, 0xf
 /* 0000D418 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000D41C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D420 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D41C 3C600000 */ lis r3, winData@ha
+/* 0000D420 38030000 */ addi r0, r3, winData@l
 /* 0000D424 7C602214 */ add r3, r0, r4
 /* 0000D428 98A30001 */ stb r5, 1(r3)
 lbl_0000D42C:
@@ -14082,8 +14082,8 @@ lbl_0000D430:
 /* 0000D43C 40820034 */ bne lbl_0000D470
 /* 0000D440 38A0000F */ li r5, 0xf
 /* 0000D444 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000D448 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D44C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D448 3C600000 */ lis r3, winData@ha
+/* 0000D44C 38030000 */ addi r0, r3, winData@l
 /* 0000D450 7C602214 */ add r3, r0, r4
 /* 0000D454 98A30001 */ stb r5, 1(r3)
 /* 0000D458 38600100 */ li r3, 0x100
@@ -14254,8 +14254,8 @@ lbl_0000D684:
 /* 0000D6D0 48000001 */ bl func_80042304
 /* 0000D6D4 7C7E0734 */ extsh r30, r3
 /* 0000D6D8 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000D6DC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D6E0 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D6DC 3C600000 */ lis r3, winData@ha
+/* 0000D6E0 38030000 */ addi r0, r3, winData@l
 /* 0000D6E4 7C602214 */ add r3, r0, r4
 /* 0000D6E8 A8630004 */ lha r3, 4(r3)
 /* 0000D6EC 38800000 */ li r4, 0
@@ -14269,20 +14269,20 @@ lbl_0000D684:
 /* 0000D70C 80010048 */ lwz r0, 0x48(r1)
 /* 0000D710 7C050734 */ extsh r5, r0
 /* 0000D714 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000D718 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D71C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D718 3C600000 */ lis r3, winData@ha
+/* 0000D71C 38030000 */ addi r0, r3, winData@l
 /* 0000D720 7C602214 */ add r3, r0, r4
 /* 0000D724 B0A30060 */ sth r5, 0x60(r3)
 /* 0000D728 8001004C */ lwz r0, 0x4c(r1)
 /* 0000D72C 7C050734 */ extsh r5, r0
 /* 0000D730 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000D734 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D738 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D734 3C600000 */ lis r3, winData@ha
+/* 0000D738 38030000 */ addi r0, r3, winData@l
 /* 0000D73C 7C602214 */ add r3, r0, r4
 /* 0000D740 B0A30062 */ sth r5, 0x62(r3)
 /* 0000D744 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000D748 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D74C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D748 3C600000 */ lis r3, winData@ha
+/* 0000D74C 38030000 */ addi r0, r3, winData@l
 /* 0000D750 7C602214 */ add r3, r0, r4
 /* 0000D754 8003004C */ lwz r0, 0x4c(r3)
 /* 0000D758 60000080 */ ori r0, r0, 0x80
@@ -14305,8 +14305,8 @@ lbl_0000D684:
 /* 0000D79C 48000001 */ bl func_80045DD4
 /* 0000D7A0 38A00000 */ li r5, 0
 /* 0000D7A4 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000D7A8 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D7AC 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D7A8 3C600000 */ lis r3, winData@ha
+/* 0000D7AC 38030000 */ addi r0, r3, winData@l
 /* 0000D7B0 7C602214 */ add r3, r0, r4
 /* 0000D7B4 98A30001 */ stb r5, 1(r3)
 /* 0000D7B8 7FC3F378 */ mr r3, r30
@@ -14332,19 +14332,19 @@ lbl_0000D684:
 /* 0000D808 7EC3002E */ lwzx r22, r3, r0
 /* 0000D80C 38A00000 */ li r5, 0
 /* 0000D810 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000D814 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D818 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D814 3C600000 */ lis r3, winData@ha
+/* 0000D818 38030000 */ addi r0, r3, winData@l
 /* 0000D81C 7C602214 */ add r3, r0, r4
 /* 0000D820 B0A30060 */ sth r5, 0x60(r3)
 /* 0000D824 38A00009 */ li r5, 9
 /* 0000D828 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000D82C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D830 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D82C 3C600000 */ lis r3, winData@ha
+/* 0000D830 38030000 */ addi r0, r3, winData@l
 /* 0000D834 7C602214 */ add r3, r0, r4
 /* 0000D838 B0A30062 */ sth r5, 0x62(r3)
 /* 0000D83C 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000D840 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D844 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D840 3C600000 */ lis r3, winData@ha
+/* 0000D844 38030000 */ addi r0, r3, winData@l
 /* 0000D848 7C602214 */ add r3, r0, r4
 /* 0000D84C 8003004C */ lwz r0, 0x4c(r3)
 /* 0000D850 60000080 */ ori r0, r0, 0x80
@@ -14369,8 +14369,8 @@ lbl_0000D87C:
 /* 0000D898 3B600001 */ li r27, 1
 /* 0000D89C 38A0000F */ li r5, 0xf
 /* 0000D8A0 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000D8A4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D8A8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D8A4 3C600000 */ lis r3, winData@ha
+/* 0000D8A8 38030000 */ addi r0, r3, winData@l
 /* 0000D8AC 7C602214 */ add r3, r0, r4
 /* 0000D8B0 98A30001 */ stb r5, 1(r3)
 lbl_0000D8B4:
@@ -14382,8 +14382,8 @@ lbl_0000D8B8:
 /* 0000D8C4 40820034 */ bne lbl_0000D8F8
 /* 0000D8C8 38A0000F */ li r5, 0xf
 /* 0000D8CC 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000D8D0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000D8D4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000D8D0 3C600000 */ lis r3, winData@ha
+/* 0000D8D4 38030000 */ addi r0, r3, winData@l
 /* 0000D8D8 7C602214 */ add r3, r0, r4
 /* 0000D8DC 98A30001 */ stb r5, 1(r3)
 /* 0000D8E0 38600100 */ li r3, 0x100
@@ -14542,8 +14542,8 @@ lbl_0000DAD8:
 /* 0000DB24 48000001 */ bl func_80042304
 /* 0000DB28 7C7D0734 */ extsh r29, r3
 /* 0000DB2C 1C9D0180 */ mulli r4, r29, 0x180
-/* 0000DB30 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000DB34 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000DB30 3C600000 */ lis r3, winData@ha
+/* 0000DB34 38030000 */ addi r0, r3, winData@l
 /* 0000DB38 7C602214 */ add r3, r0, r4
 /* 0000DB3C A8630004 */ lha r3, 4(r3)
 /* 0000DB40 38800000 */ li r4, 0
@@ -14557,20 +14557,20 @@ lbl_0000DAD8:
 /* 0000DB60 80010120 */ lwz r0, 0x120(r1)
 /* 0000DB64 7C050734 */ extsh r5, r0
 /* 0000DB68 1C9D0180 */ mulli r4, r29, 0x180
-/* 0000DB6C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000DB70 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000DB6C 3C600000 */ lis r3, winData@ha
+/* 0000DB70 38030000 */ addi r0, r3, winData@l
 /* 0000DB74 7C602214 */ add r3, r0, r4
 /* 0000DB78 B0A30060 */ sth r5, 0x60(r3)
 /* 0000DB7C 80010124 */ lwz r0, 0x124(r1)
 /* 0000DB80 7C050734 */ extsh r5, r0
 /* 0000DB84 1C9D0180 */ mulli r4, r29, 0x180
-/* 0000DB88 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000DB8C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000DB88 3C600000 */ lis r3, winData@ha
+/* 0000DB8C 38030000 */ addi r0, r3, winData@l
 /* 0000DB90 7C602214 */ add r3, r0, r4
 /* 0000DB94 B0A30062 */ sth r5, 0x62(r3)
 /* 0000DB98 1C9D0180 */ mulli r4, r29, 0x180
-/* 0000DB9C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000DBA0 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000DB9C 3C600000 */ lis r3, winData@ha
+/* 0000DBA0 38030000 */ addi r0, r3, winData@l
 /* 0000DBA4 7C602214 */ add r3, r0, r4
 /* 0000DBA8 8003004C */ lwz r0, 0x4c(r3)
 /* 0000DBAC 60000080 */ ori r0, r0, 0x80
@@ -14593,8 +14593,8 @@ lbl_0000DAD8:
 /* 0000DBF0 48000001 */ bl func_80045DD4
 /* 0000DBF4 38A00000 */ li r5, 0
 /* 0000DBF8 1C9D0180 */ mulli r4, r29, 0x180
-/* 0000DBFC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000DC00 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000DBFC 3C600000 */ lis r3, winData@ha
+/* 0000DC00 38030000 */ addi r0, r3, winData@l
 /* 0000DC04 7C602214 */ add r3, r0, r4
 /* 0000DC08 98A30001 */ stb r5, 1(r3)
 /* 0000DC0C 7FA3EB78 */ mr r3, r29
@@ -14632,19 +14632,19 @@ lbl_0000DC68:
 /* 0000DC88 90010044 */ stw r0, 0x44(r1)
 /* 0000DC8C 38A00000 */ li r5, 0
 /* 0000DC90 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000DC94 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000DC98 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000DC94 3C600000 */ lis r3, winData@ha
+/* 0000DC98 38030000 */ addi r0, r3, winData@l
 /* 0000DC9C 7C602214 */ add r3, r0, r4
 /* 0000DCA0 B0A30060 */ sth r5, 0x60(r3)
 /* 0000DCA4 38A00009 */ li r5, 9
 /* 0000DCA8 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000DCAC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000DCB0 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000DCAC 3C600000 */ lis r3, winData@ha
+/* 0000DCB0 38030000 */ addi r0, r3, winData@l
 /* 0000DCB4 7C602214 */ add r3, r0, r4
 /* 0000DCB8 B0A30062 */ sth r5, 0x62(r3)
 /* 0000DCBC 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000DCC0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000DCC4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000DCC0 3C600000 */ lis r3, winData@ha
+/* 0000DCC4 38030000 */ addi r0, r3, winData@l
 /* 0000DCC8 7C602214 */ add r3, r0, r4
 /* 0000DCCC 8003004C */ lwz r0, 0x4c(r3)
 /* 0000DCD0 60000080 */ ori r0, r0, 0x80
@@ -14669,8 +14669,8 @@ lbl_0000DCFC:
 /* 0000DD18 3A800001 */ li r20, 1
 /* 0000DD1C 38A0000F */ li r5, 0xf
 /* 0000DD20 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000DD24 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000DD28 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000DD24 3C600000 */ lis r3, winData@ha
+/* 0000DD28 38030000 */ addi r0, r3, winData@l
 /* 0000DD2C 7C602214 */ add r3, r0, r4
 /* 0000DD30 98A30001 */ stb r5, 1(r3)
 lbl_0000DD34:
@@ -14682,8 +14682,8 @@ lbl_0000DD38:
 /* 0000DD44 40820038 */ bne lbl_0000DD7C
 /* 0000DD48 38A0000F */ li r5, 0xf
 /* 0000DD4C 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000DD50 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000DD54 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000DD50 3C600000 */ lis r3, winData@ha
+/* 0000DD54 38030000 */ addi r0, r3, winData@l
 /* 0000DD58 7C602214 */ add r3, r0, r4
 /* 0000DD5C 98A30001 */ stb r5, 1(r3)
 /* 0000DD60 38600100 */ li r3, 0x100
@@ -14790,8 +14790,8 @@ lbl_0000DE90:
 /* 0000DEE4 48000001 */ bl func_80042304
 /* 0000DEE8 7C7C0734 */ extsh r28, r3
 /* 0000DEEC 1C9C0180 */ mulli r4, r28, 0x180
-/* 0000DEF0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000DEF4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000DEF0 3C600000 */ lis r3, winData@ha
+/* 0000DEF4 38030000 */ addi r0, r3, winData@l
 /* 0000DEF8 7C602214 */ add r3, r0, r4
 /* 0000DEFC A8630004 */ lha r3, 4(r3)
 /* 0000DF00 38800000 */ li r4, 0
@@ -14805,20 +14805,20 @@ lbl_0000DE90:
 /* 0000DF20 800100C0 */ lwz r0, 0xc0(r1)
 /* 0000DF24 7C050734 */ extsh r5, r0
 /* 0000DF28 1C9C0180 */ mulli r4, r28, 0x180
-/* 0000DF2C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000DF30 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000DF2C 3C600000 */ lis r3, winData@ha
+/* 0000DF30 38030000 */ addi r0, r3, winData@l
 /* 0000DF34 7C602214 */ add r3, r0, r4
 /* 0000DF38 B0A30060 */ sth r5, 0x60(r3)
 /* 0000DF3C 800100C4 */ lwz r0, 0xc4(r1)
 /* 0000DF40 7C050734 */ extsh r5, r0
 /* 0000DF44 1C9C0180 */ mulli r4, r28, 0x180
-/* 0000DF48 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000DF4C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000DF48 3C600000 */ lis r3, winData@ha
+/* 0000DF4C 38030000 */ addi r0, r3, winData@l
 /* 0000DF50 7C602214 */ add r3, r0, r4
 /* 0000DF54 B0A30062 */ sth r5, 0x62(r3)
 /* 0000DF58 1C9C0180 */ mulli r4, r28, 0x180
-/* 0000DF5C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000DF60 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000DF5C 3C600000 */ lis r3, winData@ha
+/* 0000DF60 38030000 */ addi r0, r3, winData@l
 /* 0000DF64 7C602214 */ add r3, r0, r4
 /* 0000DF68 8003004C */ lwz r0, 0x4c(r3)
 /* 0000DF6C 60000080 */ ori r0, r0, 0x80
@@ -14841,8 +14841,8 @@ lbl_0000DE90:
 /* 0000DFB0 48000001 */ bl func_80045DD4
 /* 0000DFB4 38A00000 */ li r5, 0
 /* 0000DFB8 1C9C0180 */ mulli r4, r28, 0x180
-/* 0000DFBC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000DFC0 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000DFBC 3C600000 */ lis r3, winData@ha
+/* 0000DFC0 38030000 */ addi r0, r3, winData@l
 /* 0000DFC4 7C602214 */ add r3, r0, r4
 /* 0000DFC8 98A30001 */ stb r5, 1(r3)
 /* 0000DFCC 7F83E378 */ mr r3, r28
@@ -14873,19 +14873,19 @@ lbl_0000DE90:
 /* 0000E030 7F1AC378 */ mr r26, r24
 /* 0000E034 38A00000 */ li r5, 0
 /* 0000E038 1C9A0180 */ mulli r4, r26, 0x180
-/* 0000E03C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E040 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E03C 3C600000 */ lis r3, winData@ha
+/* 0000E040 38030000 */ addi r0, r3, winData@l
 /* 0000E044 7C602214 */ add r3, r0, r4
 /* 0000E048 B0A30060 */ sth r5, 0x60(r3)
 /* 0000E04C 38A00009 */ li r5, 9
 /* 0000E050 1C9A0180 */ mulli r4, r26, 0x180
-/* 0000E054 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E058 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E054 3C600000 */ lis r3, winData@ha
+/* 0000E058 38030000 */ addi r0, r3, winData@l
 /* 0000E05C 7C602214 */ add r3, r0, r4
 /* 0000E060 B0A30062 */ sth r5, 0x62(r3)
 /* 0000E064 1C9A0180 */ mulli r4, r26, 0x180
-/* 0000E068 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E06C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E068 3C600000 */ lis r3, winData@ha
+/* 0000E06C 38030000 */ addi r0, r3, winData@l
 /* 0000E070 7C602214 */ add r3, r0, r4
 /* 0000E074 8003004C */ lwz r0, 0x4c(r3)
 /* 0000E078 60000080 */ ori r0, r0, 0x80
@@ -14911,8 +14911,8 @@ lbl_0000E0A8:
 /* 0000E0C4 3A200001 */ li r17, 1
 /* 0000E0C8 38A0000F */ li r5, 0xf
 /* 0000E0CC 1C970180 */ mulli r4, r23, 0x180
-/* 0000E0D0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E0D4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E0D0 3C600000 */ lis r3, winData@ha
+/* 0000E0D4 38030000 */ addi r0, r3, winData@l
 /* 0000E0D8 7C602214 */ add r3, r0, r4
 /* 0000E0DC 98A30001 */ stb r5, 1(r3)
 lbl_0000E0E0:
@@ -14924,8 +14924,8 @@ lbl_0000E0E4:
 /* 0000E0F0 40820038 */ bne lbl_0000E128
 /* 0000E0F4 3860000F */ li r3, 0xf
 /* 0000E0F8 1CB70180 */ mulli r5, r23, 0x180
-/* 0000E0FC 3C800000 */ lis r4, lbl_801923C0@ha
-/* 0000E100 38040000 */ addi r0, r4, lbl_801923C0@l
+/* 0000E0FC 3C800000 */ lis r4, winData@ha
+/* 0000E100 38040000 */ addi r0, r4, winData@l
 /* 0000E104 7C802A14 */ add r4, r0, r5
 /* 0000E108 98640001 */ stb r3, 1(r4)
 /* 0000E10C 38600100 */ li r3, 0x100
@@ -15095,8 +15095,8 @@ lbl_0000E33C:
 /* 0000E380 48000001 */ bl func_80042304
 /* 0000E384 7C7E0734 */ extsh r30, r3
 /* 0000E388 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000E38C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E390 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E38C 3C600000 */ lis r3, winData@ha
+/* 0000E390 38030000 */ addi r0, r3, winData@l
 /* 0000E394 7C602214 */ add r3, r0, r4
 /* 0000E398 A8630004 */ lha r3, 4(r3)
 /* 0000E39C 38800000 */ li r4, 0
@@ -15110,20 +15110,20 @@ lbl_0000E33C:
 /* 0000E3BC 80010078 */ lwz r0, 0x78(r1)
 /* 0000E3C0 7C050734 */ extsh r5, r0
 /* 0000E3C4 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000E3C8 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E3CC 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E3C8 3C600000 */ lis r3, winData@ha
+/* 0000E3CC 38030000 */ addi r0, r3, winData@l
 /* 0000E3D0 7C602214 */ add r3, r0, r4
 /* 0000E3D4 B0A30060 */ sth r5, 0x60(r3)
 /* 0000E3D8 8001007C */ lwz r0, 0x7c(r1)
 /* 0000E3DC 7C050734 */ extsh r5, r0
 /* 0000E3E0 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000E3E4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E3E8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E3E4 3C600000 */ lis r3, winData@ha
+/* 0000E3E8 38030000 */ addi r0, r3, winData@l
 /* 0000E3EC 7C602214 */ add r3, r0, r4
 /* 0000E3F0 B0A30062 */ sth r5, 0x62(r3)
 /* 0000E3F4 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000E3F8 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E3FC 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E3F8 3C600000 */ lis r3, winData@ha
+/* 0000E3FC 38030000 */ addi r0, r3, winData@l
 /* 0000E400 7C602214 */ add r3, r0, r4
 /* 0000E404 8003004C */ lwz r0, 0x4c(r3)
 /* 0000E408 60000080 */ ori r0, r0, 0x80
@@ -15146,8 +15146,8 @@ lbl_0000E33C:
 /* 0000E44C 48000001 */ bl func_80045DD4
 /* 0000E450 38A00000 */ li r5, 0
 /* 0000E454 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000E458 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E45C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E458 3C600000 */ lis r3, winData@ha
+/* 0000E45C 38030000 */ addi r0, r3, winData@l
 /* 0000E460 7C602214 */ add r3, r0, r4
 /* 0000E464 98A30001 */ stb r5, 1(r3)
 /* 0000E468 7FC3F378 */ mr r3, r30
@@ -15224,19 +15224,19 @@ lbl_0000E33C:
 /* 0000E584 9003004C */ stw r0, 0x4c(r3)
 /* 0000E588 38A00000 */ li r5, 0
 /* 0000E58C 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000E590 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E594 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E590 3C600000 */ lis r3, winData@ha
+/* 0000E594 38030000 */ addi r0, r3, winData@l
 /* 0000E598 7C602214 */ add r3, r0, r4
 /* 0000E59C B0A30060 */ sth r5, 0x60(r3)
 /* 0000E5A0 38A00009 */ li r5, 9
 /* 0000E5A4 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000E5A8 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E5AC 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E5A8 3C600000 */ lis r3, winData@ha
+/* 0000E5AC 38030000 */ addi r0, r3, winData@l
 /* 0000E5B0 7C602214 */ add r3, r0, r4
 /* 0000E5B4 B0A30062 */ sth r5, 0x62(r3)
 /* 0000E5B8 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000E5BC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E5C0 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E5BC 3C600000 */ lis r3, winData@ha
+/* 0000E5C0 38030000 */ addi r0, r3, winData@l
 /* 0000E5C4 7C602214 */ add r3, r0, r4
 /* 0000E5C8 8003004C */ lwz r0, 0x4c(r3)
 /* 0000E5CC 60000080 */ ori r0, r0, 0x80
@@ -15262,8 +15262,8 @@ lbl_0000E5FC:
 /* 0000E618 3AE00001 */ li r23, 1
 /* 0000E61C 38A0000F */ li r5, 0xf
 /* 0000E620 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000E624 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E628 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E624 3C600000 */ lis r3, winData@ha
+/* 0000E628 38030000 */ addi r0, r3, winData@l
 /* 0000E62C 7C602214 */ add r3, r0, r4
 /* 0000E630 98A30001 */ stb r5, 1(r3)
 lbl_0000E634:
@@ -15275,8 +15275,8 @@ lbl_0000E638:
 /* 0000E644 40820034 */ bne lbl_0000E678
 /* 0000E648 38A0000F */ li r5, 0xf
 /* 0000E64C 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000E650 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E654 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E650 3C600000 */ lis r3, winData@ha
+/* 0000E654 38030000 */ addi r0, r3, winData@l
 /* 0000E658 7C602214 */ add r3, r0, r4
 /* 0000E65C 98A30001 */ stb r5, 1(r3)
 /* 0000E660 38600100 */ li r3, 0x100
@@ -15417,8 +15417,8 @@ lbl_0000E81C:
 /* 0000E868 48000001 */ bl func_80042304
 /* 0000E86C 7C7E0734 */ extsh r30, r3
 /* 0000E870 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000E874 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E878 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E874 3C600000 */ lis r3, winData@ha
+/* 0000E878 38030000 */ addi r0, r3, winData@l
 /* 0000E87C 7C602214 */ add r3, r0, r4
 /* 0000E880 A8630004 */ lha r3, 4(r3)
 /* 0000E884 38800000 */ li r4, 0
@@ -15432,20 +15432,20 @@ lbl_0000E81C:
 /* 0000E8A4 8001005C */ lwz r0, 0x5c(r1)
 /* 0000E8A8 7C050734 */ extsh r5, r0
 /* 0000E8AC 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000E8B0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E8B4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E8B0 3C600000 */ lis r3, winData@ha
+/* 0000E8B4 38030000 */ addi r0, r3, winData@l
 /* 0000E8B8 7C602214 */ add r3, r0, r4
 /* 0000E8BC B0A30060 */ sth r5, 0x60(r3)
 /* 0000E8C0 80010060 */ lwz r0, 0x60(r1)
 /* 0000E8C4 7C050734 */ extsh r5, r0
 /* 0000E8C8 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000E8CC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E8D0 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E8CC 3C600000 */ lis r3, winData@ha
+/* 0000E8D0 38030000 */ addi r0, r3, winData@l
 /* 0000E8D4 7C602214 */ add r3, r0, r4
 /* 0000E8D8 B0A30062 */ sth r5, 0x62(r3)
 /* 0000E8DC 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000E8E0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E8E4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E8E0 3C600000 */ lis r3, winData@ha
+/* 0000E8E4 38030000 */ addi r0, r3, winData@l
 /* 0000E8E8 7C602214 */ add r3, r0, r4
 /* 0000E8EC 8003004C */ lwz r0, 0x4c(r3)
 /* 0000E8F0 60000080 */ ori r0, r0, 0x80
@@ -15468,8 +15468,8 @@ lbl_0000E81C:
 /* 0000E934 48000001 */ bl func_80045DD4
 /* 0000E938 38A00000 */ li r5, 0
 /* 0000E93C 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000E940 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E944 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E940 3C600000 */ lis r3, winData@ha
+/* 0000E944 38030000 */ addi r0, r3, winData@l
 /* 0000E948 7C602214 */ add r3, r0, r4
 /* 0000E94C 98A30001 */ stb r5, 1(r3)
 /* 0000E950 7FC3F378 */ mr r3, r30
@@ -15504,19 +15504,19 @@ lbl_0000E81C:
 /* 0000E9C4 48000001 */ bl func_80032B5C
 /* 0000E9C8 38A00000 */ li r5, 0
 /* 0000E9CC 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000E9D0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E9D4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E9D0 3C600000 */ lis r3, winData@ha
+/* 0000E9D4 38030000 */ addi r0, r3, winData@l
 /* 0000E9D8 7C602214 */ add r3, r0, r4
 /* 0000E9DC B0A30060 */ sth r5, 0x60(r3)
 /* 0000E9E0 38A00009 */ li r5, 9
 /* 0000E9E4 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000E9E8 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000E9EC 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E9E8 3C600000 */ lis r3, winData@ha
+/* 0000E9EC 38030000 */ addi r0, r3, winData@l
 /* 0000E9F0 7C602214 */ add r3, r0, r4
 /* 0000E9F4 B0A30062 */ sth r5, 0x62(r3)
 /* 0000E9F8 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000E9FC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000EA00 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000E9FC 3C600000 */ lis r3, winData@ha
+/* 0000EA00 38030000 */ addi r0, r3, winData@l
 /* 0000EA04 7C602214 */ add r3, r0, r4
 /* 0000EA08 8003004C */ lwz r0, 0x4c(r3)
 /* 0000EA0C 60000080 */ ori r0, r0, 0x80
@@ -15652,8 +15652,8 @@ lbl_0000EBB8:
 /* 0000EC04 48000001 */ bl func_80042304
 /* 0000EC08 7C7E0734 */ extsh r30, r3
 /* 0000EC0C 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000EC10 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000EC14 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000EC10 3C600000 */ lis r3, winData@ha
+/* 0000EC14 38030000 */ addi r0, r3, winData@l
 /* 0000EC18 7C602214 */ add r3, r0, r4
 /* 0000EC1C A8630004 */ lha r3, 4(r3)
 /* 0000EC20 38800000 */ li r4, 0
@@ -15667,20 +15667,20 @@ lbl_0000EBB8:
 /* 0000EC40 80010024 */ lwz r0, 0x24(r1)
 /* 0000EC44 7C050734 */ extsh r5, r0
 /* 0000EC48 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000EC4C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000EC50 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000EC4C 3C600000 */ lis r3, winData@ha
+/* 0000EC50 38030000 */ addi r0, r3, winData@l
 /* 0000EC54 7C602214 */ add r3, r0, r4
 /* 0000EC58 B0A30060 */ sth r5, 0x60(r3)
 /* 0000EC5C 80010028 */ lwz r0, 0x28(r1)
 /* 0000EC60 7C050734 */ extsh r5, r0
 /* 0000EC64 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000EC68 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000EC6C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000EC68 3C600000 */ lis r3, winData@ha
+/* 0000EC6C 38030000 */ addi r0, r3, winData@l
 /* 0000EC70 7C602214 */ add r3, r0, r4
 /* 0000EC74 B0A30062 */ sth r5, 0x62(r3)
 /* 0000EC78 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000EC7C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000EC80 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000EC7C 3C600000 */ lis r3, winData@ha
+/* 0000EC80 38030000 */ addi r0, r3, winData@l
 /* 0000EC84 7C602214 */ add r3, r0, r4
 /* 0000EC88 8003004C */ lwz r0, 0x4c(r3)
 /* 0000EC8C 60000080 */ ori r0, r0, 0x80
@@ -15703,8 +15703,8 @@ lbl_0000EBB8:
 /* 0000ECD0 48000001 */ bl func_80045DD4
 /* 0000ECD4 38A00000 */ li r5, 0
 /* 0000ECD8 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000ECDC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000ECE0 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000ECDC 3C600000 */ lis r3, winData@ha
+/* 0000ECE0 38030000 */ addi r0, r3, winData@l
 /* 0000ECE4 7C602214 */ add r3, r0, r4
 /* 0000ECE8 98A30001 */ stb r5, 1(r3)
 /* 0000ECEC 7FC3F378 */ mr r3, r30
@@ -15735,19 +15735,19 @@ lbl_0000EBB8:
 /* 0000ED50 48000001 */ bl func_80032B5C
 /* 0000ED54 38A00000 */ li r5, 0
 /* 0000ED58 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000ED5C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000ED60 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000ED5C 3C600000 */ lis r3, winData@ha
+/* 0000ED60 38030000 */ addi r0, r3, winData@l
 /* 0000ED64 7C602214 */ add r3, r0, r4
 /* 0000ED68 B0A30060 */ sth r5, 0x60(r3)
 /* 0000ED6C 38A00009 */ li r5, 9
 /* 0000ED70 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000ED74 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000ED78 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000ED74 3C600000 */ lis r3, winData@ha
+/* 0000ED78 38030000 */ addi r0, r3, winData@l
 /* 0000ED7C 7C602214 */ add r3, r0, r4
 /* 0000ED80 B0A30062 */ sth r5, 0x62(r3)
 /* 0000ED84 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000ED88 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000ED8C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000ED88 3C600000 */ lis r3, winData@ha
+/* 0000ED8C 38030000 */ addi r0, r3, winData@l
 /* 0000ED90 7C602214 */ add r3, r0, r4
 /* 0000ED94 8003004C */ lwz r0, 0x4c(r3)
 /* 0000ED98 60000080 */ ori r0, r0, 0x80
@@ -15892,8 +15892,8 @@ lbl_0000EF68:
 /* 0000EFB4 48000001 */ bl func_80042304
 /* 0000EFB8 7C7E0734 */ extsh r30, r3
 /* 0000EFBC 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000EFC0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000EFC4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000EFC0 3C600000 */ lis r3, winData@ha
+/* 0000EFC4 38030000 */ addi r0, r3, winData@l
 /* 0000EFC8 7C602214 */ add r3, r0, r4
 /* 0000EFCC A8630004 */ lha r3, 4(r3)
 /* 0000EFD0 38800000 */ li r4, 0
@@ -15907,20 +15907,20 @@ lbl_0000EF68:
 /* 0000EFF0 80010070 */ lwz r0, 0x70(r1)
 /* 0000EFF4 7C050734 */ extsh r5, r0
 /* 0000EFF8 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000EFFC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000F000 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000EFFC 3C600000 */ lis r3, winData@ha
+/* 0000F000 38030000 */ addi r0, r3, winData@l
 /* 0000F004 7C602214 */ add r3, r0, r4
 /* 0000F008 B0A30060 */ sth r5, 0x60(r3)
 /* 0000F00C 80010074 */ lwz r0, 0x74(r1)
 /* 0000F010 7C050734 */ extsh r5, r0
 /* 0000F014 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000F018 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000F01C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000F018 3C600000 */ lis r3, winData@ha
+/* 0000F01C 38030000 */ addi r0, r3, winData@l
 /* 0000F020 7C602214 */ add r3, r0, r4
 /* 0000F024 B0A30062 */ sth r5, 0x62(r3)
 /* 0000F028 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000F02C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000F030 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000F02C 3C600000 */ lis r3, winData@ha
+/* 0000F030 38030000 */ addi r0, r3, winData@l
 /* 0000F034 7C602214 */ add r3, r0, r4
 /* 0000F038 8003004C */ lwz r0, 0x4c(r3)
 /* 0000F03C 60000080 */ ori r0, r0, 0x80
@@ -15943,8 +15943,8 @@ lbl_0000EF68:
 /* 0000F080 48000001 */ bl func_80045DD4
 /* 0000F084 38A00000 */ li r5, 0
 /* 0000F088 1C9E0180 */ mulli r4, r30, 0x180
-/* 0000F08C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000F090 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000F08C 3C600000 */ lis r3, winData@ha
+/* 0000F090 38030000 */ addi r0, r3, winData@l
 /* 0000F094 7C602214 */ add r3, r0, r4
 /* 0000F098 98A30001 */ stb r5, 1(r3)
 /* 0000F09C 7FC3F378 */ mr r3, r30
@@ -15973,19 +15973,19 @@ lbl_0000EF68:
 /* 0000F0F8 9003004C */ stw r0, 0x4c(r3)
 /* 0000F0FC 38A00000 */ li r5, 0
 /* 0000F100 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000F104 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000F108 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000F104 3C600000 */ lis r3, winData@ha
+/* 0000F108 38030000 */ addi r0, r3, winData@l
 /* 0000F10C 7C602214 */ add r3, r0, r4
 /* 0000F110 B0A30060 */ sth r5, 0x60(r3)
 /* 0000F114 38A00009 */ li r5, 9
 /* 0000F118 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000F11C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000F120 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000F11C 3C600000 */ lis r3, winData@ha
+/* 0000F120 38030000 */ addi r0, r3, winData@l
 /* 0000F124 7C602214 */ add r3, r0, r4
 /* 0000F128 B0A30062 */ sth r5, 0x62(r3)
 /* 0000F12C 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000F130 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000F134 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000F130 3C600000 */ lis r3, winData@ha
+/* 0000F134 38030000 */ addi r0, r3, winData@l
 /* 0000F138 7C602214 */ add r3, r0, r4
 /* 0000F13C 8003004C */ lwz r0, 0x4c(r3)
 /* 0000F140 60000080 */ ori r0, r0, 0x80
@@ -16011,8 +16011,8 @@ lbl_0000F170:
 /* 0000F18C 3B600001 */ li r27, 1
 /* 0000F190 38A0000F */ li r5, 0xf
 /* 0000F194 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000F198 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000F19C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000F198 3C600000 */ lis r3, winData@ha
+/* 0000F19C 38030000 */ addi r0, r3, winData@l
 /* 0000F1A0 7C602214 */ add r3, r0, r4
 /* 0000F1A4 98A30001 */ stb r5, 1(r3)
 lbl_0000F1A8:
@@ -16024,8 +16024,8 @@ lbl_0000F1AC:
 /* 0000F1B8 40820038 */ bne lbl_0000F1F0
 /* 0000F1BC 38A0000F */ li r5, 0xf
 /* 0000F1C0 1C9F0180 */ mulli r4, r31, 0x180
-/* 0000F1C4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000F1C8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000F1C4 3C600000 */ lis r3, winData@ha
+/* 0000F1C8 38030000 */ addi r0, r3, winData@l
 /* 0000F1CC 7C602214 */ add r3, r0, r4
 /* 0000F1D0 98A30001 */ stb r5, 1(r3)
 /* 0000F1D4 38600100 */ li r3, 0x100
@@ -17823,8 +17823,8 @@ lbl_00010BC8:
 /* 00010C0C 48000001 */ bl func_80042304
 /* 00010C10 7C7C0734 */ extsh r28, r3
 /* 00010C14 1C9C0180 */ mulli r4, r28, 0x180
-/* 00010C18 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00010C1C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00010C18 3C600000 */ lis r3, winData@ha
+/* 00010C1C 38030000 */ addi r0, r3, winData@l
 /* 00010C20 7C602214 */ add r3, r0, r4
 /* 00010C24 A8630004 */ lha r3, 4(r3)
 /* 00010C28 38800000 */ li r4, 0
@@ -17838,20 +17838,20 @@ lbl_00010BC8:
 /* 00010C48 80010044 */ lwz r0, 0x44(r1)
 /* 00010C4C 7C050734 */ extsh r5, r0
 /* 00010C50 1C9C0180 */ mulli r4, r28, 0x180
-/* 00010C54 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00010C58 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00010C54 3C600000 */ lis r3, winData@ha
+/* 00010C58 38030000 */ addi r0, r3, winData@l
 /* 00010C5C 7C602214 */ add r3, r0, r4
 /* 00010C60 B0A30060 */ sth r5, 0x60(r3)
 /* 00010C64 80010048 */ lwz r0, 0x48(r1)
 /* 00010C68 7C050734 */ extsh r5, r0
 /* 00010C6C 1C9C0180 */ mulli r4, r28, 0x180
-/* 00010C70 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00010C74 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00010C70 3C600000 */ lis r3, winData@ha
+/* 00010C74 38030000 */ addi r0, r3, winData@l
 /* 00010C78 7C602214 */ add r3, r0, r4
 /* 00010C7C B0A30062 */ sth r5, 0x62(r3)
 /* 00010C80 1C9C0180 */ mulli r4, r28, 0x180
-/* 00010C84 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00010C88 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00010C84 3C600000 */ lis r3, winData@ha
+/* 00010C88 38030000 */ addi r0, r3, winData@l
 /* 00010C8C 7C602214 */ add r3, r0, r4
 /* 00010C90 8003004C */ lwz r0, 0x4c(r3)
 /* 00010C94 60000080 */ ori r0, r0, 0x80
@@ -17874,8 +17874,8 @@ lbl_00010BC8:
 /* 00010CD8 48000001 */ bl func_80045DD4
 /* 00010CDC 38A00000 */ li r5, 0
 /* 00010CE0 1C9C0180 */ mulli r4, r28, 0x180
-/* 00010CE4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00010CE8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00010CE4 3C600000 */ lis r3, winData@ha
+/* 00010CE8 38030000 */ addi r0, r3, winData@l
 /* 00010CEC 7C602214 */ add r3, r0, r4
 /* 00010CF0 98A30001 */ stb r5, 1(r3)
 /* 00010CF4 7F83E378 */ mr r3, r28
@@ -17936,19 +17936,19 @@ lbl_00010D90:
 /* 00010DC8 9019001C */ stw r0, 0x1c(r25)
 /* 00010DCC 38A00000 */ li r5, 0
 /* 00010DD0 1C9E0180 */ mulli r4, r30, 0x180
-/* 00010DD4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00010DD8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00010DD4 3C600000 */ lis r3, winData@ha
+/* 00010DD8 38030000 */ addi r0, r3, winData@l
 /* 00010DDC 7C602214 */ add r3, r0, r4
 /* 00010DE0 B0A30060 */ sth r5, 0x60(r3)
 /* 00010DE4 38A00009 */ li r5, 9
 /* 00010DE8 1C9E0180 */ mulli r4, r30, 0x180
-/* 00010DEC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00010DF0 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00010DEC 3C600000 */ lis r3, winData@ha
+/* 00010DF0 38030000 */ addi r0, r3, winData@l
 /* 00010DF4 7C602214 */ add r3, r0, r4
 /* 00010DF8 B0A30062 */ sth r5, 0x62(r3)
 /* 00010DFC 1C9E0180 */ mulli r4, r30, 0x180
-/* 00010E00 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00010E04 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00010E00 3C600000 */ lis r3, winData@ha
+/* 00010E04 38030000 */ addi r0, r3, winData@l
 /* 00010E08 7C602214 */ add r3, r0, r4
 /* 00010E0C 8003004C */ lwz r0, 0x4c(r3)
 /* 00010E10 60000080 */ ori r0, r0, 0x80
@@ -18111,8 +18111,8 @@ lbl_00011028:
 /* 0001106C 48000001 */ bl func_80042304
 /* 00011070 7C7E0734 */ extsh r30, r3
 /* 00011074 1C9E0180 */ mulli r4, r30, 0x180
-/* 00011078 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0001107C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011078 3C600000 */ lis r3, winData@ha
+/* 0001107C 38030000 */ addi r0, r3, winData@l
 /* 00011080 7C602214 */ add r3, r0, r4
 /* 00011084 A8630004 */ lha r3, 4(r3)
 /* 00011088 38800000 */ li r4, 0
@@ -18126,20 +18126,20 @@ lbl_00011028:
 /* 000110A8 80010050 */ lwz r0, 0x50(r1)
 /* 000110AC 7C050734 */ extsh r5, r0
 /* 000110B0 1C9E0180 */ mulli r4, r30, 0x180
-/* 000110B4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 000110B8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 000110B4 3C600000 */ lis r3, winData@ha
+/* 000110B8 38030000 */ addi r0, r3, winData@l
 /* 000110BC 7C602214 */ add r3, r0, r4
 /* 000110C0 B0A30060 */ sth r5, 0x60(r3)
 /* 000110C4 80010054 */ lwz r0, 0x54(r1)
 /* 000110C8 7C050734 */ extsh r5, r0
 /* 000110CC 1C9E0180 */ mulli r4, r30, 0x180
-/* 000110D0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 000110D4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 000110D0 3C600000 */ lis r3, winData@ha
+/* 000110D4 38030000 */ addi r0, r3, winData@l
 /* 000110D8 7C602214 */ add r3, r0, r4
 /* 000110DC B0A30062 */ sth r5, 0x62(r3)
 /* 000110E0 1C9E0180 */ mulli r4, r30, 0x180
-/* 000110E4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 000110E8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 000110E4 3C600000 */ lis r3, winData@ha
+/* 000110E8 38030000 */ addi r0, r3, winData@l
 /* 000110EC 7C602214 */ add r3, r0, r4
 /* 000110F0 8003004C */ lwz r0, 0x4c(r3)
 /* 000110F4 60000080 */ ori r0, r0, 0x80
@@ -18162,8 +18162,8 @@ lbl_00011028:
 /* 00011138 48000001 */ bl func_80045DD4
 /* 0001113C 38A00000 */ li r5, 0
 /* 00011140 1C9E0180 */ mulli r4, r30, 0x180
-/* 00011144 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011148 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011144 3C600000 */ lis r3, winData@ha
+/* 00011148 38030000 */ addi r0, r3, winData@l
 /* 0001114C 7C602214 */ add r3, r0, r4
 /* 00011150 98A30001 */ stb r5, 1(r3)
 /* 00011154 7FC3F378 */ mr r3, r30
@@ -18202,19 +18202,19 @@ lbl_00011028:
 /* 000111D8 7EA3002E */ lwzx r21, r3, r0
 /* 000111DC 38A00000 */ li r5, 0
 /* 000111E0 1C9F0180 */ mulli r4, r31, 0x180
-/* 000111E4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 000111E8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 000111E4 3C600000 */ lis r3, winData@ha
+/* 000111E8 38030000 */ addi r0, r3, winData@l
 /* 000111EC 7C602214 */ add r3, r0, r4
 /* 000111F0 B0A30060 */ sth r5, 0x60(r3)
 /* 000111F4 38A00009 */ li r5, 9
 /* 000111F8 1C9F0180 */ mulli r4, r31, 0x180
-/* 000111FC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011200 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 000111FC 3C600000 */ lis r3, winData@ha
+/* 00011200 38030000 */ addi r0, r3, winData@l
 /* 00011204 7C602214 */ add r3, r0, r4
 /* 00011208 B0A30062 */ sth r5, 0x62(r3)
 /* 0001120C 1C9F0180 */ mulli r4, r31, 0x180
-/* 00011210 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011214 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011210 3C600000 */ lis r3, winData@ha
+/* 00011214 38030000 */ addi r0, r3, winData@l
 /* 00011218 7C602214 */ add r3, r0, r4
 /* 0001121C 8003004C */ lwz r0, 0x4c(r3)
 /* 00011220 60000080 */ ori r0, r0, 0x80
@@ -18355,8 +18355,8 @@ lbl_000113E4:
 /* 00011428 48000001 */ bl func_80042304
 /* 0001142C 7C7E0734 */ extsh r30, r3
 /* 00011430 1C9E0180 */ mulli r4, r30, 0x180
-/* 00011434 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011438 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011434 3C600000 */ lis r3, winData@ha
+/* 00011438 38030000 */ addi r0, r3, winData@l
 /* 0001143C 7C602214 */ add r3, r0, r4
 /* 00011440 A8630004 */ lha r3, 4(r3)
 /* 00011444 38800000 */ li r4, 0
@@ -18370,20 +18370,20 @@ lbl_000113E4:
 /* 00011464 80010054 */ lwz r0, 0x54(r1)
 /* 00011468 7C050734 */ extsh r5, r0
 /* 0001146C 1C9E0180 */ mulli r4, r30, 0x180
-/* 00011470 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011474 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011470 3C600000 */ lis r3, winData@ha
+/* 00011474 38030000 */ addi r0, r3, winData@l
 /* 00011478 7C602214 */ add r3, r0, r4
 /* 0001147C B0A30060 */ sth r5, 0x60(r3)
 /* 00011480 80010058 */ lwz r0, 0x58(r1)
 /* 00011484 7C050734 */ extsh r5, r0
 /* 00011488 1C9E0180 */ mulli r4, r30, 0x180
-/* 0001148C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011490 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0001148C 3C600000 */ lis r3, winData@ha
+/* 00011490 38030000 */ addi r0, r3, winData@l
 /* 00011494 7C602214 */ add r3, r0, r4
 /* 00011498 B0A30062 */ sth r5, 0x62(r3)
 /* 0001149C 1C9E0180 */ mulli r4, r30, 0x180
-/* 000114A0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 000114A4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 000114A0 3C600000 */ lis r3, winData@ha
+/* 000114A4 38030000 */ addi r0, r3, winData@l
 /* 000114A8 7C602214 */ add r3, r0, r4
 /* 000114AC 8003004C */ lwz r0, 0x4c(r3)
 /* 000114B0 60000080 */ ori r0, r0, 0x80
@@ -18406,8 +18406,8 @@ lbl_000113E4:
 /* 000114F4 48000001 */ bl func_80045DD4
 /* 000114F8 38A00000 */ li r5, 0
 /* 000114FC 1C9E0180 */ mulli r4, r30, 0x180
-/* 00011500 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011504 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011500 3C600000 */ lis r3, winData@ha
+/* 00011504 38030000 */ addi r0, r3, winData@l
 /* 00011508 7C602214 */ add r3, r0, r4
 /* 0001150C 98A30001 */ stb r5, 1(r3)
 /* 00011510 7FC3F378 */ mr r3, r30
@@ -18465,19 +18465,19 @@ lbl_000113E4:
 /* 000115E0 9003004C */ stw r0, 0x4c(r3)
 /* 000115E4 38A00000 */ li r5, 0
 /* 000115E8 1C9F0180 */ mulli r4, r31, 0x180
-/* 000115EC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 000115F0 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 000115EC 3C600000 */ lis r3, winData@ha
+/* 000115F0 38030000 */ addi r0, r3, winData@l
 /* 000115F4 7C602214 */ add r3, r0, r4
 /* 000115F8 B0A30060 */ sth r5, 0x60(r3)
 /* 000115FC 38A00009 */ li r5, 9
 /* 00011600 1C9F0180 */ mulli r4, r31, 0x180
-/* 00011604 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011608 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011604 3C600000 */ lis r3, winData@ha
+/* 00011608 38030000 */ addi r0, r3, winData@l
 /* 0001160C 7C602214 */ add r3, r0, r4
 /* 00011610 B0A30062 */ sth r5, 0x62(r3)
 /* 00011614 1C9F0180 */ mulli r4, r31, 0x180
-/* 00011618 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0001161C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011618 3C600000 */ lis r3, winData@ha
+/* 0001161C 38030000 */ addi r0, r3, winData@l
 /* 00011620 7C602214 */ add r3, r0, r4
 /* 00011624 8003004C */ lwz r0, 0x4c(r3)
 /* 00011628 60000080 */ ori r0, r0, 0x80
@@ -18651,8 +18651,8 @@ lbl_0001186C:
 /* 000118B0 48000001 */ bl func_80042304
 /* 000118B4 7C7E0734 */ extsh r30, r3
 /* 000118B8 1C9E0180 */ mulli r4, r30, 0x180
-/* 000118BC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 000118C0 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 000118BC 3C600000 */ lis r3, winData@ha
+/* 000118C0 38030000 */ addi r0, r3, winData@l
 /* 000118C4 7C602214 */ add r3, r0, r4
 /* 000118C8 A8630004 */ lha r3, 4(r3)
 /* 000118CC 38800000 */ li r4, 0
@@ -18666,20 +18666,20 @@ lbl_0001186C:
 /* 000118EC 80010054 */ lwz r0, 0x54(r1)
 /* 000118F0 7C050734 */ extsh r5, r0
 /* 000118F4 1C9E0180 */ mulli r4, r30, 0x180
-/* 000118F8 3C600000 */ lis r3, lbl_801923C0@ha
-/* 000118FC 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 000118F8 3C600000 */ lis r3, winData@ha
+/* 000118FC 38030000 */ addi r0, r3, winData@l
 /* 00011900 7C602214 */ add r3, r0, r4
 /* 00011904 B0A30060 */ sth r5, 0x60(r3)
 /* 00011908 80010058 */ lwz r0, 0x58(r1)
 /* 0001190C 7C050734 */ extsh r5, r0
 /* 00011910 1C9E0180 */ mulli r4, r30, 0x180
-/* 00011914 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011918 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011914 3C600000 */ lis r3, winData@ha
+/* 00011918 38030000 */ addi r0, r3, winData@l
 /* 0001191C 7C602214 */ add r3, r0, r4
 /* 00011920 B0A30062 */ sth r5, 0x62(r3)
 /* 00011924 1C9E0180 */ mulli r4, r30, 0x180
-/* 00011928 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0001192C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011928 3C600000 */ lis r3, winData@ha
+/* 0001192C 38030000 */ addi r0, r3, winData@l
 /* 00011930 7C602214 */ add r3, r0, r4
 /* 00011934 8003004C */ lwz r0, 0x4c(r3)
 /* 00011938 60000080 */ ori r0, r0, 0x80
@@ -18702,8 +18702,8 @@ lbl_0001186C:
 /* 0001197C 48000001 */ bl func_80045DD4
 /* 00011980 38A00000 */ li r5, 0
 /* 00011984 1C9E0180 */ mulli r4, r30, 0x180
-/* 00011988 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0001198C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011988 3C600000 */ lis r3, winData@ha
+/* 0001198C 38030000 */ addi r0, r3, winData@l
 /* 00011990 7C602214 */ add r3, r0, r4
 /* 00011994 98A30001 */ stb r5, 1(r3)
 /* 00011998 7FC3F378 */ mr r3, r30
@@ -18752,19 +18752,19 @@ lbl_0001186C:
 /* 00011A44 9003004C */ stw r0, 0x4c(r3)
 /* 00011A48 38A00000 */ li r5, 0
 /* 00011A4C 1C9F0180 */ mulli r4, r31, 0x180
-/* 00011A50 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011A54 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011A50 3C600000 */ lis r3, winData@ha
+/* 00011A54 38030000 */ addi r0, r3, winData@l
 /* 00011A58 7C602214 */ add r3, r0, r4
 /* 00011A5C B0A30060 */ sth r5, 0x60(r3)
 /* 00011A60 38A00009 */ li r5, 9
 /* 00011A64 1C9F0180 */ mulli r4, r31, 0x180
-/* 00011A68 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011A6C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011A68 3C600000 */ lis r3, winData@ha
+/* 00011A6C 38030000 */ addi r0, r3, winData@l
 /* 00011A70 7C602214 */ add r3, r0, r4
 /* 00011A74 B0A30062 */ sth r5, 0x62(r3)
 /* 00011A78 1C9F0180 */ mulli r4, r31, 0x180
-/* 00011A7C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011A80 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011A7C 3C600000 */ lis r3, winData@ha
+/* 00011A80 38030000 */ addi r0, r3, winData@l
 /* 00011A84 7C602214 */ add r3, r0, r4
 /* 00011A88 8003004C */ lwz r0, 0x4c(r3)
 /* 00011A8C 60000080 */ ori r0, r0, 0x80
@@ -18980,8 +18980,8 @@ lbl_00011D70:
 /* 00011DB4 48000001 */ bl func_80042304
 /* 00011DB8 7C7D0734 */ extsh r29, r3
 /* 00011DBC 1C9D0180 */ mulli r4, r29, 0x180
-/* 00011DC0 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011DC4 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011DC0 3C600000 */ lis r3, winData@ha
+/* 00011DC4 38030000 */ addi r0, r3, winData@l
 /* 00011DC8 7C602214 */ add r3, r0, r4
 /* 00011DCC A8630004 */ lha r3, 4(r3)
 /* 00011DD0 38800000 */ li r4, 0
@@ -18995,20 +18995,20 @@ lbl_00011D70:
 /* 00011DF0 80010074 */ lwz r0, 0x74(r1)
 /* 00011DF4 7C050734 */ extsh r5, r0
 /* 00011DF8 1C9D0180 */ mulli r4, r29, 0x180
-/* 00011DFC 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011E00 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011DFC 3C600000 */ lis r3, winData@ha
+/* 00011E00 38030000 */ addi r0, r3, winData@l
 /* 00011E04 7C602214 */ add r3, r0, r4
 /* 00011E08 B0A30060 */ sth r5, 0x60(r3)
 /* 00011E0C 80010078 */ lwz r0, 0x78(r1)
 /* 00011E10 7C050734 */ extsh r5, r0
 /* 00011E14 1C9D0180 */ mulli r4, r29, 0x180
-/* 00011E18 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011E1C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011E18 3C600000 */ lis r3, winData@ha
+/* 00011E1C 38030000 */ addi r0, r3, winData@l
 /* 00011E20 7C602214 */ add r3, r0, r4
 /* 00011E24 B0A30062 */ sth r5, 0x62(r3)
 /* 00011E28 1C9D0180 */ mulli r4, r29, 0x180
-/* 00011E2C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011E30 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011E2C 3C600000 */ lis r3, winData@ha
+/* 00011E30 38030000 */ addi r0, r3, winData@l
 /* 00011E34 7C602214 */ add r3, r0, r4
 /* 00011E38 8003004C */ lwz r0, 0x4c(r3)
 /* 00011E3C 60000080 */ ori r0, r0, 0x80
@@ -19031,8 +19031,8 @@ lbl_00011D70:
 /* 00011E80 48000001 */ bl func_80045DD4
 /* 00011E84 38A00000 */ li r5, 0
 /* 00011E88 1C9D0180 */ mulli r4, r29, 0x180
-/* 00011E8C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011E90 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011E8C 3C600000 */ lis r3, winData@ha
+/* 00011E90 38030000 */ addi r0, r3, winData@l
 /* 00011E94 7C602214 */ add r3, r0, r4
 /* 00011E98 98A30001 */ stb r5, 1(r3)
 /* 00011E9C 7FA3EB78 */ mr r3, r29
@@ -19067,19 +19067,19 @@ lbl_00011F04:
 /* 00011F0C 7E23002E */ lwzx r17, r3, r0
 /* 00011F10 38A00000 */ li r5, 0
 /* 00011F14 1C9F0180 */ mulli r4, r31, 0x180
-/* 00011F18 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011F1C 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011F18 3C600000 */ lis r3, winData@ha
+/* 00011F1C 38030000 */ addi r0, r3, winData@l
 /* 00011F20 7C602214 */ add r3, r0, r4
 /* 00011F24 B0A30060 */ sth r5, 0x60(r3)
 /* 00011F28 38A00009 */ li r5, 9
 /* 00011F2C 1C9F0180 */ mulli r4, r31, 0x180
-/* 00011F30 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011F34 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011F30 3C600000 */ lis r3, winData@ha
+/* 00011F34 38030000 */ addi r0, r3, winData@l
 /* 00011F38 7C602214 */ add r3, r0, r4
 /* 00011F3C B0A30062 */ sth r5, 0x62(r3)
 /* 00011F40 1C9F0180 */ mulli r4, r31, 0x180
-/* 00011F44 3C600000 */ lis r3, lbl_801923C0@ha
-/* 00011F48 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 00011F44 3C600000 */ lis r3, winData@ha
+/* 00011F48 38030000 */ addi r0, r3, winData@l
 /* 00011F4C 7C602214 */ add r3, r0, r4
 /* 00011F50 8003004C */ lwz r0, 0x4c(r3)
 /* 00011F54 60000080 */ ori r0, r0, 0x80

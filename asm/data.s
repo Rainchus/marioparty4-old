@@ -680,6 +680,7 @@ lbl_8011FDE0:
 	.balign 4
 	.4byte 0
 
+.balign 32
 .global lbl_8011FE00
 lbl_8011FE00:
 	# ROM: 0x11CE00
@@ -2772,10 +2773,10 @@ lbl_80122018:
 	.asciz "%08x %08x %02x %02x %08x %08x %08x %08x %08x\n"
 	.asciz "MCB:%d(%d/%d) MEM:%08x(%08x/%08x)\n"
 	.asciz "======== HuMem heap dump %08x end =====\n"
-	.balign 0x20
 
-.global lbl_80122140
-lbl_80122140:
+.balign 32
+.global fcoltbl
+fcoltbl:
 	# ROM: 0x11F140
 	.4byte 0x000000FF
 	.4byte 0x000080FF
@@ -3027,9 +3028,10 @@ lbl_80122569:
 lbl_80122573:
 	# ROM: 11F573
 	.asciz "Error: Not Found %s for ObjPosGet\n"
-	.balign 16
-.global lbl_801225A0
-lbl_801225A0:
+
+.balign 32
+.global refMapData0
+refMapData0:
 	# ROM: 11F5A0
 	.4byte 0x00010001
 	.4byte 0x00014100
@@ -14279,51 +14281,28 @@ lbl_801225A0:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
+
 .global lbl_8012D560
 lbl_8012D560:
 	# ROM: 12A560
-	.4byte 0x4572726F
-	.4byte 0x723A2043
-	.4byte 0x72656174
-	.4byte 0x65204D6F
-	.4byte 0x64656C20
-	.4byte 0x4F766572
-	.2byte 0x210A
-	.byte 0x00
+	.asciz "Error: Create Model Over!\n"
+
 .global lbl_8012D57B
 lbl_8012D57B:
 	# ROM: 12A57B
-	.4byte 0x4572726F
-	.4byte 0x723A204F
-	.4byte 0x424A5074
-	.4byte 0x72204572
-	.4byte 0x726F7221
-	.2byte 0x0A00
+	.asciz "Error: OBJPtr Error!\n"
+
 .global lbl_8012D591
 lbl_8012D591:
 	# ROM: 12A591
-	.4byte 0x4572726F
-	.4byte 0x723A204E
-	.4byte 0x6F742046
-	.4byte 0x6F756E64
-	.4byte 0x20257320
-	.4byte 0x666F7220
-	.4byte 0x486F6F6B
-	.4byte 0x5365740A
-	.byte 0x00
+	.asciz "Error: Not Found %s for HookSet\n"
+
 .global lbl_8012D5B2
 lbl_8012D5B2:
 	# ROM: 12A5B2
-	.4byte 0x4572726F
-	.4byte 0x723A204E
-	.4byte 0x6F742046
-	.4byte 0x6F756E64
-	.4byte 0x20257320
-	.4byte 0x666F7220
-	.4byte 0x486F6F6B
-	.4byte 0x52657365
-	.4byte 0x740A0000
-	.2byte 0x0000
+	.asciz "Error: Not Found %s for HookReset\n"
+
+.balign 8
 .global lbl_8012D5D8
 lbl_8012D5D8:
 	# ROM: 12A5D8
@@ -14349,39 +14328,25 @@ lbl_8012D5D8:
 	.4byte 0x43F00000
 	.4byte 0x00000000
 	.4byte 0x3F800000
+
 .global lbl_8012D630
 lbl_8012D630:
 	# ROM: 12A630
-	.4byte 0x4572726F
-	.4byte 0x723A204E
-	.4byte 0x6F742046
-	.4byte 0x6F756E64
-	.4byte 0x20257320
-	.4byte 0x666F7220
-	.4byte 0x4D69704D
-	.4byte 0x61705365
-	.4byte 0x740A0000
-	.4byte 0x00000000
+	.asciz "Error: Not Found %s for MipMapSet\n"
+
+.balign 8
 .global lbl_8012D658
 lbl_8012D658:
 	# ROM: 12A658
-	.4byte 0x4572726F
-	.4byte 0x723A2043
-	.4byte 0x72656174
-	.4byte 0x65204D6F
-	.4byte 0x74696F6E
-	.4byte 0x204F7665
-	.4byte 0x72210A00
+	.asciz "Error: Create Motion Over!\n"
+
+.balign 4
 .global lbl_8012D674
 lbl_8012D674:
 	# ROM: 12A674
-	.4byte 0x4572726F
-	.4byte 0x723A2043
-	.4byte 0x6C757374
-	.4byte 0x65722045
-	.4byte 0x6E747279
-	.4byte 0x204F7665
-	.4byte 0x720A0000
+	.asciz "Error: Cluster Entry Over\n"
+
+.balign 4
 .global lbl_8012D690
 lbl_8012D690:
 	# ROM: 12A690
@@ -14500,36 +14465,23 @@ lbl_8012D814:
 	.4byte lbl_80027D84
 	.4byte lbl_80027F2C
 	.4byte 0x00000000
+
 .global lbl_8012D838
 lbl_8012D838:
 	# ROM: 12A838
-	.4byte 0x4572726F
-	.4byte 0x723A2054
-	.4byte 0x6578416E
-	.4byte 0x696D204F
-	.4byte 0x7665720A
-	.byte 0x00
+	.asciz "Error: TexAnim Over\n"
+
 .global lbl_8012D84D
 lbl_8012D84D:
 	# ROM: 12A84D
-	.4byte 0x4572726F
-	.4byte 0x723A204E
-	.4byte 0x6F742046
-	.4byte 0x6F756E64
-	.4byte 0x20546578
-	.4byte 0x416E696D
-	.4byte 0x204E616D
-	.2byte 0x650A
-	.byte 0x00
+	.asciz "Error: Not Found TexAnim Name\n"
+
 .global lbl_8012D86C
 lbl_8012D86C:
 	# ROM: 12A86C
-	.4byte 0x4572726F
-	.4byte 0x723A2054
-	.4byte 0x65785363
-	.4byte 0x726F6C6C
-	.4byte 0x204F7665
-	.4byte 0x720A0000
+	.asciz "Error: TexScroll Over\n"
+
+.balign 4
 .global lbl_8012D884
 lbl_8012D884:
 	# ROM: 12A884
@@ -14582,57 +14534,18 @@ lbl_8012D8F8:
 .global lbl_8012D918
 lbl_8012D918:
 	# ROM: 12A918
-	.4byte 0x2B2B2B2B
-	.4byte 0x2B2B2B2B
-	.4byte 0x2B2B2B2B
-	.4byte 0x2B2B2B2B
-	.4byte 0x2B2B2B2B
-	.4byte 0x20537461
-	.4byte 0x7274204E
-	.4byte 0x6577204F
-	.4byte 0x564C2025
-	.4byte 0x64202845
-	.4byte 0x56543A25
-	.4byte 0x64205354
-	.4byte 0x41543A30
-	.4byte 0x78253038
-	.4byte 0x7829202B
-	.4byte 0x2B2B2B2B
-	.4byte 0x2B2B2B2B
-	.4byte 0x2B2B2B2B
-	.4byte 0x2B2B2B2B
-	.4byte 0x2B0A006F
-	.4byte 0x626A6D61
-	.4byte 0x6E3E5573
-	.4byte 0x6564204D
-	.4byte 0x656D6F72
-	.4byte 0x79205369
-	.4byte 0x7A653A25
-	.4byte 0x3038780A
-	.4byte 0x006F626A
-	.4byte 0x6D616E3E
-	.4byte 0x55736564
-	.4byte 0x204D656D
-	.4byte 0x6F727920
-	.4byte 0x436E743A
-	.4byte 0x25640A00
-	.4byte 0x6F626A6D
-	.4byte 0x616E3E49
-	.4byte 0x6E697420
-	.4byte 0x6573700A
-	.4byte 0x006F626A
-	.4byte 0x6D616E3E
-	.4byte 0x43616C6C
-	.4byte 0x206F626A
-	.4byte 0x65637473
-	.4byte 0x65747570
-	.4byte 0x0A006F62
-	.4byte 0x6A6D616E
-	.4byte 0x3E4F626A
-	.4byte 0x65637453
-	.4byte 0x65747570
-	.4byte 0x20656E64
-	.2byte 0x0A00
+	.asciz "++++++++++++++++++++ Start New OVL %d (EVT:%d STAT:0x%08x) ++++++++++++++++++\n"
+	
+	.asciz "objman>Used Memory Size:%08x\n"
+
+	.asciz "objman>Used Memory Cnt:%d\n"
+
+	.asciz "objman>Init esp\n"
+
+	.asciz "objman>Call objectsetup\n"
+
+	.asciz "objman>ObjectSetup end\n"
+	
 .global lbl_8012D9E2
 lbl_8012D9E2:
 	# ROM: 12A9E2
@@ -17244,8 +17157,10 @@ lbl_801303E0:
 	.4byte 0x14141414
 	.4byte 0x14141414
 	.4byte 0x14141414
-.global lbl_80130520
-lbl_80130520:
+
+.balign 32
+.global charColPal
+charColPal:
 	# ROM: 12D520
 	.4byte 0x00000000
 	.4byte 0x00FFFF00
@@ -27162,13 +27077,24 @@ lbl_80139D08:
 	.4byte 0x000F0004
 	.4byte 0x000F0024
 	.4byte 0x000F0024
-.global lbl_80139D2C
-lbl_80139D2C:
+.global itemPrices
+itemPrices:
 	# ROM: 136D2C
-	.4byte 0x05050F0F
-	.4byte 0x0A0A0F0F
-	.4byte 0x0F0F0019
-	.4byte 0x1E1E0000
+	.byte 0x05 #MINI_MUSHROOM
+	.byte 0x05 #MUSHROOM
+	.byte 0x0F #SUPER_MINI_MUSHROOM
+	.byte 0x0F #SUPER_MEGA_MUSHROOM
+	.byte 0x0A #MINI_MEGA_HAMMER
+	.byte 0x0A #WARP_PIPE
+	.byte 0x0F #SWAP_CARD
+	.byte 0x0F #SPARKY_STICKER
+	.byte 0x0F #GADDLIGHT
+	.byte 0x0F #CHOMP_CALL
+	.byte 0x00 #BOWSER_SUIT
+	.byte 0x19 #BOO_CRYSTAL_BALL
+	.byte 0x1E #MAGIC_LAMP
+	.byte 0x1E #UNK
+	.2byte 0x0000 #Padding
 .global lbl_80139D3C
 lbl_80139D3C:
 	# ROM: 136D3C

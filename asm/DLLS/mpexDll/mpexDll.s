@@ -12599,8 +12599,8 @@ lbl_0000BBA4:
 /* 0000BC10 9081000C */ stw r4, 0xc(r1)
 /* 0000BC14 80010008 */ lwz r0, 8(r1)
 /* 0000BC18 1C800180 */ mulli r4, r0, 0x180
-/* 0000BC1C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000BC20 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000BC1C 3C600000 */ lis r3, winData@ha
+/* 0000BC20 38030000 */ addi r0, r3, winData@l
 /* 0000BC24 7C602214 */ add r3, r0, r4
 /* 0000BC28 A8030004 */ lha r0, 4(r3)
 /* 0000BC2C 1C800054 */ mulli r4, r0, 0x54
@@ -12868,8 +12868,8 @@ lbl_0000BE78:
 /* 0000C024 38630000 */ addi r3, r3, lbl_10000104@l
 /* 0000C028 82C30000 */ lwz r22, 0(r3)
 /* 0000C02C 1C960180 */ mulli r4, r22, 0x180
-/* 0000C030 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000C034 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000C030 3C600000 */ lis r3, winData@ha
+/* 0000C034 38030000 */ addi r0, r3, winData@l
 /* 0000C038 7C602214 */ add r3, r0, r4
 /* 0000C03C A8030004 */ lha r0, 4(r3)
 /* 0000C040 1C800054 */ mulli r4, r0, 0x54
@@ -13105,8 +13105,8 @@ lbl_0000C208:
 /* 0000C3B8 38630000 */ addi r3, r3, lbl_10000104@l
 /* 0000C3BC 82630000 */ lwz r19, 0(r3)
 /* 0000C3C0 1C930180 */ mulli r4, r19, 0x180
-/* 0000C3C4 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0000C3C8 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0000C3C4 3C600000 */ lis r3, winData@ha
+/* 0000C3C8 38030000 */ addi r0, r3, winData@l
 /* 0000C3CC 7C602214 */ add r3, r0, r4
 /* 0000C3D0 A8030004 */ lha r0, 4(r3)
 /* 0000C3D4 1C800054 */ mulli r4, r0, 0x54
@@ -29852,8 +29852,8 @@ lbl_0001B8F4:
 /* 0001BA40 38630000 */ addi r3, r3, lbl_0001DFFC@l
 /* 0001BA44 80030000 */ lwz r0, 0(r3)
 /* 0001BA48 1C800180 */ mulli r4, r0, 0x180
-/* 0001BA4C 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0001BA50 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0001BA4C 3C600000 */ lis r3, winData@ha
+/* 0001BA50 38030000 */ addi r0, r3, winData@l
 /* 0001BA54 7C602214 */ add r3, r0, r4
 /* 0001BA58 98A30001 */ stb r5, 1(r3)
 /* 0001BA5C 3C600000 */ lis r3, lbl_0001DFFC@ha
@@ -30046,8 +30046,8 @@ lbl_0001BC64:
 /* 0001BD18 7C7F0734 */ extsh r31, r3
 /* 0001BD1C 38A00001 */ li r5, 1
 /* 0001BD20 1C9F0180 */ mulli r4, r31, 0x180
-/* 0001BD24 3C600000 */ lis r3, lbl_801923C0@ha
-/* 0001BD28 38030000 */ addi r0, r3, lbl_801923C0@l
+/* 0001BD24 3C600000 */ lis r3, winData@ha
+/* 0001BD28 38030000 */ addi r0, r3, winData@l
 /* 0001BD2C 7C602214 */ add r3, r0, r4
 /* 0001BD30 98A30001 */ stb r5, 1(r3)
 /* 0001BD34 7FE30734 */ extsh r3, r31

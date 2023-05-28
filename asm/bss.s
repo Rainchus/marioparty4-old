@@ -9,6 +9,7 @@ padStatErrOld:
 .global rumbleData
 rumbleData:
 	.skip 0x20
+	
 .balign 32
 .global ReadDataStat
 ReadDataStat:
@@ -211,8 +212,10 @@ lbl_80192260:
 .global lbl_80192360
 lbl_80192360:
 	.skip 0x60
-.global lbl_801923C0
-lbl_801923C0:
+
+.balign 32
+.global winData
+winData:
 	.skip 0x3000
 .global lbl_801953C0
 lbl_801953C0:
@@ -220,6 +223,8 @@ lbl_801953C0:
 .global lbl_801953D0
 lbl_801953D0:
 	.skip 0x1410
+
+.balign 32
 .global lbl_801967E0
 lbl_801967E0:
 	.skip 0x400
