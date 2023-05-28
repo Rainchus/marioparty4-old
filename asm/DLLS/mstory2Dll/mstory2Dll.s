@@ -133,8 +133,8 @@ lbl_00000214:
 /* 00000240 3BE00005 */ li r31, 5
 lbl_00000244:
 /* 00000244 3800000F */ li r0, 0xf
-/* 00000248 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 0000024C 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00000248 3C600000 */ lis r3, debugFontColor@ha
+/* 0000024C 38630000 */ addi r3, r3, debugFontColor@l
 /* 00000250 90030000 */ stw r0, 0(r3)
 /* 00000254 38600018 */ li r3, 0x18
 /* 00000258 38800064 */ li r4, 0x64
@@ -149,14 +149,14 @@ lbl_00000244:
 /* 0000027C 48000070 */ b lbl_000002EC
 lbl_00000280:
 /* 00000280 3800000F */ li r0, 0xf
-/* 00000284 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00000288 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00000284 3C600000 */ lis r3, debugFontColor@ha
+/* 00000288 38630000 */ addi r3, r3, debugFontColor@l
 /* 0000028C 90030000 */ stw r0, 0(r3)
 /* 00000290 7C1FF000 */ cmpw r31, r30
 /* 00000294 40820014 */ bne lbl_000002A8
 /* 00000298 3800000D */ li r0, 0xd
-/* 0000029C 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 000002A0 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 0000029C 3C600000 */ lis r3, debugFontColor@ha
+/* 000002A0 38630000 */ addi r3, r3, debugFontColor@l
 /* 000002A4 90030000 */ stw r0, 0(r3)
 lbl_000002A8:
 /* 000002A8 38600018 */ li r3, 0x18
@@ -8801,8 +8801,8 @@ lbl_000081A4:
 lbl_00008200:
 /* 00008200 4BFF8A89 */ bl lbl_00000C88
 /* 00008204 3800000F */ li r0, 0xf
-/* 00008208 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 0000820C 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00008208 3C600000 */ lis r3, debugFontColor@ha
+/* 0000820C 38630000 */ addi r3, r3, debugFontColor@l
 /* 00008210 90030000 */ stw r0, 0(r3)
 /* 00008214 7FE30734 */ extsh r3, r31
 /* 00008218 7FC40734 */ extsh r4, r30
@@ -26268,8 +26268,8 @@ lbl_00018B6C:
 lbl_00018BC8:
 /* 00018BC8 4BFE80C1 */ bl lbl_00000C88
 /* 00018BCC 3800000F */ li r0, 0xf
-/* 00018BD0 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00018BD4 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00018BD0 3C600000 */ lis r3, debugFontColor@ha
+/* 00018BD4 38630000 */ addi r3, r3, debugFontColor@l
 /* 00018BD8 90030000 */ stw r0, 0(r3)
 /* 00018BDC 7FE30734 */ extsh r3, r31
 /* 00018BE0 7FC40734 */ extsh r4, r30

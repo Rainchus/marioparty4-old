@@ -709,16 +709,16 @@ lbl_801D4C78:
 lbl_801D4C7C:
 	#ROM: 1400FC
 	.4byte 0x3F800000
-.global lbl_801D4C80
-lbl_801D4C80:
+.global debugBoxScalar
+debugBoxScalar:
 	#ROM: 140100
 	.4byte 0x3FC00000
-.global lbl_801D4C84
-lbl_801D4C84:
+.global debugBoxWidth
+debugBoxWidth:
 	#ROM: 140104
 	.4byte 0x43000000
-.global lbl_801D4C88
-lbl_801D4C88:
+.global debugBoxHeight
+debugBoxHeight:
 	#ROM: 140108
 	.4byte 0x42200000
 .global lbl_801D4C8C

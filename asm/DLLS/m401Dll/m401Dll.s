@@ -16376,8 +16376,8 @@ lbl_0000F7E4:
 /* 0000F88C C01F002C */ lfs f0, 0x2c(r31)
 /* 0000F890 D0010020 */ stfs f0, 0x20(r1)
 /* 0000F894 3800000F */ li r0, 0xf
-/* 0000F898 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 0000F89C 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 0000F898 3C600000 */ lis r3, debugFontColor@ha
+/* 0000F89C 38630000 */ addi r3, r3, debugFontColor@l
 /* 0000F8A0 90030000 */ stw r0, 0(r3)
 /* 0000F8A4 3BC00000 */ li r30, 0
 /* 0000F8A8 48000118 */ b lbl_0000F9C0

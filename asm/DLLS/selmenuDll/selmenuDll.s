@@ -626,8 +626,8 @@ lbl_00000990:
 /* 000009B0 93E1001C */ stw r31, 0x1c(r1)
 /* 000009B4 93C10018 */ stw r30, 0x18(r1)
 /* 000009B8 3800000E */ li r0, 0xe
-/* 000009BC 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 000009C0 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 000009BC 3C600000 */ lis r3, debugFontColor@ha
+/* 000009C0 38630000 */ addi r3, r3, debugFontColor@l
 /* 000009C4 90030000 */ stw r0, 0(r3)
 /* 000009C8 386000C8 */ li r3, 0xc8
 /* 000009CC 388000A0 */ li r4, 0xa0
@@ -664,20 +664,20 @@ lbl_00000A08:
 /* 00000A44 7C1F0000 */ cmpw r31, r0
 /* 00000A48 40820018 */ bne lbl_00000A60
 /* 00000A4C 3800000D */ li r0, 0xd
-/* 00000A50 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00000A54 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00000A50 3C600000 */ lis r3, debugFontColor@ha
+/* 00000A54 38630000 */ addi r3, r3, debugFontColor@l
 /* 00000A58 90030000 */ stw r0, 0(r3)
 /* 00000A5C 48000028 */ b lbl_00000A84
 lbl_00000A60:
 /* 00000A60 3800000C */ li r0, 0xc
-/* 00000A64 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00000A68 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00000A64 3C600000 */ lis r3, debugFontColor@ha
+/* 00000A68 38630000 */ addi r3, r3, debugFontColor@l
 /* 00000A6C 90030000 */ stw r0, 0(r3)
 /* 00000A70 48000014 */ b lbl_00000A84
 lbl_00000A74:
 /* 00000A74 38000004 */ li r0, 4
-/* 00000A78 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00000A7C 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00000A78 3C600000 */ lis r3, debugFontColor@ha
+/* 00000A7C 38630000 */ addi r3, r3, debugFontColor@l
 /* 00000A80 90030000 */ stw r0, 0(r3)
 lbl_00000A84:
 /* 00000A84 38600064 */ li r3, 0x64
@@ -1386,8 +1386,8 @@ lbl_000014B0:
 /* 000014B0 2C1F0004 */ cmpwi r31, 4
 /* 000014B4 4180FD24 */ blt lbl_000011D8
 /* 000014B8 3800000E */ li r0, 0xe
-/* 000014BC 3C800000 */ lis r4, lbl_801D3B30@ha
-/* 000014C0 38640000 */ addi r3, r4, lbl_801D3B30@l
+/* 000014BC 3C800000 */ lis r4, debugFontColor@ha
+/* 000014C0 38640000 */ addi r3, r4, debugFontColor@l
 /* 000014C4 90030000 */ stw r0, 0(r3)
 /* 000014C8 386000C8 */ li r3, 0xc8
 /* 000014CC 388000A0 */ li r4, 0xa0
@@ -1424,20 +1424,20 @@ lbl_00001508:
 /* 00001544 7C181800 */ cmpw r24, r3
 /* 00001548 40820018 */ bne lbl_00001560
 /* 0000154C 3880000D */ li r4, 0xd
-/* 00001550 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00001554 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00001550 3C600000 */ lis r3, debugFontColor@ha
+/* 00001554 38630000 */ addi r3, r3, debugFontColor@l
 /* 00001558 90830000 */ stw r4, 0(r3)
 /* 0000155C 48000028 */ b lbl_00001584
 lbl_00001560:
 /* 00001560 3880000C */ li r4, 0xc
-/* 00001564 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00001568 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00001564 3C600000 */ lis r3, debugFontColor@ha
+/* 00001568 38630000 */ addi r3, r3, debugFontColor@l
 /* 0000156C 90830000 */ stw r4, 0(r3)
 /* 00001570 48000014 */ b lbl_00001584
 lbl_00001574:
 /* 00001574 38000004 */ li r0, 4
-/* 00001578 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 0000157C 38830000 */ addi r4, r3, lbl_801D3B30@l
+/* 00001578 3C600000 */ lis r3, debugFontColor@ha
+/* 0000157C 38830000 */ addi r4, r3, debugFontColor@l
 /* 00001580 90040000 */ stw r0, 0(r4)
 lbl_00001584:
 /* 00001584 38600064 */ li r3, 0x64
@@ -3270,8 +3270,8 @@ lbl_00002EF4:
 /* 00002FA0 2C000001 */ cmpwi r0, 1
 /* 00002FA4 40820064 */ bne lbl_00003008
 /* 00002FA8 38A0000F */ li r5, 0xf
-/* 00002FAC 3C800000 */ lis r4, lbl_801D3B30@ha
-/* 00002FB0 38640000 */ addi r3, r4, lbl_801D3B30@l
+/* 00002FAC 3C800000 */ lis r4, debugFontColor@ha
+/* 00002FB0 38640000 */ addi r3, r4, debugFontColor@l
 /* 00002FB4 90A30000 */ stw r5, 0(r3)
 /* 00002FB8 7E439378 */ mr r3, r18
 /* 00002FBC 7E248B78 */ mr r4, r17
@@ -3295,8 +3295,8 @@ lbl_00002EF4:
 /* 00003004 480000E4 */ b lbl_000030E8
 lbl_00003008:
 /* 00003008 3880000C */ li r4, 0xc
-/* 0000300C 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00003010 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 0000300C 3C600000 */ lis r3, debugFontColor@ha
+/* 00003010 38630000 */ addi r3, r3, debugFontColor@l
 /* 00003014 90830000 */ stw r4, 0(r3)
 /* 00003018 7E439378 */ mr r3, r18
 /* 0000301C 7E248B78 */ mr r4, r17
@@ -3339,8 +3339,8 @@ lbl_00003068:
 /* 000030AC 38E7006C */ addi r7, r7, 0x6c
 /* 000030B0 7CF10734 */ extsh r17, r7
 /* 000030B4 38C0000E */ li r6, 0xe
-/* 000030B8 3CA00000 */ lis r5, lbl_801D3B30@ha
-/* 000030BC 38850000 */ addi r4, r5, lbl_801D3B30@l
+/* 000030B8 3CA00000 */ lis r5, debugFontColor@ha
+/* 000030BC 38850000 */ addi r4, r5, debugFontColor@l
 /* 000030C0 90C40000 */ stw r6, 0(r4)
 /* 000030C4 7E439378 */ mr r3, r18
 /* 000030C8 7E248B78 */ mr r4, r17
@@ -3619,14 +3619,14 @@ lbl_00003464:
 /* 000034D0 7C03F800 */ cmpw r3, r31
 /* 000034D4 40820018 */ bne lbl_000034EC
 /* 000034D8 3800000D */ li r0, 0xd
-/* 000034DC 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 000034E0 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 000034DC 3C600000 */ lis r3, debugFontColor@ha
+/* 000034E0 38630000 */ addi r3, r3, debugFontColor@l
 /* 000034E4 90030000 */ stw r0, 0(r3)
 /* 000034E8 48000014 */ b lbl_000034FC
 lbl_000034EC:
 /* 000034EC 3800000C */ li r0, 0xc
-/* 000034F0 3C800000 */ lis r4, lbl_801D3B30@ha
-/* 000034F4 38640000 */ addi r3, r4, lbl_801D3B30@l
+/* 000034F0 3C800000 */ lis r4, debugFontColor@ha
+/* 000034F4 38640000 */ addi r3, r4, debugFontColor@l
 /* 000034F8 90030000 */ stw r0, 0(r3)
 lbl_000034FC:
 /* 000034FC 7F43D378 */ mr r3, r26
@@ -3647,8 +3647,8 @@ lbl_000034FC:
 /* 00003538 2C000000 */ cmpwi r0, 0
 /* 0000353C 408201F0 */ bne lbl_0000372C
 /* 00003540 38C00004 */ li r6, 4
-/* 00003544 3CA00000 */ lis r5, lbl_801D3B30@ha
-/* 00003548 38A50000 */ addi r5, r5, lbl_801D3B30@l
+/* 00003544 3CA00000 */ lis r5, debugFontColor@ha
+/* 00003548 38A50000 */ addi r5, r5, debugFontColor@l
 /* 0000354C 90C50000 */ stw r6, 0(r5)
 /* 00003550 57E70FFE */ srwi r7, r31, 0x1f
 /* 00003554 57E607FE */ clrlwi r6, r31, 0x1f
@@ -3786,14 +3786,14 @@ lbl_0000372C:
 /* 00003760 2C000000 */ cmpwi r0, 0
 /* 00003764 40820018 */ bne lbl_0000377C
 /* 00003768 3BC0000D */ li r30, 0xd
-/* 0000376C 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00003770 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 0000376C 3C600000 */ lis r3, debugFontColor@ha
+/* 00003770 38630000 */ addi r3, r3, debugFontColor@l
 /* 00003774 93C30000 */ stw r30, 0(r3)
 /* 00003778 48000014 */ b lbl_0000378C
 lbl_0000377C:
 /* 0000377C 3BC0000C */ li r30, 0xc
-/* 00003780 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00003784 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00003780 3C600000 */ lis r3, debugFontColor@ha
+/* 00003784 38630000 */ addi r3, r3, debugFontColor@l
 /* 00003788 93C30000 */ stw r30, 0(r3)
 lbl_0000378C:
 /* 0000378C 57E30FFE */ srwi r3, r31, 0x1f
@@ -3836,14 +3836,14 @@ lbl_0000378C:
 /* 00003820 2C000001 */ cmpwi r0, 1
 /* 00003824 40820018 */ bne lbl_0000383C
 /* 00003828 3BA0000D */ li r29, 0xd
-/* 0000382C 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00003830 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 0000382C 3C600000 */ lis r3, debugFontColor@ha
+/* 00003830 38630000 */ addi r3, r3, debugFontColor@l
 /* 00003834 93A30000 */ stw r29, 0(r3)
 /* 00003838 48000014 */ b lbl_0000384C
 lbl_0000383C:
 /* 0000383C 3BA0000C */ li r29, 0xc
-/* 00003840 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00003844 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00003840 3C600000 */ lis r3, debugFontColor@ha
+/* 00003844 38630000 */ addi r3, r3, debugFontColor@l
 /* 00003848 93A30000 */ stw r29, 0(r3)
 lbl_0000384C:
 /* 0000384C 57E30FFE */ srwi r3, r31, 0x1f
@@ -3878,14 +3878,14 @@ lbl_0000384C:
 /* 000038C0 2C000002 */ cmpwi r0, 2
 /* 000038C4 40820018 */ bne lbl_000038DC
 /* 000038C8 3B80000D */ li r28, 0xd
-/* 000038CC 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 000038D0 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 000038CC 3C600000 */ lis r3, debugFontColor@ha
+/* 000038D0 38630000 */ addi r3, r3, debugFontColor@l
 /* 000038D4 93830000 */ stw r28, 0(r3)
 /* 000038D8 48000014 */ b lbl_000038EC
 lbl_000038DC:
 /* 000038DC 3B80000C */ li r28, 0xc
-/* 000038E0 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 000038E4 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 000038E0 3C600000 */ lis r3, debugFontColor@ha
+/* 000038E4 38630000 */ addi r3, r3, debugFontColor@l
 /* 000038E8 93830000 */ stw r28, 0(r3)
 lbl_000038EC:
 /* 000038EC 57E30FFE */ srwi r3, r31, 0x1f
@@ -3920,14 +3920,14 @@ lbl_000038EC:
 /* 00003960 2C000003 */ cmpwi r0, 3
 /* 00003964 40820018 */ bne lbl_0000397C
 /* 00003968 3B60000D */ li r27, 0xd
-/* 0000396C 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00003970 38830000 */ addi r4, r3, lbl_801D3B30@l
+/* 0000396C 3C600000 */ lis r3, debugFontColor@ha
+/* 00003970 38830000 */ addi r4, r3, debugFontColor@l
 /* 00003974 93640000 */ stw r27, 0(r4)
 /* 00003978 48000014 */ b lbl_0000398C
 lbl_0000397C:
 /* 0000397C 3B60000C */ li r27, 0xc
-/* 00003980 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00003984 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00003980 3C600000 */ lis r3, debugFontColor@ha
+/* 00003984 38630000 */ addi r3, r3, debugFontColor@l
 /* 00003988 93630000 */ stw r27, 0(r3)
 lbl_0000398C:
 /* 0000398C 57E40FFE */ srwi r4, r31, 0x1f
@@ -3962,8 +3962,8 @@ lbl_0000398C:
 /* 00003A00 480001E8 */ b lbl_00003BE8
 lbl_00003A04:
 /* 00003A04 38000004 */ li r0, 4
-/* 00003A08 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00003A0C 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00003A08 3C600000 */ lis r3, debugFontColor@ha
+/* 00003A0C 38630000 */ addi r3, r3, debugFontColor@l
 /* 00003A10 90030000 */ stw r0, 0(r3)
 /* 00003A14 57E40FFE */ srwi r4, r31, 0x1f
 /* 00003A18 57E307FE */ clrlwi r3, r31, 0x1f
@@ -5361,8 +5361,8 @@ lbl_00004E90:
 /* 00004EB0 90610008 */ stw r3, 8(r1)
 /* 00004EB4 9001000C */ stw r0, 0xc(r1)
 /* 00004EB8 3800000E */ li r0, 0xe
-/* 00004EBC 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00004EC0 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00004EBC 3C600000 */ lis r3, debugFontColor@ha
+/* 00004EC0 38630000 */ addi r3, r3, debugFontColor@l
 /* 00004EC4 90030000 */ stw r0, 0(r3)
 /* 00004EC8 386000C8 */ li r3, 0xc8
 /* 00004ECC 38800040 */ li r4, 0x40
@@ -5379,14 +5379,14 @@ lbl_00004E90:
 /* 00004EF8 2C000000 */ cmpwi r0, 0
 /* 00004EFC 40820018 */ bne lbl_00004F14
 /* 00004F00 3800000C */ li r0, 0xc
-/* 00004F04 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00004F08 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00004F04 3C600000 */ lis r3, debugFontColor@ha
+/* 00004F08 38630000 */ addi r3, r3, debugFontColor@l
 /* 00004F0C 90030000 */ stw r0, 0(r3)
 /* 00004F10 48000014 */ b lbl_00004F24
 lbl_00004F14:
 /* 00004F14 38000004 */ li r0, 4
-/* 00004F18 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00004F1C 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00004F18 3C600000 */ lis r3, debugFontColor@ha
+/* 00004F1C 38630000 */ addi r3, r3, debugFontColor@l
 /* 00004F20 90030000 */ stw r0, 0(r3)
 lbl_00004F24:
 /* 00004F24 3860008C */ li r3, 0x8c
@@ -5407,14 +5407,14 @@ lbl_00004F24:
 /* 00004F60 2C000001 */ cmpwi r0, 1
 /* 00004F64 40820018 */ bne lbl_00004F7C
 /* 00004F68 3800000C */ li r0, 0xc
-/* 00004F6C 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00004F70 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00004F6C 3C600000 */ lis r3, debugFontColor@ha
+/* 00004F70 38630000 */ addi r3, r3, debugFontColor@l
 /* 00004F74 90030000 */ stw r0, 0(r3)
 /* 00004F78 48000014 */ b lbl_00004F8C
 lbl_00004F7C:
 /* 00004F7C 38000004 */ li r0, 4
-/* 00004F80 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00004F84 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00004F80 3C600000 */ lis r3, debugFontColor@ha
+/* 00004F84 38630000 */ addi r3, r3, debugFontColor@l
 /* 00004F88 90030000 */ stw r0, 0(r3)
 lbl_00004F8C:
 /* 00004F8C 3860008C */ li r3, 0x8c
@@ -5435,14 +5435,14 @@ lbl_00004F8C:
 /* 00004FC8 2C000002 */ cmpwi r0, 2
 /* 00004FCC 40820018 */ bne lbl_00004FE4
 /* 00004FD0 3800000C */ li r0, 0xc
-/* 00004FD4 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00004FD8 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00004FD4 3C600000 */ lis r3, debugFontColor@ha
+/* 00004FD8 38630000 */ addi r3, r3, debugFontColor@l
 /* 00004FDC 90030000 */ stw r0, 0(r3)
 /* 00004FE0 48000014 */ b lbl_00004FF4
 lbl_00004FE4:
 /* 00004FE4 38000004 */ li r0, 4
-/* 00004FE8 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00004FEC 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00004FE8 3C600000 */ lis r3, debugFontColor@ha
+/* 00004FEC 38630000 */ addi r3, r3, debugFontColor@l
 /* 00004FF0 90030000 */ stw r0, 0(r3)
 lbl_00004FF4:
 /* 00004FF4 3860008C */ li r3, 0x8c
@@ -5463,14 +5463,14 @@ lbl_00004FF4:
 /* 00005030 2C000003 */ cmpwi r0, 3
 /* 00005034 40820018 */ bne lbl_0000504C
 /* 00005038 3800000C */ li r0, 0xc
-/* 0000503C 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00005040 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 0000503C 3C600000 */ lis r3, debugFontColor@ha
+/* 00005040 38630000 */ addi r3, r3, debugFontColor@l
 /* 00005044 90030000 */ stw r0, 0(r3)
 /* 00005048 48000014 */ b lbl_0000505C
 lbl_0000504C:
 /* 0000504C 38000004 */ li r0, 4
-/* 00005050 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00005054 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00005050 3C600000 */ lis r3, debugFontColor@ha
+/* 00005054 38630000 */ addi r3, r3, debugFontColor@l
 /* 00005058 90030000 */ stw r0, 0(r3)
 lbl_0000505C:
 /* 0000505C 3860008C */ li r3, 0x8c
@@ -5491,14 +5491,14 @@ lbl_0000505C:
 /* 00005098 2C000004 */ cmpwi r0, 4
 /* 0000509C 40820018 */ bne lbl_000050B4
 /* 000050A0 3800000C */ li r0, 0xc
-/* 000050A4 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 000050A8 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 000050A4 3C600000 */ lis r3, debugFontColor@ha
+/* 000050A8 38630000 */ addi r3, r3, debugFontColor@l
 /* 000050AC 90030000 */ stw r0, 0(r3)
 /* 000050B0 48000014 */ b lbl_000050C4
 lbl_000050B4:
 /* 000050B4 38000004 */ li r0, 4
-/* 000050B8 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 000050BC 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 000050B8 3C600000 */ lis r3, debugFontColor@ha
+/* 000050BC 38630000 */ addi r3, r3, debugFontColor@l
 /* 000050C0 90030000 */ stw r0, 0(r3)
 lbl_000050C4:
 /* 000050C4 3860008C */ li r3, 0x8c
@@ -5519,14 +5519,14 @@ lbl_000050C4:
 /* 00005100 2C000005 */ cmpwi r0, 5
 /* 00005104 40820018 */ bne lbl_0000511C
 /* 00005108 3800000C */ li r0, 0xc
-/* 0000510C 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00005110 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 0000510C 3C600000 */ lis r3, debugFontColor@ha
+/* 00005110 38630000 */ addi r3, r3, debugFontColor@l
 /* 00005114 90030000 */ stw r0, 0(r3)
 /* 00005118 48000014 */ b lbl_0000512C
 lbl_0000511C:
 /* 0000511C 38000004 */ li r0, 4
-/* 00005120 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00005124 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00005120 3C600000 */ lis r3, debugFontColor@ha
+/* 00005124 38630000 */ addi r3, r3, debugFontColor@l
 /* 00005128 90030000 */ stw r0, 0(r3)
 lbl_0000512C:
 /* 0000512C 3860008C */ li r3, 0x8c
@@ -5547,14 +5547,14 @@ lbl_0000512C:
 /* 00005168 2C000006 */ cmpwi r0, 6
 /* 0000516C 40820018 */ bne lbl_00005184
 /* 00005170 3800000C */ li r0, 0xc
-/* 00005174 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00005178 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00005174 3C600000 */ lis r3, debugFontColor@ha
+/* 00005178 38630000 */ addi r3, r3, debugFontColor@l
 /* 0000517C 90030000 */ stw r0, 0(r3)
 /* 00005180 48000014 */ b lbl_00005194
 lbl_00005184:
 /* 00005184 38000004 */ li r0, 4
-/* 00005188 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 0000518C 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00005188 3C600000 */ lis r3, debugFontColor@ha
+/* 0000518C 38630000 */ addi r3, r3, debugFontColor@l
 /* 00005190 90030000 */ stw r0, 0(r3)
 lbl_00005194:
 /* 00005194 3860008C */ li r3, 0x8c
@@ -5575,14 +5575,14 @@ lbl_00005194:
 /* 000051D0 2C000007 */ cmpwi r0, 7
 /* 000051D4 40820018 */ bne lbl_000051EC
 /* 000051D8 3800000C */ li r0, 0xc
-/* 000051DC 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 000051E0 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 000051DC 3C600000 */ lis r3, debugFontColor@ha
+/* 000051E0 38630000 */ addi r3, r3, debugFontColor@l
 /* 000051E4 90030000 */ stw r0, 0(r3)
 /* 000051E8 48000014 */ b lbl_000051FC
 lbl_000051EC:
 /* 000051EC 38000004 */ li r0, 4
-/* 000051F0 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 000051F4 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 000051F0 3C600000 */ lis r3, debugFontColor@ha
+/* 000051F4 38630000 */ addi r3, r3, debugFontColor@l
 /* 000051F8 90030000 */ stw r0, 0(r3)
 lbl_000051FC:
 /* 000051FC 3C600000 */ lis r3, lbl_801D3D1C@ha

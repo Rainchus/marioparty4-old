@@ -172,8 +172,8 @@ lbl_801D3AF8:
 .global lbl_801D3AFC
 lbl_801D3AFC:
 	.skip 0x4
-.global lbl_801D3B00
-lbl_801D3B00:
+.global lbl_animScalar
+lbl_animScalar:
 	.skip 0x4
 .global lbl_801D3B04
 lbl_801D3B04:
@@ -208,9 +208,12 @@ lbl_801D3B2C:
 .global lbl_801D3B2E
 lbl_801D3B2E:
 	.skip 0x2
-.global lbl_801D3B30
-lbl_801D3B30:
-	.skip 0x8
+.global debugFontColor
+debugFontColor:
+	.skip 0x4
+.global lbl_801D3B34
+lbl_801D3B34:
+	.skip 0x4
 .global lbl_801D3B38
 lbl_801D3B38:
 	.skip 0x4
@@ -544,8 +547,8 @@ lbl_801D3CB8:
 .global lbl_801D3CBC
 lbl_801D3CBC:
 	.skip 0x4
-.global lbl_801D3CC0
-lbl_801D3CC0:
+.global drawDebugBoxBool # RAM 0x801D3CC0
+drawDebugBoxBool:
 	.skip 0x2
 .global lbl_801D3CC2
 lbl_801D3CC2:

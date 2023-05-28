@@ -109,6 +109,9 @@ RED = "\033[31m"
 RESET = "\033[0m"
 
 # Iterate over all keys in the dictionary
+rel_total = 0
+matching_rels = 0
+
 for rel_path in us_rel_sha1:
     expected_sum = us_rel_sha1[rel_path]
     
@@ -120,5 +123,12 @@ for rel_path in us_rel_sha1:
     # Compare the expected and actual SHA1 sums
     if actual_sum == expected_sum:
         print(f"{GREEN}{os.path.basename(rel_path)}: Success{RESET}")
+        matching_rels += 1
     else:
         print(f"{RED}{os.path.basename(rel_path)}: Fail{RESET}")
+    rel_total += 1
+
+if (matching_rels == rel_total):
+    print(f"Matching rels: {GREEN}{matching_rels} / {rel_total}{RESET}")
+else:
+    print(f"Matching rels: {RED}{matching_rels} / {rel_total}{RESET}")

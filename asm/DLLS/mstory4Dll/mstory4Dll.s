@@ -157,8 +157,8 @@ lbl_0000026C:
 lbl_00000284:
 /* 00000284 48000001 */ bl func_8000CF8C
 /* 00000288 3880000F */ li r4, 0xf
-/* 0000028C 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00000290 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 0000028C 3C600000 */ lis r3, debugFontColor@ha
+/* 00000290 38630000 */ addi r3, r3, debugFontColor@l
 /* 00000294 90830000 */ stw r4, 0(r3)
 /* 00000298 3C600000 */ lis r3, lbl_10000004@ha
 /* 0000029C 38630000 */ addi r3, r3, lbl_10000004@l
@@ -1512,8 +1512,8 @@ lbl_000015EC:
 /* 00001608 4CC63242 */ crset 6
 /* 0000160C 48000001 */ bl func_8000AFF4
 /* 00001610 3800000D */ li r0, 0xd
-/* 00001614 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00001618 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00001614 3C600000 */ lis r3, debugFontColor@ha
+/* 00001618 38630000 */ addi r3, r3, debugFontColor@l
 /* 0000161C 90030000 */ stw r0, 0(r3)
 /* 00001620 7FC30734 */ extsh r3, r30
 /* 00001624 1C1C0005 */ mulli r0, r28, 5
@@ -1535,8 +1535,8 @@ lbl_000015EC:
 /* 00001664 4CC63242 */ crset 6
 /* 00001668 48000001 */ bl func_8000AFF4
 /* 0000166C 3800000F */ li r0, 0xf
-/* 00001670 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00001674 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00001670 3C600000 */ lis r3, debugFontColor@ha
+/* 00001674 38630000 */ addi r3, r3, debugFontColor@l
 /* 00001678 90030000 */ stw r0, 0(r3)
 /* 0000167C 7FC30734 */ extsh r3, r30
 /* 00001680 1C1C0006 */ mulli r0, r28, 6
@@ -1555,8 +1555,8 @@ lbl_000015EC:
 /* 000016B4 2C000001 */ cmpwi r0, 1
 /* 000016B8 40820014 */ bne lbl_000016CC
 /* 000016BC 3800000D */ li r0, 0xd
-/* 000016C0 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 000016C4 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 000016C0 3C600000 */ lis r3, debugFontColor@ha
+/* 000016C4 38630000 */ addi r3, r3, debugFontColor@l
 /* 000016C8 90030000 */ stw r0, 0(r3)
 lbl_000016CC:
 /* 000016CC 2C1F0009 */ cmpwi r31, 9
@@ -1572,8 +1572,8 @@ lbl_000016CC:
 /* 000016F4 4CC63242 */ crset 6
 /* 000016F8 48000001 */ bl func_8000AFF4
 /* 000016FC 3800000F */ li r0, 0xf
-/* 00001700 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00001704 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 00001700 3C600000 */ lis r3, debugFontColor@ha
+/* 00001704 38630000 */ addi r3, r3, debugFontColor@l
 /* 00001708 90030000 */ stw r0, 0(r3)
 /* 0000170C 4800003C */ b lbl_00001748
 lbl_00001710:
@@ -1588,8 +1588,8 @@ lbl_00001710:
 /* 00001730 4CC63242 */ crset 6
 /* 00001734 48000001 */ bl func_8000AFF4
 /* 00001738 3800000F */ li r0, 0xf
-/* 0000173C 3C600000 */ lis r3, lbl_801D3B30@ha
-/* 00001740 38630000 */ addi r3, r3, lbl_801D3B30@l
+/* 0000173C 3C600000 */ lis r3, debugFontColor@ha
+/* 00001740 38630000 */ addi r3, r3, debugFontColor@l
 /* 00001744 90030000 */ stw r0, 0(r3)
 lbl_00001748:
 /* 00001748 3C600000 */ lis r3, lbl_00001B38@ha
