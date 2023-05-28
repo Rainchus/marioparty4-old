@@ -144,7 +144,7 @@ DUMMY != mkdir -p $(ALL_DIRS)
 
 .PHONY: tools
 
-$(LDSCRIPT_DOL): ldscript.lcf
+$(LDSCRIPT_DOL): lcf/ldscript.lcf
 	$(QUIET) $(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
 
 $(DOL): $(ELF) | tools

@@ -158,8 +158,8 @@ header = (
     "DOL = $BUILD_DIR/main.dol\n"
     "ELF = $BUILD_DIR/mp4.1/main.elf\n"
     "MAP = $BUILD_DIR/mp4.1/MarioParty4.MAP\n"
-    "LDSCRIPT_DOL = ldscript.lcf\n"
-    "LDSCRIPT_REL = partial.lcf\n"
+    "LDSCRIPT_DOL = lcf/ldscript.lcf\n"
+    "LDSCRIPT_REL = lcf/partial.lcf\n"
     "OPTFLAGS = -O4,p\n"
     "DOL = $BUILD_DIR/main.dol\n"
     "MWCC_VERSION = 2.6\n"
@@ -176,7 +176,7 @@ header = (
     "LDFLAGS = $MAPGEN -fp hard -nodefaults\n"
     "CFLAGS = -Cpp_exceptions off -proc gekko -fp hard $OPTFLAGS -nodefaults -sdata 48 -sdata2 8 -inline all,deferred -use_lmw_stmw on -enum int -rostr $INCLUDES\n"
     "NAME = ttyd_us\n"
-    "LD_REL = $LD -lcf partial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in $MAPGEN -o $out\n"
+    "LD_REL = $LD -lcf $LDSCRIPT_REL -nodefaults -fp hard -r1 -m _prolog -g\n"
 )
 
 # Create a Ninja build file object
@@ -191,10 +191,10 @@ ninja_file.rule('gen_ldscript',
                  depfile = "$out.d")
 
 ninja_file.rule('rel_ldscript',
-                 command = "wine ./tools/mwcc_compiler/2.6/mwldeppc.exe -lcf partial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in -o $out")
+                 command = "$LD_REL $in -o $out")
 
 ninja_file.rule('nis_rel_ldscript',
-                 command = "wine ./tools/mwcc_compiler/2.6/mwldeppc.exe -lcf nisPartial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in -o $out")
+                 command = "$LD -lcf lcf/nisPartial.lcf -nodefaults -fp hard -r1 -m _prolog -g $in -o $out")
 
 ninja_file.rule('c_files',
                  command = "$CC $CFLAGS -c -o $in $out",

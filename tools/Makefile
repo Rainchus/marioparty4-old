@@ -11,4 +11,3 @@ elf2dol: elf2dol.c
 clean:
 	$(RM) elf2dol
 	$(RM) elf2rel
-	$(RM) relInfoPrint
