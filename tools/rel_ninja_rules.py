@@ -323,8 +323,9 @@ rule_dict = {
         'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 8 -i 1 -o 0x00 -l 0x33 -c 15 $out",
         'description': "mstoryDll.rel building..."
     },
+    #Major hack going on here to set the data offset address to 0. Even though the size is 0, it still gives it an offset address
     'nisDll_elf_to_rel': {
-        'command': "wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 1 -i 1 -o 0x00 -l 0x2D -c 12 $out",
+        'command': "(wine ./tools/elf2rel $in ./build/mp4.1/main.elf -b 1 -i 1 -o 0x00 -l 0x2D -c 12 $out) && (./tools/setDataSectionOffsetTo0.py)",
         'description': "nisDll.rel building..."
     },
     'option_elf_to_rel': {

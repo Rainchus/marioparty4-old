@@ -175,7 +175,7 @@ header = (
     "MAPGEN = -map $MAP\n"
     "LDFLAGS = $MAPGEN -fp hard -nodefaults\n"
     "CFLAGS = -Cpp_exceptions off -proc gekko -fp hard $OPTFLAGS -nodefaults -sdata 48 -sdata2 8 -inline all,deferred -use_lmw_stmw on -enum int -rostr $INCLUDES\n"
-    "NAME = ttyd_us\n"
+    "NAME = mp4_us\n"
     "LD_REL = $LD -lcf $LDSCRIPT_REL -nodefaults -fp hard -r1 -m _prolog -g\n"
 )
 
@@ -209,7 +209,7 @@ ninja_file.rule('make_elf',
                  description = ".o Files to ELF")
 
 ninja_file.rule('make_dol',
-                command = "(python3 $ELF2DOL $in -o $out) && ($SHA1SUM -c sha1/ttyd.us.sha1)",
+                command = "(python3 $ELF2DOL $in -o $out) && ($SHA1SUM -c sha1/mp4.us.sha1)",
                 description = "Converting ELF to DOL")
 
 for rule, info in rule_dict.items():

@@ -13,6 +13,7 @@
 .equ BOWSER_SUIT, 0xA
 .equ BOO_CRYSTAL_BALL, 0xB
 .equ MAGIC_LAMP, 0xC
+.equ ITEM_BAG, 0xD
 
 .section .data, "wa"  # 0x8011EDE0 - 0x80142800
 .global lbl_8011EDE0
@@ -26820,9 +26821,10 @@ lbl_80139AE8:
 	.4byte 0x00280029
 	.4byte 0x002A0000
 	.4byte 0x00000000
-.global characterItemShopPreferences
-characterItemShopPreferences: # RAM 0x80139B00
+.global characterItemPreferences
+characterItemPreferences: # RAM 0x80139B00
 	# ROM: 136B00
+ 	# Affects the items characters buy on the shop and the order they use their items on.
 	# Character Mario
 	.byte MAGIC_LAMP
 	.byte BOO_CRYSTAL_BALL
@@ -26935,23 +26937,25 @@ characterItemShopPreferences: # RAM 0x80139B00
 	.byte SUPER_MINI_MUSHROOM
 	.byte MINI_MUSHROOM
 
-.global lbl_80139B60
-lbl_80139B60:
+.global CPUItemUsageTimingFunctions
+CPUItemUsageTimingFunctions: # RAM 0x80139B60
 	# ROM: 136B60
-	.4byte lbl_80071A9C
-	.4byte lbl_80071CBC
-	.4byte lbl_80071A9C
-	.4byte lbl_80071CBC
-	.4byte lbl_8007205C
-	.4byte lbl_8007205C
-	.4byte lbl_80072370
-	.4byte lbl_80071F04
-	.4byte 0x00000000
-	.4byte lbl_8007205C
-	.4byte 0x00000000
-	.4byte lbl_80072508
-	.4byte lbl_80072584
-	.4byte 0x00000000
+	# Contains a list of functions for each item that determine if a CPU character will use said item or not.
+ 	# Items with no function are never used.
+	.4byte func_80071A9C   #Mini Mushroom
+	.4byte func_80071CBC   #Mega Mushroom
+	.4byte func_80071A9C   #Super Mini Mushroom
+	.4byte func_80071CBC   #Super Mega Mushroom
+	.4byte func_8007205C   #MiniMega Hammer
+	.4byte func_8007205C   #Warp Pipe
+	.4byte func_80072370   #Swap Card
+	.4byte func_80071F04   #Sparky Sticker
+	.4byte 0x00000000      #Gaddlight
+	.4byte func_8007205C   #Chomp Call
+	.4byte 0x00000000      #Bowser Suit
+	.4byte func_80072508   #Boo's Crystal Ball
+	.4byte func_80072584   #Magic Lamp
+	.4byte 0x00000000      #Item Bag
 .global lbl_80139B98
 lbl_80139B98:
 	# ROM: 136B98
@@ -27093,7 +27097,7 @@ itemPrices:
 	.byte 0x00 #BOWSER_SUIT
 	.byte 0x19 #BOO_CRYSTAL_BALL
 	.byte 0x1E #MAGIC_LAMP
-	.byte 0x1E #UNK
+	.byte 0x1E #ITEM_BAG
 	.2byte 0x0000 #Padding
 .global lbl_80139D3C
 lbl_80139D3C:
