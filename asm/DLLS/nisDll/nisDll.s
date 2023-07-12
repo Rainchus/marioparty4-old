@@ -144,8 +144,6 @@ lbl_00000228:
 
 # 4
 .section .rodata
-.global _rodata
-_rodata:
 .balign 8
     # 0x230
     .4byte 0x3FE00000

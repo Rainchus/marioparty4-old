@@ -26937,7 +26937,7 @@ characterItemPreferences: # RAM 0x80139B00
 	.byte SUPER_MINI_MUSHROOM
 	.byte MINI_MUSHROOM
 
-.global CPUItemUsageTimingFunctions:
+.global CPUItemUsageTimingFunctions
 CPUItemUsageTimingFunctions: # RAM 0x80139B60
 	# ROM: 136B60
 	# Contains a list of functions for each item that determine if a CPU character will use said item or not.
