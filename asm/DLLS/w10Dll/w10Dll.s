@@ -834,7 +834,7 @@ lbl_00000CA4:
 /* 00000CA4 7FE30734 */ extsh r3, r31
 /* 00000CA8 80810008 */ lwz r4, 8(r1)
 /* 00000CAC 38A0FFFF */ li r5, -1
-/* 00000CB0 48000001 */ bl func_80070530
+/* 00000CB0 48000001 */ bl ShowMessage
 /* 00000CB4 48000001 */ bl func_800706E8
 /* 00000CB8 48000001 */ bl CloseMessage
 /* 00000CBC 83E1001C */ lwz r31, 0x1c(r1)
