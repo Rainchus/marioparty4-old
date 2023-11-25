@@ -1,3 +1,8 @@
+
+
+# New Repo
+This repo is archived as it's no longer used. The new repo is located at https://github.com/Rainchus/mp4-dtk
+
 # Mario Party 4 (USA)
 
 A public decompilation of Mario Party 4 (US) v1.0.
